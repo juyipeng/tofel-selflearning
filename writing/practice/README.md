@@ -1,6 +1,7 @@
 # 写作刷题站（Email + Academic Discussion）
 
-在 `writing/` 下新造的写作刷题工具，专注 **Write an Email** 和 **Academic Discussion** 两个题型（组句 Build a Sentence 忽略，用 `make-a-sentence/` 那套）。
+在 `writing/` 下新造的写作刷题工具，专注 **Write an Email** 和 **Academic Discussion** 两个题型。
+写作的第三个题型组句 **Build a Sentence** 不在这里，见 `writing/build-a-sentence/`（自包含网页，不需要服务端）。
 
 ## 文件
 

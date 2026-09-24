@@ -1,7 +1,7 @@
 """本地 GLM-OCR 调用（走 Ollama）。
 
-原本有四处各写了一份近乎相同的实现（reading/ocr_read.py、make-a-sentence/ocr_glm.py、
-make-a-sentence/reocr_abnormal.py、writing/practice/extract.py 的 _ocr_b64），这里合并。
+原本有四处各写了一份近乎相同的实现（reading/ocr_read.py、writing/build-a-sentence/ocr_glm.py、
+writing/build-a-sentence/reocr_abnormal.py、writing/practice/extract.py 的 _ocr_b64），这里合并。
 
 分两层：
   ocr_b64()   —— 底层，收 base64 图，只管调 Ollama

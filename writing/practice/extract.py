@@ -7,7 +7,7 @@
   4. 按内容定位 Email 页（含 "Write an email to"）和 Discussion 页（含 "Your professor is teaching"）
   5. 解析成结构化 JSON，写到 data/questions.json（resume-safe，已处理的套题跳过）
 
-复用 make-a-sentence 项目的 OCR 经验：简单提示词、超宽图先缩小。
+复用 build-a-sentence 模块的 OCR 经验：简单提示词、超宽图先缩小。
 """
 import json
 import re

@@ -11,7 +11,7 @@ Pillow>=10.0
 # 注意：cuda 版本请按 https://pytorch.org 的指引单独装 torch，再装下面这个。
 faster-whisper>=1.0
 
-# ---- 批量 LLM 结构化输出（make-a-sentence/llm_order.py）----
+# ---- 批量 LLM 结构化输出（writing/build-a-sentence/llm_order.py）----
 langchain>=0.2
 langchain-openai>=0.1
 openai>=1.0

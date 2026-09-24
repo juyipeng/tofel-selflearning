@@ -1034,7 +1034,7 @@ function saveToFile() {
   const blob = new Blob([serializeState()], { type: 'application/json' });
   const a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'make_a_sentence_progress.json';
+  a.download = 'build_a_sentence_progress.json';
   a.click();
   URL.revokeObjectURL(a.href);
 }

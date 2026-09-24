@@ -67,10 +67,10 @@ MODULES = {
         'hint': '音频已内嵌，单文件自包含',
     },
     'sentence': {
-        'label': '组句练习',
+        'label': '组句 Build a Sentence',
         'kind': 'static',
-        'file': 'make-a-sentence/quiz.html',
-        'hint': '打散的词重组成正确句子',
+        'file': 'writing/build-a-sentence/quiz.html',
+        'hint': '写作题型之一：打散的词重组成正确句子',
     },
     'writing': {
         'label': '写作刷题站 + 素材库',

@@ -1,4 +1,4 @@
-读取 `e:\code\personal_projects\TOEFL-learning\make-a-sentence\data\agent_batches\batch_XXX.json`，是 JSON 数组，每题一个对象：
+读取 `e:\code\personal_projects\TOEFL-learning\writing\build-a-sentence\data\agent_batches\batch_XXX.json`，是 JSON 数组，每题一个对象：
 
 ```json
 {"b":"BS_1月","st":1,"pg":1,"ix":0,"p":"提示句","s":[null,"固定词",null,...],"o":["词1","词2",...]}
@@ -10,7 +10,7 @@
 
 任务：把 `o` 里的所有词组织成正确的词组，并按正确顺序填入 `s` 的空位。
 
-用 Write 工具把结果 JSON 数组写入 `e:\code\personal_projects\TOEFL-learning\make-a-sentence\data\agent_batches\batch_XXX_result.json`，每题一个对象：
+用 Write 工具把结果 JSON 数组写入 `e:\code\personal_projects\TOEFL-learning\writing\build-a-sentence\data\agent_batches\batch_XXX_result.json`，每题一个对象：
 
 ```json
 {"answers":["词组1","词组2",...]}

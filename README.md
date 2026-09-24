@@ -15,7 +15,11 @@
 | **听力** [listening/](listening/) | 音频内嵌，逐题播放 + 作答 | 自包含网页 | `python start.py listening` |
 | **口语** [speaking/](speaking/) | Listen and Repeat（跟读）+ Take an Interview（录音 + AI 按 ETS 三维标准评分） | 需本地服务 | `python start.py speaking` |
 | **写作** [writing/](writing/) | Write an Email + Academic Discussion，AI 三维打分 + 探讨改进 + 素材库 | 需本地服务 | `python start.py writing` |
-| **组句** [make-a-sentence/](make-a-sentence/) | 打散的词重组成正确句子 | 自包含网页 | `python start.py sentence` |
+| ↳ **组句** [writing/build-a-sentence/](writing/build-a-sentence/) | 写作第三个题型 **Build a Sentence**：打散的词重组成正确句子 | 自包含网页 | `python start.py sentence` |
+
+> 写作 Section 共三个题型：Write an Email、Academic Discussion、Build a Sentence。
+> 前两个在 [writing/practice/](writing/practice/)（需服务端 + AI 打分），
+> Build a Sentence 是自包含网页，见 [writing/build-a-sentence/](writing/build-a-sentence/)。
 
 `python start.py` 不带参数会列出以上全部。
 
@@ -49,7 +53,7 @@ python start.py speaking          # 需要 faster-whisper，见下文
 |---|---|---|
 | 起 `writing` 服务 | 任意 Python 3 | 仅标准库 |
 | 起 `speaking` 服务、听力转写 | 装了 faster-whisper 的环境 | `faster-whisper`（带 CUDA 更好） |
-| `make-a-sentence/llm_order.py` 批量组句 | 任意 Python 3 | `langchain`、`langchain-openai` |
+| `writing/build-a-sentence/llm_order.py` 批量组句 | 任意 Python 3 | `langchain`、`langchain-openai` |
 | 所有 OCR 脚本 | 任意 Python 3 | `Pillow` + 本地 [Ollama](https://ollama.com) |
 | 视频/音频切分（重建听力模块时） | 系统 PATH | `ffmpeg` |
 
@@ -89,8 +93,8 @@ cp config.example.json config.json
 
 | 配置项 | 用途 | 谁在用 |
 |---|---|---|
-| `deepseek_api_key` | 口语/写作 AI 评分、批量组句 | `speaking/app/server.py`、`writing/practice/server.py`、`make-a-sentence/llm_order.py` |
-| `aliyun_ocr_appcode` | 阿里云 OCR（组句题早期方案，现主要用本地 GLM-OCR） | `make-a-sentence/ocr_batch.py` |
+| `deepseek_api_key` | 口语/写作 AI 评分、批量组句 | `speaking/app/server.py`、`writing/practice/server.py`、`writing/build-a-sentence/llm_order.py` |
+| `aliyun_ocr_appcode` | 阿里云 OCR（组句题早期方案，现主要用本地 GLM-OCR） | `writing/build-a-sentence/ocr_batch.py` |
 
 ---
 
@@ -151,9 +155,15 @@ python start.py writing
 
 计时倒计时到点不硬断（变红继续走表并另存限时版）；提交后 AI 三维打分 + 提分建议 + 可多轮「探讨改进」。素材库支持 AI 找素材、逐句背诵默写。
 
-### 组句 make-a-sentence/
+### 组句 writing/build-a-sentence/
 
-拆图 → OCR → LLM 把打散的词重组成正确语序 → 合成刷题页。见 [make-a-sentence/](make-a-sentence/)。
+写作的第三个题型 **Build a Sentence**——给一句被打散的词，重组成语法正确的句子。
+
+```bash
+python start.py sentence          # 自包含网页，不需要服务端
+```
+
+数据管线：拆图 → OCR → LLM 把打散的词重组成正确语序 → 合成刷题页。见 [writing/build-a-sentence/](writing/build-a-sentence/)。
 
 ---
 
@@ -170,8 +180,9 @@ TOEFL-learning/
 ├── reading/                 阅读模块
 ├── listening/               听力模块
 ├── speaking/                口语模块
-├── writing/                 写作模块
-├── make-a-sentence/         组句模块
+├── writing/                 写作模块（三个题型）
+│   ├── practice/              Write an Email + Academic Discussion（服务端 + AI 打分）
+│   └── build-a-sentence/      组句 Build a Sentence（自包含网页）
 └── OCR_ASR_LLM_GUIDE.md     OCR / ASR / 批量 LLM 的踩坑记录
 ```
 

@@ -21,7 +21,7 @@ listening/app/clips/
 
 # ---- 个人数据（做题记录、进度）----
 toefl_progress.json
-make-a-sentence/make_a_sentence_progress.json
+writing/build-a-sentence/build_a_sentence_progress.json
 writing/practice/data/records.json
 writing/practice/data/materials.json
 

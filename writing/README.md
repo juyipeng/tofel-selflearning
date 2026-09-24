@@ -10,6 +10,7 @@ writing/
 ├── 8月真题.zip              真题 PDF（11 套，按日期分子目录）
 ├── 写作精选套题练习10套.zip   精选写作练习（10 套）
 ├── 【套题专用】写作答题卡.docx   答题卡模板（含 AI 评分提示词）
+├── build-a-sentence/        组句 Build a Sentence（自包含网页，见该目录 README）
 └── practice/                服务与网页（见下）
     ├── server.py            本地服务（刷题 + 素材共用一个服务）
     ├── practice.html        写作刷题站
