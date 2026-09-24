@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>写作刷题 · Email &amp; Academic Discussion</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --panel2: #1a2332;
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --accent: #38bdf8;
+  --success: #34d399;
+  --danger: #f87171;
+  --warn: #fbbf24;
+  --border: #334155;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+.btn {
+  padding: 11px 20px; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--panel); color: var(--text); font-size: 0.95rem; cursor: pointer;
+  transition: all .15s; font-family: inherit;
+}
+.btn:hover { background: #2d3a4f; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 700; }
+.btn-primary:hover { background: #7dd3fc; }
+.btn-ghost { background: transparent; }
+.view { display: none; flex: 1; flex-direction: column; min-height: 0; }
+.view.active { display: flex; }
+
+/* 持久顶栏 */
+.app-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 8px 16px; border-bottom: 1px solid var(--border); flex-shrink: 0;
+}
+.app-topbar .title { font-weight: 700; font-size: 0.95rem; }
+.app-topbar .actions { display: flex; gap: 6px; }
+.mini-btn {
+  padding: 6px 10px; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--panel); color: var(--text2); font-size: 0.78rem; cursor: pointer; font-family: inherit;
+}
+.mini-btn:hover { color: var(--text); border-color: #64748b; }
+
+/* ===== Home ===== */
+#homeView { align-items: center; justify-content: center; gap: 20px; padding: 20px 24px; overflow-y: auto; }
+#homeView h1 {
+  font-size: 1.55rem; font-weight: 800;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.task-toggle { display: flex; gap: 10px; }
+.task-toggle .task-opt {
+  padding: 12px 20px; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--panel); cursor: pointer; text-align: center; transition: all .15s;
+  display: flex; flex-direction: column; gap: 2px;
+}
+.task-toggle .task-opt:hover { border-color: #64748b; }
+.task-toggle .task-opt.selected { border-color: var(--accent); background: rgba(56,189,248,.08); }
+.task-opt .t-name { font-weight: 700; }
+.task-opt .t-time { font-size: .78rem; color: var(--text2); }
+.set-list { display: flex; flex-direction: column; gap: 8px; width: 100%; max-width: 520px; max-height: 40vh; overflow-y: auto; }
+.set-item {
+  display: flex; align-items: center; gap: 10px; padding: 12px 16px;
+  border: 1px solid var(--border); border-radius: 12px; background: var(--panel); cursor: pointer;
+}
+.set-item:hover { border-color: #64748b; }
+.set-item.selected { border-color: var(--accent); background: rgba(56,189,248,.08); }
+.set-item .s-id { font-weight: 700; }
+.set-item .s-topic { font-size: .8rem; color: var(--text2); margin-left: auto; text-align: right; }
+.set-item .s-rec { font-size: .75rem; color: var(--success); white-space: nowrap; }
+.home-btns { display: flex; gap: 10px; }
+.hint { font-size: .78rem; color: var(--text2); max-width: 520px; text-align: center; line-height: 1.6; }
+.hint a { color: var(--accent); }
+
+/* ===== Practice ===== */
+.topbar {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 10px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap;
+}
+.topbar .meta { font-size: .85rem; color: var(--text2); }
+.topbar .meta b { color: var(--text); }
+.topbar .right { display: flex; align-items: center; gap: 12px; }
+.timer {
+  font-size: 1.15rem; font-weight: 800; font-variant-numeric: tabular-nums;
+  padding: 4px 14px; border-radius: 10px; background: var(--panel); border: 1px solid var(--border);
+}
+.timer.normal { color: var(--accent); }
+.timer.overtime { color: var(--danger); border-color: var(--danger); }
+.wc { font-size: .85rem; color: var(--text2); font-variant-numeric: tabular-nums; }
+.mini-btn.undo { color: var(--warn); border-color: rgba(251,191,36,.4); }
+
+.practice-body { flex: 1; display: flex; flex-direction: column; gap: 12px; padding: 14px 18px; min-height: 0; }
+.prompt-card {
+  border: 1px solid var(--border); border-radius: 12px; background: var(--panel2);
+  padding: 14px 16px; overflow-y: auto; max-height: 40%; flex-shrink: 0;
+  font-size: .92rem; line-height: 1.6;
+}
+.prompt-card .label { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--warn); margin-bottom: 6px; }
+.prompt-card .ctx { color: var(--text); margin-bottom: 10px; }
+.prompt-card .task { color: var(--text); font-weight: 600; margin-bottom: 8px; }
+.prompt-card ul { margin: 0 0 8px 0; padding-left: 20px; }
+.prompt-card li { margin: 3px 0; }
+.prompt-card .prof { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); }
+.prompt-card .prof .pname { font-weight: 700; color: var(--accent); margin-bottom: 4px; }
+.prompt-card .student { margin-top: 10px; padding: 8px 10px; background: var(--panel); border-radius: 8px; }
+.prompt-card .student .sname { font-weight: 700; color: var(--success); font-size: .82rem; margin-bottom: 3px; }
+
+.write-area { flex: 1; display: flex; flex-direction: column; gap: 8px; min-height: 0; }
+textarea {
+  flex: 1; width: 100%; resize: none; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--panel); color: var(--text); padding: 14px; font-size: 1rem; line-height: 1.7;
+  font-family: inherit; outline: none;
+}
+textarea:focus { border-color: var(--accent); }
+.footer { display: flex; gap: 10px; justify-content: center; padding: 12px 18px; border-top: 1px solid var(--border); }
+.footer .btn { flex: 1; max-width: 240px; }
+
+.badge {
+  display: none; padding: 6px 12px; border-radius: 8px; font-size: .8rem;
+  background: rgba(251,191,36,.12); border: 1px solid rgba(251,191,36,.35); color: var(--warn);
+}
+.badge.show { display: inline-block; }
+.badge.prev {
+  display: none; background: rgba(52,211,153,.1); border-color: rgba(52,211,153,.35); color: var(--success);
+}
+.badge.prev.show { display: inline-block; }
+
+/* ===== Result ===== */
+#resultView { align-items: stretch; justify-content: flex-start; gap: 14px; padding: 18px; overflow-y: auto; }
+.result-header { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.result-header h2 { font-size: 1.1rem; }
+.grade-card {
+  border: 1px solid var(--border); border-radius: 14px; background: var(--panel); padding: 18px;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.grade-card .g-title { font-weight: 700; color: var(--accent); }
+.grade-card .g-timeout { font-weight: 700; color: var(--danger); }
+.grade-body { white-space: pre-wrap; line-height: 1.75; font-size: .95rem; color: var(--text); }
+.grade-body .hl { color: var(--warn); font-weight: 700; }
+.spinner { color: var(--text2); font-size: .9rem; padding: 20px; text-align: center; }
+
+/* ===== Stats ===== */
+#statsView { padding: 18px; overflow-y: auto; gap: 16px; align-items: stretch; }
+.stats-summary { display: flex; gap: 20px; flex-wrap: wrap; }
+.stat-tile {
+  flex: 1; min-width: 120px; padding: 14px; border: 1px solid var(--border); border-radius: 12px;
+  background: var(--panel); text-align: center;
+}
+.stat-tile .num { font-size: 1.5rem; font-weight: 800; color: var(--accent); }
+.stat-tile .lbl { font-size: .78rem; color: var(--text2); margin-top: 2px; }
+.rec-table { width: 100%; border-collapse: collapse; font-size: .85rem; }
+.rec-table th, .rec-table td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border); }
+.rec-table th { color: var(--text2); font-weight: 600; font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; }
+.rec-table tr:hover { background: var(--panel2); }
+.rec-table .score-cell { color: var(--accent); font-weight: 700; }
+.rec-table .ot { color: var(--danger); font-size: .72rem; }
+.chart-wrap { width: 100%; max-width: 700px; }
+.chart-wrap svg { width: 100%; height: auto; display: block; }
+.chart-legend { display: flex; gap: 18px; justify-content: center; font-size: .82rem; color: var(--text2); }
+.legend-dot { width: 10px; height: 10px; border-radius: 50%; display: inline-block; margin-right: 5px; vertical-align: middle; }
+.legend-dot.score { background: var(--accent); }
+.legend-dot.time { background: #f59e0b; }
+.stats-head { display: flex; align-items: center; gap: 12px; }
+.stats-head h2 { font-size: 1.1rem; }
+
+/* ===== Chat / 探讨 ===== */
+#chatPanel {
+  display: none; flex-direction: column; gap: 12px;
+  border: 1px solid var(--border); border-radius: 14px; background: var(--panel2);
+  padding: 14px; margin-top: 6px;
+}
+#chatPanel.open { display: flex; }
+.chat-head { font-weight: 700; color: #818cf8; font-size: .95rem; }
+.chat-log { display: flex; flex-direction: column; gap: 10px; max-height: 360px; overflow-y: auto; }
+.chat-msg { max-width: 82%; padding: 10px 14px; border-radius: 12px; line-height: 1.6; font-size: .9rem; white-space: pre-wrap; }
+.chat-msg.user { align-self: flex-end; background: var(--accent); color: #0f172a; }
+.chat-msg.ai { align-self: flex-start; background: var(--panel); color: var(--text); }
+.chat-msg .who { font-size: .7rem; opacity: .7; margin-bottom: 3px; font-weight: 700; }
+.chat-input { display: flex; gap: 8px; }
+.chat-input textarea {
+  flex: 1; resize: none; height: 56px; border: 1px solid var(--border); border-radius: 10px;
+  background: var(--panel); color: var(--text); padding: 10px 12px; font-size: .9rem; line-height: 1.5;
+  font-family: inherit; outline: none;
+}
+.chat-input textarea:focus { border-color: #818cf8; }
+.chat-input .btn { align-self: flex-end; }
+
+/* ===== 题目/作答展示 ===== */
+#qaSection { display: flex; flex-direction: column; gap: 12px; }
+#qaSection.hidden { display: none; }
+#qaSection .prompt-card { max-height: none; flex-shrink: 0; }
+.qa-answer-box {
+  border: 1px solid var(--border); border-radius: 12px; background: var(--panel2); padding: 12px 14px;
+}
+.qa-answer-box .label { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; color: var(--warn); margin-bottom: 6px; }
+.qa-answer { font-size: .9rem; line-height: 1.7; color: var(--text); white-space: pre-wrap; word-break: break-word; }
+</style>
+</head>
+<body>
+
+<!-- 持久顶栏 -->
+<div class="app-topbar">
+  <div class="title">📝 写作刷题</div>
+  <div class="actions">
+    <button class="mini-btn" id="saveBtn">💾 保存</button>
+    <button class="mini-btn" id="loadBtn">📂 加载</button>
+    <button class="mini-btn" id="resetBtn">🔄 重置</button>
+    <button class="mini-btn" id="statsBtn">📊 统计</button>
+  </div>
+</div>
+
+<!-- ===== Home ===== -->
+<div class="view active" id="homeView">
+  <h1>写作刷题 · Email &amp; Academic Discussion</h1>
+  <div class="task-toggle" id="taskToggle">
+    <div class="task-opt selected" data-task="email">
+      <span class="t-name">✉️ Write an Email</span>
+      <span class="t-time">限时 7 分钟 · /5.0 分</span>
+    </div>
+    <div class="task-opt" data-task="discussion">
+      <span class="t-name">💬 Academic Discussion</span>
+      <span class="t-time">限时 10 分钟 · /5.0 分</span>
+    </div>
+  </div>
+  <div class="set-list" id="setList"></div>
+  <div class="home-btns">
+    <button class="btn btn-primary" id="startBtn" disabled>开始写作</button>
+    <button class="btn" id="homeStatsBtn">数据统计</button>
+  </div>
+  <div class="hint">
+    需先运行 <b>python server.py</b> 后访问 <b>http://localhost:8765/practice.html</b>。
+    做题记录自动存本地浏览器；「保存/加载」可导出/导入 JSON 备份。
+  </div>
+</div>
+
+<!-- ===== Practice ===== -->
+<div class="view" id="practiceView">
+  <div class="topbar">
+    <div class="meta" id="metaText"></div>
+    <div class="right">
+      <span class="wc" id="wordCount">0 词</span>
+      <span class="timer normal" id="timerDisplay">--:--</span>
+      <button class="mini-btn undo" id="redoBtn" title="清空当前作答并重新计时">↺ 重新做题</button>
+    </div>
+  </div>
+  <div class="practice-body">
+    <div class="prompt-card" id="promptCard"></div>
+    <div class="write-area">
+      <div style="display:flex; gap:10px; flex-wrap:wrap;">
+        <span class="badge" id="overtimeBadge">⏰ 已超时，已保存限时版本</span>
+        <span class="badge prev" id="prevBadge"></span>
+      </div>
+      <textarea id="answerBox" placeholder="在这里写下你的作答…"></textarea>
+    </div>
+  </div>
+  <div class="footer">
+    <button class="btn" id="backBtn">← 返回选题</button>
+    <button class="btn btn-primary" id="gradeBtn">提交并打分</button>
+  </div>
+</div>
+
+<!-- ===== Result ===== -->
+<div class="view" id="resultView">
+  <div class="result-header">
+    <h2 id="resultTitle"></h2>
+    <button class="btn" id="toggleQBtn">📋 题目/作答</button>
+    <button class="btn" id="copyContextBtn">📋 复制全部上下文</button>
+    <button class="btn" id="retryBtn">继续写</button>
+    <button class="btn" id="chatBtn">💬 探讨改进</button>
+    <button class="btn btn-primary" id="homeBtn">返回选题</button>
+  </div>
+  <div id="qaSection">
+    <div class="prompt-card">
+      <div class="label">📋 题目</div>
+      <div id="qaQuestion"></div>
+    </div>
+    <div class="qa-answer-box">
+      <div class="label">✍️ 我的作答</div>
+      <div class="qa-answer" id="qaAnswer"></div>
+    </div>
+  </div>
+  <div id="resultBody"></div>
+  <div id="chatPanel">
+    <div class="chat-head">🧑‍🏫 AI 写作导师（结合题目、你的作答与批改结果，帮你探讨改进）</div>
+    <div class="chat-log" id="chatLog"></div>
+    <div class="chat-input">
+      <textarea id="chatInput" placeholder="向导师提问，例如：我的论证哪里最薄弱？怎么改进开头？"></textarea>
+      <button class="btn btn-primary" id="chatSend">发送</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Stats ===== -->
+<div class="view" id="statsView">
+  <div class="stats-head">
+    <h2>数据统计</h2>
+    <button class="btn" id="statsBackBtn">← 返回</button>
+  </div>
+  <div class="stats-summary" id="statsSummary"></div>
+  <div class="chart-wrap">
+    <svg id="trendChart" viewBox="0 0 640 300" preserveAspectRatio="xMidYMid meet"></svg>
+  </div>
+  <div class="chart-legend">
+    <span class="legend-dot score"></span>得分（/5.0）
+    <span class="legend-dot time"></span>用时（秒）
+  </div>
+  <table class="rec-table" id="recTable">
+    <thead><tr><th>套题</th><th>题型</th><th>得分</th><th>用时</th><th>超时</th><th>时间</th></tr></thead>
+    <tbody id="recBody"></tbody>
+  </table>
+</div>
+
+<script>
+// ================= 题目数据 =================
+let QUESTIONS = null;
+
+// ================= 评分提示词（来自答题卡） =================
+const EMAIL_RUBRIC = `任务：请以ETS托福邮件写作评分标准，从以下三个维度对我附上的作文进行打分（满分5.0分，每项满分5.0分，最后给出加权总分）：
+
+Task Completion（任务完成度）：评估是否完整覆盖了题目中所有要求的沟通任务（通常为3个，如：询问信息+提出建议+说明理由）？每个任务是否给予了充分、具体的细节支撑，使沟通目的得以有效实现？
+
+Appropriateness（语气适切性）：评估全文语气是否始终如一地符合该邮件类型的沟通场景——求助邮件需礼貌恳切，投诉邮件需克制理性，建议邮件需委婉有据，邀请邮件需热情诚挚？语气是否前后一致、无突兀跳脱？
+
+Language Use（语言使用）：评估句型是否丰富多样（疑问句、条件句、委婉请求句等交替使用）？选词是否地道、精准且符合书面沟通规范？语法和拼写错误是否极少且不影响理解？
+
+请按以下格式输出：
+【总分】：X.X / 5.0
+【Task Completion】：X.X / 5.0 + 具体评语（含任务覆盖情况与细节充足度分析）
+【Appropriateness】：X.X / 5.0 + 具体评语（含语气一致性及场景匹配度判断）
+【Language Use】：X.X / 5.0 + 具体评语（含典型错误举例及亮点表达）
+【提分要点】：给出2-3条最关键的改进建议（附修改示例）`;
+
+const DISC_RUBRIC = `任务：请以ETS托福学术讨论写作评分标准，从以下三个维度对我附上的作文进行打分（满分5.0分，每项满分5.0分，最后给出加权总分）：
+
+Contribution（贡献度）：评估发言是否对讨论有实质推进——观点是否有洞察力？是否与教授的问题及前一位同学的发言形成有效互动（回应、补充或反驳）？分析他人观点的深度和针对性如何？
+
+Topic Development（话题发展）：评估内容是否紧密扣题、不偏不离？理由和细节是否充分、具体且贴合实际（是否有鲜活例证、因果推理或对比支撑）？
+
+Language Use（语言使用）：评估句型是否丰富多样（简单句与复合句交替）？选词是否地道、精准且符合学术语境？语法和拼写错误是否极少且不影响理解？
+
+请按以下格式输出：
+【总分】：X.X / 5.0
+【Contribution】：X.X / 5.0 + 具体评语（含互动亮点/不足）
+【Topic Development】：X.X / 5.0 + 具体评语（含扣题与细节分析）
+【Language Use】：X.X / 5.0 + 具体评语（含典型错误举例）
+【提分要点】：给出2-3条最关键的改进建议（附修改示例）`;
+
+const TASK_META = {
+  email: { name: 'Write an Email', seconds: 7 * 60, rubric: EMAIL_RUBRIC },
+  discussion: { name: 'Academic Discussion', seconds: 10 * 60, rubric: DISC_RUBRIC },
+};
+
+const TUTOR_SYSTEM = `你是一位资深托福写作导师。下面会提供：一道写作题、学生的作答、以及AI的批改结果。请以耐心、具体、可操作的方式回答学生的问题，帮他分析问题所在、探讨如何改进写作（论证、结构、语言、扣题等）。用中文回答，回答要有针对性、给出可落地的修改建议和示例。`;
+
+// ================= 状态 =================
+let state = {
+  task: 'email',
+  setId: null,
+  timedOut: false,
+  timedSnapshot: null,
+  timeLeft: 0,
+  overtime: 0,
+  startTs: 0,
+};
+let timerInterval = null;
+let records = [];          // [{id, setId, task, score, timeUsed, timedOut, answer, ts}]
+let lastSession = null;    // {setId, task, question, answer, gradingResult}
+let chatHistory = [];      // [{role: 'user'|'assistant', content}]
+const LS_RECORDS = 'wp_records';
+
+// ================= 持久化 =================
+function loadRecords() {
+  try { records = JSON.parse(localStorage.getItem(LS_RECORDS)) || []; }
+  catch (e) { records = []; }
+}
+function persistRecords() {
+  try { localStorage.setItem(LS_RECORDS, JSON.stringify(records)); } catch (e) {}
+}
+function draftKey() { return 'wp_draft::' + state.setId + '::' + state.task; }
+function saveDraft() { try { localStorage.setItem(draftKey(), document.getElementById('answerBox').value); } catch (e) {} }
+function loadDraft() { try { return localStorage.getItem(draftKey()) || ''; } catch (e) { return ''; } }
+function snapshotKey() { return 'wp_snap::' + state.setId + '::' + state.task; }
+
+// ================= 视图 =================
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(name + 'View').classList.add('active');
+}
+
+// ================= 数据加载 =================
+async function loadData() {
+  try {
+    const r = await fetch('data/questions.json');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    QUESTIONS = await r.json();
+    renderSetList();
+  } catch (e) {
+    document.getElementById('setList').innerHTML =
+      '<div class="hint" style="color:var(--danger)">无法加载题目数据：请先运行 python server.py，再通过 http://localhost:8765/practice.html 访问。</div>';
+  }
+}
+function currentSet() { return QUESTIONS.sets.find(s => s.id === state.setId); }
+
+// ================= 记录查询 =================
+function recordsFor(setId, task) {
+  return records.filter(r => r.setId === setId && r.task === task);
+}
+function lastRecord(setId, task) {
+  const rs = recordsFor(setId, task);
+  return rs.length ? rs[rs.length - 1] : null;
+}
+function fmtTime(sec) {
+  sec = Math.round(sec);
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return m > 0 ? `${m}分${s}秒` : `${s}秒`;
+}
+function fmtDate(ts) {
+  const d = new Date(ts);
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getMonth() + 1}/${d.getDate()} ${p(d.getHours())}:${p(d.getMinutes())}`;
+}
+
+// ================= 首页 =================
+function setTopic(set) {
+  if (set.email && set.email.recipient) return set.email.recipient;
+  if (set.discussion && set.discussion.professor && set.discussion.professor.name) return set.discussion.professor.name;
+  return '';
+}
+function renderSetList() {
+  const list = document.getElementById('setList');
+  list.innerHTML = '';
+  for (const set of QUESTIONS.sets) {
+    const item = document.createElement('div');
+    item.className = 'set-item';
+    item.dataset.id = set.id;
+    const rec = lastRecord(set.id, state.task);
+    const recHtml = rec ? `<span class="s-rec">${rec.score != null ? rec.score.toFixed(1) + '分' : '—'} · ${fmtTime(rec.timeUsed)}</span>` : '';
+    item.innerHTML = `<span class="s-id">${set.id}</span>
+      <span class="s-topic">${setTopic(set) || '—'}</span>${recHtml}`;
+    item.addEventListener('click', () => {
+      state.setId = set.id;
+      document.querySelectorAll('.set-item').forEach(i => i.classList.remove('selected'));
+      item.classList.add('selected');
+      document.getElementById('startBtn').disabled = false;
+    });
+    list.appendChild(item);
+  }
+}
+
+// ================= 题目文案 =================
+function esc(s) { return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+function emailPromptText(set) {
+  const e = set.email; const lines = [];
+  if (e.context) lines.push(e.context);
+  if (e.task) lines.push(e.task);
+  (e.bullets || []).forEach(b => lines.push('- ' + b));
+  if (e.closing) lines.push(e.closing);
+  return lines.join('\n');
+}
+function emailPromptHtml(set) {
+  const e = set.email; let h = '';
+  if (e.context) h += `<div class="ctx">${esc(e.context)}</div>`;
+  if (e.task) h += `<div class="task">${esc(e.task)}</div>`;
+  if (e.bullets && e.bullets.length) h += '<ul>' + e.bullets.map(b => `<li>${esc(b)}</li>`).join('') + '</ul>';
+  if (e.closing) h += `<div class="ctx">${esc(e.closing)}</div>`;
+  return h;
+}
+function discussionPromptText(set) {
+  const d = set.discussion; const lines = [];
+  if (d.instruction) lines.push(d.instruction);
+  (d.requirements || []).forEach(r => lines.push('- ' + r));
+  if (d.word_min) lines.push(`An effective response will contain at least ${d.word_min} words.`);
+  if (d.professor) {
+    if (d.professor.name) lines.push('\n' + d.professor.name);
+    if (d.professor.text) lines.push(d.professor.text);
+  }
+  (d.students || []).forEach(s => { lines.push(`\n${s.name || 'Student'}: ${s.text}`); });
+  return lines.join('\n');
+}
+function discussionPromptHtml(set) {
+  const d = set.discussion; let h = '';
+  if (d.instruction) h += `<div class="ctx">${esc(d.instruction)}</div>`;
+  if (d.requirements && d.requirements.length) h += '<ul>' + d.requirements.map(r => `<li>${esc(r)}</li>`).join('') + '</ul>';
+  if (d.word_min) h += `<div class="ctx">An effective response will contain at least ${d.word_min} words.</div>`;
+  if (d.professor) h += `<div class="prof"><div class="pname">${esc(d.professor.name || 'Professor')}</div><div>${esc(d.professor.text || '')}</div></div>`;
+  (d.students || []).forEach(s => {
+    h += `<div class="student"><div class="sname">${esc(s.name || 'Student')}</div><div>${esc(s.text)}</div></div>`;
+  });
+  return h;
+}
+function currentPromptText() { return state.task === 'email' ? emailPromptText(currentSet()) : discussionPromptText(currentSet()); }
+function currentPromptHtml() { return state.task === 'email' ? emailPromptHtml(currentSet()) : discussionPromptHtml(currentSet()); }
+
+// ================= 开始 / 重新做题 =================
+function start() {
+  const set = currentSet();
+  if (!set) return;
+  const meta = TASK_META[state.task];
+  const has = state.task === 'email' ? !!set.email : !!set.discussion;
+  if (!has) { alert('该套题缺少 ' + meta.name + ' 题目，请换一套或换题型。'); return; }
+
+  document.getElementById('metaText').innerHTML = `<b>${set.id}</b> · ${meta.name}`;
+  document.getElementById('promptCard').innerHTML =
+    `<div class="label">${state.task === 'email' ? 'Email 任务' : 'Discussion 任务'}</div>` + currentPromptHtml();
+
+  // 载入作答：优先草稿，其次上次提交的答案（便于修改过去回答），否则空
+  const draft = loadDraft();
+  const prev = lastRecord(set.id, state.task);
+  let answer = draft || '';
+  const prevBadge = document.getElementById('prevBadge');
+  if (!draft && prev && prev.answer) {
+    answer = prev.answer;
+    prevBadge.textContent = `已载入上次作答（${prev.score != null ? prev.score.toFixed(1) + '分' : '未打分'}），可继续修改；点「重新做题」清空重写`;
+    prevBadge.classList.add('show');
+  } else {
+    prevBadge.classList.remove('show');
+  }
+  document.getElementById('answerBox').value = answer;
+  document.getElementById('overtimeBadge').classList.remove('show');
+  updateWordCount();
+
+  state.timedOut = false;
+  state.timedSnapshot = null;
+  try { localStorage.removeItem(snapshotKey()); } catch (e) {}
+  showView('practice');
+  beginTimer(meta.seconds);
+}
+
+function redo() {
+  if (!confirm('确定重新做题吗？当前作答将被清空（已提交的记录仍保留）。')) return;
+  document.getElementById('answerBox').value = '';
+  try { localStorage.removeItem(draftKey()); localStorage.removeItem(snapshotKey()); } catch (e) {}
+  state.timedOut = false;
+  state.timedSnapshot = null;
+  document.getElementById('overtimeBadge').classList.remove('show');
+  document.getElementById('prevBadge').classList.remove('show');
+  updateWordCount();
+  beginTimer(TASK_META[state.task].seconds);
+}
+
+// ================= 计时器 =================
+function beginTimer(seconds) {
+  stopTimer();
+  state.timeLeft = seconds;
+  state.overtime = 0;
+  state.timedOut = false;
+  state.startTs = Date.now();
+  updateTimerDisplay();
+  timerInterval = setInterval(() => {
+    if (!state.timedOut) {
+      state.timeLeft--;
+      if (state.timeLeft <= 0) { state.timeLeft = 0; onTimeout(); }
+    } else { state.overtime++; }
+    updateTimerDisplay();
+  }, 1000);
+}
+function stopTimer() { if (timerInterval) { clearInterval(timerInterval); timerInterval = null; } }
+function onTimeout() {
+  if (state.timedOut) return;
+  state.timedOut = true;
+  state.timedSnapshot = document.getElementById('answerBox').value;
+  try { localStorage.setItem(snapshotKey(), state.timedSnapshot || ''); } catch (e) {}
+  document.getElementById('overtimeBadge').classList.add('show');
+}
+function updateTimerDisplay() {
+  const el = document.getElementById('timerDisplay');
+  if (!state.timedOut) {
+    const m = String(Math.floor(state.timeLeft / 60)).padStart(2, '0');
+    const s = String(state.timeLeft % 60).padStart(2, '0');
+    el.textContent = m + ':' + s; el.className = 'timer normal';
+  } else {
+    const m = String(Math.floor(state.overtime / 60)).padStart(2, '0');
+    const s = String(state.overtime % 60).padStart(2, '0');
+    el.textContent = `超时 +${m}:${s}`; el.className = 'timer overtime';
+  }
+}
+
+// ================= 字数 =================
+function updateWordCount() {
+  const txt = document.getElementById('answerBox').value.trim();
+  const n = txt ? txt.split(/\s+/).filter(Boolean).length : 0;
+  document.getElementById('wordCount').textContent = n + ' 词';
+}
+
+// ================= 打分 =================
+function parseScore(content) {
+  const m = content.match(/【总分】[^\d]*(\d+(?:\.\d+)?)/);
+  if (m) return parseFloat(m[1]);
+  const m2 = content.match(/(\d+(?:\.\d+)?)\s*\/\s*5/);
+  return m2 ? parseFloat(m2[1]) : null;
+}
+async function grade(answer) {
+  const meta = TASK_META[state.task];
+  const user = '题目：\n' + currentPromptText() + '\n\n我的作答：\n' + answer;
+  const payload = {
+    model: 'deepseek-v4-flash',
+    messages: [{ role: 'system', content: meta.rubric }, { role: 'user', content: user }],
+  };
+  const r = await fetch('/grade', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+  const data = await r.json();
+  if (!r.ok) throw new Error(data.error || 'HTTP ' + r.status);
+  return data.content;
+}
+function gradeBodyHtml(content) {
+  return '<div class="grade-body">' + esc(content).split('\n').map(line =>
+    /^【[^】]+】/.test(line) ? '<span class="hl">' + line + '</span>' : line
+  ).join('\n') + '</div>';
+}
+
+async function submitGrade() {
+  const box = document.getElementById('answerBox');
+  const finalAnswer = box.value;
+  if (!finalAnswer.trim()) { alert('还没写任何内容。'); return; }
+  stopTimer();
+  const timeUsed = Math.round((Date.now() - state.startTs) / 1000);
+  const btn = document.getElementById('gradeBtn');
+  btn.disabled = true; btn.textContent = '打分中…';
+
+  document.getElementById('resultTitle').textContent = `${currentSet().id} · ${TASK_META[state.task].name} 评分`;
+  // 展示题目与作答，方便批改/探讨时回看
+  document.getElementById('qaQuestion').innerHTML = currentPromptHtml();
+  document.getElementById('qaAnswer').textContent = finalAnswer;
+  document.getElementById('qaSection').classList.remove('hidden');
+  showView('result');
+  const body = document.getElementById('resultBody');
+  body.innerHTML = '';
+
+  const needDouble = state.timedOut && state.timedSnapshot !== null && state.timedSnapshot.trim() !== finalAnswer.trim();
+  const jobs = [];
+  if (needDouble) jobs.push({ answer: state.timedSnapshot, label: '⏰ 限时版本（超时那一刻）', timeout: true });
+  jobs.push({ answer: finalAnswer, label: '✅ 最终版本', timeout: false });
+
+  let finalScore = null;
+  let finalContent = null;
+  for (const job of jobs) {
+    const card = document.createElement('div');
+    card.className = 'grade-card';
+    card.innerHTML = `<div class="g-title ${job.timeout ? 'g-timeout' : ''}">${job.label}</div><div class="spinner">打分中…（可能需 30~60 秒）</div>`;
+    body.appendChild(card);
+    try {
+      const content = await grade(job.answer);
+      card.innerHTML = `<div class="g-title ${job.timeout ? 'g-timeout' : ''}">${job.label}</div>` + gradeBodyHtml(content);
+      if (!job.timeout) { finalScore = parseScore(content); finalContent = content; }
+    } catch (e) {
+      card.innerHTML = `<div class="g-title">${job.label}</div><div class="grade-body" style="color:var(--danger)">打分失败：${esc(e.message)}</div>`;
+    }
+  }
+
+  // 记录这次作答（最终版本）
+  records.push({
+    id: 'r' + Date.now(), setId: state.setId, task: state.task,
+    score: finalScore, timeUsed, timedOut: state.timedOut, answer: finalAnswer, ts: Date.now(),
+  });
+  persistRecords();
+  renderSetList();
+  saveToServer(true).catch(() => {});  // 自动同步到服务端（失败静默）
+
+  // 保存会话上下文，供「探讨」导师对话使用
+  lastSession = {
+    setId: state.setId, task: state.task,
+    question: currentPromptText(), answer: finalAnswer, gradingResult: finalContent || '',
+  };
+  chatHistory = [];
+  document.getElementById('chatPanel').classList.remove('open');
+  document.getElementById('chatLog').innerHTML = '';
+
+  btn.disabled = false; btn.textContent = '提交并打分';
+}
+
+// ================= 保存 / 加载 / 重置（服务端持久化） =================
+function saveToServer(silent) {
+  return fetch('/records', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(records),
+  }).then(r => r.json().then(d => ({ ok: r.ok, d })));
+}
+async function onSave() {
+  try {
+    const { ok, d } = await saveToServer();
+    if (!ok) throw new Error(d.error || 'HTTP');
+    alert('已保存 ' + records.length + ' 条记录到服务端（data/records.json）。');
+  } catch (e) { alert('保存失败：' + e.message + '（请确认已运行 python server.py）'); }
+}
+async function onLoad() {
+  try {
+    const r = await fetch('/records');
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const arr = await r.json();
+    if (!Array.isArray(arr)) throw new Error('格式错误');
+    records = arr; persistRecords(); renderSetList(); renderStats();
+    alert('已从服务端加载 ' + records.length + ' 条记录。');
+  } catch (e) { alert('加载失败：' + e.message); }
+}
+async function resetAll() {
+  if (!confirm('确定清空所有做题记录吗？（草稿和快照也会清除）')) return;
+  records = [];
+  try {
+    localStorage.removeItem(LS_RECORDS);
+    Object.keys(localStorage).filter(k => k.startsWith('wp_')).forEach(k => localStorage.removeItem(k));
+  } catch (e) {}
+  renderSetList(); renderStats();
+  try { await saveToServer(true); } catch (e) {}
+}
+
+// ================= 统计 =================
+function renderStats() {
+  const total = records.length;
+  const scored = records.filter(r => r.score != null);
+  const avgScore = scored.length ? scored.reduce((s, r) => s + r.score, 0) / scored.length : null;
+  const avgTime = total ? records.reduce((s, r) => s + (r.timeUsed || 0), 0) / total : 0;
+  document.getElementById('statsSummary').innerHTML =
+    `<div class="stat-tile"><div class="num">${total}</div><div class="lbl">总作答次数</div></div>
+     <div class="stat-tile"><div class="num">${avgScore != null ? avgScore.toFixed(2) : '—'}</div><div class="lbl">平均得分 /5.0</div></div>
+     <div class="stat-tile"><div class="num">${fmtTime(avgTime)}</div><div class="lbl">平均用时</div></div>
+     <div class="stat-tile"><div class="num">${records.filter(r => r.timedOut).length}</div><div class="lbl">超时次数</div></div>`;
+
+  const tbody = document.getElementById('recBody');
+  tbody.innerHTML = '';
+  const ordered = [...records].sort((a, b) => b.ts - a.ts);
+  const taskName = t => t === 'email' ? 'Email' : 'Discussion';
+  for (const r of ordered) {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${esc(r.setId)}</td><td>${taskName(r.task)}</td>
+      <td class="score-cell">${r.score != null ? r.score.toFixed(1) : '—'}</td>
+      <td>${fmtTime(r.timeUsed || 0)}</td>
+      <td>${r.timedOut ? '<span class="ot">超时</span>' : ''}</td>
+      <td>${fmtDate(r.ts)}</td>`;
+    tbody.appendChild(tr);
+  }
+  renderChart();
+}
+function renderChart() {
+  const svg = document.getElementById('trendChart');
+  const hist = [...records].sort((a, b) => a.ts - b.ts);
+  const n = hist.length;
+  const W = 640, H = 300, padL = 44, padR = 48, padT = 16, padB = 36;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+  if (n === 0) {
+    svg.innerHTML = `<text x="${W / 2}" y="${H / 2}" fill="#94a3b8" text-anchor="middle" font-size="14">暂无做题记录</text>`;
+    return;
+  }
+  const maxT = Math.max(60, Math.ceil(Math.max(...hist.map(r => r.timeUsed || 0)) / 60) * 60);
+  const x = i => padL + (n === 1 ? plotW / 2 : (i / (n - 1)) * plotW);
+  const yS = s => padT + (1 - s / 5) * plotH;
+  const yT = t => padT + (1 - t / maxT) * plotH;
+  const els = [];
+  [0, 0.5, 1].forEach(f => {
+    const y = padT + (1 - f) * plotH;
+    els.push(`<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#1e293b"/>`);
+    els.push(`<text x="${padL - 8}" y="${y + 4}" fill="#94a3b8" font-size="10" text-anchor="end">${(f * 5).toFixed(1)}</text>`);
+    els.push(`<text x="${W - padR + 8}" y="${y + 4}" fill="#94a3b8" font-size="10">${Math.round(f * maxT)}s</text>`);
+  });
+  const sPts = hist.map((r, i) => `${x(i)},${yS(r.score != null ? r.score : 0)}`).join(' ');
+  const tPts = hist.map((r, i) => `${x(i)},${yT(r.timeUsed || 0)}`).join(' ');
+  els.push(`<polyline points="${sPts}" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>`);
+  els.push(`<polyline points="${tPts}" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>`);
+  hist.forEach((r, i) => {
+    els.push(`<circle cx="${x(i)}" cy="${yS(r.score != null ? r.score : 0)}" r="3" fill="#38bdf8"/>`);
+    els.push(`<circle cx="${x(i)}" cy="${yT(r.timeUsed || 0)}" r="3" fill="#f59e0b"/>`);
+  });
+  els.push(`<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H - padB}" stroke="#334155"/>`);
+  els.push(`<line x1="${padL}" y1="${H - padB}" x2="${W - padR}" y2="${H - padB}" stroke="#334155"/>`);
+  svg.innerHTML = els.join('');
+}
+
+// ================= 探讨（AI 导师对话） =================
+function chatContextMsg() {
+  const s = lastSession;
+  if (!s) return '';
+  return `【题目】\n${s.question}\n\n【我的作答】\n${s.answer}\n\n【AI 批改结果】\n${s.gradingResult}`;
+}
+function renderChat() {
+  const log = document.getElementById('chatLog');
+  log.innerHTML = '';
+  for (const m of chatHistory) {
+    const div = document.createElement('div');
+    div.className = 'chat-msg ' + (m.role === 'user' ? 'user' : 'ai');
+    div.innerHTML = `<div class="who">${m.role === 'user' ? '你' : '导师'}</div>${esc(m.content)}`;
+    log.appendChild(div);
+  }
+  log.scrollTop = log.scrollHeight;
+}
+function openChat() {
+  const panel = document.getElementById('chatPanel');
+  if (!lastSession) { alert('请先提交并完成打分。'); return; }
+  panel.classList.toggle('open');
+  if (panel.classList.contains('open') && chatHistory.length === 0) {
+    chatHistory.push({ role: 'assistant', content: '你好！我是你的写作导师，已经看过这道题、你的作答和批改结果。想探讨什么、想怎么改进，尽管问我。' });
+  }
+  renderChat();
+}
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const q = input.value.trim();
+  if (!q) return;
+  if (!lastSession) { alert('请先提交并完成打分。'); return; }
+  input.value = '';
+  chatHistory.push({ role: 'user', content: q });
+  renderChat();
+
+  const sendBtn = document.getElementById('chatSend');
+  sendBtn.disabled = true;
+  const log = document.getElementById('chatLog');
+  const typing = document.createElement('div');
+  typing.className = 'chat-msg ai';
+  typing.innerHTML = '<div class="who">导师</div>思考中…';
+  log.appendChild(typing);
+
+  try {
+    const messages = [
+      { role: 'system', content: TUTOR_SYSTEM },
+      { role: 'user', content: chatContextMsg() },
+      ...chatHistory.map(m => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.content })),
+    ];
+    const r = await fetch('/grade', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'deepseek-v4-flash', messages }) });
+    const data = await r.json();
+    if (!r.ok) throw new Error(data.error || 'HTTP ' + r.status);
+    chatHistory.push({ role: 'assistant', content: data.content });
+  } catch (e) {
+    chatHistory.push({ role: 'assistant', content: '（出错：' + e.message + '）' });
+  }
+  sendBtn.disabled = false;
+  renderChat();
+}
+
+// ================= 复制全部上下文 =================
+function fallbackCopy(text) {
+  const ta = document.createElement('textarea');
+  ta.value = text;
+  ta.style.position = 'fixed'; ta.style.opacity = '0';
+  document.body.appendChild(ta);
+  ta.select();
+  try { document.execCommand('copy'); alert('已复制全部上下文，去粘贴到任意 AI 对话吧。'); }
+  catch (e) { alert('复制失败，请手动复制。'); }
+  document.body.removeChild(ta);
+}
+function copyContext() {
+  if (!lastSession || !lastSession.gradingResult) { alert('请先提交并完成打分。'); return; }
+  const s = lastSession;
+  const meta = TASK_META[s.task];
+  const text = [
+    '【系统提示词（让 AI 扮演写作导师）】',
+    TUTOR_SYSTEM,
+    '',
+    '【题目】',
+    s.question,
+    '',
+    '【我的作答】',
+    s.answer,
+    '',
+    '【评分提示词（当时打分用的评分标准）】',
+    meta.rubric,
+    '',
+    '【评分结果】',
+    s.gradingResult,
+    '',
+    '—— 以上是全部上下文，请以写作导师身份继续和我对话 ——',
+  ].join('\n');
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(() => {
+      alert('已复制全部上下文，去粘贴到任意 AI 对话吧。');
+    }).catch(() => fallbackCopy(text));
+  } else {
+    fallbackCopy(text);
+  }
+}
+
+// ================= 事件 =================
+document.getElementById('taskToggle').addEventListener('click', (e) => {
+  const opt = e.target.closest('.task-opt');
+  if (!opt) return;
+  state.task = opt.dataset.task;
+  document.querySelectorAll('.task-opt').forEach(o => o.classList.remove('selected'));
+  opt.classList.add('selected');
+  renderSetList();
+  document.getElementById('startBtn').disabled = !state.setId;
+});
+document.getElementById('startBtn').addEventListener('click', start);
+document.getElementById('redoBtn').addEventListener('click', redo);
+document.getElementById('gradeBtn').addEventListener('click', submitGrade);
+document.getElementById('backBtn').addEventListener('click', () => { stopTimer(); saveDraft(); showView('home'); });
+document.getElementById('homeBtn').addEventListener('click', () => showView('home'));
+document.getElementById('retryBtn').addEventListener('click', () => { saveDraft(); showView('practice'); });
+document.getElementById('homeStatsBtn').addEventListener('click', () => { renderStats(); showView('stats'); });
+document.getElementById('statsBtn').addEventListener('click', () => { renderStats(); showView('stats'); });
+document.getElementById('statsBackBtn').addEventListener('click', () => showView('home'));
+document.getElementById('saveBtn').addEventListener('click', onSave);
+document.getElementById('loadBtn').addEventListener('click', onLoad);
+document.getElementById('resetBtn').addEventListener('click', resetAll);
+document.getElementById('toggleQBtn').addEventListener('click', () => {
+  document.getElementById('qaSection').classList.toggle('hidden');
+});
+document.getElementById('answerBox').addEventListener('input', () => { updateWordCount(); saveDraft(); });
+document.getElementById('chatBtn').addEventListener('click', openChat);
+document.getElementById('copyContextBtn').addEventListener('click', copyContext);
+document.getElementById('chatSend').addEventListener('click', sendChat);
+document.getElementById('chatInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); }
+});
+
+// ================= 初始化 =================
+async function initRecords() {
+  try {
+    const r = await fetch('/records');
+    if (r.ok) {
+      const arr = await r.json();
+      if (Array.isArray(arr)) { records = arr; persistRecords(); }
+      else loadRecords();
+    } else { loadRecords(); }
+  } catch (e) { loadRecords(); }
+  renderStats();
+}
+loadData();
+initRecords();
+showView('home');
+</script>
+</body>
+</html>

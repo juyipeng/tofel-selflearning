@@ -1,0 +1,22 @@
+[
+{"s": ["How", null, null, null, "be", "staying?"], "a": ["long", "will", "they"]},
+{"s": ["No,", null, null, "an appointment", null, "that time"], "a": ["she", "has", "at"]},
+{"s": ["I didn't", null, null, "with", null], "a": ["bring", "them", "me"]},
+{"s": ["No, I", null, null, null, null, "to complete", null, "yet."], "a": ["have", "not", "had", "time", "it"]},
+{"s": ["My morning class ended", null, null, null, null, "to attend", "the workshop"], "a": ["too", "late", "for", "me"]},
+{"s": ["Unfortunately, I", null, null, null, "to get", "there"], "a": ["was", "never", "able"]},
+{"s": ["The book", "that", "I just read", null, null, null], "a": ["was", "very", "insightful"]},
+{"s": ["The seminar", "that", null, "for today", null, null, "my other commitments"], "a": ["was scheduled", "conflicted", "with"]},
+{"s": ["They", null, "in the drawer", "where", "I", null, "the", null], "a": ["are", "keep", "textbooks"]},
+{"s": ["He", null, null, "I", null, null, "to study", "next year"], "a": ["didn't know", "where", "was", "planning"]},
+{"s": ["How", null, null, null, "be", "staying?"], "a": ["long", "will", "they"]},
+{"s": ["No,", null, null, "an appointment", null, "that time"], "a": ["she", "has", "at"]},
+{"s": ["I didn't", null, null, "with", null], "a": ["bring", "them", "me"]},
+{"s": ["No, I", null, null, null, null, "to complete", null, "yet."], "a": ["have", "not", "had", "time", "it"]},
+{"s": ["My morning class ended", null, null, null, null, "to attend", "the workshop"], "a": ["too", "late", "for", "me"]},
+{"s": ["Unfortunately, I", null, null, null, "to get", "there"], "a": ["was", "never", "able"]},
+{"s": ["The book", "that", "I just read", null, null, null], "a": ["was", "very", "insightful"]},
+{"s": ["The seminar", "that", null, "for today", null, null, "my other commitments"], "a": ["was scheduled", "conflicted", "with"]},
+{"s": ["They", null, "in the drawer", "where", "I", null, "the", null], "a": ["are", "keep", "textbooks"]},
+{"s": ["He", null, null, "I", null, null, "to study", "next year"], "a": ["didn't know", "where", "was", "planning"]}
+]

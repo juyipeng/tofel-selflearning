@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOEFL 填词真题练习</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f0f2f5; color: #1a1a2e; min-height: 100vh; line-height: 1.8;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    color: white; padding: 20px 0; text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3); position: sticky; top: 0; z-index: 100;
+  }
+  .header h1 { font-size: 1.5em; font-weight: 600; letter-spacing: 2px; }
+  .header .subtitle { font-size: 0.85em; opacity: 0.7; margin-top: 4px; }
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+  .passage-list { display: flex; flex-direction: column; gap: 8px; }
+  .passage-item {
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+    background: white; border-radius: 12px; cursor: pointer; transition: all 0.2s;
+    border: 2px solid transparent; box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  }
+  .passage-item:hover { border-color: #3b82f6; transform: translateX(4px); }
+  .passage-item.done { border-color: #10b981; }
+  .passage-num {
+    width: 36px; height: 36px; border-radius: 50%; background: #f3f4f6;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.9em; color: #6b7280; flex-shrink: 0;
+  }
+  .passage-item.done .passage-num { background: #d1fae5; color: #065f46; }
+  .passage-info { flex: 1; min-width: 0; }
+  .passage-preview {
+    font-size: 0.88em; color: #6b7280; white-space: nowrap;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  .passage-meta { display: flex; gap: 8px; align-items: center; margin-top: 2px; }
+  .cat-tag { padding: 1px 8px; border-radius: 10px; font-size: 0.7em; font-weight: 500; color: white; }
+  .blank-tag { font-size: 0.75em; color: #9ca3af; }
+  .score-tag { font-size: 0.75em; font-weight: 600; }
+  .score-tag.good { color: #059669; }
+  .score-tag.mid { color: #d97706; }
+  .score-tag.low { color: #dc2626; }
+  .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; padding: 12px 0; align-items: center; }
+  .filter-label { font-size: 0.8em; color: #9ca3af; margin-right: 4px; }
+  .f-btn {
+    padding: 4px 10px; border: 1.5px solid #e5e7eb; border-radius: 16px;
+    background: white; cursor: pointer; font-size: 0.78em; transition: all 0.2s; color: #6b7280;
+  }
+  .f-btn:hover { border-color: #9ca3af; }
+  .f-btn.active { background: #1a1a2e; color: white; border-color: #1a1a2e; }
+  .practice-view { display: none; }
+  .practice-view.show { display: block; }
+  #list-view.hidden { display: none; }
+  .back-btn {
+    display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px;
+    background: white; border: 1.5px solid #e5e7eb; border-radius: 8px;
+    cursor: pointer; font-size: 0.88em; color: #374151; margin-bottom: 16px; transition: all 0.2s;
+  }
+  .back-btn:hover { background: #f9fafb; border-color: #9ca3af; }
+  .back-btn.reselect { background: #eff6ff; border-color: #3b82f6; color: #2563eb; }
+  .nav-bar {
+    display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px;
+  }
+  .nav-info { font-size: 0.9em; color: #6b7280; }
+  .nav-btns { display: flex; gap: 8px; flex-wrap: wrap; }
+  .nav-btns button {
+    padding: 8px 16px; border: none; border-radius: 8px;
+    cursor: pointer; font-size: 0.88em; font-weight: 500; transition: all 0.2s;
+  }
+  .btn-prev, .btn-next { background: #e5e7eb; color: #374151; }
+  .btn-prev:hover, .btn-next:hover { background: #d1d5db; }
+  .btn-prev:disabled, .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
+  .btn-submit { background: #10b981; color: white; }
+  .btn-submit:hover { background: #059669; }
+  .btn-answer { background: #f59e0b; color: white; }
+  .btn-answer:hover { background: #d97706; }
+  .passage-card {
+    background: white; border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06); overflow: hidden; animation: fadeIn 0.3s ease;
+  }
+  @keyframes fadeIn { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .passage-header {
+    padding: 16px 24px; display: flex; justify-content: space-between;
+    align-items: center; border-bottom: 1px solid #f3f4f6;
+  }
+  .passage-title { font-size: 1.05em; font-weight: 600; color: #1a1a2e; }
+  .category-badge { padding: 4px 12px; border-radius: 20px; font-size: 0.8em; font-weight: 500; color: white; }
+  .passage-body { padding: 24px; font-size: 1.05em; line-height: 2.2; color: #374151; }
+  .blank-group { display: inline; white-space: nowrap; }
+  .blank-prefix { color: #1a1a2e; font-weight: 600; border-bottom: 2px solid #3b82f6; }
+  .blank-input {
+    width: auto; min-width: 70px; padding: 2px 6px; margin: 0 2px;
+    border: 1.5px solid #d1d5db; border-radius: 6px; font-size: 0.95em;
+    font-family: inherit; color: #1a1a2e; background: #fafafa;
+    transition: all 0.2s; vertical-align: baseline; outline: none;
+  }
+  .blank-input:focus { border-color: #3b82f6; background: white; box-shadow: 0 0 0 3px rgba(59,130,246,0.1); }
+  .blank-input.correct { border-color: #10b981; background: #ecfdf5; color: #065f46; }
+  .blank-input.incorrect { border-color: #ef4444; background: #fef2f2; color: #991b1b; }
+  .result-panel {
+    padding: 20px 24px; border-top: 2px solid #f3f4f6; display: none; animation: fadeIn 0.3s ease;
+  }
+  .result-panel.show { display: block; }
+  .score-bar {
+    display: flex; align-items: center; gap: 12px; margin-bottom: 16px;
+    padding: 12px 16px; border-radius: 12px; font-weight: 600; font-size: 1.05em;
+  }
+  .score-bar.excellent { background: #ecfdf5; color: #065f46; }
+  .score-bar.good { background: #eff6ff; color: #1e40af; }
+  .score-bar.fair { background: #fffbeb; color: #92400e; }
+  .score-bar.poor { background: #fef2f2; color: #991b1b; }
+  .answer-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .answer-item {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 8px; font-size: 0.9em; font-weight: 500;
+  }
+  .answer-item.was-correct { background: #ecfdf5; color: #065f46; }
+  .answer-item.was-wrong { background: #fef2f2; color: #991b1b; }
+  .stats-panel {
+    background: white; border-radius: 12px; padding: 16px; margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06); display: flex; justify-content: center; gap: 32px;
+  }
+  .stat-item { text-align: center; }
+  .stat-value { font-size: 1.4em; font-weight: 700; color: #1a1a2e; }
+  .stat-label { font-size: 0.72em; color: #9ca3af; text-transform: uppercase; letter-spacing: 1px; }
+  .empty-state { text-align: center; padding: 60px 20px; color: #9ca3af; }
+  .empty-state .emoji { font-size: 3em; margin-bottom: 12px; }
+  @media (max-width: 600px) {
+    .passage-body { padding: 16px; font-size: 0.95em; }
+    .blank-input { min-width: 56px; font-size: 0.85em; }
+    .header h1 { font-size: 1.2em; }
+    .stats-panel { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📝 TOEFL 填词真题练习</h1>
+  <div class="subtitle">新托福考试 · 填空题 · 共 78 篇</div>
+</div>
+
+<div class="container">
+  <div class="stats-panel">
+    <div class="stat-item"><div class="stat-value" id="stat-done">0</div><div class="stat-label">已完成</div></div>
+    <div class="stat-item"><div class="stat-value" id="stat-correct">0</div><div class="stat-label">答对</div></div>
+    <div class="stat-item"><div class="stat-value" id="stat-acc">-</div><div class="stat-label">正确率</div></div>
+    <div class="stat-item"><div class="stat-value" id="stat-total">78</div><div class="stat-label">总题数</div></div>
+  </div>
+
+  <div id="list-view">
+    <div id="filter-bar" class="filter-bar"></div>
+    <div id="passage-list" class="passage-list"></div>
+  </div>
+
+  <div id="practice-view" class="practice-view">
+    <div style="margin-bottom:16px">
+      <button class="back-btn reselect" onclick="reselect()">🔄 重新选择</button>
+    </div>
+    <div class="nav-bar">
+      <div class="nav-info" id="nav-info"></div>
+      <div class="nav-btns">
+        <button class="btn-prev" id="btn-prev" onclick="goPrev()">← 上一篇</button>
+        <button class="btn-answer" onclick="showAllAnswers()">👁️ 答案</button>
+        <button class="btn-submit" onclick="submitAll()">✅ 提交</button>
+        <button class="btn-next" id="btn-next" onclick="goNext()">下一篇 →</button>
+      </div>
+    </div>
+    <div class="passage-card">
+      <div class="passage-header">
+        <span class="passage-title" id="passage-title"></span>
+        <span class="category-badge" id="cat-badge"></span>
+      </div>
+      <div class="passage-body" id="passage-body"></div>
+      <div class="result-panel" id="result-panel"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+var PASSAGES = [{"id":0,"text":"Ravens are highly intelligent birds known for their problem-solving abilities and complex social behaviors. They u_ _ tools, su_ _ as sti_ _ _, to obt_ _ _ food a_ _ have be_ _ observed enga_ _ _ _ in pla_ _ _ _ behaviors li_ _ sliding o_ snow. Ravens communicate with a wide range of vocalizations, conveying different messages to their peers. Their adaptability allows them to thrive in various environments, from forests to urban areas. Studying raven behavior provides insights into avian intelligence and the evolutionary mechanisms that support cognitive development.","answers":["Use","such","sticks","obtain","and","been","engaging","playful","like","on"],"category":"综合"},{"id":1,"text":"The concept of microfinance has transformed the way people access financial services. Microfinance institutions provide small loans to individuals or groups who lack access to traditional banking. These loans empower recip_ _ _ _ _ to st_ _ _ or exp_ _ _ small busin_ _ _ _ _, improving th_ _ _ living condi_ _ _ _ _ and commu_ _ _ _ _ _. By encou_ _ _ _ _ _ financial lite_ _ _ _ and adva_ _ _ _ _ financial inclusion, microfinance helps reduce poverty, foster economic development, and build long-term stability at the grassroots level. Understanding this system helps design effective financial inclusion strategies.","answers":["Recipients","start","expand","businesses","their","conditions","communities","encouraging","literacy","advancing"],"category":"综合"},{"id":2,"text":"Archaeology is the study of past human cultures through the excavation and analysis of artifacts, structures, and other physical remains. This disci_ _ _ _ _ helps unc_ _ _ _ the da_ _ _ lives, bel_ _ _ _, and techno_ _ _ _ _ _ of anc_ _ _ _ civilizations. Archaeo_ _ _ _ _ _ _ often wo_ _ at dig si_ _ _, carefully unear_ _ _ _ _ and documenting finds. Techniques such as carbon dating and soil analysis provide information about the age and context of discoveries. Collaborative efforts with historians and anthropologists enrich our understanding of past civilizations, revealing information about their religious practices, the tools they used, and many other aspects of how they lived.","answers":["Discipline","uncover","daily","beliefs","technologies","ancient","archaeologists","work","sites","unearthing"],"category":"综合"},{"id":3,"text":"Mushrooms are made up of two main parts: the mycelium and the fruiting body. The mycelium i_ long-lived, wh_ _ _ the fruiting body app_ _ _ _ only wh_ _ conditions a_ _ ideal f_ _ reproduction (li_ _ after ra_ _). Usually under_ _ _ _ _ _, the mycelium cons_ _ _ _ of a network of thread-like structures that absorb nutrients from the soil. The fruiting body is above ground and responsible for producing and spreading spores. These spores are released into the air to help the mushroom reproduce.","answers":["Is","while","appears","when","are","for","like","rain","underground","consists"],"category":"综合"},{"id":4,"text":"Logical reasoning is a cornerstone of academic methodology, providing a structured approach to analyzing arguments and evidence. Deductive reas_ _ _ _ _ starts wi_ _ general princ_ _ _ _ _ and der_ _ _ _ specific concl_ _ _ _ _ _, while indu_ _ _ _ _ thinking invo_ _ _ _ drawing br_ _ _ generalizations fr_ _ specific observ_ _ _ _ _ _. Critical thinking skills enable scholars to identify logical fallacies, assess the credibility of sources, and construct coherent arguments. The application of logic extends across disciplines, from mathematics to philosophy to the natural sciences. Developing proficiency in logical reasoning enhances the ability to solve complex problems and communicate effectively, fostering intellectual rigor and innovation.","answers":["Reasoning","with","principles","derives","conclusions","inductive","involves","broad","from","observations"],"category":"综合"},{"id":5,"text":"Art has long reflected human culture, mirroring society's values and beliefs. Throughout history, artists have expressed emotions, told stories, and challenged norms. During the Renaissance, figures like Leonardo da Vinci and Michelangelo explored ana_ _ _ _ and persp_ _ _ _ _ _, echoing t_ _ era's inte_ _ _ _ in sci_ _ _ _ and nat_ _ _. Later, move_ _ _ _ _ such a_ Impressionism a_ _ Abstract Expressionism rede_ _ _ _ _ traditional boundaries. These styles invited viewers to see the world differently, highlighting art's lasting ability to provoke thought, inspire change, and deepen our understanding of human experience.","answers":["Anatomy","perspective","the","interest","science","nature","movements","as","and","redefined"],"category":"综合"},{"id":6,"text":"Aquariums provide an opportunity to observe a variety of fish and other aquatic organisms in a controlled environment. These facil_ _ _ _ _ carefully repli_ _ _ _ natural habi_ _ _ _, allowing visi_ _ _ _ to le_ _ _ about mar_ _ _ life with_ _ _ venturing in_ _ the oc_ _ _. Exhibits of_ _ _ include coral reefs, kelp forests, and freshwater streams, showcasing the diversity of aquatic ecosystems. Educational programs and guided tours enhance the experience, offering insights into the behavior, diet, and conservation of these organisms. Maintaining an aquarium requires expertise in water chemistry, filtration systems, and species compatibility.","answers":["Facilities","replicate","habitats","visitors","learn","marine","without","into","ocean","often"],"category":"综合"},{"id":7,"text":"The development of jazz music in the United States in the early twentieth century represents a significant cultural milestone. Originating in the African American communities of New Orleans, jazz blended elements of blues, ragtime, and European classical music. Reflecting shi_ _ _ in cul_ _ _ _, jazz empl_ _ _ _ innovative techn_ _ _ _ _ like improv_ _ _ _ _ _ _ that chall_ _ _ _ _ traditional mus_ _ _ _ conventions, allo_ _ _ _ musicians t_ express th_ _ _ individuality. Figures like Louis Armstrong and Ella Fitzgerald popularized jazz, playing pivotal roles in advancing its stylistic innovations. The genre's influence extended globally, shaping various musical forms and inspiring new generations of artists.","answers":["shifts","culture","employed","techiniques","improvisation","challenged","musical","allowing","to","their"],"category":"综合"},{"id":8,"text":"The respiratory system is essential for delivering oxygen to the body's cells and removing carbon dioxide. In hum_ _ _, air ent_ _ _ through t_ _ nose o_ mouth. Inco_ _ _ _ air ge_ _ warmed u_ and bec_ _ _ _ moist wh_ _ _ it tra_ _ _ _ in the nasal passages. Dust and other particles are also filtered out. Then the air goes down the trachea and reaches the lungs. Within the lungs, tiny air sacs shaped like balloons facilitate the exchange of gases with the bloodstream. This process is crucial for cellular respiration, which provides energy for bodily functions.","answers":["Humans","enters","the","or","incoming","gets","up","becomes","while","travels"],"category":"综合"},{"id":9,"text":"Museums play a crucial role in preserving and showcasing art, history, and culture. They pro_ _ _ _ a sp_ _ _ where peo_ _ _ can eng_ _ _ with mult_ _ _ _ forms o_ artistic expre_ _ _ _ _ and histo_ _ _ _ _ artifacts. Ma_ _ museums al_ _ offer educational programs and workshops, fostering a deeper understanding of the subjects they display. In addition, digital innovations have enabled museums to reach global audiences through virtual tours and online collections. The patronage of visual arts by individuals and organizations helps support artists and ensures the continued growth and diversity of the cultural landscape.","answers":["Provide","space","people","engage","multiple","of","expression","historical","many","also"],"category":"综合"},{"id":10,"text":"The Great Plains of North America were once home to vast herds of bison, which played a crucial role in the lives of Indigenous peoples, who made use of bison meat, hides, and bones. These commu_ _ _ _ _ _ relied o_ bison f_ _ food, clot_ _ _ _, and she_ _ _ _. Hunting prac_ _ _ _ _ were of_ _ _ sophisticated, invo_ _ _ _ _ coordinated eff_ _ _ _ to dr_ _ _ bison into traps or over cliffs. The arrival of European settlers dramatically altered the landscape, leading to overhunting and near extinction of bison populations. Conservation efforts in the twentieth century helped restore bison numbers, symbolizing resilience and recovery.","answers":["Communities","on","for","clothing","shelters","practices","often","involving","efforts","drive"],"category":"综合"},{"id":11,"text":"Weather patterns are influenced by a variety of factors, including atmospheric pressure, temperature, and humidity. Meteorologists st_ _ _ these fac_ _ _ _ to pre_ _ _ _ weather condi_ _ _ _ _ and under_ _ _ _ _ climate cha_ _ _. Tools li_ _ satellites a_ _ radar al_ _ _ meteorologists t_ monitor weather systems in great detail. Accurate weather forecasting is crucial for agriculture, disaster preparedness, and daily planning. It should be noted, however, that despite technological advancements, weather is inherently unpredictable due to the numerous atmospheric variables that can change rapidly.","answers":["Study","factors","predict","conditions","understand","change","like","and","allow","to"],"category":"综合"},{"id":12,"text":"The study of sleep and circadian rhythms explores how humans and animals regulate their sleep-wake cycles. This fi_ _ _ examines t_ _ biological clo_ _ _ that man_ _ _ daily rhy_ _ _ _, influenced b_ factors su_ _ as li_ _ _ and tempe_ _ _ _ _ _. Understanding proc_ _ _ _ _ of this kind helps in addressing sleep disorders and optimizing work schedules. Research in this area is crucial for improving health, productivity, and well-being in modern societies. Recent studies have identified specific genes responsible for circadian regulation, while melatonin production and seasonal affective disorder demonstrate the profound connection between environmental cues and internal biological timing mechanisms.","answers":["Field","the","clocks","manage","rhythms","by","such","light","temperature","processes"],"category":"综合"},{"id":13,"text":"Glaciers play a crucial role in Earth's climate and ecosystems. They store about 70% of the planet's freshwater and help regulate global temperatures by reflecting sunlight. As they move, glaciers shape lands_ _ _ _ _, carving val_ _ _ _ and transp_ _ _ _ _ _ sediment. Th_ _ _ seasonal mel_ _ _ _ feeds riv_ _ _ and la_ _ _, supporting agric_ _ _ _ _ _ and wild_ _ _ _. Glaciers se_ _ _ as indicators of climate change—rapid melting signals shifts in global temperatures. Studying glaciers helps scientists understand past climate patterns and predict future environmental impacts, making them vital to global research.","answers":["Landscapes","valleys","transporting","their","melting","rivers","lands","agriculture","wildlife","serve"],"category":"综合"},{"id":14,"text":"Camels live in the desert where the weather is hot and dry. Sometimes i_ the des_ _ _, camels ha_ _ to tra_ _ _ for a lo_ _ time wit_ _ _ _ finding a_ _ food o_ water. S_ when cam_ _ _ do find food, they are able to eat and drink a lot. Camels turn extra food into fat and store this fat in a special hump on their back. Then they change this fat into energy to help them cross the desert.","answers":["In","desert","have","travel","long","without","any","or","so","camels"],"category":"综合"},{"id":15,"text":"Oceanography is the study of the physical, chemical, and biological aspects of the ocean. This fi_ _ _ encompasses t_ _ exploration o_ ocean curr_ _ _ _, marine ecosy_ _ _ _ _, and geolo_ _ _ _ _ seabed struc_ _ _ _ _. Oceanographers u_ _ satellites a_ _ other adva_ _ _ _ technology to monitor and analyze ocean conditions. By tracking sea surface temperatures, currents, salinity, and other features, researchers contribute to our understanding of climate change. Their work is vital for sustaining ocean health and preserving marine biodiversity.","answers":["Field","the","of","currents","ecosystems","geological","structures","use","and","advanced"],"category":"综合"},{"id":16,"text":"Medieval European history, lasting approximately from 500 C.E. to 1500 C.E., is marked by significant cultural, political, and economic changes. Feudalism domi_ _ _ _ _ the soc_ _ _ structure, wi_ _ lords gove_ _ _ _ _ lands a_ _ vassals prov_ _ _ _ _ military ser_ _ _ _. The Church exe_ _ _ _ substantial infl_ _ _ _ _ over da_ _ _ life and governance. Trade routes expanded, facilitating the exchange of goods and ideas. Art and architecture flourished, exemplified by Gothic cathedrals and illuminated manuscripts. Studying this era involves analyzing historical documents, artifacts, and architectural remains to understand the complexities of medieval society.","answers":["Dominated","social","with","governing","and","providing","service","exerted","influence","daily"],"category":"综合"},{"id":17,"text":"The unusual properties of spider silk—a remarkable combination of strength and elasticity—have long attracted the attention of many. Spider si_ _ has a brea_ _ _ _ point f_ _ greater th_ _ steel a_ _ may str_ _ _ _ its fu_ _ length bef_ _ _ breaking: a 0.01 centi_ _ _ _ _ thread c_ _ support eighty grams. Spider silk is also very durable, a feature well illustrated by the persistence of cobwebs. Throughout history, humans have adapted spider silk for many purposes. For a long period, thick webs were used in Europe as bandages.","answers":["Silk","breaking","far","than","and","stretch","full","before","centimeter","can"],"category":"综合"},{"id":18,"text":"We know from drawings that have been preserved in caves for over 10,000 years that early humans performed dances as a group activity. We mi_ _ _ think th_ _ prehistoric peo_ _ _ concentrated on_ _ on t_ _ basic wo_ _ that w_ _ required f_ _ survival: hun_ _ _ _, gathering fo_ _, and making weapons and garments. However, it is clear from the record that group dancing was important to them. They made masks and costumes; they used much energy in the process of dancing; they recorded more drawings of dancing than of any other group activity.","answers":["Might","that","people","only","the","work","was","for","hunting","food"],"category":"综合"},{"id":19,"text":"The universe is a vast expanse, filled with mysteries that have intrigued humans for centuries. Black holes are reg_ _ _ _ in sp_ _ _ where gra_ _ _ _ is s_ strong th_ _ nothing, n_ _ even li_ _ _, can esc_ _ _. Even tho_ _ _ they a_ _ invisible, black holes can be detected by observing their effects on nearby matter. Black holes play a crucial role in astrophysics, influencing galaxy formation and offering insights into the nature of space, time, and gravity.","answers":["Regular","space","gravity","so","that","not","light","escape","though","are"],"category":"综合"},{"id":20,"text":"Grasshoppers are insects commonly found in dry places with grass and plants. Grasshoppers ha_ _ several wa_ _ they pro_ _ _ _ themselves aga_ _ _ _ danger. Th_ _ have powe_ _ _ _ back le_ _, which al_ _ _ them t_ jump aw_ _ from enemies, such as rodents and snakes. Some grasshoppers can jump twenty times the length of their bodies. By the time they are adults, grasshoppers can also fly. Adult grasshoppers fly very quickly and this helps them avoid danger.","answers":["Have","way","protect","against","they","powerful","legs","allow","to","away"],"category":"综合"},{"id":21,"text":"The stars we see in the night sky are massive balls of gas that give off light and heat. Our S_ _ is o_ _ of these, and i_ provides t_ _ energy nee_ _ _ for li_ _ on Ea_ _ _. These celestial bodies a_ _ grouped in_ _ collections cal_ _ _ galaxies. Our solar system belongs to the Milky Way galaxy. Scientists known as astronomers study these distant lights to better understand the universe and how it came to be.","answers":["Sun","one","it","the","needed","life","earth","are","into","called"],"category":"综合"},{"id":22,"text":"The circadian rhythm regulates sleep-wake cycles and other physiological processes, operating on a roughly 24-hour cycle influenced by external cues such as light and temperature. Disruptions to this rhythm, like irre_ _ _ _ _ sleep patt_ _ _ _, can le_ _ to hea_ _ _ issues incl_ _ _ _ _ insomnia, exhau_ _ _ _ _, and decr_ _ _ _ _ cognitive func_ _ _ _. Some resea_ _ _ _ _ _ are expl_ _ _ _ _ the mechanisms of circadian rhythms, aiming to develop treatments for sleep disorders and improve overall health. Understanding these rhythms is crucial for addressing various health concerns.","answers":["Irregular","patterns","lead","health","including","exhaustion","decreased","function","researchers","exploring"],"category":"综合"},{"id":23,"text":"Cognition encompasses mental processes involved in acquiring, storing, and using information, including perception, memory, and decision-making. Researchers inves_ _ _ _ _ _ the mecha_ _ _ _ _ underlying cogn_ _ _ _ _ processes, aim_ _ _ to under_ _ _ _ _ how t_ _ brain sto_ _ _ and retr_ _ _ _ _ information. Consci_ _ _ _ _ _ _, the st_ _ _ of being aware of one's thoughts and surroundings, remains a particularly elusive aspect of cognition. Theories about this state explore whether it arises from specific brain structures or emerges from the interplay of neural networks. Advances in neuroimaging techniques offer glimpses into the complex workings of the brain.","answers":["Investigate","mechanisms","cognitive","aiming","understand","the","store","retrieve","Consciousness","start"],"category":"综合"},{"id":24,"text":"Crop rotation is a farming technique that involves growing a series of different types of crops in the same area across a sequence of seasons. Different crops use different nutrients from the soil, so rotating them prevents the soil from becoming depleted. Th_ _ method he_ _ _ to red_ _ _ pests a_ _ diseases; i_ also decr_ _ _ _ _ the ne_ _ for chem_ _ _ _ fertilizers, prom_ _ _ _ _ sustainable agric_ _ _ _ _ _. Farmers use this practice to improve crop yields and maintain healthy soil.","answers":["This","helps","reduce","and","it","decreases","need","chemical","promoting","agriculture"],"category":"综合"},{"id":25,"text":"The study of the classical world involves examining the cultural, political, and social structures of ancient civilizations such as Greece and Rome. These soci_ _ _ _ _ have gre_ _ _ _ influenced mod_ _ _ governance, philo_ _ _ _ _, and a_ _. The con_ _ _ _ of demo_ _ _ _ _ originated i_ Athens, a_ _ Romans we_ _ superb engineers, building roads, aqueducts, and impressive buildings like the Pantheon. By understanding their advancements and contributions, we gain insight into the foundations of contemporary society. Archaeologists and historians employ various methods to uncover artifacts and interpret historical records from ancient times.","answers":["Societies","greatly","modern","philosophy","art","concept","democracy","in","and","were"],"category":"综合"},{"id":26,"text":"Coral reefs are vibrant underwater ecosystems found in warm, shallow oceans around the world. Coral reefs are prod_ _ _ _ by colo_ _ _ _ of ti_ _ animals cal_ _ _ coral polyps, wh_ _ _ secrete calcium carbonate t_ build th_ _ _ hard skel_ _ _ _ _. These nat_ _ _ _ formations pro_ _ _ _ critical habitats for a diverse array of marine species, including fish, crustaceans, and mollusks. They also offer protection to coastal areas by reducing the impact of waves and storms. However, coral reefs are facing threats from climate change, pollution, and overfishing.","answers":["Produced","colonies","tiny","called","which","to","their","skeletons","natural","provide"],"category":"综合"},{"id":27,"text":"Prehistoric art and religion provide invaluable insights into the spiritual life of early humans. Cave paintings and carvings often depict animals and symbolic figures, reflecting the beliefs and rituals of ancient communities. These artworks se_ _ _ as a win_ _ _ into t_ _ social struc_ _ _ _ _ and cult_ _ _ _ practices o_ prehistoric ti_ _ _. By stud_ _ _ _ them, resea_ _ _ _ _ _ can bet_ _ _ understand the evolution of human thought and spirituality. These early forms of art show that even long ago, people had deep feelings, ideas, and questions about life and the world around them.","answers":["Serve","window","the","structures","cultural","of","times","studying","researchers","better"],"category":"综合"},{"id":28,"text":"Human anatomy is the scientific study of human structure. Anatomy rev_ _ _ _ how different pa_ _ _ of t_ _ body inte_ _ _ _ and func_ _ _ _ together t_ maintain li_ _. For exa_ _ _ _, the circulatory sys_ _ _ transports bl_ _ _ throughout the body, carrying oxygen and nutrients to cells while removing waste products. Anatomists must also understand the organization of organs, tissues, and cells. Medical professionals use anatomical knowledge to diagnose and treat illnesses, improving patient care and health outcomes.","answers":["Reveals","parts","the","interact","function","to","life","example","system","blood"],"category":"综合"},{"id":29,"text":"Conservation ecology focuses on preserving biodiversity and protecting ecosystems from degradation. This disci_ _ _ _ _ involves stud_ _ _ _ the intera_ _ _ _ _ _ between spe_ _ _ _ and th_ _ _ environments t_ develop strat_ _ _ _ _ for maint_ _ _ _ _ _ ecological bal_ _ _ _. Efforts inc_ _ _ _ habitat restoration, sustainable resource management, and the establishment of protected areas. Conservation ecologists work to mitigate the impacts of human activities such as deforestation, pollution, and climate change. Public awareness campaigns and policy advocacy are crucial components of conservation initiatives. By safeguarding natural habitats, conservation ecology aims to ensure the survival of diverse species and the health of the planet.","answers":["Discipline","studying","interaction","species","their","to","strategies","maintaining","balance","include"],"category":"综合"},{"id":30,"text":"Rooted in both biology and chemistry, modern biochemistry has grown into a foundational science that explores the molecular basis of life. I_ emerged fr_ _ early investi_ _ _ _ _ _ _ into nat_ _ _ _ processes li_ _ fermentation a_ _ digestion and n_ _ encompasses t_ _ study o_ biomolecules su_ _ as proteins, carbohydrates, and nucleic acids. Biochemistry plays a vital role in diverse fields including agriculture, environmental science, and pharmacology, contributing to innovations in areas like crop improvement, pollution control, and drug design, for example. Its broad applications continue to shape our understanding of living systems and support solutions to global challenges.","answers":["It","from","investigations","natural","like","and","now","the","of","such"],"category":"综合"},{"id":31,"text":"Art colonies have historically served as vibrant communities where artists gather to share ideas, collaborate, and create. The comm_ _ _ _ _ environment all_ _ _ artists t_ receive feed_ _ _ _ from pe_ _ _ and exper_ _ _ _ _ with n_ _ techniques, enri_ _ _ _ _ their arti_ _ _ _ practice. Su_ _ enclaves often emerge in picturesque locations that inspire creativity, such as coastal towns or rural landscapes. Notable art colonies, like those in Montmartre or Taos, have produced influential works and fostered movements such as Impressionism and Modernism. Contemporary art colonies continue this tradition, adapting to new mediums and technologies while maintaining a spirit of collaboration and innovation.","answers":["Community","allows","to","feedback","peers","experiment","new","enriching","artistic","such"],"category":"综合"},{"id":32,"text":"Plants have tiny holes called stomata on their leaves and stems that allow them to take in carbon dioxide from the air and release oxygen into the air. How_ _ _ _, stomata c_ _ also l_ _ water vapor esc_ _ _, which cau_ _ _ problems i_ dry enviro_ _ _ _ _ _. To man_ _ _ this, dur_ _ _ hot per_ _ _ _ when water loss is especially severe, some plants close their stomata temporarily. Another special adaptation is thick, waxy coatings on plant leaves that help conserve water.","answers":["However","can","let","escape","causes","in","environment","manage","during","periods"],"category":"综合"},{"id":33,"text":"One of the topics psychologists investigate is our capacity to understand the mental states of others. This abi_ _ _ _ is funda_ _ _ _ _ _ for soc_ _ _ interaction bec_ _ _ _ it ena_ _ _ _ us t_ predict a_ _ explain t_ _ behavior o_ others. I_ this skill innate or shaped by experience? Is understanding others' mental states a matter of simulation (imagining ourselves in their place) or theory (applying a set of rules or concepts)? These inquiries contribute to broader discussions about human cognition.","answers":["Ability","fundamental","social","because","enables","to","and","the","of","is"],"category":"综合"},{"id":34,"text":"Climate change refers to significant and lasting changes in weather patterns over periods ranging from decades to millions of years. It is dri_ _ _ by nat_ _ _ _ factors li_ _ volcanic erup_ _ _ _ _ and hu_ _ _ activities su_ _ as bur_ _ _ _ fossil fu_ _ _ and remo_ _ _ _ trees, wh_ _ _ release large amounts of greenhouse gases into the atmosphere. These gases trap heat, leading to global warming, rising sea levels, and more extreme weather events. Addressing climate change requires sustainable practices and international cooperation to mitigate its impacts.","answers":["Driven","natural","like","eruptions","human","such","burning","fuels","removing","which"],"category":"综合"},{"id":35,"text":"Museums often serve as cultural hubs, preserving and exhibiting artifacts that reflect human history and creativity. They pro_ _ _ _ educational reso_ _ _ _ _ that he_ _ visitors under_ _ _ _ _ diverse cult_ _ _ _, historical er_ _, and arti_ _ _ _ movements. Exhi_ _ _ _ are desi_ _ _ _ to te_ _ compelling stories and engage the audience. Museums also play a crucial role in conservation, employing techniques to preserve delicate or ancient items. They foster a deeper appreciation for heritage and inspire curious minds to explore the past and present through tangible connections.","answers":["Provide","resources","help","understand","culture","eras","artistic","exhibits","designed","tell"],"category":"综合"},{"id":36,"text":"Medieval European history encompasses the time period from the fall of the Roman Empire to the onset of the Renaissance. This era lasted around 900 years and is also called the Middle Ages. Dur_ _ _ these cent_ _ _ _ _, feudalism w_ _ the domi_ _ _ _ social stru_ _ _ _ _, shaping t_ _ political, econ_ _ _ _, and cult_ _ _ _ landscape. Da_ _ _ life a_ _ governance were strongly influenced by the Catholic Church. Studying medieval history reveals the foundations of modern European society and the profound changes that occurred over time. It also helps students understand how people lived, worked, and believed during this important time in history.","answers":["During","centuries","was","dominant","structure","the","economic","cultural","daily","and"],"category":"综合"},{"id":37,"text":"Global temperatures and weather patterns are experiencing notable shifts, which scientific research strongly associates with human-related factors. Activities su_ _ as t_ _ use o_ fossil fu_ _ _, changes i_ land u_ _, and industrial produ_ _ _ _ _ contribute t_ the accumu_ _ _ _ _ _ of green_ _ _ _ _ gases in the atmosphere. These gases retain heat, gradually increasing the Earth's average temperature. If emissions continue at current levels, potential outcomes may include more frequent extreme weather events, rising sea levels, and disruptions to ecosystems. Experts emphasize that timely and coordinated efforts are essential to reduce risks and promote long-term environmental stability.","answers":["Such","the","of","fuels","in","use","production","to","accumulation","greenhouse"],"category":"综合"},{"id":38,"text":"The Odyssey is an ancient Greek epic poem that follows the hero, Odysseus, on his ten-year journey home after the Trojan War. It i_ widely consi_ _ _ _ _ one o_ the grea_ _ _ _ works i_ the his_ _ _ _ of Euro_ _ _ _ literature. The Odyssey estab_ _ _ _ _ _ many narr_ _ _ _ _ structures a_ _ archetypes—like the hero's journey—that continue to shape storytelling today. It also delves into timeless human experiences. Odysseus's longing to return home, for example, resonates with the universal desire for belonging and stability. He must adapt, disguise, and rediscover himself, reflecting the fluid nature of identity.","answers":["Is","considered","of","greatest","in","history","Eeuropean","establishes","narrative","and"],"category":"综合"},{"id":39,"text":"Learning the controlled use of fire was a key development in human history that greatly improved the early humans' ability to survive. Coo_ _ _ _ food, partic_ _ _ _ _ _ meat a_ _ tubers, ma_ _ digesting nutr_ _ _ _ _ much eas_ _ _. Fire al_ _ provided war_ _ _ in col_ _ _ climates, allo_ _ _ _ humans to expand their geographic range and survive in areas where they might not have otherwise. In addition, fire was used to harden wood for tools like spears and to shape stones for cutting and scraping, thus contributing to advances in toolmaking.","answers":["cooking","particularly","and","made","nutrients","easier","also","warmth","colder","allowing"],"category":"综合"},{"id":40,"text":"What are some foundational skills for academic success? Critical thin_ _ _ _ allows stud_ _ _ _ to appr_ _ _ _ problems systema_ _ _ _ _ _ _, analyze infor_ _ _ _ _ _, and ma_ _ connections bet_ _ _ _ ideas. Al_ _ important a_ _ soft skills li_ _ time management and social skills. Time management is helpful for balancing studies, extracurricular activities, and personal life in an efficient manner. Social skills are good predictors of academic success because those who communicate effectively can form positive relationships with their peers and professors.","answers":["Thinking","studying","approach","systematically","information","make","between","also","are","like"],"category":"综合"},{"id":41,"text":"Child development milestones are key indicators of a child's growth. They enco_ _ _ _ _ various asp_ _ _ _ of development, incl_ _ _ _ _ language acqui_ _ _ _ _ _, motor ski_ _ _, and soc_ _ _ interactions. O_ _ example i_ taking a fi_ _ _ step, wh_ _ _ typically occurs around the age of twelve months. These milestones are useful in helping parents and caretakers monitor a child's progress. It is important to remember, however, that these milestones only provide a general guide, and each child develops at their own pace.","answers":["Encompass","aspects","including","acquisition","skills","social","one","is","first","which"],"category":"综合"},{"id":42,"text":"Archaeologists typically study human history and prehistory through the excavation of artifacts buried underground. Sometimes, how_ _ _ _, they disc_ _ _ _ artifacts subm_ _ _ _ _ underwater. A stone wall w_ _ found ben_ _ _ _ the Baltic Sea i_ 2012 th_ _ dates t_ over 10,000 ye_ _ _ ago. Resea_ _ _ _ _ _ believe it was used by hunter-gatherer societies to guide and trap reindeer. The wall consists of approximately 1,670 stones and is considered one of the oldest documented hunting structures made by humans.","answers":["However","discover","submerged","was","beneath","in","that","to","years","researchers"],"category":"综合"},{"id":43,"text":"Pigments are substances that provide color to materials, and they can be derived from various natural sources, such as minerals and plants. It w_ _ once com_ _ _ for art_ _ _ _ to cre_ _ _ their o_ _ paints b_ mixing sev_ _ _ _ pigments toge_ _ _ _. This pro_ _ _ _ was ti_ _-consuming and required detailed knowledge of pigments—their chemical properties, how they interact with different media, and their durability over time. But it also allowed painters to give their artworks a truly unique color palette.","answers":["Was","common","artists","create","own","by","several","together","process","time"],"category":"综合"},{"id":44,"text":"Human cognition refers to the mental processes involved in acquiring, processing, storing and using knowledge. These inc_ _ _ _ the wa_ that peo_ _ _ interpret sensory sig_ _ _ _ (perception), h_ _ we st_ _ _ and retr_ _ _ _ information (mem_ _ _ ), how lang_ _ _ _ is prod_ _ _ _ (speech), and how humans analyze and solve problems. Researchers study cognitive functions to uncover how the brain processes information and how these processes influence behavior. Insights from cognitive science can improve educational methods and help develop interventions for cognitive disorders.","answers":["Include","way","people","signals","how","store","retrieve","memory","language","produced"],"category":"综合"},{"id":45,"text":"Throughout history, art and religion have been deeply intertwined. Religious bel_ _ _ _ often ins_ _ _ _ artistic crea_ _ _ _ _, from anc_ _ _ _ cave pain_ _ _ _ _ to elab_ _ _ _ _ cathedral archit_ _ _ _ _ _. Throughout his_ _ _ _, artists ha_ _ used vis_ _ _ imagery to express spiritual ideas and convey religious stories. Iconography, the study of symbols and images in art, helps us understand the meaning behind religious artworks. Churches, temples, and other places of worship are often adorned with intricate designs that reflect the convictions and practices of their communities.","answers":["Beliefs","inspire","creations","ancient","paintings","elaborate","architecture","history","have","visual"],"category":"综合"},{"id":46,"text":"Extinctions are a natural part of Earth's history, marking the end of species that die out and paving the way for new ones. These inci_ _ _ _ _ can b_ caused b_ varying fac_ _ _ _, such a_ environmental cha_ _ _ _, habitat lo_ _, and catast_ _ _ _ _ _ events. Stud_ _ _ _ extinctions he_ _ _ scientists understand biodiversity and the resilience of ecosystems. Notable extinctions, like the one that wiped out most of the dinosaurs, offer insights into how life on Earth can dramatically shift. Modern conservation efforts aim to prevent human-induced extinctions and preserve remaining species.","answers":["Incidents","be","by","factors","as","changes","loss","catastrophic","studying","helps"],"category":"综合"},{"id":47,"text":"Mass extinctions have periodically reshaped the diversity of life on Earth, representing significant biological and ecological shifts. The most famous event, the Cretaceous-Paleogene extinction, occurred approximately 66 million years ago and led to the demise of the dinosaurs. Large-scale los_ _ _ of spe_ _ _ _ are of_ _ _ caused b_ catastrophic eve_ _ _ such a_ volcanic erup_ _ _ _ _, asteroid imp_ _ _ _, and cli_ _ _ _ change. T_ _ resulting damage to biodiversity disrupts ecosystems and alters evolutionary trajectories. Studying past extinctions provides insights into the resilience and adaptability of life, helping scientists predict and mitigate future biodiversity loss.","answers":["Losses","species","often","by","events","as","eruptions","impacts","climate","the"],"category":"综合"},{"id":48,"text":"The study of geological formations provides insights into Earth's dynamic processes. Metamorphic rocks are rocks that have been transformed by heat and pressure. Sedimentary rocks fo_ _ as lay_ _ _ of mate_ _ _ _ build u_ over ti_ _ and a_ _ eventually pre_ _ _ _ and fu_ _ _ together t_ create so_ _ _ rock. The strata inside these formations serve as historical records of environmental conditions, revealing changes in climate, sea levels, and biological evolution. Analyzing rocks allows geologists to reconstruct past geological events. (The study of geological formations）","answers":["Form","layers","material","up","time","are","pressed","fused","to","solid"],"category":"综合"},{"id":49,"text":"Agricultural practices have evolved to meet growing worldwide nutritional requirements. Sustainable farming offers a promising path, emphasizing ecological balance and resource conservation. Techniques like crop rotation, polyculture, and organic farming main_ _ _ _ soil hea_ _ _ and decr_ _ _ _ pesticide u_ _. These met_ _ _ _ improve fo_ _ security a_ _ reduce environ_ _ _ _ _ _ harm. Far_ _ _ _ often ben_ _ _ _ from higher yields and lower long-term costs. Although traditional methods dominate due to short-term profits, the future of agriculture may depend on embracing sustainability.","answers":["Maintain","health","decrease","use","methods","for","and","environmental","farmers","benefit"],"category":"综合"},{"id":50,"text":"In academic research, reasoning is key to forming and testing hypotheses. Logical reasoning uses structured thinking to evaluate arguments and reach conclusions. Deductive reasoning starts with known facts and leads to certain outcomes, while inductive reasoning draws gen_ _ _ _ ideas fr_ _ specific observ_ _ _ _ _ _, though i_ involves so_ _ uncertainty. Us_ _ _ both met_ _ _ _ together stren_ _ _ _ _ _ the appr_ _ _ _ to invest_ _ _ _ _ _ _ and inquiry. This practice helps scholars build solid arguments and make informed decisions. By applying clear reasoning strategies, researchers can advance knowledge and contribute meaningful insights to their fields. (reasoning)","answers":["General","from","observations","it","some","using","methods","strengthen","approach","investigation"],"category":"综合"},{"id":51,"text":"Glaciers are large expanses of ice that move slowly over land. As th_ _ advance, these mas_ _ _ play a crit_ _ _ _ role i_ shaping t_ _ Earth's sur_ _ _ _. The imm_ _ _ _ weight a_ _ movement o_ glaciers gr_ _ _ down rocks and soil, creating valleys. These glacially carved depressions may eventually evolve into freshwater basins following the ice's retreat. Researchers analyze glacial geomorphology to reconstruct paleoclimatic conditions and model prospective environmental shifts. The shrinking of glaciers is a clear sign of ongoing global climate change.","answers":["They","masses","critical","in","the","surface","immense","and","of","grind"],"category":"综合"},{"id":52,"text":"Craftsmanship blends art with functional design through a meticulous process requiring creativity and precision. Artisans wo_ _ with mater_ _ _ _ like me_ _ _, wood, a_ _ fabric t_ create prod_ _ _ _ that a_ _ both use_ _ _ and beau_ _ _ _ _. Each pi_ _ _ shows the maker's skill, attention to detail, and personal style. Beyond utility, handcrafted items carry cultural significance. Even as societies modernize, the value of tradition and quality endures, highlighting a lasting appreciation for the uniqueness and care embedded in artisanal work.","answers":["Work","materials","metal","and","to","products","are","useful","beautiful","piece"],"category":"综合"},{"id":53,"text":"Reggae music, originating in Jamaica in the late 1960s, has become a global cultural phenomenon. Rooted in earlier styles like ska and rocksteady, reggae evolved as a voice for the marginalized and against violence and war. Characterized by its distinctive rhy_ _ _ and soci_ _ _ _ conscious lyr_ _ _, the ge_ _ _ addr_ _ _ _ _ themes o_ resistance, pe_ _ _, and spir_ _ _ _ _ unity. Dee_ _ _ connected t_ Jamaican culture, reggae has impacted fashion, language, and political movements. Today, reggae continues to inspire new generations of musicians and activists, maintaining its relevance in a rapidly changing world.","answers":["Rhythm","socially","lyrics","genre","addresses","of","peace","spiritual","deeply","to"],"category":"综合"},{"id":54,"text":"The Ottoman Empire, which lasted from 1299 to 1922, was a formidable force that reshaped the political and cultural landscapes of Europe, the Middle East, and North Africa. Renowned for its mili_ _ _ _ prowess a_ _ strategic conq_ _ _ _ _, the emp_ _ _ reached i_ _ zenith un_ _ _ the re_ _ _ of Suleyman the Magnificent, dur_ _ _ which ar_ _ and archit_ _ _ _ _ _ flourished. The Ottomans also played a pivotal role in global commerce, controlling key trade routes that linked the spice markets of Asia with the merchant hubs of Europe.","answers":["Military","and","conquests","empire","its","under","reign","during","arts","architecture(难）"],"category":"综合"},{"id":55,"text":"Geology is the scientific study of our planet, including its composition, structure, and processes. Geolo_ _ _ _ _ analyze ro_ _ _, minerals, a_ _ the nat_ _ _ _ forces th_ _ change t_ _ outer la_ _ _ of Ea_ _ _ over ti_ _. This know_ _ _ _ _ helps scientists understand the planet's history and predict future changes. It is essential for natural resource management, hazard mitigation, and environmental protection. Advances in geologic research—such as satellite-based remote sensing, deep-Earth imaging, and isotopic dating—have greatly improved our ability to monitor earthquakes, track volcanic activity, and assess groundwater resources.","answers":["Geologists","rocks","and","natural","that","the","layer","earth","time","knowledge"],"category":"综合"},{"id":56,"text":"Craftsmanship has undergone a profound transformation over the centuries, shifting from a demonstration of manual skill to an expression of artistic vision and communal identity. In medieval Europe, skilled makers—known as artisans—were highly valued not only for their tech_ _ _ _ _ expertise b_ _ also f_ _ their abi_ _ _ _ to inf_ _ _ their crea_ _ _ _ _ with mea_ _ _ _ and repr_ _ _ _ _ deeper spir_ _ _ _ _ or cult_ _ _ _ themes. The intricate details in woodwork, textiles, and pottery served as a testament to the craftsman's mastery and the motifs prevalent during that era.","answers":["Technical","but","for","ability","infuse","creation","meaning","represent","spiritual","cultural"],"category":"综合"},{"id":57,"text":"In recent years, the search for extraterrestrial organisms has increasingly focused on water as an important clue. On Earth, water supports biological processes, and its detection on ice-covered moons such as Europa and Enceladus has attracted scien_ _ _ _ _ attention. Evid_ _ _ _ suggests th_ _ these i_ _ moons con_ _ _ _ oceans ke_ _ liquid b_ tidal hea_ _ _ _, a pro_ _ _ _ in wh_ _ _ gravitational forces generated by nearby planets produce internal warmth. This energy source may create environments comparable to Earth's deep-sea hydrothermal regions, where biological activity occurs without sunlight.","answers":["Scientific","evidence","that","icy","contain","kept","by","heating","process","which"],"category":"综合"},{"id":58,"text":"Geology involves the study of Earth's physical structure and substances, the processes that act upon them, and the history of the planet and its life forms. Environmental geology specif_ _ _ _ _ _ focuses o_ how geolo_ _ _ _ _ processes aff_ _ _ human activ_ _ _ _ _ and t_ _ environment. I_ encompasses ar_ _ _ such a_ natural haz_ _ _ assessment, resource management, and land-use planning. By understanding the geological factors that influence environmental conditions, geologists can help mitigate the impacts of natural disasters and promote sustainable development.","answers":["Specifically","on","geological","affect","activities","the","it","areas","as","hazard"],"category":"综合"},{"id":59,"text":"Oceanography and hydrology are fields that study the dynamics of water on Earth, encompassing aspects like ocean currents, tides, and the hydrological cycle. Ocean currents, influ_ _ _ _ _ by fac_ _ _ _ such a_ wind patt_ _ _ _ and Earth's rota_ _ _ _, play a cru_ _ _ _ role i_ regulating glo_ _ _ climate si_ _ _ they redist_ _ _ _ _ _ heat across the planet. The hydrological cycle, on the other hand, describes the continuous movement of water between the Earth's surface and atmosphere, involving processes such as evaporation, condensation, and precipitation. Together, these phenomena illustrate the interconnected nature of Earth's water systems.","answers":["Influenced","factors","as","patterns","rotation","crucial","in","global","since","redistribute"],"category":"综合"},{"id":60,"text":"Photosynthesis is a vital process for life on Earth that also has potential to address modern energy challenges. Through the conversion of sunlight into chemical energy, plants pro_ _ _ _ oxygen a_ _ organic comp_ _ _ _ _, sustaining li_ _ and for_ _ _ _ the found_ _ _ _ _ of fo_ _ chains. Artif_ _ _ _ _ photosynthesis c_ _ theoretically pro_ _ _ _ clean and renewable energy, reducing our dependence on fossil fuels. By mimicking photosynthesis, scientists can produce carbon-neutral fuels, which can aid in developing sustainable energy solutions.","answers":["Produce","and","compounds","life","forming","foundation","food","artificial","can","produce"],"category":"综合"},{"id":61,"text":"Lions, known as the kings of the jungle, are actually savanna (grassland) dwellers found mainly in Africa. They are the only truly soc_ _ _ big ca_ _, living i_ prides, wh_ _ _ are gro_ _ _ that typi_ _ _ _ _ include rel_ _ _ _ females, th_ _ _ offspring, a_ _ some ma_ _ _. The pride structure aids in hunting, cub protection, and territorial defense. Lions communicate through vocalizations, such as roars, which can be heard up to 5 miles away. These vocal signals help maintain territorial boundaries and coordinate group activities.","answers":["Social","cats","in","which","groups","typically","related","their","and","males"],"category":"综合"},{"id":62,"text":"Climate change has become one of the most pressing current issues of our time, sparking global conversations. When discussing climate, it is often confused with weather. Climate specif_ _ _ _ _ _ refers t_ long-term tre_ _ _ in tempe_ _ _ _ _ _, humidity, wi_ _, and precip_ _ _ _ _ _ _ that def_ _ _ typical condi_ _ _ _ _ for a reg_ _ _ —not ju_ _ the daily forecast. While weather can shift dramatically from one day to the next, the climate of an area describes what is normal over decades.","answers":["Specifically","to","trends","temperature","wind","precipitation","define","conditions","region","just"],"category":"综合"},{"id":63,"text":"Paleontology is the scientific study of life's history through the examination of fossil remains. Fossils, incl_ _ _ _ _ bones, she_ _ _, and foot_ _ _ _ _ _, provide crit_ _ _ _ evidence o_ past orga_ _ _ _ _ and th_ _ _ environments. B_ analyzing su_ _ remnants, paleont_ _ _ _ _ _ _ _ can reconstruct ancient ecosystems and track evolutionary changes over millions of years. This field offers valuable insights into the development and extinction of species. Advanced techniques like radiometric dating and CT scanning allow scientists to determine precise ages of specimens and examine internal structures without damaging delicate fossils.","answers":["Including","shells","footprints","critical","on","organisms","their","by","such","paleontologists"],"category":"综合"},{"id":64,"text":"The Erie Canal, completed in 1825, is a historic waterway in the United States that linked the Atlantic Ocean to the Great Lakes. Its constr_ _ _ _ _ _ was a remar_ _ _ _ _ engineering fe_ _ and pion_ _ _ _ _ many innov_ _ _ _ _ techniques. T_ _ canal signif_ _ _ _ _ _ _ reduced transpo_ _ _ _ _ _ _ costs a_ _ time fr_ _ New York City to the interior of the nation, propelling the city into a major commercial hub. The success of the Erie Canal inspired the building of other canals and infrastructure projects across the United States.","answers":["Construction","remarkable","feat","pioneered","innovative","the","significantly","transportation","and","from"],"category":"综合"},{"id":65,"text":"The study of insect behavior reveals complex survival strategies and social interactions across species. Honeybees, for inst_ _ _ _, perform a disti_ _ _ _ _ _ dance t_ convey spa_ _ _ _ information ab_ _ _ foraging si_ _ _. Ants exem_ _ _ _ _ extraordinary colle_ _ _ _ _ behavior, def_ _ _ _ by cooper_ _ _ _ _ efficiency. By analyzing these patterns, researchers can trace evolutionary pathways and adaptive strategies that support insect resilience across diverse ecosystems. These insights underscore the ecological sophistication embedded within even the smallest of organisms.","answers":["Instance","distinctive","to","spatial","about","sites","exemplify","collective","defined","cooperative"],"category":"综合"},{"id":66,"text":"The evolution of paint as a medium has significantly impacted the development of visual arts. Early art_ _ _ _ used nat_ _ _ _ pigments der_ _ _ _ from mine_ _ _ _, plants, a_ _ animal sou_ _ _ _ to cre_ _ _ their wo_ _ _. Advances i_ chemistry resu_ _ _ _ in the synthesis of vibrant, durable colors, expanding the artist's palette. Techniques such as oil painting allowed for greater detail and expression. The introduction of acrylic paints offered versatility and fast drying times. Modern painters continue to explore innovative materials and methods, pushing the boundaries of artistic creation. Understanding the history of paint enriches appreciation for the diversity and complexity of artistic practices.","answers":["Artists","natural","derived","minerals","and","sources","create","works","in","resulted"],"category":"综合"},{"id":67,"text":"The advancement of 3-D printing technology has revolutionized manufacturing by enabling precise, layer-by-layer fabrication of complex objects. 3-D printing can use div_ _ _ _ materials su_ _ as plas_ _ _ _, metals, a_ _ ceramics. Engi_ _ _ _ _ are ab_ _ to fabr_ _ _ _ _ lightweight, str_ _ _ components wi_ _ internal struc_ _ _ _ _ that are impossible to produce using traditional methods. In the medical field, 3-D printing facilitates the production of patient-specific implants and prosthetics tailored to anatomical data from imaging scans. 3-D printing enhances design flexibility and production efficiency by streamlining prototyping and reducing material waste.","answers":["Diverse","such","plastics","and","engineers","able","fabricate","strong","with","structure"],"category":"综合"},{"id":68,"text":"The Renaissance was a period of cultural rebirth in Europe, spanning the fourteenth to seventeenth centuries. A vib_ _ _ _ period o_ cultural, arti_ _ _ _, and intell_ _ _ _ _ _ revival, t_ _ Renaissance mar_ _ _ a ren_ _ _ _ interest i_ classical liter_ _ _ _ _, art, a_ _ science. The Renaissance had a profound historical impact, serving as a bridge between the Middle Ages and the modern era. It sparked a cultural awakening that emphasized humanism, individual achievement, and secular learning, which reshaped European thought and institutions.","answers":["Vibrant","on","artistic","intellectual","the","marked","renewed","in","literature","and"],"category":"综合"},{"id":69,"text":"Plants have evolved various structures to optimize photosynthesis (the capture and conversion of light energy) and survival. Roots anc_ _ _ the plant a_ _ absorb wa_ _ _ and mine_ _ _ _ from t_ _ soil. Leaves a_ _ the pri_ _ _ _ sites o_ photosynthesis. Their br_ _ _, flat surf_ _ _ _ maximize light absorption. The stem supports the leaves and transports nutrients and water through the vascular system, which consists of xylem and phloem. Some plants, like succulents, store water in their thick leaves to endure arid conditions.","answers":["Anchor","and","water","minerals","the","are","primary","on","broad","surfaces"],"category":"综合"},{"id":70,"text":"The Middle Ages was a period in Europe that spanned roughly between the fifth and fifteenth centuries. This e_ _ saw signi_ _ _ _ _ _ changes, mo_ _ notably t_ _ spread o_ Christianity a_ _ the establ_ _ _ _ _ _ _ of powe_ _ _ _ kingdoms. Des_ _ _ _ being of_ _ _ referred to as the \"Dark Ages,\" a name that suggests stagnation and decline, this period also witnessed remarkable achievements in art, architecture, and learning, laying the groundwork for Europe's transition into the Renaissance and the age of discovery.","answers":["Era","significant","most","the","of","and","establishment","powerful","despite","often"],"category":"综合"},{"id":71,"text":"The presence of water and volcanic activity on other planets is central to the search for extraterrestrial life. Water is a key ingredient for life as we know it, and its discovery on Mars and moons like Europa and Enceladus raises intriguing possibilities. Volc_ _ _ _ activity prov_ _ _ _ heat a_ _ nutrients th_ _ could sup_ _ _ _ microbial li_ _. Missions equi_ _ _ _ with adva_ _ _ _ instruments col_ _ _ _ and exa_ _ _ _ surface and atmospheric samples to detect signs of liquid water and geothermal activity. Discoveries of liquid water and geothermal energy are pivotal in assessing the habitability of extraterrestrial environments.","answers":["Volcanic","provide","and","that","support","life","equipped","advanced","collect","examine"],"category":"综合"},{"id":72,"text":"Understanding the relationship between cognition and consciousness is pivotal for unraveling the complexities of human thinking and behavior, as both are fundamental activities of the brain. Cognition is the men_ _ _ process b_ which indiv_ _ _ _ _ _ acquire know_ _ _ _ _ and unders_ _ _ _ _ _ _ through tho_ _ _ _, experience, a_ _ the sen_ _ _. Consciousness ref_ _ _ to t_ _ state of being aware of and responsive to one's surroundings. The advancements of neuroimaging technologies have provided insights into how consciousness arises from neural networks and how cognitive processes can occur both with and without conscious awareness.","answers":["Mental","by","individuals","knowledge","understanding","thought","and","senses","refers","the"],"category":"综合"},{"id":73,"text":"Environmental scientists examine how coastal marshes store carbon within waterlogged sediments. This pro_ _ _ _ is cru_ _ _ _ for cli_ _ _ _ regulation bec_ _ _ _ vegetation tr_ _ _ sediment bet_ _ _ _ stems wh_ _ _ waterlogged condi_ _ _ _ _ slow micr_ _ _ _ _ decay. Do_ _ this storage depend mainly on plant growth or sediment accumulation? Do marshes release stored carbon when drained, and can they recover after tidal flow is restored? Such questions inform broader debates about ecosystem management and the role of natural habitats in slowing atmospheric warming.","answers":["Process","crucial","climate","because","traps","between","while","conditions","microbial","does"],"category":"综合"},{"id":74,"text":"Climate change is a long-term alteration in average temperatures and weather patterns across Earth’s regions. Researchers docu_ _ _ _ warming oce_ _ _, retreating glac_ _ _ _, shifting rain_ _ _ _, intensifying sto_ _ _, prolonged drou_ _ _ _, coastal floo_ _ _ _, damaged re_ _ _, and disr_ _ _ _ _ harvests worl_ _ _ _ _. Although some climate variations occur naturally, the rapid warming observed since the industrial era is mainly caused by human emissions of heat-trapping gases. Reducing these emissions and adapting infrastructure can limit future harm to ecosystems and communities.","answers":["Document","oceans","glaciers","rainfall","storms","droughts","flooding","reefs","disruptive","worldwide"],"category":"综合"},{"id":75,"text":"Seed banks act as biological archives, collecting and storing seeds from crops and wild plants around the world. They main_ _ _ _ genetic reso_ _ _ _ _ that he_ _ scientists pres_ _ _ _ rare spe_ _ _ _, restore ecosy_ _ _ _ _, and imp_ _ _ _ crops. Sam_ _ _ _ are cata_ _ _ _ _ to ens_ _ _ their origins and traits can be traced. Seed banks also play a critical role in conservation, using low temperatures and dry conditions to keep seeds viable for decades. They strengthen food security and give future researchers access to plant diversity that may prove essential as climates and agricultural needs change.","answers":["Maintain","resources","help","preserve","species","ecosystems","improve","samples","cataloged","ensure"],"category":"综合"},{"id":76,"text":"The Aeneid is a Roman epic poem that follows the Trojan warrior Aeneas as he searches for a new homeland after the destruction of Troy. It cont_ _ _ _ _ to be rega_ _ _ _ as o_ _ of t_ _ most influ_ _ _ _ _ _ poems i_ Latin lite_ _ _ _ history. Th_ _ work comb_ _ _ _ enduring narr_ _ _ _ _ patterns with political symbolism, influencing later European storytelling. It also examines the conflict between personal desire and public duty. Aeneas repeatedly sacrifices private happiness to fulfill a larger mission, illustrating how loyalty, loss, and political responsibility can transform an individual's sense of identity.","answers":["Continues","regarded","one","the","influential","in","literary","this","combines","narrative"],"category":"综合"},{"id":77,"text":"What abilities help students complete group research successfully? Clear commun_ _ _ _ _ _ _ enables mem_ _ _ _ to coord_ _ _ _ _ tasks effic_ _ _ _ _ _, identify prob_ _ _ _, and ma_ _ decisions un_ _ _ pressure. Al_ _ valuable a_ _ practical ski_ _ _ like planning and conflict resolution. Planning helps a team divide responsibilities, establish realistic deadlines, and use available resources wisely. Conflict resolution supports group performance because students who address disagreements respectfully can preserve trust, consider different perspectives, and keep everyone focused on shared goals.","answers":["Communication","members","coordinate","efficiently","problems","make","under","Also","are","skills"],"category":"综合"}];
+var currentIdx = -1;
+var submitted = false;
+var scores = {};
+var stats = { done: 0, correct: 0, total: 0 };
+var activeFilter = 'all';
+
+var catColors = {
+  '乌鸦':'#6B7280','人文':'#8B5CF6','生物':'#10B981','历史':'#F59E0B',
+  '心理':'#EC4899','气候':'#3B82F6','考古':'#A855F7','艺术':'#EF4444',
+  '地质':'#78716C','综合':'#6366f1'
+};
+var catEmojis = {
+  '乌鸦':'🐦','人文':'📚','生物':'🧬','历史':'🏛️',
+  '心理':'🧠','气候':'🌍','考古':'⛏️','艺术':'🎨',
+  '地质':'🪨','综合':'📌'
+};
+
+function getCategories() {
+  var cats = {};
+  PASSAGES.forEach(function(p) { cats[p.category] = (cats[p.category]||0) + 1; });
+  return Object.keys(cats).sort(function(a,b){ return cats[b]-cats[a]; });
+}
+
+function renderFilters() {
+  var cats = getCategories();
+  var el = document.getElementById('filter-bar');
+  var html = '<span class="filter-label">筛选：</span>';
+  html += '<button class="f-btn active" onclick="setFilter(\'all\',this)">全部('+PASSAGES.length+')</button>';
+  cats.forEach(function(c) {
+    var cnt = PASSAGES.filter(function(p){return p.category===c;}).length;
+    html += '<button class="f-btn" onclick="setFilter(\''+c+'\',this)">'+(catEmojis[c]||'📌')+' '+c+'('+cnt+')</button>';
+  });
+  el.innerHTML = html;
+}
+
+function setFilter(cat, btn) {
+  activeFilter = cat;
+  document.querySelectorAll('.f-btn').forEach(function(b){b.classList.remove('active');});
+  btn.classList.add('active');
+  renderList();
+}
+
+function renderList() {
+  var el = document.getElementById('passage-list');
+  var html = '';
+  PASSAGES.forEach(function(p, i) {
+    if (activeFilter !== 'all' && p.category !== activeFilter) return;
+    var preview = p.text.replace(/([a-zA-Z]{1,20})((_ +_?)+)/g, '___').substring(0, 100) + '...';
+    var done = scores[i] !== undefined;
+    var cls = done ? 'done' : '';
+    var color = catColors[p.category] || '#6366f1';
+    var emoji = catEmojis[p.category] || '📌';
+    var scoreHTML = '';
+    if (done) {
+      var s = scores[i];
+      var pct = Math.round(s.correct / s.total * 100);
+      var sc = pct >= 80 ? 'good' : pct >= 50 ? 'mid' : 'low';
+      scoreHTML = '<span class="score-tag '+sc+'">'+pct+'%</span>';
+    }
+    html += '<div class="passage-item '+cls+'" onclick="openPassage('+i+')">' +
+      '<div class="passage-num">'+(i+1)+'</div>' +
+      '<div class="passage-info">' +
+        '<div class="passage-preview">'+escapeHTML(preview)+'</div>' +
+        '<div class="passage-meta">' +
+          '<span class="cat-tag" style="background:'+color+'">'+emoji+' '+p.category+'</span>' +
+          '<span class="blank-tag">'+p.answers.length+'空</span>' +
+          scoreHTML +
+        '</div>' +
+      '</div></div>';
+  });
+  if (!html) html = '<div class="empty-state"><div class="emoji">🔍</div><p>该分类暂无题目</p></div>';
+  el.innerHTML = html;
+}
+
+function escapeHTML(s) {
+  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// Render passage: find each blank, use answer length to determine required letters
+function renderPassageText(passage) {
+  var blankIdx = 0;
+  var answers = passage.answers;
+  var text = passage.text;
+  // Pass 1: replace blank patterns (prefix + underscores)
+  var result = text.replace(/([a-zA-Z]{1,20})((_+ ?)+_?)/g, function(match, prefix) {
+    if (blankIdx >= answers.length) return match;
+    var requiredLen = answers[blankIdx].length;
+    var prefixLen = prefix.length;
+    var needMore = requiredLen - prefixLen;
+    blankIdx++;
+    if (needMore <= 0) needMore = 1;
+    return '<span class="blank-group"><span class="blank-prefix">' + prefix + '</span>' +
+      '<input type="text" class="blank-input" data-i="' + blankIdx +
+      '" placeholder="' + needMore + '个字母" maxlength="' + needMore + '" autocomplete="off" spellcheck="false"></span>';
+  });
+  // Pass 2: remove any remaining stray underscores/spaces from blanks
+  // Simple approach: iterate through chars, skip _ and space between tags
+  var out = '';
+  var i = 0;
+  while (i < result.length) {
+    // Check if we're at </span>
+    if (result.substring(i, i + 7) === '</span>') {
+      out += '</span>';
+      i += 7;
+      // Skip any following underscores and spaces
+      while (i < result.length && (result[i] === '_' || result[i] === ' ')) i++;
+    }
+    // Check if we're at underscores before <span class="blank-group">
+    else if (result[i] === '_' || result[i] === ' ') {
+      // Look ahead: is this followed by underscores/spaces then <span class="blank-group">?
+      var j = i;
+      while (j < result.length && (result[j] === '_' || result[j] === ' ')) j++;
+      if (result.substring(j, j + 25) === '<span class="blank-group">') {
+        i = j; // skip the underscores, keep the span
+      } else {
+        out += result[i];
+        i++;
+      }
+    }
+    else {
+      out += result[i];
+      i++;
+    }
+  }
+  result = out;
+  return result;
+}
+
+function openPassage(i) {
+  currentIdx = i;
+  submitted = false;
+  var p = PASSAGES[i];
+  document.getElementById('list-view').classList.add('hidden');
+  var pv = document.getElementById('practice-view');
+  pv.classList.add('show');
+  document.getElementById('nav-info').textContent = '第 '+i+' / '+PASSAGES.length+' 篇';
+  document.getElementById('passage-title').textContent = 'Passage '+(i+1)+' / '+PASSAGES.length;
+  var color = catColors[p.category]||'#6366f1';
+  var emoji = catEmojis[p.category]||'📌';
+  document.getElementById('cat-badge').style.background = color;
+  document.getElementById('cat-badge').textContent = emoji+' '+p.category+' · '+p.answers.length+'空';
+  document.getElementById('passage-body').innerHTML = renderPassageText(p);
+  document.getElementById('result-panel').classList.remove('show');
+  document.getElementById('result-panel').innerHTML = '';
+  document.getElementById('btn-prev').disabled = (i === 0);
+  document.getElementById('btn-next').disabled = (i === PASSAGES.length - 1);
+  document.querySelectorAll('.blank-input').forEach(function(inp) {
+    inp.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        var arr = Array.from(document.querySelectorAll('.blank-input'));
+        var idx2 = arr.indexOf(this);
+        if (idx2 < arr.length-1) arr[idx2+1].focus();
+        else submitAll();
+      }
+    });
+  });
+  window.scrollTo({top: 0, behavior: 'smooth'});
+}
+
+function reselect() {
+  submitted = false;
+  currentIdx = -1;
+  document.getElementById('practice-view').classList.remove('show');
+  document.getElementById('list-view').classList.remove('hidden');
+  renderList();
+}
+
+function goPrev() { if (currentIdx > 0) openPassage(currentIdx - 1); }
+function goNext() { if (currentIdx < PASSAGES.length - 1) openPassage(currentIdx + 1); }
+
+function submitAll() {
+  if (currentIdx < 0 || submitted) return;
+  submitted = true;
+  var answers = PASSAGES[currentIdx].answers;
+  var inputs = document.querySelectorAll('.blank-input');
+  var correct = 0;
+  var results = [];
+  // Re-parse to get prefix for each blank
+  var blankIdx = 0;
+  var prefixes = [];
+  PASSAGES[currentIdx].text.replace(/([a-zA-Z]{1,20})((_ +_?)+)/g, function(match, prefix) {
+    prefixes.push(prefix);
+  });
+  inputs.forEach(function(inp, i) {
+    var ua = inp.value.trim().toLowerCase();
+    var fullAns = (answers[i]||'').trim();
+    var prefix = prefixes[i] || '';
+    var suffix = fullAns.substring(prefix.length).toLowerCase();
+    var ok = ua === suffix;
+    if (ok) { inp.classList.add('correct'); correct++; }
+    else { inp.classList.add('incorrect'); }
+    inp.disabled = true;
+    results.push({ user: prefix + (inp.value.trim()||'(未填)'), ans: fullAns, ok: ok });
+  });
+  var total = answers.length;
+  var pct = Math.round(correct/total*100);
+  if (scores[currentIdx] === undefined) stats.done++;
+  else { stats.correct -= scores[currentIdx].correct; stats.total -= scores[currentIdx].total; }
+  stats.correct += correct;
+  stats.total += total;
+  scores[currentIdx] = { correct: correct, total: total, pct: pct };
+  updateStatsUI();
+  var sc='excellent',se='🎉',st='完美！';
+  if(pct<100){sc='good';se='👍';st='不错！';}
+  if(pct<70){sc='fair';se='💪';st='继续加油！';}
+  if(pct<50){sc='poor';se='📖';st='需要复习';}
+  var aHTML='<div class="answer-list">';
+  results.forEach(function(r,i){
+    var cls=r.ok?'was-correct':'was-wrong';
+    var ic=r.ok?'✓':'✗';
+    aHTML+='<span class="answer-item '+cls+'"><span>'+ic+'</span>'+(i+1)+'. '+r.user+' → <strong>'+r.ans+'</strong></span>';
+  });
+  aHTML+='</div>';
+  var panel=document.getElementById('result-panel');
+  panel.innerHTML='<div class="score-bar '+sc+'">'+se+' '+st+' 答对 '+correct+'/'+total+'（'+pct+'%）</div>'+aHTML;
+  panel.classList.add('show');
+  panel.scrollIntoView({behavior:'smooth',block:'nearest'});
+}
+
+function showAllAnswers() {
+  if (currentIdx<0) return;
+  submitted=true;
+  var answers=PASSAGES[currentIdx].answers;
+  // Re-parse to get prefixes
+  var prefixes=[];
+  PASSAGES[currentIdx].text.replace(/([a-zA-Z]{1,20})((_ +_?)+)/g, function(m,p){prefixes.push(p);});
+  document.querySelectorAll('.blank-input').forEach(function(inp,i){
+    var fullAns=answers[i]||'';
+    var suffix=fullAns.substring((prefixes[i]||'').length);
+    inp.value=suffix;
+    inp.classList.add('correct');
+    inp.disabled=true;
+  });
+  var panel=document.getElementById('result-panel');
+  panel.innerHTML='<div class="score-bar good">👁️ 已显示所有正确答案</div>';
+  panel.classList.add('show');
+}
+
+function updateStatsUI() {
+  document.getElementById('stat-done').textContent=stats.done;
+  document.getElementById('stat-correct').textContent=stats.correct;
+  document.getElementById('stat-acc').textContent=stats.total>0?Math.round(stats.correct/stats.total*100)+'%':'-';
+}
+
+renderFilters();
+renderList();
+</script>
+</body>
+</html>

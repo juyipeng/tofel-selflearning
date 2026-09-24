@@ -1,0 +1,80 @@
+[
+  {
+    "batch": "BS_4月",
+    "set_num": 1,
+    "page_in_set": 1,
+    "image_index": 0,
+    "strs": [
+      "What did Sarah say about the meeting tomorrow?",
+      "She",
+      "arrived late",
+      "if it would",
+      "be",
+      "ok",
+      "wanted",
+      "to know",
+      "if she"
+    ]
+  },
+  {
+    "batch": "BS_4月",
+    "set_num": 1,
+    "page_in_set": 1,
+    "image_index": 1,
+    "strs": [
+      "Did you see the documentary they showed in the campus auditorium last week?",
+      "Can",
+      "?",
+      "watching",
+      "me whether",
+      "it's worth",
+      "you",
+      "tell"
+    ]
+  },
+  {
+    "batch": "BS_4月",
+    "set_num": 1,
+    "page_in_set": 1,
+    "image_index": 2,
+    "strs": [
+      "I need to get my university-issued laptop repaired this weekend.",
+      "you",
+      "?",
+      "where",
+      "take",
+      "will",
+      "it"
+    ]
+  },
+  {
+    "batch": "BS_4月",
+    "set_num": 1,
+    "page_in_set": 1,
+    "image_index": 3,
+    "strs": [
+      "I heard you went to the new restaurant off campus. How was it?",
+      "Can you",
+      "?",
+      "the food",
+      "asking about",
+      "tell me",
+      "or the atmosphere",
+      "if you are"
+    ]
+  },
+  {
+    "batch": "BS_4月",
+    "set_num": 1,
+    "page_in_set": 1,
+    "image_index": 4,
+    "strs": [
+      "I need to find a gift for my professor's birthday.",
+      "does",
+      "?",
+      "what",
+      "she",
+      "like"
+    ]
+  }
+]

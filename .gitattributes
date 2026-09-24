@@ -1,0 +1,21 @@
+# 统一换行符，避免不同平台 clone 后整文件 diff
+* text=auto
+
+*.py    text eol=lf
+*.html  text eol=lf
+*.css   text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.jsonl text eol=lf
+*.md    text eol=lf
+*.txt   text eol=lf
+
+# Windows 批处理必须 CRLF
+*.bat   text eol=crlf
+*.cmd   text eol=crlf
+
+# 二进制，不做换行转换
+*.mp3   binary
+*.png   binary
+*.jpg   binary
+*.ico   binary

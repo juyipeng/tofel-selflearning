@@ -1,0 +1,9236 @@
+[
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "if",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "know",
+      "the due dates",
+      "have been updated"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me",
+      "whether",
+      "it",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "tell",
+      "will be online or",
+      "in-person"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      null,
+      "this morning"
+    ],
+    "a": [
+      "missed",
+      "the class"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "did",
+      "you",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "aspects",
+      "find",
+      "most interesting"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "haven't",
+      null,
+      null,
+      "today"
+    ],
+    "a": [
+      "received",
+      "any emails"
+    ]
+  },
+  {
+    "s": [
+      "The environmental science department",
+      null,
+      null,
+      "and",
+      null
+    ],
+    "a": [
+      "offers",
+      "research opportunities",
+      "internships"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "it because",
+      "it's the",
+      null,
+      "that",
+      null,
+      null
+    ],
+    "a": [
+      "chose",
+      "topic",
+      "has",
+      "the new study report"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "do",
+      "you",
+      null,
+      "to visit",
+      "?"
+    ],
+    "a": [
+      "places",
+      "plan"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "to buy",
+      null,
+      "in",
+      null,
+      "?"
+    ],
+    "a": [
+      "need",
+      "tickets",
+      "advance"
+    ]
+  },
+  {
+    "s": [
+      "The campus",
+      null,
+      "the",
+      null,
+      null,
+      "and",
+      null
+    ],
+    "a": [
+      "has",
+      "best",
+      "research facilities",
+      "laboratories"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "for",
+      "it",
+      "yet",
+      "?"
+    ],
+    "a": [
+      "applied"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "started",
+      "the application process"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "if",
+      "she",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "know",
+      "included",
+      "the schedule"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      "will",
+      "you",
+      "be",
+      null,
+      "?"
+    ],
+    "a": [
+      "discussing"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "are",
+      "you",
+      null,
+      "about",
+      "?"
+    ],
+    "a": [
+      "topic",
+      "writing"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "does",
+      "the",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "time",
+      "game",
+      "start"
+    ]
+  },
+  {
+    "s": [
+      "Was",
+      "it",
+      "not",
+      null,
+      "to complete",
+      "before",
+      "the deadline."
+    ],
+    "a": [
+      "able"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "if",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "know",
+      "the new due date",
+      "has been announced"
+    ]
+  },
+  {
+    "s": [
+      "Sorry, but I",
+      "have",
+      "not",
+      null,
+      null,
+      "to look",
+      "at",
+      "it",
+      "yet."
+    ],
+    "a": [
+      "had",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "The dates",
+      null,
+      null,
+      "when",
+      "it",
+      null
+    ],
+    "a": [
+      "conflict with",
+      "my other commitments",
+      "is scheduled"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "if",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "know",
+      "the due dates",
+      "have been updated"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me",
+      "whether",
+      "it",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "tell",
+      "will be online or",
+      "in-person"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      null,
+      "this morning"
+    ],
+    "a": [
+      "missed",
+      "the class"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "did",
+      "you",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "aspects",
+      "find",
+      "most interesting"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "haven't",
+      null,
+      null,
+      "today"
+    ],
+    "a": [
+      "received",
+      "any emails"
+    ]
+  },
+  {
+    "s": [
+      "the environmental",
+      null,
+      "department",
+      "offers",
+      null,
+      "opportunities",
+      "and internships"
+    ],
+    "a": [
+      "science",
+      "research"
+    ]
+  },
+  {
+    "s": [
+      "I chose",
+      "it because",
+      "it's the",
+      "topic that",
+      null,
+      "new study report",
+      null
+    ],
+    "a": [
+      "the",
+      "has"
+    ]
+  },
+  {
+    "s": [
+      "what",
+      null,
+      "do",
+      "you",
+      "plan",
+      "to",
+      null,
+      "?"
+    ],
+    "a": [
+      "places",
+      "visit"
+    ]
+  },
+  {
+    "s": [
+      "do",
+      "you",
+      "need",
+      "to buy",
+      null,
+      "in advance?"
+    ],
+    "a": [
+      "tickets"
+    ]
+  },
+  {
+    "s": [
+      "the campus",
+      "has",
+      null,
+      null,
+      "research facilities",
+      "and laboratories"
+    ],
+    "a": [
+      "the",
+      "best"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately,",
+      "it",
+      "was",
+      null,
+      null,
+      "to complete",
+      "on time"
+    ],
+    "a": [
+      "not",
+      "able"
+    ]
+  },
+  {
+    "s": [
+      "My top choice is",
+      null,
+      "that",
+      "offers",
+      "the best",
+      null,
+      "program"
+    ],
+    "a": [
+      "the one",
+      "engineering"
+    ]
+  },
+  {
+    "s": [
+      "I read it",
+      "in",
+      "the research paper",
+      null,
+      null,
+      "published last week"
+    ],
+    "a": [
+      "that",
+      "was"
+    ]
+  },
+  {
+    "s": [
+      "Sorry, but",
+      "I wouldn't have",
+      null,
+      null,
+      "to complete",
+      "my assignments",
+      "if I did."
+    ],
+    "a": [
+      "enough",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "My teacher",
+      null,
+      "that",
+      "the school",
+      "would",
+      null,
+      "me",
+      "the most"
+    ],
+    "a": [
+      "suggested",
+      "interest"
+    ]
+  },
+  {
+    "s": [
+      "the places",
+      null,
+      null,
+      "were",
+      "breathtaking"
+    ],
+    "a": [
+      "we",
+      "visited"
+    ]
+  },
+  {
+    "s": [
+      "I don't think",
+      null,
+      "be",
+      null,
+      "to",
+      null,
+      "it"
+    ],
+    "a": [
+      "I'll",
+      "able",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately,",
+      "I",
+      null,
+      "have",
+      null,
+      "free time",
+      "this weekend"
+    ],
+    "a": [
+      "will",
+      "no"
+    ]
+  },
+  {
+    "s": [
+      "do",
+      "you",
+      null,
+      null,
+      "the questions",
+      "will be",
+      null,
+      "?"
+    ],
+    "a": [
+      "think",
+      "that",
+      "difficult"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "wasn't",
+      null,
+      "to",
+      null
+    ],
+    "a": [
+      "able",
+      "participate"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately,",
+      "my schedule",
+      null,
+      null,
+      "allow",
+      "me",
+      "to",
+      "go"
+    ],
+    "a": [
+      "did",
+      "not"
+    ]
+  },
+  {
+    "s": [
+      "the website",
+      null,
+      "our professor",
+      null,
+      "has",
+      null,
+      "the details"
+    ],
+    "a": [
+      "that",
+      "mentioned",
+      "all"
+    ]
+  },
+  {
+    "s": [
+      "He wanted",
+      "to be",
+      "sure that",
+      null,
+      null,
+      null,
+      "courses"
+    ],
+    "a": [
+      "my schedule",
+      "included all",
+      "the required"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "don't",
+      null,
+      "it",
+      "will",
+      null,
+      null,
+      "desired results"
+    ],
+    "a": [
+      "believe",
+      "achieve",
+      "the"
+    ]
+  },
+  {
+    "s": [
+      "She",
+      null,
+      "to know",
+      "when",
+      "I plan",
+      "to complete",
+      "my",
+      "assignment"
+    ],
+    "a": [
+      "wanted"
+    ]
+  },
+  {
+    "s": [
+      "Yes. Do",
+      "you",
+      null,
+      "if",
+      "I",
+      "will",
+      "speak with",
+      "the head of the",
+      "department?"
+    ],
+    "a": [
+      "know"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately, I",
+      "will",
+      null,
+      "be",
+      null,
+      "to",
+      null,
+      "it",
+      "this year."
+    ],
+    "a": [
+      "not",
+      "able",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "was",
+      null,
+      null,
+      "to make it",
+      "to",
+      "yesterday's",
+      "lecture."
+    ],
+    "a": [
+      "not",
+      "able"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      "haven't",
+      null,
+      "the chance",
+      "to",
+      null,
+      "myself"
+    ],
+    "a": [
+      "had",
+      "introduce"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "have",
+      null,
+      null,
+      "of",
+      "going"
+    ],
+    "a": [
+      "no",
+      "intention"
+    ]
+  },
+  {
+    "s": [
+      "How",
+      null,
+      null,
+      null,
+      "be",
+      "staying?"
+    ],
+    "a": [
+      "long",
+      "will",
+      "they"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      null,
+      null,
+      "an appointment",
+      null,
+      "that time"
+    ],
+    "a": [
+      "she",
+      "has",
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "I didn't",
+      null,
+      null,
+      "with",
+      null
+    ],
+    "a": [
+      "bring",
+      "them",
+      "me"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      null,
+      null,
+      null,
+      null,
+      "to complete",
+      null,
+      "yet."
+    ],
+    "a": [
+      "have",
+      "not",
+      "had",
+      "time",
+      "it"
+    ]
+  },
+  {
+    "s": [
+      "My morning class ended",
+      null,
+      null,
+      null,
+      null,
+      "to attend",
+      "the workshop"
+    ],
+    "a": [
+      "too",
+      "late",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately, I",
+      null,
+      null,
+      null,
+      "to get",
+      "there"
+    ],
+    "a": [
+      "was",
+      "never",
+      "able"
+    ]
+  },
+  {
+    "s": [
+      "The book",
+      "that",
+      "I just read",
+      null,
+      null,
+      null
+    ],
+    "a": [
+      "was",
+      "very",
+      "insightful"
+    ]
+  },
+  {
+    "s": [
+      "The seminar",
+      "that",
+      null,
+      "for today",
+      null,
+      null,
+      "my other commitments"
+    ],
+    "a": [
+      "was scheduled",
+      "conflicted",
+      "with"
+    ]
+  },
+  {
+    "s": [
+      "They",
+      null,
+      "in the drawer",
+      "where",
+      "I",
+      null,
+      "the",
+      null
+    ],
+    "a": [
+      "are",
+      "keep",
+      "textbooks"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      null,
+      null,
+      "I",
+      null,
+      null,
+      "to study",
+      "next year"
+    ],
+    "a": [
+      "didn't know",
+      "where",
+      "was",
+      "planning"
+    ]
+  },
+  {
+    "s": [
+      "How",
+      null,
+      null,
+      null,
+      "be",
+      "staying?"
+    ],
+    "a": [
+      "long",
+      "will",
+      "they"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      null,
+      null,
+      "an appointment",
+      null,
+      "that time"
+    ],
+    "a": [
+      "she",
+      "has",
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "I didn't",
+      null,
+      null,
+      "with",
+      null
+    ],
+    "a": [
+      "bring",
+      "them",
+      "me"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      null,
+      null,
+      null,
+      null,
+      "to complete",
+      null,
+      "yet."
+    ],
+    "a": [
+      "have",
+      "not",
+      "had",
+      "time",
+      "it"
+    ]
+  },
+  {
+    "s": [
+      "My morning class ended",
+      null,
+      null,
+      null,
+      null,
+      "to attend",
+      "the workshop"
+    ],
+    "a": [
+      "too",
+      "late",
+      "for",
+      "me"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately, I",
+      null,
+      null,
+      null,
+      "to get",
+      "there"
+    ],
+    "a": [
+      "was",
+      "never",
+      "able"
+    ]
+  },
+  {
+    "s": [
+      "The book",
+      "that",
+      "I just read",
+      null,
+      null,
+      null
+    ],
+    "a": [
+      "was",
+      "very",
+      "insightful"
+    ]
+  },
+  {
+    "s": [
+      "The seminar",
+      "that",
+      null,
+      "for today",
+      null,
+      null,
+      "my other commitments"
+    ],
+    "a": [
+      "was scheduled",
+      "conflicted",
+      "with"
+    ]
+  },
+  {
+    "s": [
+      "They",
+      null,
+      "in the drawer",
+      "where",
+      "I",
+      null,
+      "the",
+      null
+    ],
+    "a": [
+      "are",
+      "keep",
+      "textbooks"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      null,
+      null,
+      "I",
+      null,
+      null,
+      "to study",
+      "next year"
+    ],
+    "a": [
+      "didn't know",
+      "where",
+      "was",
+      "planning"
+    ]
+  },
+  {
+    "s": [
+      "She",
+      null,
+      "to know",
+      "if it would be",
+      null,
+      "if she",
+      null
+    ],
+    "a": [
+      "wanted",
+      "ok",
+      "arrived late"
+    ]
+  },
+  {
+    "s": [
+      "Can",
+      "you",
+      "tell",
+      "me whether",
+      "it's worth",
+      null,
+      "?"
+    ],
+    "a": [
+      "watching"
+    ]
+  },
+  {
+    "s": [
+      "Where",
+      "will",
+      "you",
+      null,
+      "it",
+      "?"
+    ],
+    "a": [
+      "take"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell me",
+      "if you are",
+      null,
+      "the food",
+      "or the atmosphere",
+      "?"
+    ],
+    "a": [
+      "asking about"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      "does",
+      "she",
+      null,
+      "?"
+    ],
+    "a": [
+      "like"
+    ]
+  },
+  {
+    "s": [
+      "Can",
+      "you",
+      "tell",
+      "me whether",
+      "you visited",
+      "the Eiffel",
+      null,
+      "?"
+    ],
+    "a": [
+      "Tower"
+    ]
+  },
+  {
+    "s": [
+      "I've",
+      null,
+      "a slideshow",
+      "that",
+      null,
+      "my",
+      "experiment"
+    ],
+    "a": [
+      "prepared",
+      "describes"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "she has",
+      "any available",
+      null,
+      "?"
+    ],
+    "a": [
+      "office hours"
+    ]
+  },
+  {
+    "s": [
+      "Who",
+      "else",
+      "have",
+      "you",
+      null,
+      "?"
+    ],
+    "a": [
+      "invited"
+    ]
+  },
+  {
+    "s": [
+      "I chose",
+      "a theme",
+      "that",
+      "focuses on",
+      "renewable",
+      null,
+      "and",
+      "a sustainable future"
+    ],
+    "a": [
+      "energy"
+    ]
+  },
+  {
+    "s": [
+      "I didn't",
+      null,
+      "it",
+      "until",
+      null
+    ],
+    "a": [
+      "see",
+      "late"
+    ]
+  },
+  {
+    "s": [
+      "I wasn't",
+      null,
+      "about",
+      "some",
+      "of",
+      "the",
+      "requirements"
+    ],
+    "a": [
+      "sure"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      "have",
+      "a",
+      null,
+      "at",
+      "that",
+      null
+    ],
+    "a": [
+      "commitment",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "I'm not",
+      "sure",
+      "who",
+      "was",
+      null,
+      "for",
+      "them"
+    ],
+    "a": [
+      "responsible"
+    ]
+  },
+  {
+    "s": [
+      "No, I couldn't",
+      "get",
+      null,
+      "in",
+      null
+    ],
+    "a": [
+      "tickets",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "to",
+      null,
+      "in",
+      "time"
+    ],
+    "a": [
+      "forgot",
+      "register"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you need",
+      null,
+      "for",
+      "your",
+      "research",
+      "project",
+      "?"
+    ],
+    "a": [
+      "a source"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that",
+      "comes",
+      "with",
+      "fresh",
+      null
+    ],
+    "a": [
+      "berries"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      "checked",
+      "their",
+      "website for",
+      null,
+      "?"
+    ],
+    "a": [
+      "availability"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      "know",
+      "if",
+      "it's",
+      "still",
+      null,
+      "?"
+    ],
+    "a": [
+      "available"
+    ]
+  },
+  {
+    "s": [
+      "I was feeling",
+      null,
+      "and",
+      "decided",
+      "to",
+      null,
+      "home"
+    ],
+    "a": [
+      "unwell",
+      "stay"
+    ]
+  },
+  {
+    "s": [
+      "I bought",
+      "it from",
+      "a shop",
+      "that specializes",
+      "in",
+      "vintage",
+      null
+    ],
+    "a": [
+      "items"
+    ]
+  },
+  {
+    "s": [
+      "My classmate",
+      "who",
+      "majors",
+      "in",
+      null,
+      "will",
+      "attend"
+    ],
+    "a": [
+      "marketing"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that has",
+      "the highest",
+      "customer ratings",
+      "seemed like the",
+      null,
+      null
+    ],
+    "a": [
+      "best",
+      "choice"
+    ]
+  },
+  {
+    "s": [
+      "No, I didn't",
+      "have",
+      "any free",
+      null
+    ],
+    "a": [
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "It is",
+      "taught by",
+      "a professor",
+      "who",
+      "is an",
+      null,
+      "the field"
+    ],
+    "a": [
+      "expert in"
+    ]
+  },
+  {
+    "s": [
+      "The topic",
+      "they",
+      "chose",
+      "does",
+      "not",
+      null,
+      "me"
+    ],
+    "a": [
+      "interest"
+    ]
+  },
+  {
+    "s": [
+      "It has",
+      null,
+      "that I",
+      "need to",
+      "return to",
+      "the",
+      null
+    ],
+    "a": [
+      "some books",
+      "campus library"
+    ]
+  },
+  {
+    "s": [
+      "I followed",
+      "a tutorial that",
+      "explained",
+      "the",
+      null,
+      "one step at a time"
+    ],
+    "a": [
+      "process"
+    ]
+  },
+  {
+    "s": [
+      "No, I haven't",
+      null,
+      "it yet"
+    ],
+    "a": [
+      "completed"
+    ]
+  },
+  {
+    "s": [
+      "I didn't",
+      null,
+      "it",
+      "until",
+      null
+    ],
+    "a": [
+      "see",
+      "late"
+    ]
+  },
+  {
+    "s": [
+      "I wasn't",
+      null,
+      "about",
+      "some",
+      "of",
+      "the",
+      "requirements"
+    ],
+    "a": [
+      "sure"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      "have",
+      "a",
+      null,
+      "at",
+      "that",
+      null
+    ],
+    "a": [
+      "commitment",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "I'm not",
+      "sure",
+      "who",
+      "was",
+      null,
+      "for",
+      "them"
+    ],
+    "a": [
+      "responsible"
+    ]
+  },
+  {
+    "s": [
+      "No, I couldn't",
+      "get",
+      null,
+      "in",
+      null
+    ],
+    "a": [
+      "tickets",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "to",
+      null,
+      "in",
+      "time"
+    ],
+    "a": [
+      "forgot",
+      "register"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you need",
+      null,
+      "for",
+      "your",
+      "research",
+      "project",
+      "?"
+    ],
+    "a": [
+      "a source"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that",
+      "comes",
+      "with",
+      "fresh",
+      null
+    ],
+    "a": [
+      "berries"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      "checked",
+      "their",
+      "website for",
+      null,
+      "?"
+    ],
+    "a": [
+      "availability"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      "know",
+      "if",
+      "it's",
+      "still",
+      null,
+      "?"
+    ],
+    "a": [
+      "available"
+    ]
+  },
+  {
+    "s": [
+      "The model",
+      "that has",
+      "the longest",
+      "battery life",
+      "is my",
+      "top",
+      null
+    ],
+    "a": [
+      "choice"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      "stuck in",
+      "a traffic jam",
+      "that lasted",
+      "for",
+      "an",
+      null
+    ],
+    "a": [
+      "hour"
+    ]
+  },
+  {
+    "s": [
+      "I had",
+      "another",
+      "appointment",
+      "that",
+      "I couldn't",
+      null
+    ],
+    "a": [
+      "reschedule"
+    ]
+  },
+  {
+    "s": [
+      "The recent",
+      "renovations",
+      "to",
+      "the library",
+      "make it",
+      "look",
+      null
+    ],
+    "a": [
+      "very impressive"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      "studying",
+      "for",
+      "my calculus",
+      "test at",
+      null
+    ],
+    "a": [
+      "the library"
+    ]
+  },
+  {
+    "s": [
+      "Yes, it's",
+      null,
+      "that won",
+      null,
+      "award last year"
+    ],
+    "a": [
+      "the one",
+      "the literary"
+    ]
+  },
+  {
+    "s": [
+      "The group",
+      "that meets",
+      "every",
+      "Thursday",
+      "afternoon",
+      "is",
+      "very",
+      null
+    ],
+    "a": [
+      "helpful"
+    ]
+  },
+  {
+    "s": [
+      "The car",
+      "that I usually",
+      "drive is",
+      "in the",
+      "shop at",
+      null
+    ],
+    "a": [
+      "the moment"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      "in",
+      "a",
+      "class",
+      "that",
+      null,
+      null
+    ],
+    "a": [
+      "ran",
+      "late"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      "have",
+      "other",
+      "study",
+      null,
+      null
+    ],
+    "a": [
+      "plans",
+      "tonight"
+    ]
+  },
+  {
+    "prompt": "Which internship did you have during the summer?",
+    "sentence": [
+      "I",
+      "worked",
+      "with",
+      null,
+      "that",
+      "aimed to reduce",
+      null
+    ],
+    "options": [
+      "a company",
+      "carbon emissions"
+    ],
+    "answers": [
+      "a company",
+      "carbon emissions"
+    ]
+  },
+  {
+    "prompt": "There's a career fair in the auditorium tomorrow.",
+    "sentence": [
+      "Is it",
+      null,
+      null,
+      "in the",
+      "morning or",
+      "afternoon?"
+    ],
+    "options": [
+      "going to",
+      "start"
+    ],
+    "answers": [
+      "going to",
+      "start"
+    ]
+  },
+  {
+    "prompt": "Are you planning to participate in the school's charity event this weekend?",
+    "sentence": [
+      "Unfortunately,",
+      "I",
+      "have",
+      null,
+      null,
+      "to",
+      null
+    ],
+    "options": [
+      "no",
+      "time",
+      "participate"
+    ],
+    "answers": [
+      "no",
+      "time",
+      "participate"
+    ]
+  },
+  {
+    "prompt": "Why didn't you bring the book to class?",
+    "sentence": [
+      "I accidentally",
+      null,
+      "it on the",
+      "desk in",
+      null
+    ],
+    "options": [
+      "left",
+      "my dorm room"
+    ],
+    "answers": [
+      "left",
+      "my dorm room"
+    ]
+  },
+  {
+    "prompt": "Our class is scheduled to have a meeting on Thursday.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the agenda",
+      null,
+      null,
+      "on the",
+      "new project?"
+    ],
+    "options": [
+      "includes a",
+      "discussion"
+    ],
+    "answers": [
+      "includes a",
+      "discussion"
+    ]
+  },
+  {
+    "prompt": "I just got a new internship!",
+    "sentence": [
+      "What type",
+      "of",
+      null,
+      "will",
+      "you",
+      "be",
+      null,
+      "?"
+    ],
+    "options": [
+      "work",
+      "doing"
+    ],
+    "answers": [
+      "work",
+      "doing"
+    ]
+  },
+  {
+    "prompt": "Are you going to the new café for lunch today?",
+    "sentence": [
+      "Sorry, but",
+      "I",
+      "wouldn't have",
+      "enough",
+      null,
+      "to",
+      null,
+      "my assignments",
+      "if I did."
+    ],
+    "options": [
+      "time",
+      "complete"
+    ],
+    "answers": [
+      "time",
+      "complete"
+    ]
+  },
+  {
+    "prompt": "Why didn't you come to the literature symposium yesterday?",
+    "sentence": [
+      "The",
+      null,
+      "I",
+      "received",
+      "had",
+      "the wrong",
+      null
+    ],
+    "options": [
+      "email",
+      "time listed"
+    ],
+    "answers": [
+      "email",
+      "time listed"
+    ]
+  },
+  {
+    "prompt": "What did the club advisor say during the meeting?",
+    "sentence": [
+      "He",
+      null,
+      "why",
+      "the",
+      "new",
+      "policy",
+      null
+    ],
+    "options": [
+      "explained",
+      "is being implemented"
+    ],
+    "answers": [
+      "explained",
+      "is being implemented"
+    ]
+  },
+  {
+    "prompt": "There is a work study position in the athletic department.",
+    "sentence": [
+      "Do you",
+      "know if",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "the position",
+      "requires experience"
+    ],
+    "answers": [
+      "the position",
+      "requires experience"
+    ]
+  },
+  {
+    "prompt": "Do you have a question about the interview process for the research position at the Chemistry Department?",
+    "sentence": [
+      "Yes. Do",
+      "you",
+      "know",
+      "if",
+      "I",
+      "will",
+      null,
+      null,
+      "department?"
+    ],
+    "options": [
+      "speak with",
+      "the head of the"
+    ],
+    "answers": [
+      "speak with",
+      "the head of the"
+    ]
+  },
+  {
+    "prompt": "Why did you choose to take this course?",
+    "sentence": [
+      "I",
+      null,
+      "it",
+      null,
+      "my future",
+      "career plans"
+    ],
+    "options": [
+      "thought",
+      "would benefit"
+    ],
+    "answers": [
+      "thought",
+      "would benefit"
+    ]
+  },
+  {
+    "prompt": "I'm applying for a part-time position on campus.",
+    "sentence": [
+      "Have you",
+      null,
+      "your",
+      null,
+      "to",
+      "them",
+      "?"
+    ],
+    "options": [
+      "sent",
+      "resume"
+    ],
+    "answers": [
+      "sent",
+      "resume"
+    ]
+  },
+  {
+    "prompt": "The presentation you gave was very insightful.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the audience",
+      null,
+      null,
+      "afterward?"
+    ],
+    "options": [
+      "had",
+      "any questions"
+    ],
+    "answers": [
+      "had",
+      "any questions"
+    ]
+  },
+  {
+    "prompt": "I need to buy some supplies for my art project.",
+    "sentence": [
+      "Did you",
+      null,
+      "if the",
+      "store has",
+      "everything you",
+      null,
+      "?"
+    ],
+    "options": [
+      "check",
+      "need"
+    ],
+    "answers": [
+      "check",
+      "need"
+    ]
+  },
+  {
+    "prompt": "Are you going to the class picnic?",
+    "sentence": [
+      "Unfortunately, I",
+      "will",
+      "not",
+      "be",
+      null,
+      "to",
+      null,
+      "it",
+      "this year."
+    ],
+    "options": [
+      "able",
+      "make"
+    ],
+    "answers": [
+      "able",
+      "make"
+    ]
+  },
+  {
+    "prompt": "My parents are coming to visit for family weekend.",
+    "sentence": [
+      "How",
+      null,
+      "will",
+      "they",
+      "be",
+      null,
+      "?"
+    ],
+    "options": [
+      "long",
+      "staying"
+    ],
+    "answers": [
+      "long",
+      "staying"
+    ]
+  },
+  {
+    "prompt": "Why aren't you attending the conference?",
+    "sentence": [
+      "The dates",
+      null,
+      "my",
+      null,
+      "when",
+      "it",
+      "is scheduled."
+    ],
+    "options": [
+      "conflict with",
+      "other commitments"
+    ],
+    "answers": [
+      "conflict with",
+      "other commitments"
+    ]
+  },
+  {
+    "prompt": "Which project are you working on with your internship?",
+    "sentence": [
+      "The one",
+      "that involves",
+      null,
+      null,
+      "is my",
+      "focus right",
+      "now."
+    ],
+    "options": [
+      "community outreach",
+      "and education"
+    ],
+    "answers": [
+      "community outreach",
+      "and education"
+    ]
+  },
+  {
+    "prompt": "I saw a job posting for a part-time position at the student bookstore.",
+    "sentence": [
+      "Have you",
+      null,
+      "for",
+      null,
+      "yet?"
+    ],
+    "options": [
+      "applied",
+      "it"
+    ],
+    "answers": [
+      "applied",
+      "it"
+    ]
+  },
+  {
+    "prompt": "Did you finish the book I lent you?",
+    "sentence": [
+      "Sorry, I",
+      "have",
+      "not",
+      "had",
+      null,
+      "to begin",
+      null,
+      "it",
+      "yet."
+    ],
+    "options": [
+      "a chance",
+      "reading"
+    ],
+    "answers": [
+      "a chance",
+      "reading"
+    ]
+  },
+  {
+    "prompt": "Hannah mentioned the upcoming research conference in her email.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "she",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "included",
+      "the schedule"
+    ],
+    "answers": [
+      "included",
+      "the schedule"
+    ]
+  },
+  {
+    "prompt": "I have a meeting with my advisor this afternoon.",
+    "sentence": [
+      null,
+      "will",
+      "you",
+      "be",
+      null,
+      "?"
+    ],
+    "options": [
+      "what",
+      "discussing"
+    ],
+    "answers": [
+      "what",
+      "discussing"
+    ]
+  },
+  {
+    "prompt": "I need to finish my essay by Friday.",
+    "sentence": [
+      "What",
+      null,
+      "are",
+      "you",
+      null,
+      "about",
+      "?"
+    ],
+    "options": [
+      "topic",
+      "writing"
+    ],
+    "answers": [
+      "topic",
+      "writing"
+    ]
+  },
+  {
+    "prompt": "Tomorrow is the big game between our school and the rival team.",
+    "sentence": [
+      "What",
+      null,
+      "does",
+      "the",
+      "game",
+      null,
+      "?"
+    ],
+    "options": [
+      "time",
+      "start"
+    ],
+    "answers": [
+      "time",
+      "start"
+    ]
+  },
+  {
+    "prompt": "Did you finish the assignment on time?",
+    "sentence": [
+      "I",
+      "was",
+      "not",
+      null,
+      null,
+      "it",
+      "before",
+      "the",
+      "deadline."
+    ],
+    "options": [
+      "able",
+      "to complete"
+    ],
+    "answers": [
+      "able",
+      "to complete"
+    ]
+  },
+  {
+    "prompt": "The assignment deadline has been extended.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the new",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "due date",
+      "has been announced"
+    ],
+    "answers": [
+      "due date",
+      "has been announced"
+    ]
+  },
+  {
+    "prompt": "Did you get a chance to review the report?",
+    "sentence": [
+      "Sorry, but I",
+      "have",
+      "not",
+      "had",
+      null,
+      null,
+      "at",
+      "it",
+      "yet."
+    ],
+    "options": [
+      "time",
+      "to look"
+    ],
+    "answers": [
+      "time",
+      "to look"
+    ]
+  },
+  {
+    "prompt": "Why aren't you attending the conference?",
+    "sentence": [
+      "The dates",
+      null,
+      "my",
+      null,
+      "when",
+      "it",
+      "is scheduled."
+    ],
+    "options": [
+      "conflict with",
+      "other commitments"
+    ],
+    "answers": [
+      "conflict with",
+      "other commitments"
+    ]
+  },
+  {
+    "prompt": "The university seminar on financial management was very insightful.",
+    "sentence": [
+      "Do you",
+      "know if",
+      null,
+      "will be",
+      null,
+      "?"
+    ],
+    "options": [
+      "the slides",
+      "available online"
+    ],
+    "answers": [
+      "the slides",
+      "available online"
+    ]
+  },
+  {
+    "prompt": "Why is everyone gathering in that classroom?",
+    "sentence": [
+      "They want",
+      "to",
+      null,
+      null,
+      "what the",
+      null,
+      "is about"
+    ],
+    "options": [
+      "find",
+      "out",
+      "announcement"
+    ],
+    "answers": [
+      "find",
+      "out",
+      "announcement"
+    ]
+  },
+  {
+    "prompt": "I'm planning to join the cooking class next month.",
+    "sentence": [
+      "Have you",
+      null,
+      null,
+      "yet?"
+    ],
+    "options": [
+      "signed",
+      "up"
+    ],
+    "answers": [
+      "signed",
+      "up"
+    ]
+  },
+  {
+    "prompt": "I'm thinking about adopting a dog from the shelter near campus.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "they have",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "any puppies",
+      "available"
+    ],
+    "answers": [
+      "any puppies",
+      "available"
+    ]
+  },
+  {
+    "prompt": "I need to finish my essay by Friday.",
+    "sentence": [
+      "What",
+      null,
+      "are",
+      "you",
+      null,
+      "about",
+      "?"
+    ],
+    "options": [
+      "topic",
+      "writing"
+    ],
+    "answers": [
+      "topic",
+      "writing"
+    ]
+  },
+  {
+    "prompt": "Who did you want to work with on the geology project?",
+    "sentence": [
+      "I",
+      "am planning",
+      null,
+      null,
+      "if he",
+      "is available."
+    ],
+    "options": [
+      "to work",
+      "with Michael"
+    ],
+    "answers": [
+      "to work",
+      "with Michael"
+    ]
+  },
+  {
+    "prompt": "Did you hear about the university's new resident artist?",
+    "sentence": [
+      "The artist",
+      "who created",
+      "the",
+      null,
+      "is",
+      "very",
+      null
+    ],
+    "options": [
+      "sculptures",
+      "talented"
+    ],
+    "answers": [
+      "sculptures",
+      "talented"
+    ]
+  },
+  {
+    "prompt": "Professor Smith announced the date for the final exam.",
+    "sentence": [
+      "Do you",
+      "think",
+      "it's going",
+      "to be",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "online or",
+      "in person"
+    ],
+    "answers": [
+      "online or",
+      "in person"
+    ]
+  },
+  {
+    "prompt": "They just announced the dates for student orientation next month.",
+    "sentence": [
+      "Have",
+      "you registered",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "for",
+      "it yet"
+    ],
+    "answers": [
+      "for",
+      "it yet"
+    ]
+  },
+  {
+    "prompt": "Were you able to solve the final math problem for the algebra assignment?",
+    "sentence": [
+      "I",
+      "couldn't",
+      null,
+      "the",
+      "correct",
+      null
+    ],
+    "options": [
+      "determine",
+      "solution"
+    ],
+    "answers": [
+      "determine",
+      "solution"
+    ]
+  },
+  {
+    "prompt": "Are you going to attend class tomorrow?",
+    "sentence": [
+      "No, I'm",
+      null,
+      "to",
+      "the",
+      null,
+      "with",
+      "friends"
+    ],
+    "options": [
+      "headed",
+      "beach"
+    ],
+    "answers": [
+      "headed",
+      "beach"
+    ]
+  },
+  {
+    "prompt": "Why didn't you bring your umbrella to class?",
+    "sentence": [
+      "I didn't",
+      null,
+      "it",
+      "was",
+      "going",
+      "to",
+      null
+    ],
+    "options": [
+      "think",
+      "rain"
+    ],
+    "answers": [
+      "think",
+      "rain"
+    ]
+  },
+  {
+    "prompt": "Did you attend the study session last Saturday?",
+    "sentence": [
+      "No.",
+      "I",
+      "couldn't",
+      null,
+      null
+    ],
+    "options": [
+      "make",
+      "it"
+    ],
+    "answers": [
+      "make",
+      "it"
+    ]
+  },
+  {
+    "prompt": "Did you finish your part of the group project?",
+    "sentence": [
+      "No,",
+      "I'm",
+      "still",
+      null,
+      "on",
+      "my",
+      null,
+      "section."
+    ],
+    "options": [
+      "working",
+      "assigned"
+    ],
+    "answers": [
+      "working",
+      "assigned"
+    ]
+  },
+  {
+    "prompt": "Where can I find the biology project guidelines?",
+    "sentence": [
+      "Do you",
+      "know how",
+      "to",
+      null,
+      "the",
+      null,
+      "portal?"
+    ],
+    "options": [
+      "use",
+      "online"
+    ],
+    "answers": [
+      "use",
+      "online"
+    ]
+  },
+  {
+    "prompt": "Why didn't you bring your gym clothes to tennis class?",
+    "sentence": [
+      "I",
+      null,
+      "to",
+      null,
+      "them",
+      "this",
+      "morning"
+    ],
+    "options": [
+      "forgot",
+      "pack"
+    ],
+    "answers": [
+      "forgot",
+      "pack"
+    ]
+  },
+  {
+    "prompt": "Who is coming to the party in the dorm tonight?",
+    "sentence": [
+      "I don't",
+      "know who",
+      null,
+      "the",
+      null,
+      "are"
+    ],
+    "options": [
+      "any of",
+      "guests"
+    ],
+    "answers": [
+      "any of",
+      "guests"
+    ]
+  },
+  {
+    "prompt": "Did you receive the email I sent about class?",
+    "sentence": [
+      "No, I",
+      "didn't",
+      null,
+      "it",
+      "in",
+      "my",
+      null
+    ],
+    "options": [
+      "see",
+      "inbox"
+    ],
+    "answers": [
+      "see",
+      "inbox"
+    ]
+  },
+  {
+    "prompt": "I just purchased all of the textbooks I need this semester.",
+    "sentence": [
+      "Can you tell",
+      "me",
+      "if",
+      "they",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "were",
+      "expensive"
+    ],
+    "answers": [
+      "were",
+      "expensive"
+    ]
+  },
+  {
+    "prompt": "Did you read the article in the latest university newsletter?",
+    "sentence": [
+      "No, I",
+      "haven't had",
+      null,
+      "to",
+      null,
+      "it",
+      "yet"
+    ],
+    "options": [
+      "the time",
+      "read"
+    ],
+    "answers": [
+      "the time",
+      "read"
+    ]
+  },
+  {
+    "prompt": "Did you attend the conference last week?",
+    "sentence": [
+      "Unfortunately,",
+      "my schedule",
+      "did",
+      "not",
+      null,
+      "me",
+      "to",
+      null
+    ],
+    "options": [
+      "allow",
+      "go"
+    ],
+    "answers": [
+      "allow",
+      "go"
+    ]
+  },
+  {
+    "s": [
+      "I'm",
+      null,
+      "to",
+      null,
+      "a report",
+      null,
+      "the deadline"
+    ],
+    "a": [
+      "trying",
+      "finish",
+      "before"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      "they",
+      null,
+      null,
+      "me",
+      null
+    ],
+    "a": [
+      "haven't",
+      "contacted",
+      "yet."
+    ]
+  },
+  {
+    "s": [
+      "How",
+      null,
+      "you",
+      null,
+      null,
+      "it",
+      "?"
+    ],
+    "a": [
+      "do",
+      "practice",
+      "speaking"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately, I",
+      "will",
+      "not",
+      null,
+      "able",
+      "to",
+      null,
+      "it",
+      "this year."
+    ],
+    "a": [
+      "be",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately,",
+      "I",
+      null,
+      null,
+      null,
+      "free time",
+      "this weekend"
+    ],
+    "a": [
+      "will",
+      "have",
+      "no"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "it",
+      null,
+      "in the",
+      "morning or",
+      "afternoon?"
+    ],
+    "a": [
+      "know if",
+      "starts"
+    ]
+  },
+  {
+    "s": [
+      "What types",
+      null,
+      "vegetables",
+      null,
+      "you",
+      null,
+      null
+    ],
+    "a": [
+      "of",
+      "do",
+      "plan",
+      "to grow"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "I",
+      null,
+      "make it",
+      "this",
+      "time."
+    ],
+    "a": [
+      "don't think",
+      "can"
+    ]
+  },
+  {
+    "s": [
+      "The places",
+      "we",
+      null,
+      null,
+      null
+    ],
+    "a": [
+      "visited",
+      "were",
+      "breathtaking"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "the speaker",
+      null,
+      "any",
+      "handouts?"
+    ],
+    "a": [
+      "know if",
+      "shared"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "to see if",
+      "it's",
+      null,
+      null,
+      "the library?"
+    ],
+    "a": [
+      "checked",
+      "available",
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "I'm enrolled",
+      "in the",
+      null,
+      "that",
+      null,
+      null,
+      null
+    ],
+    "a": [
+      "one",
+      "covers",
+      "advanced",
+      "mathematics"
+    ]
+  },
+  {
+    "s": [
+      "The topic",
+      "they are",
+      "discussing is",
+      null,
+      "to",
+      "my",
+      "research."
+    ],
+    "a": [
+      "not relevant"
+    ]
+  },
+  {
+    "s": [
+      "My top choice is",
+      "the one",
+      "that",
+      null,
+      "the best",
+      "engineering",
+      "program"
+    ],
+    "a": [
+      "offers"
+    ]
+  },
+  {
+    "s": [
+      "The library",
+      "that",
+      null,
+      "to be",
+      "open was",
+      null,
+      "renovations."
+    ],
+    "a": [
+      "was supposed",
+      "closed for"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell me",
+      "if there are",
+      "more",
+      "sessions like",
+      null,
+      "scheduled",
+      "?"
+    ],
+    "a": [
+      "that"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "on",
+      "it",
+      "yet?"
+    ],
+    "a": [
+      "started working"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      "she",
+      "has",
+      "an appointment",
+      null,
+      "that time."
+    ],
+    "a": [
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      "didn't know",
+      "where",
+      "he",
+      null,
+      "planning",
+      "to study",
+      "next year."
+    ],
+    "a": [
+      "was"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "to work",
+      "with Michael",
+      null,
+      "is available."
+    ],
+    "a": [
+      "am planning",
+      "if he"
+    ]
+  },
+  {
+    "s": [
+      "The recent",
+      "renovations",
+      null,
+      "the library",
+      "look",
+      "very impressive."
+    ],
+    "a": [
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      "know",
+      "whether",
+      "it covered",
+      null,
+      "trends?"
+    ],
+    "a": [
+      "social media"
+    ]
+  },
+  {
+    "s": [
+      "The technique",
+      "that my",
+      "tutor recommended",
+      "seems",
+      "to",
+      null,
+      "best",
+      "for",
+      "me."
+    ],
+    "a": [
+      "work"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell me",
+      "whether it",
+      "will reopen by",
+      "the end",
+      null,
+      "the month?"
+    ],
+    "a": [
+      "of"
+    ]
+  },
+  {
+    "s": [
+      "What types",
+      null,
+      "vegetables",
+      null,
+      "you",
+      null,
+      null
+    ],
+    "a": [
+      "of",
+      "do",
+      "plan",
+      "to grow"
+    ]
+  },
+  {
+    "s": [
+      "Unfortunately, I",
+      "will",
+      "not",
+      null,
+      "able",
+      "to",
+      null,
+      "it",
+      "this year."
+    ],
+    "a": [
+      "be",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "Yes. Do",
+      "you",
+      "know",
+      "if",
+      "I",
+      null,
+      "speak with",
+      "the head of the",
+      "department?"
+    ],
+    "a": [
+      "will"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      "know",
+      "if there",
+      null,
+      "another session",
+      "next month?"
+    ],
+    "a": [
+      "will be"
+    ]
+  },
+  {
+    "s": [
+      "I followed",
+      "a tutorial that",
+      null,
+      "the process",
+      "one step",
+      "at a time."
+    ],
+    "a": [
+      "explained"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "to",
+      null,
+      "the session",
+      "that",
+      "was",
+      "fully",
+      "booked."
+    ],
+    "a": [
+      "wanted",
+      "join"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "did",
+      null,
+      "find",
+      "it",
+      "very",
+      "engaging."
+    ],
+    "a": [
+      "not"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      "I",
+      "couldn't",
+      null,
+      "the deadline."
+    ],
+    "a": [
+      "meet"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      "I",
+      "haven't",
+      null,
+      "it yet."
+    ],
+    "a": [
+      "completed"
+    ]
+  },
+  {
+    "s": [
+      "Can",
+      "you tell",
+      "me whether",
+      "it will be",
+      null,
+      "next",
+      "year?"
+    ],
+    "a": [
+      "held again"
+    ]
+  },
+  {
+    "s": [
+      "I haven't",
+      null,
+      "yet,",
+      "but it",
+      "does sound",
+      "interesting."
+    ],
+    "a": [
+      "decided"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "thought",
+      "it",
+      null,
+      "my future",
+      "career plans."
+    ],
+    "a": [
+      "would benefit"
+    ]
+  },
+  {
+    "s": [
+      "I told",
+      "you",
+      "the reason",
+      null,
+      "I have no time",
+      "for reading anymore."
+    ],
+    "a": [
+      "why"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "to see if",
+      "Sam",
+      "would have",
+      "time",
+      "to assist."
+    ],
+    "a": [
+      "planning"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "who",
+      "promised to improve",
+      null,
+      "seemed",
+      "the most reliable."
+    ],
+    "a": [
+      "education"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      "didn't know",
+      "where",
+      "he",
+      null,
+      "planning",
+      "to study",
+      "next year."
+    ],
+    "a": [
+      "was"
+    ]
+  },
+  {
+    "s": [
+      "My top choice is",
+      "the one",
+      "that",
+      null,
+      "the best",
+      "engineering",
+      "program"
+    ],
+    "a": [
+      "offers"
+    ]
+  },
+  {
+    "s": [
+      "The place where",
+      "I live now",
+      "is much quieter",
+      "than",
+      null,
+      "old",
+      "one."
+    ],
+    "a": [
+      "my"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "to see if",
+      "it's",
+      null,
+      null,
+      "the library?"
+    ],
+    "a": [
+      "checked",
+      "available",
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell",
+      "me",
+      "whether",
+      "you",
+      null,
+      "any other recommendations?"
+    ],
+    "a": [
+      "have"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      "I",
+      "didn't",
+      null,
+      "the time",
+      "to",
+      "attend the event."
+    ],
+    "a": [
+      "find"
+    ]
+  },
+  {
+    "s": [
+      "Is",
+      "it",
+      null,
+      "held online",
+      "or in person",
+      "?"
+    ],
+    "a": [
+      "being"
+    ]
+  },
+  {
+    "s": [
+      "None",
+      "of",
+      "the topics",
+      "were",
+      null,
+      "to me."
+    ],
+    "a": [
+      "engaging"
+    ]
+  },
+  {
+    "s": [
+      "I heard",
+      "that the",
+      "organizer was",
+      "trying to decide",
+      null,
+      "should be",
+      "in charge."
+    ],
+    "a": [
+      "who"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "for",
+      "my calculus",
+      "test at",
+      "the library."
+    ],
+    "a": [
+      "studying"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      "not able",
+      "to make",
+      null,
+      "to",
+      "the event."
+    ],
+    "a": [
+      "it"
+    ]
+  },
+  {
+    "prompt": "Why were you so late for class?",
+    "sentence": [
+      "I was",
+      null,
+      null,
+      "that lasted",
+      "for",
+      null
+    ],
+    "options": [
+      "stuck in",
+      "a traffic jam",
+      "an hour"
+    ],
+    "answers": [
+      "stuck in",
+      "a traffic jam",
+      "an hour"
+    ]
+  },
+  {
+    "prompt": "Which city did you visit during your school break?",
+    "sentence": [
+      "The city",
+      "that has",
+      "the most",
+      null,
+      "was my",
+      null
+    ],
+    "options": [
+      "cultural attractions",
+      "first choice"
+    ],
+    "answers": [
+      "cultural attractions",
+      "first choice"
+    ]
+  },
+  {
+    "prompt": "Why did you decide to apply for an internship for that company?",
+    "sentence": [
+      "My choice",
+      "was based on",
+      "the company that",
+      "offers the",
+      null,
+      null
+    ],
+    "options": [
+      "best career growth",
+      "opportunities."
+    ],
+    "answers": [
+      "best career growth",
+      "opportunities."
+    ]
+  },
+  {
+    "prompt": "I'm preparing for my presentation on Friday.",
+    "sentence": [
+      "Did",
+      "you",
+      null,
+      "your",
+      null,
+      "?"
+    ],
+    "options": [
+      "practice",
+      "speech"
+    ],
+    "answers": [
+      "practice",
+      "speech"
+    ]
+  },
+  {
+    "prompt": "What did the professor ask about your thesis?",
+    "sentence": [
+      "He",
+      "wanted",
+      "to know",
+      "how",
+      "my",
+      null,
+      null
+    ],
+    "options": [
+      "research",
+      "did"
+    ],
+    "answers": [
+      "research",
+      "did"
+    ]
+  },
+  {
+    "prompt": "Did they discuss the project deadlines in class today?",
+    "sentence": [
+      "I",
+      null,
+      "the class",
+      null
+    ],
+    "options": [
+      "missed",
+      "this morning"
+    ],
+    "answers": [
+      "missed",
+      "this morning"
+    ]
+  },
+  {
+    "prompt": "Why did you choose that book to read?",
+    "sentence": [
+      "It's",
+      "the one",
+      null,
+      "by",
+      null
+    ],
+    "options": [
+      "recommended",
+      "my English professor"
+    ],
+    "answers": [
+      "recommended",
+      "my English professor"
+    ]
+  },
+  {
+    "prompt": "Would you like to attend the advanced photography workshop?",
+    "sentence": [
+      "Can",
+      "you",
+      null,
+      "me whether it covers",
+      null,
+      "?"
+    ],
+    "options": [
+      "tell",
+      "picture editing"
+    ],
+    "answers": [
+      "tell",
+      "picture editing"
+    ]
+  },
+  {
+    "prompt": "When are you planning to leave for the club fair?",
+    "sentence": [
+      "I'm",
+      "still trying",
+      "to",
+      null,
+      "what",
+      null
+    ],
+    "options": [
+      "decide",
+      "time would be best"
+    ],
+    "answers": [
+      "decide",
+      "time would be best"
+    ]
+  },
+  {
+    "prompt": "I just received my acceptance letter from the university.",
+    "sentence": [
+      "Can",
+      "you",
+      null,
+      "whether",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "tell me",
+      "your scholarship application",
+      "was successful as well"
+    ],
+    "answers": [
+      "tell me",
+      "your scholarship application",
+      "was successful as well"
+    ]
+  },
+  {
+    "prompt": "I want to learn more about the English Department's literature classes.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "the",
+      null,
+      "?"
+    ],
+    "options": [
+      "read",
+      "brochure"
+    ],
+    "answers": [
+      "read",
+      "brochure"
+    ]
+  },
+  {
+    "prompt": "Who is your English professor?",
+    "sentence": [
+      "The professor",
+      "who",
+      null,
+      "the debate team",
+      "is",
+      null
+    ],
+    "options": [
+      "advises",
+      "my English teacher"
+    ],
+    "answers": [
+      "advises",
+      "my English teacher"
+    ]
+  },
+  {
+    "prompt": "I'm going to visit the college campus tomorrow.",
+    "sentence": [
+      "Do",
+      "you",
+      "know",
+      "if",
+      "the library",
+      null,
+      "?"
+    ],
+    "options": [
+      "will be open"
+    ],
+    "answers": [
+      "will be open"
+    ]
+  },
+  {
+    "prompt": "I'm going to try out the new restaurant downtown.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "a",
+      null,
+      "?"
+    ],
+    "options": [
+      "made",
+      "reservation"
+    ],
+    "answers": [
+      "made",
+      "reservation"
+    ]
+  },
+  {
+    "prompt": "I'm thinking of taking a biology course next semester.",
+    "sentence": [
+      "Have",
+      "you decided",
+      "which",
+      "biology course",
+      "you'd",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "like",
+      "to take"
+    ],
+    "answers": [
+      "like",
+      "to take"
+    ]
+  },
+  {
+    "prompt": "I want to take a cooking class next semester.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "a",
+      null,
+      "for the class",
+      "?"
+    ],
+    "options": [
+      "bought",
+      "textbook"
+    ],
+    "answers": [
+      "bought",
+      "textbook"
+    ]
+  },
+  {
+    "prompt": "How did you manage to finish the class project so quickly?",
+    "sentence": [
+      "My professor",
+      "also asked me",
+      "how I",
+      null,
+      "it",
+      null
+    ],
+    "options": [
+      "was able to complete",
+      "ahead of time"
+    ],
+    "answers": [
+      "was able to complete",
+      "ahead of time"
+    ]
+  },
+  {
+    "prompt": "Why are you taking that course?",
+    "sentence": [
+      "The class",
+      null,
+      "advanced programming",
+      null,
+      "and is highly",
+      null
+    ],
+    "options": [
+      "covers",
+      "techniques",
+      "recommended"
+    ],
+    "answers": [
+      "covers",
+      "techniques",
+      "recommended"
+    ]
+  },
+  {
+    "prompt": "Can you guess where I heard about the seminar?",
+    "sentence": [
+      "Could it",
+      "have",
+      "been",
+      "from",
+      "a",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "former",
+      "classmate"
+    ],
+    "answers": [
+      "former",
+      "classmate"
+    ]
+  },
+  {
+    "prompt": "I'm preparing for my presentation on Friday.",
+    "sentence": [
+      "Did",
+      "you",
+      null,
+      "your",
+      null,
+      "?"
+    ],
+    "options": [
+      "practice",
+      "speech"
+    ],
+    "answers": [
+      "practice",
+      "speech"
+    ]
+  },
+  {
+    "prompt": "Where is the best place to study on campus?",
+    "sentence": [
+      "The library",
+      "that",
+      null,
+      null,
+      "is the most convenient"
+    ],
+    "options": [
+      "is open",
+      "24 hours"
+    ],
+    "answers": [
+      "is open",
+      "24 hours"
+    ]
+  },
+  {
+    "prompt": "Why didn't you call me yesterday?",
+    "sentence": [
+      "I was",
+      "studying",
+      "for",
+      "my calculus",
+      null
+    ],
+    "options": [
+      "test at the library"
+    ],
+    "answers": [
+      "test at the library"
+    ]
+  },
+  {
+    "prompt": "Which off-campus restaurant do you like most?",
+    "sentence": [
+      "The one",
+      "located near",
+      "the public library",
+      "makes",
+      "the best",
+      null
+    ],
+    "options": [
+      "seafood dishes."
+    ],
+    "answers": [
+      "seafood dishes."
+    ]
+  },
+  {
+    "prompt": "The class presentation on renewable energy was very informative.",
+    "sentence": [
+      "Do you",
+      "know when",
+      "the next",
+      "one will",
+      null
+    ],
+    "options": [
+      "be?"
+    ],
+    "answers": [
+      "be?"
+    ]
+  },
+  {
+    "prompt": "Where did you get that information?",
+    "sentence": [
+      "The website",
+      "that",
+      "our professor",
+      null,
+      "has",
+      "all",
+      "the details"
+    ],
+    "options": [
+      "mentioned"
+    ],
+    "answers": [
+      "mentioned"
+    ]
+  },
+  {
+    "prompt": "My roommate and I are going to rearrange our dorm room.",
+    "sentence": [
+      "What",
+      null,
+      "are",
+      "you",
+      "planning",
+      "to",
+      null,
+      "?"
+    ],
+    "options": [
+      "changes",
+      "make"
+    ],
+    "answers": [
+      "changes",
+      "make"
+    ]
+  },
+  {
+    "prompt": "Are there any books you would recommend?",
+    "sentence": [
+      "The book",
+      "that",
+      "I",
+      null,
+      "was",
+      "very",
+      null
+    ],
+    "options": [
+      "just read",
+      "insightful"
+    ],
+    "answers": [
+      "just read",
+      "insightful"
+    ]
+  },
+  {
+    "prompt": "I'm thinking of taking a biology course next semester.",
+    "sentence": [
+      "Have",
+      "you decided",
+      "which",
+      "biology course",
+      "you'd",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "like",
+      "to take"
+    ],
+    "answers": [
+      "like",
+      "to take"
+    ]
+  },
+  {
+    "prompt": "I have to finish this report by tomorrow.",
+    "sentence": [
+      "Are",
+      "you",
+      "going to",
+      "have",
+      null,
+      "to",
+      null,
+      "the report?"
+    ],
+    "options": [
+      "time",
+      "edit"
+    ],
+    "answers": [
+      "time",
+      "edit"
+    ]
+  },
+  {
+    "prompt": "Why do you like that book?",
+    "sentence": [
+      "Books",
+      "that explore",
+      "human",
+      null,
+      "are",
+      "extremely",
+      null
+    ],
+    "options": [
+      "psychology",
+      "fascinating"
+    ],
+    "answers": [
+      "psychology",
+      "fascinating"
+    ]
+  },
+  {
+    "prompt": "Where did you put the keys to your dorm room?",
+    "sentence": [
+      "They're in",
+      "the drawer",
+      "that",
+      "has",
+      "the",
+      null,
+      null
+    ],
+    "options": [
+      "blue",
+      "handle."
+    ],
+    "answers": [
+      "blue",
+      "handle."
+    ]
+  },
+  {
+    "prompt": "I want to learn more about the English Department's literature classes.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "the",
+      null,
+      "?"
+    ],
+    "options": [
+      "read",
+      "brochure"
+    ],
+    "answers": [
+      "read",
+      "brochure"
+    ]
+  },
+  {
+    "prompt": "The university's art department is sponsoring a new exhibit at the museum.",
+    "sentence": [
+      "Do you",
+      "know whether",
+      "it",
+      null,
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "features",
+      "contemporary",
+      "artists"
+    ],
+    "answers": [
+      "features",
+      "contemporary",
+      "artists"
+    ]
+  },
+  {
+    "prompt": "Which song are you practicing for the recital?",
+    "sentence": [
+      "I'm",
+      "practicing the",
+      null,
+      "that",
+      "my",
+      null
+    ],
+    "options": [
+      "piece",
+      "professor suggested"
+    ],
+    "answers": [
+      "piece",
+      "professor suggested"
+    ]
+  },
+  {
+    "prompt": "I'm going to the new student art exhibition this weekend.",
+    "sentence": [
+      "Do",
+      "you",
+      "need",
+      "to buy",
+      null,
+      "in",
+      null
+    ],
+    "options": [
+      "tickets",
+      "advance?"
+    ],
+    "answers": [
+      "tickets",
+      "advance?"
+    ]
+  },
+  {
+    "prompt": "The book we just finished reading for the English assignment was great!",
+    "sentence": [
+      "Do",
+      "you",
+      null,
+      "whether",
+      "the author",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "know",
+      "has written",
+      "other books"
+    ],
+    "answers": [
+      "know",
+      "has written",
+      "other books"
+    ]
+  },
+  {
+    "prompt": "Why didn't you attend the biology lecture yesterday?",
+    "sentence": [
+      "I had",
+      "a family",
+      null,
+      "that I",
+      "couldn't",
+      null
+    ],
+    "options": [
+      "gathering",
+      "miss."
+    ],
+    "answers": [
+      "gathering",
+      "miss."
+    ]
+  },
+  {
+    "prompt": "I need to study for my exams this weekend.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "a",
+      null,
+      "yet?"
+    ],
+    "options": [
+      "made",
+      "study plan"
+    ],
+    "answers": [
+      "made",
+      "study plan"
+    ]
+  },
+  {
+    "prompt": "What is your favorite place to relax?",
+    "sentence": [
+      "My",
+      "favorite spot.",
+      "is",
+      "the",
+      null,
+      null
+    ],
+    "options": [
+      "park that",
+      "is close to campus"
+    ],
+    "answers": [
+      "park that",
+      "is close to campus"
+    ]
+  },
+  {
+    "prompt": "Why didn't you answer your phone?",
+    "sentence": [
+      "I was",
+      null,
+      "a class",
+      "and",
+      "couldn't",
+      null,
+      "the call"
+    ],
+    "options": [
+      "in",
+      "take"
+    ],
+    "answers": [
+      "in",
+      "take"
+    ]
+  },
+  {
+    "prompt": "Where did you hear about this work-study position?",
+    "sentence": [
+      "Can you",
+      null,
+      "if you",
+      null,
+      "for",
+      "a friend",
+      "?"
+    ],
+    "options": [
+      "tell me",
+      "are asking"
+    ],
+    "answers": [
+      "tell me",
+      "are asking"
+    ]
+  },
+  {
+    "prompt": "Why didn't you go to the class yesterday?",
+    "sentence": [
+      "I had",
+      "an urgent",
+      null,
+      "to meet"
+    ],
+    "options": [
+      "work deadline"
+    ],
+    "answers": [
+      "work deadline"
+    ]
+  },
+  {
+    "prompt": "Who helped you with the decorations for the graduation ceremony?",
+    "sentence": [
+      "I",
+      "don't",
+      null,
+      "who",
+      null,
+      "the flowers"
+    ],
+    "options": [
+      "know",
+      "arranged"
+    ],
+    "answers": [
+      "know",
+      "arranged"
+    ]
+  },
+  {
+    "prompt": "Why did you leave the dorm party early?",
+    "sentence": [
+      "I wasn't",
+      null,
+      "well",
+      "and",
+      "needed",
+      "to",
+      null
+    ],
+    "options": [
+      "feeling",
+      "rest"
+    ],
+    "answers": [
+      "feeling",
+      "rest"
+    ]
+  },
+  {
+    "prompt": "Did you watch the student debate last night?",
+    "sentence": [
+      "No, I",
+      null,
+      "too",
+      null,
+      "to",
+      "stay",
+      "up",
+      "that late."
+    ],
+    "options": [
+      "was",
+      "tired"
+    ],
+    "answers": [
+      "was",
+      "tired"
+    ]
+  },
+  {
+    "prompt": "Why weren't you in English class this morning?",
+    "sentence": [
+      "I had an",
+      "unexpected",
+      "personal",
+      null,
+      "to",
+      "deal",
+      "with"
+    ],
+    "options": [
+      "issue"
+    ],
+    "answers": [
+      "issue"
+    ]
+  },
+  {
+    "prompt": "Why do you look so preoccupied?",
+    "sentence": [
+      "I",
+      "have",
+      "a lot",
+      "of",
+      "school",
+      null,
+      null
+    ],
+    "options": [
+      "deadlines coming",
+      "up"
+    ],
+    "answers": [
+      "deadlines coming",
+      "up"
+    ]
+  },
+  {
+    "prompt": "Why didn't you bring your laptop to class today?",
+    "sentence": [
+      "I",
+      null,
+      "to",
+      null,
+      "it this morning"
+    ],
+    "options": [
+      "forgot",
+      "pack"
+    ],
+    "answers": [
+      "forgot",
+      "pack"
+    ]
+  },
+  {
+    "prompt": "I recently joined the new fitness center off campus. Are you still looking for a new gym?",
+    "sentence": [
+      "Can",
+      "you",
+      null,
+      "whether it's",
+      null,
+      "the evenings",
+      "?"
+    ],
+    "options": [
+      "tell me",
+      "crowded in"
+    ],
+    "answers": [
+      "tell me",
+      "crowded in"
+    ]
+  },
+  {
+    "prompt": "I'm planning to visit the new museum exhibit after class today.",
+    "sentence": [
+      "What",
+      null,
+      "does",
+      "it",
+      null,
+      "?"
+    ],
+    "options": [
+      "time",
+      "open"
+    ],
+    "answers": [
+      "time",
+      "open"
+    ]
+  },
+  {
+    "s": [
+      "Which country",
+      null,
+      "the best programs",
+      "?"
+    ],
+    "a": [
+      "offers"
+    ]
+  },
+  {
+    "s": [
+      "What time",
+      null,
+      "the theater doors",
+      null,
+      "?"
+    ],
+    "a": [
+      "do",
+      "open"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me whether",
+      null,
+      "you the position",
+      "?"
+    ],
+    "a": [
+      "tell",
+      "they offered"
+    ]
+  },
+  {
+    "s": [
+      "My advisor and I",
+      null,
+      "what my career goals",
+      null
+    ],
+    "a": [
+      "discussed",
+      "are"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "she has",
+      "any available office hours?"
+    ],
+    "a": [
+      "know if"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me if",
+      null,
+      "Tokyo?"
+    ],
+    "a": [
+      "tell",
+      "you visited"
+    ]
+  },
+  {
+    "s": [
+      "There",
+      null,
+      null,
+      "tickets available",
+      "when I",
+      null,
+      "the website."
+    ],
+    "a": [
+      "were",
+      "no",
+      "visited"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "it will be held in New York?"
+    ],
+    "a": [
+      "know if"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "a class that",
+      null,
+      "late."
+    ],
+    "a": [
+      "in",
+      "ran"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "it starts in the morning or afternoon?"
+    ],
+    "a": [
+      "know if"
+    ]
+  },
+  {
+    "s": [
+      "Does it",
+      null,
+      "a swimming pool?"
+    ],
+    "a": [
+      "have"
+    ]
+  },
+  {
+    "s": [
+      "The one that",
+      null,
+      "the fastest processor will fit my needs perfectly."
+    ],
+    "a": [
+      "has"
+    ]
+  },
+  {
+    "s": [
+      "No, I have",
+      null,
+      "completed all the modules yet."
+    ],
+    "a": [
+      "not"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "you",
+      null,
+      "discussing?"
+    ],
+    "a": [
+      "will",
+      "be"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      null,
+      "know when it",
+      null,
+      "to begin."
+    ],
+    "a": [
+      "doesn't",
+      "is supposed"
+    ]
+  },
+  {
+    "s": [
+      "None of the movies",
+      null,
+      "of interest",
+      null,
+      "me."
+    ],
+    "a": [
+      "were",
+      "to"
+    ]
+  },
+  {
+    "s": [
+      "My morning class ended",
+      null,
+      "late for me to attend the workshop."
+    ],
+    "a": [
+      "too"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me whether it's suitable for beginners?"
+    ],
+    "a": [
+      "tell"
+    ]
+  },
+  {
+    "s": [
+      "The organizer",
+      null,
+      "if the new equipment",
+      null,
+      "on time."
+    ],
+    "a": [
+      "wanted to know",
+      "would arrive"
+    ]
+  },
+  {
+    "s": [
+      "What time",
+      null,
+      "the theater doors",
+      null,
+      "?"
+    ],
+    "a": [
+      "do",
+      "open"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me if",
+      null,
+      "Tokyo?"
+    ],
+    "a": [
+      "tell",
+      "you visited"
+    ]
+  },
+  {
+    "s": [
+      "So it",
+      null,
+      "available; someone else",
+      null,
+      "checked it out."
+    ],
+    "a": [
+      "was not",
+      "had"
+    ]
+  },
+  {
+    "s": [
+      "What time",
+      null,
+      "you",
+      null,
+      "arrive?"
+    ],
+    "a": [
+      "are",
+      "planning to"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me whether",
+      null,
+      "you the position",
+      "?"
+    ],
+    "a": [
+      "tell",
+      "they offered"
+    ]
+  },
+  {
+    "s": [
+      "Where",
+      null,
+      "it",
+      null,
+      "held?"
+    ],
+    "a": [
+      "is",
+      "being"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      null,
+      "no intention of going."
+    ],
+    "a": [
+      "have"
+    ]
+  },
+  {
+    "s": [
+      "Do they",
+      null,
+      "a discount to university students?"
+    ],
+    "a": [
+      "offer"
+    ]
+  },
+  {
+    "s": [
+      "We went",
+      null,
+      "the restaurant",
+      null,
+      "opened downtown."
+    ],
+    "a": [
+      "to",
+      "that recently"
+    ]
+  },
+  {
+    "s": [
+      "I'm sorry, but I",
+      null,
+      null,
+      "have time to attend."
+    ],
+    "a": [
+      "do",
+      "not"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "able to participate."
+    ],
+    "a": [
+      "wasn't"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "there are any materials I need to bring?"
+    ],
+    "a": [
+      "know if"
+    ]
+  },
+  {
+    "s": [
+      "She was",
+      null,
+      "what resources we had used to find a solution."
+    ],
+    "a": [
+      "curious about"
+    ]
+  },
+  {
+    "s": [
+      "There",
+      null,
+      "none that caught my eye."
+    ],
+    "a": [
+      "were"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "learn what types of courses are most beneficial."
+    ],
+    "a": [
+      "curious to"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "the slides",
+      null,
+      "available online?"
+    ],
+    "a": [
+      "know if",
+      "will be"
+    ]
+  },
+  {
+    "s": [
+      "They wanted to know",
+      null,
+      "the rescheduling."
+    ],
+    "a": [
+      "what factors led to"
+    ]
+  },
+  {
+    "s": [
+      "None",
+      null,
+      "the team members",
+      null,
+      "it",
+      null,
+      "yet."
+    ],
+    "a": [
+      "of",
+      "have turned",
+      "in"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "it covers both front-end and back-end development?"
+    ],
+    "a": [
+      "know if"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      null,
+      "how I plan to improve my grades."
+    ],
+    "a": [
+      "wanted to know"
+    ]
+  },
+  {
+    "s": [
+      "Another classmate",
+      null,
+      "know when it begins."
+    ],
+    "a": [
+      "also wanted to"
+    ]
+  },
+  {
+    "s": [
+      "I was living",
+      null,
+      "the one that had maintenance issues."
+    ],
+    "a": [
+      "in"
+    ]
+  },
+  {
+    "s": [
+      "I wanted",
+      null,
+      "how my lab scores",
+      null,
+      "my final grade."
+    ],
+    "a": [
+      "to understand",
+      "influenced"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      null,
+      "other plans."
+    ],
+    "a": [
+      "have"
+    ]
+  },
+  {
+    "s": [
+      "There were",
+      null,
+      "spots when I tried to register."
+    ],
+    "a": [
+      "no available"
+    ]
+  },
+  {
+    "s": [
+      "I am",
+      null,
+      "learn how market research shaped the plan."
+    ],
+    "a": [
+      "curious to"
+    ]
+  },
+  {
+    "s": [
+      "The committee also",
+      null,
+      "know when they will be released."
+    ],
+    "a": [
+      "wants to"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      null,
+      "the slides",
+      null,
+      "available online?"
+    ],
+    "a": [
+      "know if",
+      "will be"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      null,
+      "my car."
+    ],
+    "a": [
+      "drove"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "anything new from the workshop."
+    ],
+    "a": [
+      "did not learn"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "me whether it's suitable for beginners?"
+    ],
+    "a": [
+      "tell"
+    ]
+  },
+  {
+    "prompt": "Our school is planning a retreat next month.",
+    "sentence": [
+      "Do you",
+      "know if",
+      null,
+      "at the",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "it's going to be",
+      "beach or",
+      "in the mountains"
+    ],
+    "answers": [
+      "it's going to be",
+      "beach or",
+      "in the mountains"
+    ]
+  },
+  {
+    "prompt": "Did you get any feedback from the instructor?",
+    "sentence": [
+      "I",
+      "didn't",
+      "receive any",
+      null,
+      "from",
+      null
+    ],
+    "options": [
+      "comments",
+      "her"
+    ],
+    "answers": [
+      "comments",
+      "her"
+    ]
+  },
+  {
+    "prompt": "The school picnic is scheduled for next Saturday.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "families are",
+      null,
+      null
+    ],
+    "options": [
+      "allowed to",
+      "join?"
+    ],
+    "answers": [
+      "allowed to",
+      "join?"
+    ]
+  },
+  {
+    "prompt": "Why did you choose to take the advanced course?",
+    "sentence": [
+      "I wanted",
+      "to see",
+      "how much",
+      "I could",
+      null,
+      "myself academically"
+    ],
+    "options": [
+      "challenge"
+    ],
+    "answers": [
+      "challenge"
+    ]
+  },
+  {
+    "prompt": "The conference on climate change was very informative.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the keynote speech will",
+      null,
+      null
+    ],
+    "options": [
+      "be available",
+      "online?"
+    ],
+    "answers": [
+      "be available",
+      "online?"
+    ]
+  },
+  {
+    "prompt": "I noticed the gym on campus is offering promotions.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the membership",
+      null,
+      "to all",
+      null
+    ],
+    "options": [
+      "includes access",
+      "classes?"
+    ],
+    "answers": [
+      "includes access",
+      "classes?"
+    ]
+  },
+  {
+    "prompt": "I heard that the new art department exhibition opens this Saturday.",
+    "sentence": [
+      "Are",
+      "you",
+      null,
+      null,
+      "the opening event",
+      "?"
+    ],
+    "options": [
+      "planning",
+      "to attend"
+    ],
+    "answers": [
+      "planning",
+      "to attend"
+    ]
+  },
+  {
+    "prompt": "Why did the university administration email us about our upcoming conference?",
+    "sentence": [
+      "They wanted",
+      "to know",
+      "which speakers",
+      "have been",
+      null
+    ],
+    "options": [
+      "confirmed so far"
+    ],
+    "answers": [
+      "confirmed so far"
+    ]
+  },
+  {
+    "prompt": "Did you go to the library today?",
+    "sentence": [
+      "Unfortunately,",
+      "I",
+      "did",
+      "not",
+      null,
+      null,
+      "for",
+      null
+    ],
+    "options": [
+      "have",
+      "had",
+      "time",
+      "a visit"
+    ],
+    "answers": [
+      "have",
+      "time",
+      "a visit"
+    ]
+  },
+  {
+    "prompt": "Where did you put the keys to your dorm room?",
+    "sentence": [
+      "They're in",
+      "the drawer",
+      "that",
+      null,
+      "the",
+      null,
+      null
+    ],
+    "options": [
+      "has",
+      "blue",
+      "handle."
+    ],
+    "answers": [
+      "has",
+      "blue",
+      "handle."
+    ]
+  },
+  {
+    "prompt": "The university's conference on climate change was very informative.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the keynote speech will",
+      null,
+      null
+    ],
+    "options": [
+      "be available",
+      "online?"
+    ],
+    "answers": [
+      "be available",
+      "online?"
+    ]
+  },
+  {
+    "prompt": "Have you thought about joining the debate club?",
+    "sentence": [
+      "I haven't",
+      null,
+      null,
+      "but it",
+      "does sound",
+      null
+    ],
+    "options": [
+      "decided",
+      "yet",
+      "interesting"
+    ],
+    "answers": [
+      "decided",
+      "yet",
+      "interesting"
+    ]
+  },
+  {
+    "prompt": "Why didn't you attend your morning class?",
+    "sentence": [
+      "I had",
+      "a doctor's appointment",
+      "at",
+      null,
+      null,
+      null
+    ],
+    "options": [
+      "the",
+      "same",
+      "time"
+    ],
+    "answers": [
+      "the",
+      "same",
+      "time"
+    ]
+  },
+  {
+    "prompt": "I just bought a new bike for my morning ride to class.",
+    "sentence": [
+      "Is",
+      "it",
+      null,
+      "to",
+      null,
+      "?"
+    ],
+    "options": [
+      "comfortable",
+      "ride"
+    ],
+    "answers": [
+      "comfortable",
+      "ride"
+    ]
+  },
+  {
+    "prompt": "The university is hosting a networking event next Friday.",
+    "sentence": [
+      "Do you",
+      "know whether",
+      "it will",
+      null,
+      "in the main",
+      null
+    ],
+    "options": [
+      "be held",
+      "auditorium?"
+    ],
+    "answers": [
+      "be held",
+      "auditorium?"
+    ]
+  },
+  {
+    "prompt": "Are you going to the campus social this weekend?",
+    "sentence": [
+      "I",
+      "have",
+      "no",
+      null,
+      "to",
+      null
+    ],
+    "options": [
+      "plans",
+      "go"
+    ],
+    "answers": [
+      "plans",
+      "go"
+    ]
+  },
+  {
+    "prompt": "Who is in charge of the group project for psychology class?",
+    "sentence": [
+      "I'm",
+      "not",
+      "sure",
+      "who",
+      "is",
+      null,
+      null
+    ],
+    "options": [
+      "leading",
+      "it"
+    ],
+    "answers": [
+      "leading",
+      "it"
+    ]
+  },
+  {
+    "prompt": "The assignment deadline has been extended.",
+    "sentence": [
+      "Do",
+      "you",
+      "know",
+      "if",
+      "the new",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "due date",
+      "has been announced"
+    ],
+    "answers": [
+      "due date",
+      "has been announced"
+    ]
+  },
+  {
+    "prompt": "Did you attend the school's networking event yesterday?",
+    "sentence": [
+      "I was",
+      "not able",
+      "to make",
+      null,
+      "to",
+      null
+    ],
+    "options": [
+      "it",
+      "the event"
+    ],
+    "answers": [
+      "it",
+      "the event"
+    ]
+  },
+  {
+    "prompt": "Why were you so late for class?",
+    "sentence": [
+      "I was",
+      "stuck in",
+      "a traffic jam",
+      "that lasted",
+      "for",
+      null
+    ],
+    "options": [
+      "an hour"
+    ],
+    "answers": [
+      "an hour"
+    ]
+  },
+  {
+    "prompt": "Which city did you visit during your school break?",
+    "sentence": [
+      "The city",
+      "that has",
+      null,
+      "cultural attractions",
+      "was my",
+      "first",
+      null
+    ],
+    "options": [
+      "the most",
+      "choice"
+    ],
+    "answers": [
+      "the most",
+      "choice"
+    ]
+  },
+  {
+    "prompt": "Why did you decide to apply for an internship for that company?",
+    "sentence": [
+      "My choice",
+      "was based on",
+      "the company that",
+      "offers",
+      null,
+      null,
+      null
+    ],
+    "options": [
+      "the best career",
+      "growth",
+      "opportunities."
+    ],
+    "answers": [
+      "the best career",
+      "growth",
+      "opportunities."
+    ]
+  },
+  {
+    "prompt": "I'm preparing for my presentation on Friday.",
+    "sentence": [
+      "Did",
+      "you",
+      null,
+      "your",
+      null,
+      "?"
+    ],
+    "options": [
+      "practice",
+      "speech"
+    ],
+    "answers": [
+      "practice",
+      "speech"
+    ]
+  },
+  {
+    "prompt": "What did the professor ask about your thesis?",
+    "sentence": [
+      "He",
+      "wanted",
+      "to know",
+      "how",
+      "my",
+      null,
+      null
+    ],
+    "options": [
+      "research",
+      "did"
+    ],
+    "answers": [
+      "research",
+      "did"
+    ]
+  },
+  {
+    "prompt": "Did they discuss the project deadlines in class today?",
+    "sentence": [
+      "I",
+      "missed",
+      "the",
+      null,
+      "this",
+      null
+    ],
+    "options": [
+      "class",
+      "morning"
+    ],
+    "answers": [
+      "class",
+      "morning"
+    ]
+  },
+  {
+    "prompt": "Why did you choose that book to read?",
+    "sentence": [
+      "It's",
+      null,
+      null,
+      "recommended",
+      "by",
+      "my",
+      null
+    ],
+    "options": [
+      "the",
+      "one",
+      "English professor"
+    ],
+    "answers": [
+      "the",
+      "one",
+      "English professor"
+    ]
+  },
+  {
+    "prompt": "Would you like to attend the advanced photography workshop?",
+    "sentence": [
+      "Can",
+      "you",
+      "tell",
+      "me whether",
+      "it covers",
+      null,
+      "?"
+    ],
+    "options": [
+      "picture editing"
+    ],
+    "answers": [
+      "picture editing"
+    ]
+  },
+  {
+    "prompt": "When are you planning to leave for the club fair?",
+    "sentence": [
+      "I'm",
+      "still trying",
+      "to",
+      null,
+      "what",
+      "time would",
+      null
+    ],
+    "options": [
+      "decide",
+      "be best"
+    ],
+    "answers": [
+      "decide",
+      "be best"
+    ]
+  },
+  {
+    "prompt": "Where can I buy textbooks?",
+    "sentence": [
+      "What",
+      "kind of",
+      "textbook",
+      "would you",
+      "like",
+      "to",
+      null,
+      "?"
+    ],
+    "options": [
+      "purchase"
+    ],
+    "answers": [
+      "purchase"
+    ]
+  },
+  {
+    "prompt": "Who is your favorite author?",
+    "sentence": [
+      "I'm not",
+      "sure",
+      "who",
+      "I",
+      "like",
+      null,
+      null
+    ],
+    "options": [
+      "the",
+      "best"
+    ],
+    "answers": [
+      "the",
+      "best"
+    ]
+  },
+  {
+    "prompt": "Are you planning to join the university's new fitness club?",
+    "sentence": [
+      "No,",
+      "I",
+      "prefer",
+      "my",
+      null,
+      null
+    ],
+    "options": [
+      "current",
+      "gym"
+    ],
+    "answers": [
+      "current",
+      "gym"
+    ]
+  },
+  {
+    "prompt": "Is there any way you can help me with this homework equation?",
+    "sentence": [
+      "No, I'm",
+      "not",
+      "familiar",
+      "with",
+      "that",
+      null,
+      null
+    ],
+    "options": [
+      "particular",
+      "math problem"
+    ],
+    "answers": [
+      "particular",
+      "math problem"
+    ]
+  },
+  {
+    "prompt": "Who is organizing the college's charity run?",
+    "sentence": [
+      "I",
+      "don't",
+      "know",
+      "who",
+      "the",
+      null,
+      null
+    ],
+    "options": [
+      "coordinator",
+      "is."
+    ],
+    "answers": [
+      "coordinator",
+      "is."
+    ]
+  },
+  {
+    "prompt": "Why haven't you visited the university's new art exhibit?",
+    "sentence": [
+      "I've",
+      "been",
+      null,
+      null,
+      "with",
+      "other",
+      null
+    ],
+    "options": [
+      "tied",
+      "up",
+      "responsibilities"
+    ],
+    "answers": [
+      "tied",
+      "up",
+      "responsibilities"
+    ]
+  },
+  {
+    "prompt": "Where is the best place to eat around campus?",
+    "sentence": [
+      "Can you tell",
+      "me",
+      "what type",
+      "of restaurant",
+      "you're",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "looking",
+      "for"
+    ],
+    "answers": [
+      "looking",
+      "for"
+    ]
+  },
+  {
+    "prompt": "Did you invite Sarah to the graduation party?",
+    "sentence": [
+      "No,",
+      "I",
+      "forgot",
+      "to",
+      null,
+      "her",
+      null
+    ],
+    "options": [
+      "send",
+      "an invitation"
+    ],
+    "answers": [
+      "send",
+      "an invitation"
+    ]
+  },
+  {
+    "prompt": "Who prepared the presentation?",
+    "sentence": [
+      "I'm",
+      "not",
+      "sure",
+      "who",
+      null,
+      null
+    ],
+    "options": [
+      "worked",
+      "on it"
+    ],
+    "answers": [
+      "worked",
+      "on it"
+    ]
+  },
+  {
+    "prompt": "Who is leading the robotics club meeting tomorrow?",
+    "sentence": [
+      "I",
+      "don't",
+      "know",
+      "who",
+      "is",
+      "in",
+      null,
+      "of it"
+    ],
+    "options": [
+      "charge"
+    ],
+    "answers": [
+      "charge"
+    ]
+  },
+  {
+    "prompt": "Why aren't you going to the party tonight?",
+    "sentence": [
+      "I",
+      "have",
+      "an",
+      null,
+      null,
+      null
+    ],
+    "options": [
+      "important",
+      "exam",
+      "tomorrow."
+    ],
+    "answers": [
+      "important",
+      "exam",
+      "tomorrow."
+    ]
+  },
+  {
+    "prompt": "I stayed up late finishing my assignment last night.",
+    "sentence": [
+      "Did",
+      "you",
+      null,
+      "to",
+      "submit",
+      "it on",
+      null,
+      "?"
+    ],
+    "options": [
+      "manage",
+      "time"
+    ],
+    "answers": [
+      "manage",
+      "time"
+    ]
+  },
+  {
+    "prompt": "Who is your favorite classmate?",
+    "sentence": [
+      "I can't",
+      null,
+      "who",
+      "I",
+      "like",
+      null,
+      null
+    ],
+    "options": [
+      "decide",
+      "the",
+      "most"
+    ],
+    "answers": [
+      "decide",
+      "the",
+      "most"
+    ]
+  },
+  {
+    "prompt": "Why didn't you bring your notes to the study group?",
+    "sentence": [
+      "I",
+      "forgot",
+      null,
+      null,
+      "home"
+    ],
+    "options": [
+      "them",
+      "at"
+    ],
+    "answers": [
+      "them",
+      "at"
+    ]
+  },
+  {
+    "prompt": "Why haven't you submitted your homework?",
+    "sentence": [
+      "I",
+      "had",
+      "some difficulty",
+      null,
+      null
+    ],
+    "options": [
+      "understanding",
+      "the assignment"
+    ],
+    "answers": [
+      "understanding",
+      "the assignment"
+    ]
+  },
+  {
+    "prompt": "Who is presenting in class tomorrow?",
+    "sentence": [
+      "I",
+      "don't",
+      "know",
+      "who",
+      null,
+      null
+    ],
+    "options": [
+      "the speaker",
+      "is."
+    ],
+    "answers": [
+      "the speaker",
+      "is."
+    ]
+  },
+  {
+    "prompt": "Why haven't you replied to my text?",
+    "sentence": [
+      "I was",
+      null,
+      null,
+      "in",
+      "my",
+      "biology",
+      null
+    ],
+    "options": [
+      "caught",
+      "up",
+      "class"
+    ],
+    "answers": [
+      "caught",
+      "up",
+      "class"
+    ]
+  },
+  {
+    "prompt": "I just bought a new backpack to carry my books.",
+    "sentence": [
+      "Do you",
+      "know",
+      "if they",
+      null,
+      null,
+      "for",
+      null,
+      "?"
+    ],
+    "options": [
+      "offer",
+      "discounts",
+      "students"
+    ],
+    "answers": [
+      "offer",
+      "discounts",
+      "students"
+    ]
+  },
+  {
+    "prompt": "Why didn't you join the virtual class?",
+    "sentence": [
+      "I",
+      "had",
+      "technical",
+      null,
+      "with",
+      "my",
+      null
+    ],
+    "options": [
+      "difficulties",
+      "computer"
+    ],
+    "answers": [
+      "difficulties",
+      "computer"
+    ]
+  },
+  {
+    "prompt": "Where did you purchase the supplies for class?",
+    "sentence": [
+      "Would you",
+      "like to",
+      "know",
+      "if they",
+      null,
+      "student",
+      null,
+      "?"
+    ],
+    "options": [
+      "offer",
+      "discounts"
+    ],
+    "answers": [
+      "offer",
+      "discounts"
+    ]
+  },
+  {
+    "prompt": "Why did the professor want to meet with you?",
+    "sentence": [
+      "She",
+      "wasn't sure",
+      "if",
+      "everyone was",
+      "aware of",
+      null,
+      null
+    ],
+    "options": [
+      "the",
+      "updates"
+    ],
+    "answers": [
+      "the",
+      "updates"
+    ]
+  },
+  {
+    "prompt": "I had to miss the literature class yesterday.",
+    "sentence": [
+      "Did you",
+      "get",
+      "the",
+      null,
+      "from",
+      null
+    ],
+    "options": [
+      "notes",
+      "someone?"
+    ],
+    "answers": [
+      "notes",
+      "someone?"
+    ]
+  },
+  {
+    "prompt": "I just finished reading the latest bestseller novel assigned for our literature class.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the author",
+      "will be",
+      null,
+      "this weekend",
+      "?"
+    ],
+    "options": [
+      "know",
+      "signing books"
+    ],
+    "answers": [
+      "know",
+      "signing books"
+    ]
+  },
+  {
+    "prompt": "What did your professor say on the last day of class?",
+    "sentence": [
+      "He was",
+      null,
+      "which lesson",
+      "the students",
+      null
+    ],
+    "options": [
+      "curious about",
+      "had enjoyed most"
+    ],
+    "answers": [
+      "curious about",
+      "had enjoyed most"
+    ]
+  },
+  {
+    "prompt": "Why aren't you participating in the class debate?",
+    "sentence": [
+      "The topic",
+      "they",
+      null,
+      "does",
+      "not",
+      null,
+      "me"
+    ],
+    "options": [
+      "chose",
+      "interest"
+    ],
+    "answers": [
+      "chose",
+      "interest"
+    ]
+  },
+  {
+    "prompt": "I missed the last bus to school.",
+    "sentence": [
+      "Can you",
+      null,
+      "a",
+      "taxi instead",
+      "?"
+    ],
+    "options": [
+      "call"
+    ],
+    "answers": [
+      "call"
+    ]
+  },
+  {
+    "prompt": "I have a job interview for the school dining hall position soon.",
+    "sentence": [
+      "Did you",
+      null,
+      "your answers",
+      "to common",
+      "interview questions",
+      "?"
+    ],
+    "options": [
+      "prepare"
+    ],
+    "answers": [
+      "prepare"
+    ]
+  },
+  {
+    "prompt": "What did the professor say about our group project?",
+    "sentence": [
+      "She",
+      null,
+      "to discuss",
+      "how we",
+      "could",
+      null,
+      "our teamwork",
+      "and time management"
+    ],
+    "options": [
+      "wanted",
+      "improve"
+    ],
+    "answers": [
+      "wanted",
+      "improve"
+    ]
+  },
+  {
+    "prompt": "Did you enjoy the drama club's performance last night?",
+    "sentence": [
+      "The",
+      "storyline",
+      "was",
+      "not",
+      "very",
+      null
+    ],
+    "options": [
+      "compelling"
+    ],
+    "answers": [
+      "compelling"
+    ]
+  },
+  {
+    "prompt": "I heard there will be a workshop on creative writing next month.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the registration",
+      "is",
+      null,
+      "yet",
+      "?"
+    ],
+    "options": [
+      "know",
+      "open"
+    ],
+    "answers": [
+      "know",
+      "open"
+    ]
+  },
+  {
+    "prompt": "Why did the professor want to meet with you?",
+    "sentence": [
+      "She",
+      "wasn't",
+      null,
+      "if",
+      "everyone",
+      "was",
+      null,
+      "of",
+      "the",
+      "updates"
+    ],
+    "options": [
+      "sure",
+      "aware"
+    ],
+    "answers": [
+      "sure",
+      "aware"
+    ]
+  },
+  {
+    "prompt": "I had to miss the literature class yesterday.",
+    "sentence": [
+      "Did you",
+      null,
+      "the",
+      "notes",
+      "from",
+      "someone",
+      "?"
+    ],
+    "options": [
+      "get"
+    ],
+    "answers": [
+      "get"
+    ]
+  },
+  {
+    "prompt": "I just finished reading the latest bestseller novel assigned for our literature class.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the author",
+      "will be",
+      null,
+      "this weekend",
+      "?"
+    ],
+    "options": [
+      "know",
+      "signing books"
+    ],
+    "answers": [
+      "know",
+      "signing books"
+    ]
+  },
+  {
+    "prompt": "What did your professor say on the last day of class?",
+    "sentence": [
+      "He was",
+      null,
+      "which lesson",
+      "the students",
+      null
+    ],
+    "options": [
+      "curious about",
+      "had enjoyed most"
+    ],
+    "answers": [
+      "curious about",
+      "had enjoyed most"
+    ]
+  },
+  {
+    "prompt": "Why aren't you participating in the class debate?",
+    "sentence": [
+      "The topic",
+      "they",
+      null,
+      "does",
+      "not",
+      null,
+      "me"
+    ],
+    "options": [
+      "chose",
+      "interest"
+    ],
+    "answers": [
+      "chose",
+      "interest"
+    ]
+  },
+  {
+    "prompt": "I missed the last bus to school.",
+    "sentence": [
+      "Can you",
+      null,
+      "a",
+      "taxi instead",
+      "?"
+    ],
+    "options": [
+      "call"
+    ],
+    "answers": [
+      "call"
+    ]
+  },
+  {
+    "prompt": "I have a job interview for the school dining hall position soon.",
+    "sentence": [
+      "Did you",
+      null,
+      "your answers",
+      "to common",
+      "interview questions",
+      "?"
+    ],
+    "options": [
+      "prepare"
+    ],
+    "answers": [
+      "prepare"
+    ]
+  },
+  {
+    "prompt": "What did the professor say about our group project?",
+    "sentence": [
+      "She",
+      null,
+      "to discuss",
+      "how we",
+      "could",
+      null,
+      "our teamwork",
+      "and time management"
+    ],
+    "options": [
+      "wanted",
+      "improve"
+    ],
+    "answers": [
+      "wanted",
+      "improve"
+    ]
+  },
+  {
+    "prompt": "Did you enjoy the drama club's performance last night?",
+    "sentence": [
+      "The",
+      "storyline",
+      "was",
+      "not",
+      "very",
+      null
+    ],
+    "options": [
+      "compelling"
+    ],
+    "answers": [
+      "compelling"
+    ]
+  },
+  {
+    "prompt": "I heard there will be a workshop on creative writing next month.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the registration",
+      "is",
+      null,
+      "yet",
+      "?"
+    ],
+    "options": [
+      "know",
+      "open"
+    ],
+    "answers": [
+      "know",
+      "open"
+    ]
+  },
+  {
+    "prompt": "Did you hear about the new restaurant that opened near campus?",
+    "sentence": [
+      "I",
+      "haven't",
+      null,
+      "about",
+      "the",
+      "new",
+      "restaurant"
+    ],
+    "options": [
+      "heard"
+    ],
+    "answers": [
+      "heard"
+    ]
+  },
+  {
+    "prompt": "I am planning to organize the school's annual charity event next month.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "on",
+      "the",
+      "location",
+      "yet",
+      "?"
+    ],
+    "options": [
+      "decided"
+    ],
+    "answers": [
+      "decided"
+    ]
+  },
+  {
+    "prompt": "I've enrolled in a dance class for this semester.",
+    "sentence": [
+      "What style",
+      "of",
+      "dance",
+      "will",
+      "you",
+      "be",
+      null,
+      "?"
+    ],
+    "options": [
+      "learning"
+    ],
+    "answers": [
+      "learning"
+    ]
+  },
+  {
+    "prompt": "What was Maria asking about just now?",
+    "sentence": [
+      "I",
+      null,
+      "she",
+      null,
+      "to know",
+      "what time",
+      "you'll be available",
+      "to study",
+      "for the exam"
+    ],
+    "options": [
+      "think",
+      "wants"
+    ],
+    "answers": [
+      "think",
+      "wants"
+    ]
+  },
+  {
+    "prompt": "I went to the seminar on leadership skills yesterday.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the speaker",
+      null,
+      "any",
+      "handouts",
+      "?"
+    ],
+    "options": [
+      "know",
+      "shared"
+    ],
+    "answers": [
+      "know",
+      "shared"
+    ]
+  },
+  {
+    "prompt": "I'm thinking about adopting a dog from the shelter near campus.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "they have",
+      "any puppies",
+      null,
+      "?"
+    ],
+    "options": [
+      "know",
+      "available"
+    ],
+    "answers": [
+      "know",
+      "available"
+    ]
+  },
+  {
+    "prompt": "I've been thinking about joining a new club at the university. Do you have any suggestions?",
+    "sentence": [
+      "I",
+      null,
+      "there's a",
+      "club that",
+      null,
+      "on",
+      "environmental issues",
+      "which you",
+      "might",
+      null,
+      "interesting"
+    ],
+    "options": [
+      "heard",
+      "focuses",
+      "find"
+    ],
+    "answers": [
+      "heard",
+      "focuses",
+      "find"
+    ]
+  },
+  {
+    "prompt": "What did the counselor say about your course schedule?",
+    "sentence": [
+      "She",
+      null,
+      "to ensure",
+      "that",
+      "my",
+      "classes",
+      "don't",
+      null
+    ],
+    "options": [
+      "wanted",
+      "overlap"
+    ],
+    "answers": [
+      "wanted",
+      "overlap"
+    ]
+  },
+  {
+    "prompt": "Did the professor have any feedback about your research paper?",
+    "sentence": [
+      "He",
+      null,
+      "if",
+      "I",
+      "could",
+      null,
+      "what methodology",
+      "was",
+      null,
+      "for data",
+      "analysis"
+    ],
+    "options": [
+      "asked",
+      "explain",
+      "used"
+    ],
+    "answers": [
+      "asked",
+      "explain",
+      "used"
+    ]
+  },
+  {
+    "prompt": "Why didn't you go to one of the school libraries yesterday?",
+    "sentence": [
+      "The library",
+      "that",
+      "was supposed",
+      "to be",
+      null,
+      "was",
+      null,
+      "for",
+      "renovations"
+    ],
+    "options": [
+      "open",
+      "closed"
+    ],
+    "answers": [
+      "open",
+      "closed"
+    ]
+  },
+  {
+    "prompt": "Did you manage to complete the class project on time?",
+    "sentence": [
+      "There were",
+      "no",
+      null,
+      "in",
+      "the",
+      "final",
+      "stages"
+    ],
+    "options": [
+      "delays"
+    ],
+    "answers": [
+      "delays"
+    ]
+  },
+  {
+    "prompt": "I'm looking for a new apartment closer to school.",
+    "sentence": [
+      "Did",
+      "you",
+      null,
+      "any",
+      "real estate",
+      "agents",
+      "?"
+    ],
+    "options": [
+      "contact"
+    ],
+    "answers": [
+      "contact"
+    ]
+  },
+  {
+    "prompt": "I'm planning a weekend getaway to the mountains for our class.",
+    "sentence": [
+      "What",
+      "activities",
+      "are",
+      "you",
+      null,
+      "to",
+      null,
+      "?"
+    ],
+    "options": [
+      "planning",
+      "do"
+    ],
+    "answers": [
+      "planning",
+      "do"
+    ]
+  },
+  {
+    "prompt": "Why did you extend your office hours to meet with those students?",
+    "sentence": [
+      "They were",
+      null,
+      "to",
+      null,
+      "what criteria",
+      "will",
+      "be",
+      "used",
+      "to",
+      null,
+      "their group assignment"
+    ],
+    "options": [
+      "curious",
+      "know",
+      "grade"
+    ],
+    "answers": [
+      "curious",
+      "know",
+      "grade"
+    ]
+  },
+  {
+    "prompt": "Our class meeting has been rescheduled to Friday morning.",
+    "sentence": [
+      "Can",
+      "you",
+      null,
+      "me whether",
+      "it will",
+      null,
+      "our",
+      "project deadlines",
+      "?"
+    ],
+    "options": [
+      "tell",
+      "affect"
+    ],
+    "answers": [
+      "tell",
+      "affect"
+    ]
+  },
+  {
+    "prompt": "I heard the school drama club is putting on a new play next month.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "tickets are",
+      "already",
+      "on",
+      null,
+      "?"
+    ],
+    "options": [
+      "know",
+      "sale"
+    ],
+    "answers": [
+      "know",
+      "sale"
+    ]
+  },
+  {
+    "prompt": "Did you see the new art exhibit at the museum near campus?",
+    "sentence": [
+      "The paintings",
+      "that were",
+      null,
+      "in",
+      "the main",
+      "hall",
+      "were",
+      null
+    ],
+    "options": [
+      "displayed",
+      "stunning"
+    ],
+    "answers": [
+      "displayed",
+      "stunning"
+    ]
+  },
+  {
+    "prompt": "Have you decided which book to read for the book club meeting next week?",
+    "sentence": [
+      "I'm",
+      null,
+      "the novel",
+      "that",
+      "my",
+      "friend",
+      null,
+      "last",
+      "month"
+    ],
+    "options": [
+      "considering",
+      "recommended"
+    ],
+    "answers": [
+      "considering",
+      "recommended"
+    ]
+  },
+  {
+    "prompt": "When should we have the surprise party for your classmate?",
+    "sentence": [
+      "I",
+      null,
+      "it would",
+      "be",
+      "best",
+      "to",
+      null,
+      "her friends",
+      "who",
+      null,
+      "her schedule"
+    ],
+    "options": [
+      "believe",
+      "ask",
+      "know"
+    ],
+    "answers": [
+      "believe",
+      "ask",
+      "know"
+    ]
+  },
+  {
+    "prompt": "What is your favorite place to go hiking?",
+    "sentence": [
+      "The walking trail",
+      "that is",
+      null,
+      "near",
+      "the school",
+      "is",
+      "my",
+      null
+    ],
+    "options": [
+      "located",
+      "favorite"
+    ],
+    "answers": [
+      "located",
+      "favorite"
+    ]
+  },
+  {
+    "prompt": "I've been studying French for a few months now.",
+    "sentence": [
+      "How",
+      "do",
+      "you",
+      null,
+      null,
+      "it",
+      "?"
+    ],
+    "options": [
+      "practice",
+      "speaking"
+    ],
+    "answers": [
+      "practice",
+      "speaking"
+    ]
+  },
+  {
+    "prompt": "Where did you buy those shoes for gym class?",
+    "sentence": [
+      "The store",
+      "that is",
+      null,
+      "them",
+      "is",
+      null,
+      "big",
+      "discounts"
+    ],
+    "options": [
+      "selling",
+      "offering"
+    ],
+    "answers": [
+      "selling",
+      "offering"
+    ]
+  },
+  {
+    "prompt": "You missed the first part of the lecture this morning.",
+    "sentence": [
+      "Did",
+      "the professor",
+      null,
+      "the",
+      "slides",
+      "with the class",
+      "?"
+    ],
+    "options": [
+      "share"
+    ],
+    "answers": [
+      "share"
+    ]
+  },
+  {
+    "prompt": "Are you coming to the biology seminar tomorrow?",
+    "sentence": [
+      "No,",
+      "I",
+      "have",
+      "another",
+      null
+    ],
+    "options": [
+      "commitment"
+    ],
+    "answers": [
+      "commitment"
+    ]
+  },
+  {
+    "prompt": "Why did you choose that science course?",
+    "sentence": [
+      "It is",
+      null,
+      "by",
+      "a professor",
+      "who",
+      "is an",
+      null,
+      "in",
+      "the field"
+    ],
+    "options": [
+      "taught",
+      "expert"
+    ],
+    "answers": [
+      "taught",
+      "expert"
+    ]
+  },
+  {
+    "prompt": "Did you see anyone in the lecture hall for the review session?",
+    "sentence": [
+      "No",
+      "one",
+      "was",
+      "there",
+      "when",
+      "I",
+      null
+    ],
+    "options": [
+      "arrived"
+    ],
+    "answers": [
+      "arrived"
+    ]
+  },
+  {
+    "prompt": "I'm going to visit the new library on campus.",
+    "sentence": [
+      null,
+      "is",
+      "it",
+      null,
+      "?"
+    ],
+    "options": [
+      "where",
+      "located"
+    ],
+    "answers": [
+      "where",
+      "located"
+    ]
+  },
+  {
+    "prompt": "What did Williams say about the project?",
+    "sentence": [
+      "He",
+      "doesn't",
+      null,
+      "when",
+      "we",
+      "are",
+      "supposed",
+      "to",
+      null,
+      "it"
+    ],
+    "options": [
+      "know",
+      "begin"
+    ],
+    "answers": [
+      "know",
+      "begin"
+    ]
+  },
+  {
+    "prompt": "Where did you put the class notes?",
+    "sentence": [
+      "They",
+      "are",
+      "in the drawer",
+      "where",
+      "I",
+      null,
+      "the",
+      "textbooks"
+    ],
+    "options": [
+      "keep"
+    ],
+    "answers": [
+      "keep"
+    ]
+  },
+  {
+    "prompt": "Why haven't you visited the university's new art exhibit?",
+    "sentence": [
+      "I've",
+      "been",
+      null,
+      "up",
+      "with",
+      "other",
+      "responsibilities"
+    ],
+    "options": [
+      "tied"
+    ],
+    "answers": [
+      "tied"
+    ]
+  },
+  {
+    "prompt": "The university seminar on financial management was very insightful.",
+    "sentence": [
+      "Do you",
+      null,
+      "if",
+      "the slides",
+      "will be",
+      null,
+      "online",
+      "?"
+    ],
+    "options": [
+      "know",
+      "available"
+    ],
+    "answers": [
+      "know",
+      "available"
+    ]
+  },
+  {
+    "prompt": "Why is everyone gathering in that classroom?",
+    "sentence": [
+      "They",
+      null,
+      "to",
+      null,
+      "out",
+      "what the",
+      "announcement",
+      "is about"
+    ],
+    "options": [
+      "want",
+      "find"
+    ],
+    "answers": [
+      "want",
+      "find"
+    ]
+  },
+  {
+    "s": [
+      "Have you",
+      null,
+      null,
+      "yet?"
+    ],
+    "a": [
+      "signed",
+      "up"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "they have",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "any puppies",
+      "available"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "are",
+      "you",
+      null,
+      "about",
+      "?"
+    ],
+    "a": [
+      "topic",
+      "writing"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "am planning",
+      null,
+      null,
+      "if he",
+      "is available."
+    ],
+    "a": [
+      "to work",
+      "with Michael"
+    ]
+  },
+  {
+    "s": [
+      "The artist",
+      "who created",
+      "the",
+      null,
+      "is",
+      "very",
+      null
+    ],
+    "a": [
+      "sculptures",
+      "talented"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "think",
+      "it's going",
+      "to be",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "online or",
+      "in person"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you registered",
+      null,
+      null,
+      "?"
+    ],
+    "a": [
+      "for",
+      "it yet"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "couldn't",
+      null,
+      "the",
+      "correct",
+      null
+    ],
+    "a": [
+      "determine",
+      "solution"
+    ]
+  },
+  {
+    "s": [
+      "I wasn't",
+      null,
+      "to",
+      null,
+      "it"
+    ],
+    "a": [
+      "able",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      "Did you",
+      null,
+      "all",
+      "the necessary",
+      null,
+      "?"
+    ],
+    "a": [
+      "gather",
+      "sources"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "there will",
+      "be a",
+      null,
+      "?"
+    ],
+    "a": [
+      "silent auction"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know",
+      "if our",
+      "team will",
+      null,
+      "on",
+      "the first",
+      "day?"
+    ],
+    "a": [
+      "be presenting"
+    ]
+  },
+  {
+    "s": [
+      "None",
+      "of",
+      "the topics",
+      "were",
+      null,
+      "for me."
+    ],
+    "a": [
+      "engaging"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "why",
+      "the professor",
+      "didn't cover the",
+      null
+    ],
+    "a": [
+      "curious",
+      "final topic"
+    ]
+  },
+  {
+    "s": [
+      "The walking trail",
+      "that is",
+      null,
+      "near",
+      "the school",
+      "is",
+      "my",
+      null
+    ],
+    "a": [
+      "located",
+      "favorite"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that has",
+      "the highest",
+      null,
+      "seemed like the",
+      null
+    ],
+    "a": [
+      "customer ratings",
+      "best choice."
+    ]
+  },
+  {
+    "s": [
+      "He was curious",
+      "about",
+      "why",
+      "we",
+      null,
+      null,
+      "the graduation ceremony"
+    ],
+    "a": [
+      "arrived",
+      "late to"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "do",
+      "you",
+      "have",
+      null
+    ],
+    "a": [
+      "activities",
+      "planned"
+    ]
+  },
+  {
+    "s": [
+      "Do",
+      "you",
+      null,
+      "the speaker",
+      null,
+      "any",
+      "handouts?"
+    ],
+    "a": [
+      "know if",
+      "shared"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "to see if",
+      "it's",
+      null,
+      null,
+      "the library?"
+    ],
+    "a": [
+      "checked",
+      "available",
+      "at"
+    ]
+  },
+  {
+    "s": [
+      "I'm enrolled",
+      "in the",
+      "one",
+      "that",
+      "covers",
+      null,
+      null
+    ],
+    "a": [
+      "advanced",
+      "mathematics"
+    ]
+  },
+  {
+    "s": [
+      "The topic",
+      "they are",
+      "discussing is",
+      null,
+      "to",
+      "my",
+      "research."
+    ],
+    "a": [
+      "not relevant"
+    ]
+  },
+  {
+    "s": [
+      "My top choice is",
+      "the one",
+      "that",
+      null,
+      "the best",
+      "engineering",
+      "program"
+    ],
+    "a": [
+      "offers"
+    ]
+  },
+  {
+    "s": [
+      "The library",
+      "that",
+      "was supposed",
+      "to be",
+      null,
+      "was",
+      null,
+      "for",
+      "renovations."
+    ],
+    "a": [
+      "open",
+      "closed"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell me",
+      "if there are",
+      "more",
+      "sessions like",
+      null,
+      "scheduled",
+      "?"
+    ],
+    "a": [
+      "that"
+    ]
+  },
+  {
+    "s": [
+      "Have you",
+      null,
+      "on",
+      null,
+      "yet?"
+    ],
+    "a": [
+      "started working",
+      "it"
+    ]
+  },
+  {
+    "s": [
+      "No,",
+      null,
+      "has",
+      null,
+      "at",
+      null
+    ],
+    "a": [
+      "she",
+      "an appointment",
+      "that time"
+    ]
+  },
+  {
+    "s": [
+      "He",
+      "didn't know",
+      null,
+      "he was planning",
+      "to study",
+      null
+    ],
+    "a": [
+      "where",
+      "next year"
+    ]
+  },
+  {
+    "s": [
+      "Have you",
+      "heard whether",
+      null,
+      null
+    ],
+    "a": [
+      "there will be another",
+      "session next month?"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "will",
+      "the class",
+      null,
+      "?"
+    ],
+    "a": [
+      "topics",
+      "cover"
+    ]
+  },
+  {
+    "s": [
+      "I haven't",
+      null,
+      "time",
+      "to",
+      null,
+      "it",
+      "yet."
+    ],
+    "a": [
+      "had",
+      "watch"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know",
+      null,
+      "it's",
+      "open to",
+      "the",
+      null,
+      "?"
+    ],
+    "a": [
+      "if",
+      "public yet"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      "able",
+      "to",
+      null,
+      "it"
+    ],
+    "a": [
+      "wasn't",
+      "make"
+    ]
+  },
+  {
+    "s": [
+      null,
+      "near the",
+      null,
+      "is",
+      "my",
+      null
+    ],
+    "a": [
+      "The park",
+      "campus",
+      "favorite spot"
+    ]
+  },
+  {
+    "s": [
+      "They",
+      null,
+      "in",
+      "the filing cabinet",
+      "that",
+      "we",
+      null
+    ],
+    "a": [
+      "are",
+      "rarely use."
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "their",
+      null,
+      "?"
+    ],
+    "a": [
+      "checked",
+      "membership fees"
+    ]
+  },
+  {
+    "s": [
+      "The car",
+      "that I usually",
+      null,
+      "is",
+      "in the",
+      null,
+      "at the moment"
+    ],
+    "a": [
+      "drive",
+      "shop"
+    ]
+  },
+  {
+    "s": [
+      "I am",
+      null,
+      "available during",
+      null,
+      "dates."
+    ],
+    "a": [
+      "not",
+      "those"
+    ]
+  },
+  {
+    "s": [
+      "What",
+      null,
+      "do you have",
+      null,
+      "?"
+    ],
+    "a": [
+      "activities",
+      "planned"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      null,
+      "whether it",
+      null,
+      "the end of",
+      null,
+      "?"
+    ],
+    "a": [
+      "tell me",
+      "will reopen by",
+      "the month"
+    ]
+  },
+  {
+    "s": [
+      "She",
+      null,
+      "her if she had",
+      null,
+      "for improving",
+      "the curriculum"
+    ],
+    "a": [
+      "asked",
+      "suggestions"
+    ]
+  },
+  {
+    "s": [
+      "The email I",
+      null,
+      "said it",
+      "was canceled"
+    ],
+    "a": [
+      "received"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "them",
+      null
+    ],
+    "a": [
+      "tried",
+      "yet?"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "the",
+      null,
+      "?"
+    ],
+    "a": [
+      "read",
+      "brochure"
+    ]
+  },
+  {
+    "s": [
+      "Have",
+      "you",
+      null,
+      "any",
+      null,
+      "at the university?"
+    ],
+    "a": [
+      "taken",
+      "lessons"
+    ]
+  },
+  {
+    "s": [
+      "Books",
+      "that explore",
+      null,
+      null,
+      "are",
+      null,
+      "fascinating"
+    ],
+    "a": [
+      "human",
+      "psychology",
+      "extremely"
+    ]
+  },
+  {
+    "s": [
+      "The new",
+      "campus gym",
+      "that has",
+      "the",
+      null,
+      "my",
+      null,
+      "gym"
+    ],
+    "a": [
+      "equipment is",
+      "favorite"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      null,
+      null,
+      "it",
+      "before",
+      "the deadline"
+    ],
+    "a": [
+      "couldn't",
+      "finish"
+    ]
+  },
+  {
+    "s": [
+      "I have",
+      "nothing to",
+      null,
+      "about",
+      "the",
+      null,
+      null
+    ],
+    "a": [
+      "say",
+      "survey",
+      "questions"
+    ]
+  },
+  {
+    "s": [
+      "Did",
+      "you",
+      null,
+      "the professor",
+      "for an",
+      null
+    ],
+    "a": [
+      "ask",
+      "extension?"
+    ]
+  },
+  {
+    "prompt": "I'm planning to host the class potluck gathering this weekend.",
+    "sentence": [
+      "What",
+      null,
+      "should I",
+      null,
+      "?"
+    ],
+    "options": [
+      "dishes",
+      "prepare"
+    ],
+    "answers": [
+      "dishes",
+      "prepare"
+    ]
+  },
+  {
+    "prompt": "What did Professor Huang ask about our group project?",
+    "sentence": [
+      "She asked",
+      "if we",
+      null,
+      "which group member would",
+      null,
+      null
+    ],
+    "options": [
+      "had decided",
+      "be giving",
+      "the presentation"
+    ],
+    "answers": [
+      "had decided",
+      "be giving",
+      "the presentation"
+    ]
+  },
+  {
+    "prompt": "The workshop on creative writing starts next Monday.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "it includes",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "any guest",
+      "speakers"
+    ],
+    "answers": [
+      "any guest",
+      "speakers"
+    ]
+  },
+  {
+    "prompt": "The annual tech conference is happening next month.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "there",
+      null,
+      "be a",
+      "session on",
+      null,
+      "?"
+    ],
+    "options": [
+      "will",
+      "artificial intelligence"
+    ],
+    "answers": [
+      "will",
+      "artificial intelligence"
+    ]
+  },
+  {
+    "prompt": "Which seminar should I attend next week?",
+    "sentence": [
+      "I'm interested in",
+      null,
+      "that focuses",
+      "on advanced",
+      null
+    ],
+    "options": [
+      "the one",
+      "research techniques"
+    ],
+    "answers": [
+      "the one",
+      "research techniques"
+    ]
+  },
+  {
+    "prompt": "What did the coach say about the upcoming school tournament?",
+    "sentence": [
+      "He",
+      null,
+      "how crucial",
+      "it is",
+      "to practice",
+      null
+    ],
+    "options": [
+      "emphasized",
+      "rigorously this week"
+    ],
+    "answers": [
+      "emphasized",
+      "rigorously this week"
+    ]
+  },
+  {
+    "prompt": "What kind of books does he write?",
+    "sentence": [
+      "He",
+      null,
+      null,
+      "that",
+      "explore",
+      null
+    ],
+    "options": [
+      "mainly writes",
+      "novels",
+      "human relationships"
+    ],
+    "answers": [
+      "mainly writes",
+      "novels",
+      "human relationships"
+    ]
+  },
+  {
+    "prompt": "Where did you leave your school ID card?",
+    "sentence": [
+      "It is",
+      "on the",
+      null,
+      "that is next to the",
+      null
+    ],
+    "options": [
+      "table",
+      "door"
+    ],
+    "answers": [
+      "table",
+      "door"
+    ]
+  },
+  {
+    "prompt": "I'm planning to attend the school conference next month.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      null,
+      "online yet?"
+    ],
+    "options": [
+      "completed",
+      "the registration"
+    ],
+    "answers": [
+      "completed",
+      "the registration"
+    ]
+  },
+  {
+    "prompt": "Why did the athletic director approach you after your soccer match?",
+    "sentence": [
+      "He was",
+      "interested in",
+      null,
+      "what strategies",
+      "contributed to",
+      null
+    ],
+    "options": [
+      "learning",
+      "our victory"
+    ],
+    "answers": [
+      "learning",
+      "our victory"
+    ]
+  },
+  {
+    "prompt": "Where should we go for lunch today after class?",
+    "sentence": [
+      "How about",
+      null,
+      "where they",
+      null
+    ],
+    "options": [
+      "the cafe",
+      "serve organic food"
+    ],
+    "answers": [
+      "the cafe",
+      "serve organic food"
+    ]
+  },
+  {
+    "prompt": "Did you enjoy the school picnic last weekend?",
+    "sentence": [
+      "None",
+      "of",
+      "the",
+      null,
+      "were fun",
+      "for",
+      null
+    ],
+    "options": [
+      "activities",
+      "me"
+    ],
+    "answers": [
+      "activities",
+      "me"
+    ]
+  },
+  {
+    "prompt": "What did Professor Silva ask you about?",
+    "sentence": [
+      "She was",
+      "interested in",
+      "what",
+      null,
+      "we were",
+      null
+    ],
+    "options": [
+      "progress",
+      "making"
+    ],
+    "answers": [
+      "progress",
+      "making"
+    ]
+  },
+  {
+    "prompt": "Are you interested in joining any of the university clubs?",
+    "sentence": [
+      "No,",
+      null,
+      "have never been",
+      null,
+      "in",
+      null
+    ],
+    "options": [
+      "I",
+      "interested",
+      "club activities"
+    ],
+    "answers": [
+      "I",
+      "interested",
+      "club activities"
+    ]
+  },
+  {
+    "prompt": "I'm planning to host the class potluck gathering this weekend.",
+    "sentence": [
+      "What",
+      null,
+      "should I",
+      null,
+      "?"
+    ],
+    "options": [
+      "dishes",
+      "prepare"
+    ],
+    "answers": [
+      "dishes",
+      "prepare"
+    ]
+  },
+  {
+    "prompt": "What did the head of the Sociology Department ask you?",
+    "sentence": [
+      "She was",
+      "interested in",
+      "understanding",
+      "which courses",
+      null,
+      null
+    ],
+    "options": [
+      "I found",
+      "most useful"
+    ],
+    "answers": [
+      "I found",
+      "most useful"
+    ]
+  },
+  {
+    "prompt": "What did the professor say about the group project proposal?",
+    "sentence": [
+      "He wanted",
+      "to know",
+      "how we",
+      null,
+      "divide the",
+      null,
+      "among us"
+    ],
+    "options": [
+      "plan to",
+      "work"
+    ],
+    "answers": [
+      "plan to",
+      "work"
+    ]
+  },
+  {
+    "prompt": "What did the professor say about the new class schedule?",
+    "sentence": [
+      "She",
+      "wanted to",
+      "know",
+      "if everyone",
+      null,
+      "at the",
+      null
+    ],
+    "options": [
+      "could attend",
+      "new time"
+    ],
+    "answers": [
+      "could attend",
+      "new time"
+    ]
+  },
+  {
+    "prompt": "Are you excited about the workshop this weekend?",
+    "sentence": [
+      "No,",
+      "I have",
+      null,
+      "interest",
+      "in",
+      "attending",
+      "the",
+      null
+    ],
+    "options": [
+      "no",
+      "workshop"
+    ],
+    "answers": [
+      "no",
+      "workshop"
+    ]
+  },
+  {
+    "prompt": "I'm excited to start my new class on Monday.",
+    "sentence": [
+      "Have",
+      "you",
+      null,
+      "your",
+      null,
+      "yet?"
+    ],
+    "options": [
+      "received",
+      "schedule"
+    ],
+    "answers": [
+      "received",
+      "schedule"
+    ]
+  },
+  {
+    "prompt": "I'm excited about the new restaurant opening right off campus.",
+    "sentence": [
+      "What",
+      null,
+      "of",
+      null,
+      "will",
+      "they",
+      "serve?"
+    ],
+    "options": [
+      "type",
+      "cuisine"
+    ],
+    "answers": [
+      "type",
+      "cuisine"
+    ]
+  },
+  {
+    "prompt": "What were you discussing with Mary?",
+    "sentence": [
+      "She",
+      "asked",
+      "what",
+      null,
+      "will",
+      "be",
+      null
+    ],
+    "options": [
+      "attendance policy",
+      "implemented"
+    ],
+    "answers": [
+      "attendance policy",
+      "implemented"
+    ]
+  },
+  {
+    "prompt": "The language lab new software update includes several features.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "it",
+      null,
+      "the previous",
+      null,
+      "?"
+    ],
+    "options": [
+      "resolves",
+      "bugs"
+    ],
+    "answers": [
+      "resolves",
+      "bugs"
+    ]
+  },
+  {
+    "prompt": "Our school is organizing a workshop on time management next week.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "it will",
+      "be conducted",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "online or",
+      "in person"
+    ],
+    "answers": [
+      "online or",
+      "in person"
+    ]
+  },
+  {
+    "prompt": "Why didn't you attend the workshop on Tuesday?",
+    "sentence": [
+      "The",
+      null,
+      "that was",
+      "supposed to",
+      "take",
+      null,
+      "was",
+      "canceled."
+    ],
+    "options": [
+      "workshop",
+      "place"
+    ],
+    "answers": [
+      "workshop",
+      "place"
+    ]
+  },
+  {
+    "prompt": "Why aren't you using the new software to complete the class project?",
+    "sentence": [
+      "The version",
+      "they released",
+      null,
+      "has a",
+      null,
+      "of",
+      "bugs."
+    ],
+    "options": [
+      "last month",
+      "lot"
+    ],
+    "answers": [
+      "last month",
+      "lot"
+    ]
+  },
+  {
+    "prompt": "Which on-campus gym do you prefer?",
+    "sentence": [
+      "The",
+      null,
+      "that",
+      "offers",
+      "a variety",
+      null,
+      "is",
+      "the",
+      "best."
+    ],
+    "options": [
+      "gym",
+      "of classes"
+    ],
+    "answers": [
+      "gym",
+      "of classes"
+    ]
+  },
+  {
+    "prompt": "Which book did you choose for your presentation?",
+    "sentence": [
+      "The book",
+      "that I",
+      "read last",
+      "year",
+      "had",
+      "the most",
+      null,
+      null
+    ],
+    "options": [
+      "compelling",
+      "arguments"
+    ],
+    "answers": [
+      "compelling",
+      "arguments"
+    ]
+  },
+  {
+    "prompt": "What were you and Sarah talking about after class?",
+    "sentence": [
+      "She wanted",
+      "to know",
+      "where",
+      "the class",
+      "could",
+      null,
+      "for",
+      null
+    ],
+    "options": [
+      "go",
+      "lunch"
+    ],
+    "answers": [
+      "go",
+      "lunch"
+    ]
+  },
+  {
+    "prompt": "Why do you prefer this study group?",
+    "sentence": [
+      "The group",
+      "that meets",
+      null,
+      "is",
+      null
+    ],
+    "options": [
+      "every Friday",
+      "very helpful"
+    ],
+    "answers": [
+      "every Friday",
+      "very helpful"
+    ]
+  },
+  {
+    "prompt": "What was Mary calling you about after the school play?",
+    "sentence": [
+      "She wanted",
+      "to know when",
+      "the",
+      null,
+      null
+    ],
+    "options": [
+      "performance",
+      "finished"
+    ],
+    "answers": [
+      "performance",
+      "finished"
+    ]
+  },
+  {
+    "prompt": "What did Professor Reid want to know about our project?",
+    "sentence": [
+      "She was",
+      "curious about",
+      "what resources",
+      "we had used",
+      "to find",
+      null
+    ],
+    "options": [
+      "a solution"
+    ],
+    "answers": [
+      "a solution"
+    ]
+  },
+  {
+    "prompt": "Did you find any good supplies at the campus store?",
+    "sentence": [
+      "None",
+      "that",
+      "were",
+      "there",
+      null,
+      "my",
+      null
+    ],
+    "options": [
+      "caught",
+      "eye"
+    ],
+    "answers": [
+      "caught",
+      "eye"
+    ]
+  },
+  {
+    "prompt": "Why did you attend the job recruitment seminar?",
+    "sentence": [
+      "I was",
+      "curious to",
+      null,
+      "what types",
+      "of courses",
+      "are most",
+      null
+    ],
+    "options": [
+      "learn",
+      "beneficial"
+    ],
+    "answers": [
+      "learn",
+      "beneficial"
+    ]
+  },
+  {
+    "prompt": "I attended a lecture on renewable energy yesterday.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the slides",
+      "will be",
+      null,
+      "?"
+    ],
+    "options": [
+      "available online"
+    ],
+    "answers": [
+      "available online"
+    ]
+  },
+  {
+    "prompt": "How did the students feel about the event being postponed?",
+    "sentence": [
+      "They wanted",
+      "to know",
+      "what factors",
+      null,
+      null
+    ],
+    "options": [
+      "led to",
+      "the rescheduling"
+    ],
+    "answers": [
+      "led to",
+      "the rescheduling"
+    ]
+  },
+  {
+    "prompt": "Has anyone submitted the group project?",
+    "sentence": [
+      "None",
+      "of",
+      "the team members",
+      "have turned",
+      null,
+      null,
+      "yet."
+    ],
+    "options": [
+      "it",
+      "in"
+    ],
+    "answers": [
+      "it",
+      "in"
+    ]
+  },
+  {
+    "prompt": "I saw a poster for a coding course in the city.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "it covers",
+      null,
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "both front-end",
+      "and back-end",
+      "development"
+    ],
+    "answers": [
+      "both front-end",
+      "and back-end",
+      "development"
+    ]
+  },
+  {
+    "prompt": "Did you enjoy the book you borrowed from the library?",
+    "sentence": [
+      "I",
+      "did",
+      "not",
+      "find",
+      "the",
+      null,
+      "engaging"
+    ],
+    "options": [
+      "story"
+    ],
+    "answers": [
+      "story"
+    ]
+  },
+  {
+    "prompt": "I'm reading the novel assigned for the English class.",
+    "sentence": [
+      "Is",
+      "it",
+      null,
+      "?"
+    ],
+    "options": [
+      "interesting"
+    ],
+    "answers": [
+      "interesting"
+    ]
+  },
+  {
+    "prompt": "I'm excited to start my new job on campus next week.",
+    "sentence": [
+      "What",
+      "will",
+      "your",
+      null,
+      "be?"
+    ],
+    "options": [
+      "responsibilities"
+    ],
+    "answers": [
+      "responsibilities"
+    ]
+  },
+  {
+    "prompt": "What did the professor say about the syllabus?",
+    "sentence": [
+      "She wanted",
+      "to explain",
+      "how it",
+      "would help",
+      null,
+      null
+    ],
+    "options": [
+      "achieve",
+      "learning goals"
+    ],
+    "answers": [
+      "achieve",
+      "learning goals"
+    ]
+  },
+  {
+    "prompt": "The university just announced that it will provide health benefits for students.",
+    "sentence": [
+      "Do you",
+      "know",
+      "if",
+      "it",
+      "includes",
+      null,
+      "coverage?"
+    ],
+    "options": [
+      "dental"
+    ],
+    "answers": [
+      "dental"
+    ]
+  },
+  {
+    "prompt": "The seminar on financial management was very insightful.",
+    "sentence": [
+      "Do you",
+      "know if",
+      "the slides",
+      "will be",
+      null,
+      "online?"
+    ],
+    "options": [
+      "available"
+    ],
+    "answers": [
+      "available"
+    ]
+  },
+  {
+    "prompt": "Why did you buy that particular laptop for school?",
+    "sentence": [
+      "The model",
+      "that has",
+      "the longest",
+      null,
+      "was my",
+      null,
+      "choice."
+    ],
+    "options": [
+      "battery life",
+      "top"
+    ],
+    "answers": [
+      "battery life",
+      "top"
+    ]
+  },
+  {
+    "prompt": "Which study method do you prefer most?",
+    "sentence": [
+      "The",
+      null,
+      "that my",
+      "tutor recommended",
+      "seems",
+      "to",
+      "work",
+      null
+    ],
+    "options": [
+      "technique",
+      "best"
+    ],
+    "answers": [
+      "technique",
+      "best"
+    ]
+  },
+  {
+    "prompt": "Why did you choose this venue for the school event?",
+    "sentence": [
+      "The hall",
+      "that accommodates",
+      "the",
+      "most",
+      null,
+      "seemed",
+      null
+    ],
+    "options": [
+      "students",
+      "ideal"
+    ],
+    "answers": [
+      "students",
+      "ideal"
+    ]
+  },
+  {
+    "prompt": "Why didn't you go to the class party last night?",
+    "sentence": [
+      "The invitation",
+      "had",
+      "the",
+      "wrong",
+      null
+    ],
+    "options": [
+      "address"
+    ],
+    "answers": [
+      "address"
+    ]
+  },
+  {
+    "prompt": "The university's art department is sponsoring a new exhibit at the museum.",
+    "sentence": [
+      "Do you",
+      "know whether",
+      "it",
+      "features",
+      null,
+      null,
+      "?"
+    ],
+    "options": [
+      "contemporary",
+      "artists"
+    ],
+    "answers": [
+      "contemporary",
+      "artists"
+    ]
+  },
+  {
+    "prompt": "I need to study for my final exams next week.",
+    "sentence": [
+      "Do",
+      "you",
+      "think",
+      "that",
+      "the questions",
+      "will be",
+      null,
+      "?"
+    ],
+    "options": [
+      "difficult"
+    ],
+    "answers": [
+      "difficult"
+    ]
+  },
+  {
+    "s": [
+      "I'm enrolled",
+      "in the",
+      "one",
+      "that",
+      "covers",
+      null,
+      null
+    ],
+    "a": [
+      "advanced",
+      "mathematics"
+    ]
+  },
+  {
+    "s": [
+      "I did",
+      null,
+      "enough",
+      "time",
+      "to",
+      null,
+      "it"
+    ],
+    "a": [
+      "not have",
+      "complete"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "there are",
+      "any materials",
+      null,
+      "to bring",
+      "?"
+    ],
+    "a": [
+      "I need"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know",
+      "if",
+      "she",
+      null,
+      "any additional resources",
+      "?"
+    ],
+    "a": [
+      "provided"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know",
+      "if",
+      "we",
+      "need to submit",
+      null,
+      "as well?"
+    ],
+    "a": [
+      "a written report"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "there will",
+      "be a",
+      null,
+      "?"
+    ],
+    "a": [
+      "silent auction"
+    ]
+  },
+  {
+    "s": [
+      "Where",
+      "is",
+      "the",
+      "class",
+      "being",
+      null,
+      "?"
+    ],
+    "a": [
+      "held"
+    ]
+  },
+  {
+    "s": [
+      "I chose",
+      "it because",
+      "it's the",
+      "topic that",
+      "has",
+      "the",
+      null
+    ],
+    "a": [
+      "new study report"
+    ]
+  },
+  {
+    "s": [
+      "I was",
+      null,
+      "to see if",
+      "Sam",
+      "would have",
+      null,
+      "to assist"
+    ],
+    "a": [
+      "planning",
+      "time"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know",
+      "if",
+      null,
+      "will be open",
+      "?"
+    ],
+    "a": [
+      "the library"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell",
+      "me",
+      "whether",
+      "it",
+      "will be online or",
+      null,
+      "?"
+    ],
+    "a": [
+      "in-person"
+    ]
+  },
+  {
+    "s": [
+      "No, I",
+      "didn't",
+      "manage to finish",
+      "it",
+      "before",
+      "the",
+      null
+    ],
+    "a": [
+      "deadline"
+    ]
+  },
+  {
+    "s": [
+      "Did you",
+      "check",
+      "the",
+      "course",
+      null,
+      "?"
+    ],
+    "a": [
+      "syllabus"
+    ]
+  },
+  {
+    "s": [
+      "The boutique",
+      "that",
+      "is",
+      "downtown",
+      "has",
+      "the required",
+      null
+    ],
+    "a": [
+      "clothing items."
+    ]
+  },
+  {
+    "s": [
+      "The library",
+      "that",
+      "was supposed",
+      "to be",
+      "open was",
+      "closed for",
+      null
+    ],
+    "a": [
+      "renovations."
+    ]
+  },
+  {
+    "s": [
+      "What kind",
+      "of",
+      null,
+      "activities",
+      "will",
+      "there",
+      "be?"
+    ],
+    "a": [
+      "fundraising"
+    ]
+  },
+  {
+    "s": [
+      "She wanted",
+      "to know",
+      "what my",
+      "reason was",
+      "for not",
+      null
+    ],
+    "a": [
+      "being there"
+    ]
+  },
+  {
+    "s": [
+      "Have you",
+      "made",
+      "a",
+      "study",
+      null,
+      "yet?"
+    ],
+    "a": [
+      "plan"
+    ]
+  },
+  {
+    "s": [
+      null,
+      "registered",
+      "for",
+      "it yet"
+    ],
+    "a": [
+      "I haven't"
+    ]
+  },
+  {
+    "s": [
+      "Did you",
+      "have",
+      "all",
+      "of",
+      "the",
+      "necessary",
+      "software",
+      "updates",
+      null,
+      "?"
+    ],
+    "a": [
+      "installed"
+    ]
+  },
+  {
+    "s": [
+      "Which dishes",
+      "are you",
+      "looking forward",
+      "to learning",
+      "how to",
+      null,
+      "?"
+    ],
+    "a": [
+      "cook"
+    ]
+  },
+  {
+    "s": [
+      "He didn't",
+      "know",
+      "which platform",
+      "provides",
+      "the most",
+      "current policy",
+      null
+    ],
+    "a": [
+      "information."
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "there",
+      "will",
+      "be",
+      "group",
+      null
+    ],
+    "a": [
+      "activities?"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "the lecture",
+      "is open",
+      "to all",
+      null
+    ],
+    "a": [
+      "students?"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that offers",
+      null,
+      "is a",
+      "great option"
+    ],
+    "a": [
+      "complimentary breakfast"
+    ]
+  },
+  {
+    "s": [
+      "The one",
+      "that serves",
+      "the best",
+      null,
+      "is my",
+      "favorite"
+    ],
+    "a": [
+      "pastries"
+    ]
+  },
+  {
+    "s": [
+      "I",
+      "heard",
+      "my classmates",
+      "discussing",
+      "who",
+      "came out",
+      null
+    ],
+    "a": [
+      "on top"
+    ]
+  },
+  {
+    "s": [
+      "The library",
+      "that",
+      "was recently",
+      null,
+      "is",
+      "very",
+      "impressive"
+    ],
+    "a": [
+      "renovated"
+    ]
+  },
+  {
+    "s": [
+      "Can you",
+      "tell",
+      "me whether",
+      "it's suitable",
+      null,
+      "?"
+    ],
+    "a": [
+      "for beginners"
+    ]
+  },
+  {
+    "s": [
+      null,
+      "had",
+      "time",
+      "to",
+      "read",
+      "it yet"
+    ],
+    "a": [
+      "I haven't"
+    ]
+  },
+  {
+    "s": [
+      "My",
+      "advisor also wanted",
+      "to",
+      "know",
+      "which subject",
+      "I",
+      null
+    ],
+    "a": [
+      "selected"
+    ]
+  },
+  {
+    "s": [
+      "I did",
+      "not",
+      "find",
+      "the",
+      "activities",
+      null
+    ],
+    "a": [
+      "interesting enough"
+    ]
+  },
+  {
+    "s": [
+      "She was",
+      "curious about",
+      "what brainstorming",
+      "techniques were",
+      null
+    ],
+    "a": [
+      "used"
+    ]
+  },
+  {
+    "s": [
+      "The",
+      "email",
+      "I received",
+      "had",
+      "the",
+      "wrong",
+      "time",
+      null
+    ],
+    "a": [
+      "listed."
+    ]
+  },
+  {
+    "s": [
+      "She",
+      "wanted",
+      "to",
+      "know",
+      null,
+      "were discussed"
+    ],
+    "a": [
+      "what issues"
+    ]
+  },
+  {
+    "s": [
+      "They wanted",
+      "to explain",
+      "which pieces",
+      "of equipment",
+      "we",
+      "would be",
+      null
+    ],
+    "a": [
+      "trained on"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "there",
+      "will",
+      "be a",
+      "session on",
+      null,
+      "?"
+    ],
+    "a": [
+      "artificial intelligence"
+    ]
+  },
+  {
+    "s": [
+      "Do you",
+      "know if",
+      "it includes",
+      "any guest",
+      null
+    ],
+    "a": [
+      "speakers?"
+    ]
+  }
+]

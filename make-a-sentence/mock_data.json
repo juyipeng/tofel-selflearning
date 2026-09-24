@@ -1,0 +1,51 @@
+{
+  "BS_4月": {
+    "name": "BS 4月真题",
+    "sets": {
+      "set_01": {
+        "name": "第 1 套",
+        "questions": [
+          {
+            "prompt": "What did Sarah say about the meeting tomorrow?",
+            "sentence": ["She", null, "if it would be", null, "to know", "if she", null, "."],
+            "options": ["arrived late", "ok", "wanted"],
+            "answers": ["arrived late", "ok", "wanted"]
+          },
+          {
+            "prompt": "The professor asked about the research findings.",
+            "sentence": ["The study", null, "that regular exercise", null, "overall health.", "One reason is that it", null, "the risk of disease."],
+            "options": ["demonstrated", "improves", "significantly", "reduces"],
+            "answers": ["demonstrated", "improves", "reduces"]
+          }
+        ]
+      },
+      "set_02": {
+        "name": "第 2 套",
+        "questions": [
+          {
+            "prompt": "Why did the author visit the museum?",
+            "sentence": ["He", null, "the ancient", null, "that had been", null, "for centuries."],
+            "options": ["wanted", "to examine", "artifacts", "preserved"],
+            "answers": ["wanted", "artifacts", "preserved"]
+          }
+        ]
+      }
+    }
+  },
+  "BS_5月": {
+    "name": "BS 5月真题",
+    "sets": {
+      "set_01": {
+        "name": "第 1 套",
+        "questions": [
+          {
+            "prompt": "How does the new policy affect the local economy?",
+            "sentence": ["The policy", null, "to", null, "economic growth", "by", null, "small businesses."],
+            "options": ["is designed", "boost", "supporting"],
+            "answers": ["is designed", "boost", "supporting"]
+          }
+        ]
+      }
+    }
+  }
+}

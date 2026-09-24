@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新托福口语 7 月回顾</title>
+<style>
+  :root { --bg:#f4f5f7; --card:#fff; --ink:#1c2333; --muted:#6b7280;
+         --accent:#4f46e5; --accent2:#eef2ff; --ok:#16a34a; --bad:#dc2626;
+         --warn:#b45309; --line:#e5e7eb; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+         background:var(--bg); color:var(--ink); }
+  .wrap { max-width:960px; margin:0 auto; padding:28px 20px 60px; }
+  h1.title { font-size:22px; margin:0 0 4px; }
+  .subtitle { color:var(--muted); font-size:13px; margin-bottom:24px; }
+  .modh { font-size:13px; font-weight:700; color:var(--muted); text-transform:uppercase;
+          letter-spacing:.04em; margin:22px 0 10px; }
+  .modh .cnt { color:var(--accent); }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+          padding:14px 16px; cursor:pointer; transition:.12s; }
+  .card:hover { border-color:var(--accent); box-shadow:0 4px 14px rgba(79,70,229,.10); }
+  .card .tag { font-size:11px; color:var(--accent); font-weight:700; margin-bottom:4px; }
+  .card h3 { font-size:14.5px; margin:0 0 4px; }
+  .card .sub { font-size:12px; color:var(--muted); }
+
+  .test-head { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+  .back { background:var(--card); border:1px solid var(--line); border-radius:8px;
+          padding:7px 12px; cursor:pointer; font-size:13px; }
+  .back:hover { background:#f3f4f6; }
+  .test-head .t { font-size:18px; font-weight:700; flex:1; }
+  .scenario { background:#f8fafc; border-left:3px solid var(--accent); padding:10px 14px;
+          border-radius:0 8px 8px 0; font-size:13.5px; color:#475569; margin:12px 0 20px; }
+  .progress { height:5px; background:var(--line); border-radius:3px; margin:10px 0 18px; overflow:hidden; }
+  .progress .bar { height:100%; background:var(--accent); transition:width .2s; }
+
+  .panel { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px 22px; }
+  .step-label { color:var(--muted); font-size:13px; margin-bottom:12px; }
+  .qtext { font-size:16px; line-height:1.7; margin:12px 0; }
+  .sentence { font-size:17px; line-height:1.6; margin:12px 0; font-weight:500; }
+
+  .row { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0; align-items:center; }
+  button { border:1px solid var(--line); background:var(--card); padding:9px 16px; border-radius:9px;
+          cursor:pointer; font-size:14px; color:var(--ink); }
+  button:hover { filter:brightness(.96); }
+  button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  button.rec { background:var(--bad); color:#fff; border-color:var(--bad); }
+  button:disabled { opacity:.5; cursor:not-allowed; }
+  .rec-ind { color:var(--bad); font-weight:700; font-size:14px; }
+  .microw { display:flex; align-items:center; gap:8px; margin:10px 0 4px; font-size:13px; color:var(--muted); }
+  .microw select { padding:5px 8px; border:1px solid var(--line); border-radius:7px; font-size:13px; background:var(--card); max-width:100%; }
+
+  .result { background:#f8fafc; border:1px solid var(--line); border-radius:12px;
+          padding:16px 18px; margin-top:16px; font-size:14px; line-height:1.7; }
+  .result .transcript { font-style:italic; color:#475569; border-bottom:1px dashed var(--line);
+          padding-bottom:10px; margin-bottom:10px; }
+  .result .score { white-space:pre-wrap; }
+  .result .scorepart { border-top:1px solid var(--line); padding-top:12px; margin-top:12px; }
+  .result .scorepart:first-child { border-top:0; padding-top:0; margin-top:0; }
+  .result h4 { margin:0 0 8px; font-size:14.5px; }
+  .teacher-row { margin-top:14px; display:flex; align-items:center; gap:10px; }
+  .copymsg { color:var(--ok); font-size:13px; }
+  .footer { display:flex; justify-content:space-between; margin-top:20px; }
+  .textmode { display:flex; align-items:center; gap:6px; margin-bottom:16px; font-size:13px; color:var(--muted); }
+  .textmode button { padding:5px 12px; font-size:12.5px; border-radius:7px; }
+  .textmode button.active { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .reveal-btn { background:var(--accent2); color:var(--accent); border-color:var(--accent2); }
+  .text-hidden { color:var(--muted); font-style:italic; }
+  .spinner { display:inline-block; width:16px; height:16px; border:2px solid var(--accent2);
+          border-top-color:var(--accent); border-radius:50%; animation:spin .8s linear infinite;
+          vertical-align:-3px; margin-right:8px; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+</style>
+</head>
+<body>
+<div class="wrap"><div id="view"></div></div>
+<audio id="promptPlayer" preload="auto"></audio>
+<audio id="recPlayer" controls style="display:none"></audio>
+<script>
+let MANIFEST = null;
+let mode = 'home';       // home | lr | int
+let cur = null;          // 当前 LR topic 或 INT unit
+let step = 0;
+
+// 文本显示模式：hide=持续隐藏  reveal=点开才显示(切题复位)  show=持续显示
+let textMode = 'reveal';
+let itemRevealed = false;
+
+// 录音状态
+let mediaRecorder = null, chunks = [], stream = null, recTimer = null, recSeconds = 0;
+let fullBlob = null, timedBlob = null, timedChunks = null, lastMime = 'audio/webm';
+let timedUrl = null, fullUrl = null;
+const LIMIT = 45;   // interview 每题作答限时（秒）
+let selectedDeviceId = null;   // 麦克风输入源（null=默认）
+let audioInputs = [];
+
+const TEACHER_PROMPT = `你是一位资深的新托福（TOEFL）口语老师。下面是一道口语题、考生的回答（语音转写文本）、以及一份 AI 评分。
+
+请从以下三个维度点评并指导：
+1. Delivery（表达）：对话流畅度、节奏、是否有交流感而非背诵感；
+2. Language Use（语言）：语法与词汇准确性、表达是否地道自然；
+3. Topic Development（内容）：是否扣题、阐述是否充分、逻辑是否连贯。
+
+最后给出 2-3 条最关键的改进建议，并附上修改示例句（直接写出更地道的英文表达）。`;
+let teacherCtx = { question: '', transcript: '', score: '' };
+
+const $ = id => document.getElementById(id);
+const promptPlayer = $('promptPlayer');
+const recPlayer = $('recPlayer');
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+async function load(){
+  const r = await fetch('manifest.json');
+  MANIFEST = await r.json();
+  renderHome();
+  refreshDevices();
+}
+
+/* ---------------- HOME ---------------- */
+function renderHome(){
+  let h = `<h1 class="title">${esc(MANIFEST.title)}</h1>
+    <div class="subtitle">口语练习 · Listen and Repeat（跟读）+ Take an Interview（面试）</div>
+    <div class="modh">Listen and Repeat <span class="cnt">(${MANIFEST.lr.length} 主题)</span></div>
+    <div class="grid">`;
+  MANIFEST.lr.forEach(t => {
+    h += `<div class="card" onclick="startLR('${t.id}')">
+      <div class="tag">${t.id}</div><h3>${esc(t.title)}</h3>
+      <div class="sub">${t.sentences.length} 句跟读</div></div>`;
+  });
+  h += `</div><div class="modh">Take an Interview <span class="cnt">(${MANIFEST.int.length} 单元)</span></div><div class="grid">`;
+  MANIFEST.int.forEach(u => {
+    h += `<div class="card" onclick="startINT('${u.id}')">
+      <div class="tag">${u.id}</div><h3>${esc(u.title || 'Interview')}</h3>
+      <div class="sub">${u.questions.length} 题 · 可录音评分</div></div>`;
+  });
+  h += '</div>';
+  $('view').innerHTML = h;
+}
+
+function startLR(id){
+  cur = MANIFEST.lr.find(t => t.id===id); mode='lr'; step=0; itemRevealed=false; resetRec();
+  render();
+}
+function startINT(id){
+  cur = MANIFEST.int.find(u => u.id===id); mode='int'; step=0; itemRevealed=false; resetRec();
+  render();
+}
+function goHome(){ mode='home'; cur=null; stopStream(); renderHome(); }
+
+function totalSteps(){ return mode==='lr' ? cur.sentences.length : cur.questions.length; }
+
+function play(src){ promptPlayer.src = src; promptPlayer.play().catch(()=>{}); }
+
+/* ---- 文本显示模式 ---- */
+const MODE_LABEL = {hide:'持续隐藏', reveal:'点开才显示', show:'持续显示'};
+function setTextMode(m){ textMode = m; itemRevealed = false; render(); }
+function revealItem(){ itemRevealed = true; render(); }
+function textShown(){ return textMode==='show' || (textMode==='reveal' && itemRevealed); }
+function modeBar(){
+  return `<div class="textmode"><span>文本显示：</span>` +
+    ['hide','reveal','show'].map(m =>
+      `<button class="${textMode===m?'active':''}" onclick="setTextMode('${m}')">${MODE_LABEL[m]}</button>`
+    ).join('') + '</div>';
+}
+function renderText(text){
+  if (textShown()) return `<div class="qtext">${esc(text)}</div>`;
+  if (textMode==='reveal') return `<div class="row"><button class="reveal-btn" onclick="revealItem()">👁 显示文本</button></div>`;
+  return `<div class="text-hidden">（文本已隐藏）</div>`;
+}
+
+/* ---------------- 录音 ---------------- */
+async function startRec(){
+  const constraints = selectedDeviceId
+    ? { audio: { deviceId: { exact: selectedDeviceId } } }
+    : { audio: true };
+  try {
+    stream = await navigator.mediaDevices.getUserMedia(constraints);
+  } catch(e){
+    alert('无法访问麦克风：' + e.message + '\n请确认已用 localhost 打开、允许了麦克风权限，且选择了正确的输入源');
+    return;
+  }
+  chunks = []; fullBlob = null; timedBlob = null; timedChunks = null;
+  mediaRecorder = new MediaRecorder(stream);   // 用浏览器默认格式，不强制 mimeType
+  mediaRecorder.ondataavailable = e => { if(e.data && e.data.size) chunks.push(e.data); };
+  mediaRecorder.onstop = onRecStop;
+  mediaRecorder.start(1000);   // 1 秒一个 chunk，便于 45s 时截取「限时版」
+  recSeconds = 0;
+  recTimer = setInterval(tick, 1000);
+  renderRecControls(true);
+}
+function stopRec(){ if(mediaRecorder && mediaRecorder.state!=='inactive') mediaRecorder.stop(); }
+function stopStream(){ if(stream){ stream.getTracks().forEach(t=>t.stop()); stream=null; } }
+
+function tick(){
+  recSeconds++;
+  const t = $('recTimer'); if(t) t.textContent = timerText();
+  if(mode==='int' && recSeconds === LIMIT){
+    timedChunks = chunks.slice();   // 45s 到点，截取「限时版」
+    const ind = $('recInd'); if(ind) ind.textContent = '● 录音中 · 已到 45s 限时（继续录完整作答）';
+  }
+}
+function timerText(){
+  if(mode!=='int') return recSeconds + 's';
+  return recSeconds <= LIMIT ? recSeconds + 's / ' + LIMIT + 's' : '超时 ' + (recSeconds - LIMIT) + 's';
+}
+function onRecStop(){
+  clearInterval(recTimer); stopStream();
+  lastMime = (mediaRecorder && mediaRecorder.mimeType) ? mediaRecorder.mimeType : 'audio/webm';
+  fullBlob = new Blob(chunks, {type:lastMime});
+  if(timedChunks && timedChunks.length) timedBlob = new Blob(timedChunks, {type:lastMime});
+  else timedBlob = null;
+  if(!fullBlob.size) alert('录音为空，请重试');
+  renderRecControls(false);
+}
+function resetRec(){ stopStream(); clearInterval(recTimer); fullBlob=null; timedBlob=null; timedChunks=null; chunks=[]; }
+
+function renderRecControls(recording){
+  const el = $('recCtl');
+  if(!el) return;
+  if(recording){
+    el.innerHTML = `<span class="rec-ind" id="recInd">● 录音中 <span id="recTimer">${timerText()}</span></span>
+      <button class="rec" onclick="stopRec()">⏹ 停止</button>`;
+  } else if(fullBlob){
+    fullUrl = URL.createObjectURL(fullBlob);
+    timedUrl = timedBlob ? URL.createObjectURL(timedBlob) : null;
+    recPlayer.src = fullUrl;
+    recPlayer.style.display = 'block';
+    let btns = '';
+    if(mode==='int'){
+      if(timedBlob) btns += `<button onclick="playTimed()">▶ 回放限时作答（45s）</button>`;
+      btns += `<button onclick="playFull()">▶ 回放完整作答</button>`;
+    } else {
+      btns += `<button onclick="playFull()">▶ 回放我的录音</button>`;
+    }
+    const submit = (mode==='int')
+      ? `<button class="primary" onclick="submitScore()">提交评分</button>` : '';
+    el.innerHTML = btns + `<button onclick="startRec()">↺ 重新录</button>${submit}`;
+  } else {
+    el.innerHTML = `<button class="rec" onclick="startRec()">🎤 开始录音</button>`;
+  }
+}
+function playTimed(){ if(timedUrl){ recPlayer.src = timedUrl; recPlayer.play().catch(()=>{}); } }
+function playFull(){ if(fullUrl){ recPlayer.src = fullUrl; recPlayer.play().catch(()=>{}); } }
+
+/* ---- 麦克风输入源选择 ---- */
+async function refreshDevices(){
+  try {
+    const devices = await navigator.mediaDevices.enumerateDevices();
+    audioInputs = devices.filter(d => d.kind === 'audioinput');
+  } catch(e) { audioInputs = []; }
+  populateMicSelect();
+}
+function onMicChange(id){ selectedDeviceId = id || null; }
+function micSelectHtml(){
+  return `<div class="microw"><span>🎙 输入源</span>
+    <select id="micSelect" onchange="onMicChange(this.value)"></select></div>`;
+}
+function populateMicSelect(){
+  const sel = $('micSelect');
+  if(!sel) return;
+  sel.innerHTML = '';
+  const def = document.createElement('option');
+  def.value = ''; def.textContent = '默认麦克风';
+  sel.appendChild(def);
+  audioInputs.forEach((d, i) => {
+    const o = document.createElement('option');
+    o.value = d.deviceId;
+    o.textContent = d.label || ('麦克风 ' + (i + 1));
+    if(d.deviceId === selectedDeviceId) o.selected = true;
+    sel.appendChild(o);
+  });
+}
+
+/* ---------------- RENDER ---------------- */
+function render(){
+  const total = totalSteps();
+  const prog = (step+1)/total*100;
+  let head = '', scenario = '', body = '';
+
+  if(mode==='lr'){
+    const s = cur.sentences[step];
+    head = `<div class="test-head"><button class="back" onclick="goHome()">← 返回</button>
+      <div class="t">${esc(cur.title)}</div><span style="color:var(--muted);font-size:13px">${cur.id}</span></div>`;
+    scenario = cur.scenario ? `<div class="scenario">${esc(cur.scenario)}</div>` : '';
+    body = `
+      <div class="step-label">第 ${step+1} / ${total} 句</div>
+      <div class="panel">
+        <div class="row"><button class="primary" onclick="play('${cur.sentences[step].audio}')">▶ 播放这句</button></div>
+        ${renderText(s.text)}
+        ${micSelectHtml()}
+        <div class="row" id="recCtl"></div>
+      </div>`;
+  } else {
+    const q = cur.questions[step];
+    head = `<div class="test-head"><button class="back" onclick="goHome()">← 返回</button>
+      <div class="t">${esc(cur.title || cur.id)}</div><span style="color:var(--muted);font-size:13px">${cur.id}</span></div>`;
+    body = `
+      <div class="step-label">第 ${step+1} / ${total} 题</div>
+      <div class="panel">
+        <div class="row"><button class="primary" onclick="play('${cur.questions[step].audio}')">▶ 播放题目</button></div>
+        ${renderText(q.text)}
+        ${micSelectHtml()}
+        <div class="row" id="recCtl"></div>
+        <div id="result"></div>
+      </div>`;
+  }
+
+  const isLast = step===total-1;
+  $('view').innerHTML = `
+    ${head}
+    <div class="progress"><div class="bar" style="width:${prog}%"></div></div>
+    ${modeBar()}
+    ${scenario}
+    ${body}
+    <div class="footer">
+      <span></span>
+      <button class="primary" onclick="next()">${isLast?'完成':'下一题 →'}</button>
+    </div>`;
+  renderRecControls(false);
+  populateMicSelect();
+}
+
+function next(){
+  if(step < totalSteps()-1){ step++; itemRevealed=false; resetRec(); render(); }
+  else { goHome(); }
+}
+
+/* ---------------- 评分 ---------------- */
+async function submitScore(){
+  if(!fullBlob){ alert('请先录音'); return; }
+  const result = $('result');
+  const question = mode==='int' ? cur.questions[step].text : '';
+
+  async function scoreOne(blob, label){
+    const b64 = await blobToBase64(blob);
+    const r = await fetch('/api/score', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({audio_b64: b64, question: question, mime: lastMime})
+    });
+    const data = await r.json();
+    if(data.error) return { html: `<div class="scorepart" style="color:var(--bad)"><b>${esc(label)}</b>：${esc(data.error)}</div>` };
+    return { html: `<div class="scorepart"><h4>${esc(label)}</h4>
+      <div class="transcript">你说的（转写）：${esc(data.transcript)||'（未识别到语音）'}</div>
+      <div class="score">${esc(data.score).replace(/\n/g,'<br>')}</div></div>`,
+      transcript: data.transcript, score: data.score };
+  }
+
+  result.innerHTML = '<div class="result"><span class="spinner"></span>转写 + 评分中…（约 20-40 秒）</div>';
+  try {
+    let html = '';
+    if(timedBlob){ html += (await scoreOne(timedBlob, '⏱ 限时作答（45s 内）')).html; }
+    const full = await scoreOne(fullBlob, '📝 完整作答');
+    html += full.html;
+    teacherCtx = { question: question, transcript: full.transcript || '', score: full.score || '' };
+    html += `<div class="teacher-row"><button class="primary" onclick="copyTeacher()">📋 复制给口语老师</button>
+      <span class="copymsg" id="copyMsg"></span></div>`;
+    result.innerHTML = `<div class="result">${html}</div>`;
+  } catch(e){
+    result.innerHTML = `<div class="result" style="color:var(--bad)">请求失败：${esc(e.message)}</div>`;
+  }
+}
+
+async function copyTeacher(){
+  const text = `${TEACHER_PROMPT}\n\n=====\n题目：${teacherCtx.question}\n\n考生作答（转写）：\n${teacherCtx.transcript}\n\nAI 评分结果：\n${teacherCtx.score}`;
+  let ok = false;
+  try {
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      await navigator.clipboard.writeText(text);
+      ok = true;
+    }
+  } catch(e) {}
+  if(!ok){
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); ok = true; } catch(e) {}
+    document.body.removeChild(ta);
+  }
+  const m = $('copyMsg');
+  if(m) m.textContent = ok ? '✓ 已复制，去粘贴给老师吧' : '复制失败，请手动复制';
+}
+function blobToBase64(blob){
+  return new Promise((resolve, reject)=>{
+    const r = new FileReader();
+    r.onload = () => resolve(r.result.split(',')[1]);
+    r.onerror = reject;
+    r.readAsDataURL(blob);
+  });
+}
+
+load();
+</script>
+</body>
+</html>

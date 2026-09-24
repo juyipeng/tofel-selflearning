@@ -1,0 +1,50 @@
+# ---- 密钥与本地配置（绝不入库）----
+config.json
+.env
+.env.*
+!.env.example
+
+# ---- 原始材料与中间产物 ----
+# 各模块的原始输入、抽出的图、转写/对齐中间结果
+**/raw-data/
+**/images/
+**/processed/
+listening/app/clips/
+
+# 原始文件格式
+*.zip
+*.pdf
+*.docx
+*.doc
+*.m4a
+*.wav
+
+# ---- 个人数据（做题记录、进度）----
+toefl_progress.json
+make-a-sentence/make_a_sentence_progress.json
+writing/practice/data/records.json
+writing/practice/data/materials.json
+
+# ---- 历史遗留 ----
+debug/
+dev/
+.claude/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- 日志与临时文件 ----
+*.log
+_tmp_*
+_thumb.png
+~$*
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

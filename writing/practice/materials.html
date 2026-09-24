@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>素材库 · 积累/总结/背诵</title>
+<style>
+:root {
+  --bg: #0f172a; --panel: #1e293b; --panel2: #1a2332; --text: #e2e8f0; --text2: #94a3b8;
+  --accent: #38bdf8; --success: #34d399; --danger: #f87171; --warn: #fbbf24; --border: #334155;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  background: var(--bg); color: var(--text); height: 100dvh; display: flex; flex-direction: column;
+}
+.btn {
+  padding: 10px 18px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel);
+  color: var(--text); font-size: .9rem; cursor: pointer; transition: all .15s; font-family: inherit;
+}
+.btn:hover { background: #2d3a4f; }
+.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn-primary { background: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 700; }
+.btn-primary:hover { background: #7dd3fc; }
+.btn-sm { padding: 6px 12px; font-size: .8rem; border-radius: 8px; }
+.btn-success { background: var(--success); color: #0f172a; border-color: var(--success); font-weight: 700; }
+
+.topbar { display: flex; align-items: center; gap: 12px; padding: 10px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.topbar .title { font-weight: 800; font-size: 1.1rem; }
+.tabs { display: flex; gap: 6px; }
+.tab { padding: 8px 14px; border: 1px solid var(--border); border-radius: 9px; background: var(--panel); color: var(--text2); cursor: pointer; font-size: .88rem; font-family: inherit; }
+.tab:hover { color: var(--text); }
+.tab.active { background: var(--accent); color: #0f172a; border-color: var(--accent); font-weight: 700; }
+.topbar .spacer { flex: 1; }
+
+.tab-panel { display: none; flex: 1; min-height: 0; overflow-y: auto; padding: 16px; }
+.tab-panel.active { display: flex; flex-direction: column; }
+
+/* 素材卡片 */
+.material-card { border: 1px solid var(--border); border-radius: 12px; background: var(--panel); padding: 14px; margin-bottom: 12px; }
+.m-card-head { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; flex-wrap: wrap; }
+.m-topic { font-weight: 800; font-size: 1rem; color: var(--accent); }
+.m-note { font-size: .8rem; color: var(--text2); }
+.m-actions { margin-left: auto; display: flex; gap: 6px; }
+.angle { margin: 6px 0; padding: 6px 10px; background: var(--panel2); border-radius: 8px; }
+.a-label { font-size: .72rem; color: var(--warn); margin-bottom: 2px; }
+.a-text { font-size: .9rem; line-height: 1.6; color: var(--text); }
+
+/* 聊天 */
+.chat-log { display: flex; flex-direction: column; gap: 10px; flex: 1; overflow-y: auto; padding: 8px 0; min-height: 200px; }
+.chat-msg { max-width: 86%; padding: 10px 14px; border-radius: 12px; line-height: 1.6; font-size: .9rem; white-space: pre-wrap; }
+.chat-msg.user { align-self: flex-end; background: var(--accent); color: #0f172a; }
+.chat-msg.ai { align-self: flex-start; background: var(--panel); color: var(--text); }
+.chat-input { display: flex; gap: 8px; margin-top: 10px; }
+.chat-input textarea { flex: 1; resize: none; height: 54px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); color: var(--text); padding: 10px 12px; font-size: .9rem; line-height: 1.5; font-family: inherit; outline: none; }
+.chat-input textarea:focus { border-color: var(--accent); }
+
+.hint { font-size: .8rem; color: var(--text2); line-height: 1.6; }
+.summary-bar { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+
+/* 背诵默写 */
+.dict-grid { display: flex; flex-direction: column; gap: 8px; }
+.dict-item { display: flex; align-items: center; gap: 10px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--panel); cursor: pointer; }
+.dict-item:hover { border-color: #64748b; }
+.dict-item .di-topic { font-weight: 700; }
+.dict-item .di-meta { font-size: .78rem; color: var(--text2); margin-left: auto; }
+.dict-item.mastered .di-topic { color: var(--success); }
+.dict-area { margin-top: 16px; }
+.dict-result { margin-top: 10px; font-size: .9rem; line-height: 1.7; }
+
+/* 编辑器弹窗 */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.6); z-index: 50; align-items: center; justify-content: center; padding: 20px; }
+.modal.open { display: flex; }
+.modal-card { width: 100%; max-width: 720px; max-height: 90vh; display: flex; flex-direction: column; background: var(--bg); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.modal-head { display: flex; align-items: center; justify-content: space-between; padding: 12px 16px; border-bottom: 1px solid var(--border); font-weight: 700; }
+.modal-head button { background: none; border: none; color: var(--text2); font-size: 1.2rem; cursor: pointer; }
+.modal-body { flex: 1; overflow-y: auto; padding: 14px 16px; display: flex; flex-direction: column; gap: 12px; }
+.editor-fields { display: flex; flex-direction: column; gap: 8px; }
+.editor-fields input[type=text], .editor-fields textarea {
+  width: 100%; border: 1px solid var(--border); border-radius: 8px; background: var(--panel); color: var(--text); padding: 8px 10px; font-size: .9rem; font-family: inherit; outline: none;
+}
+.editor-fields input:focus, .editor-fields textarea:focus { border-color: var(--accent); }
+.angle-row { display: flex; gap: 6px; align-items: flex-start; }
+.angle-row .a-label-input { flex: 0 0 120px; }
+.angle-row .a-text-input { flex: 1; min-height: 40px; resize: vertical; }
+.angle-row .a-del { flex: 0 0 auto; padding: 6px 10px; }
+.editor-chat { display: flex; flex-direction: column; gap: 8px; border-top: 1px solid var(--border); padding-top: 12px; }
+.editor-chat .chat-log { min-height: 120px; max-height: 220px; }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; padding: 12px 16px; border-top: 1px solid var(--border); }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="title">📚 素材库</div>
+  <div class="tabs">
+    <button class="tab active" data-tab="chat">💬 AI 互动</button>
+    <button class="tab" data-tab="summarize">✨ 自动找素材</button>
+    <button class="tab" data-tab="dictation">📝 背诵默写</button>
+  </div>
+  <div class="spacer"></div>
+  <button class="btn btn-sm" id="exportBtn">导出 md</button>
+</div>
+
+<!-- Tab 1: AI 互动 -->
+<div class="tab-panel active" id="panel-chat">
+  <div class="hint" style="margin-bottom:8px;">素材 = 支撑观点的<strong>具体例子</strong>（一本书 / 一个活动 / 一项研究 / 一个事实），不是观点本身。和 AI 讨论确定例子后点「保存」入素材库。</div>
+  <div class="chat-log" id="chatLog"></div>
+  <div class="chat-input">
+    <textarea id="chatInput" placeholder="例如：帮我想一个关于「环保」的例子素材（比如种树活动、或一本书）"></textarea>
+    <button class="btn btn-primary" id="chatSend">发送</button>
+  </div>
+  <div style="margin-top:16px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+      <b>我的素材库（<span id="libCount">0</span> 条）</b>
+      <button class="btn btn-sm" id="manualAddBtn">＋ 手动新建</button>
+    </div>
+    <div id="library"></div>
+  </div>
+</div>
+
+<!-- Tab 2: 自动找素材 -->
+<div class="tab-panel" id="panel-summarize">
+  <div class="summary-bar">
+    <button class="btn btn-primary" id="summarizeBtn">✨ 根据题库自动找素材</button>
+  </div>
+  <div class="hint" style="margin-bottom:12px;">
+    读取题库<strong>主题关键词</strong>（不给你看原题、不给分析过程），让 AI 归纳出能覆盖多题目的<strong>具体例子素材</strong>（书/活动/研究/事实）。
+    点「讨论/修改」可以进编辑器、和 AI 一起打磨，改好再「保存」。
+  </div>
+  <div id="summarizeResult"></div>
+</div>
+
+<!-- Tab 3: 背诵默写 -->
+<div class="tab-panel" id="panel-dictation">
+  <div class="hint" style="margin-bottom:12px;">选择一条素材 → 先看原文 → 点「默写这句」隐藏原文 → 凭记忆盲打英文 → 逐词比对、标记掌握。</div>
+  <div class="dict-grid" id="dictPicker"></div>
+  <div class="dict-area" id="dictArea"></div>
+</div>
+
+<!-- 素材编辑器弹窗 -->
+<div class="modal" id="editorModal">
+  <div class="modal-card">
+    <div class="modal-head"><span>✏️ 素材编辑</span><button id="editorClose">✕</button></div>
+    <div class="modal-body">
+      <div class="editor-fields">
+        <input type="text" id="edTopic" placeholder="主题（如：Silent Spring · 环保书籍）">
+        <input type="text" id="edNote" placeholder="适用说明（中文，如：环保/污染话题可用）">
+        <div id="edAngles"></div>
+        <button class="btn btn-sm" id="edAddAngle">＋ 加角度</button>
+      </div>
+      <div class="editor-chat">
+        <div class="hint">💬 和 AI 讨论这个素材：让它补充细节、优化英文、加角度…（AI 若给出新素材会自动填入上方）</div>
+        <div class="chat-log" id="edChatLog"></div>
+        <div class="chat-input">
+          <textarea id="edChatInput" placeholder="例如：再给我加一个「社会意义」的角度，英文写地道一点"></textarea>
+          <button class="btn btn-primary" id="edChatSend">发送</button>
+        </div>
+        <button class="btn btn-sm" id="edImprove">✨ AI 改进/扩充这个素材</button>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn btn-success" id="edSave">保存到素材库</button>
+    </div>
+  </div>
+</div>
+
+<script>
+let library = { materials: [] };
+let mastered = {};   // { "materialId:angleIdx": true }
+const LS_MASTERED = 'wp_mastered';
+let generatedMats = [];  // 最近一批生成的素材（未保存）
+
+const MATERIAL_SYSTEM = `你是托福写作素材助手。素材 = 用于支撑观点的【具体例子】（一本书、一个活动/事件、一项研究、一个具体数据/事实、一个具体人物），而不是泛泛的观点。
+
+用户会和你讨论一个主题，你要帮 TA 确定可用的具体例子素材，并用简洁地道的英文句子表达。例如谈环保，可以是「种树活动」这个经历，或「《Silent Spring》这本书」。
+
+当你给出素材时，必须只输出一个 JSON 数组（不要解释、不要 markdown 代码块），格式：
+[{"topic":"中文主题名","note":"中文适用说明","angles":[{"label":"一句话","text":"英文句子"},{"label":"详细讲","text":"英文句子"}]}]
+其它时候（打招呼、讨论思路、回答提问）用普通中文文字即可。`;
+
+const EDITOR_SYSTEM = `你是托福写作素材助手。用户正在打磨一个素材（具体例子），可能让你改进、扩充、优化英文、增加角度等。你会先看到「当前素材」的 JSON。当你给出修改后的素材时，只输出一个 JSON 数组（格式同素材）；其它时候用中文说明。`;
+
+function esc(s) { return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function parseJsonMaterials(text) {
+  const c = text.replace(/```[a-zA-Z]*/g, '').trim();
+  const s = c.indexOf('['), e = c.lastIndexOf(']');
+  if (s === -1 || e <= s) return null;
+  try { const arr = JSON.parse(c.slice(s, e + 1)); return Array.isArray(arr) ? arr : null; }
+  catch (err) { return null; }
+}
+
+// ============ 素材库读写 ============
+async function loadLibrary() {
+  try {
+    const r = await fetch('/materials');
+    if (r.ok) { const d = await r.json(); if (d && Array.isArray(d.materials)) library = d; }
+  } catch (e) {}
+  try { mastered = JSON.parse(localStorage.getItem(LS_MASTERED)) || {}; } catch (e) { mastered = {}; }
+  renderLibrary(); renderDictPicker();
+}
+async function saveLibrary() {
+  try { await fetch('/materials', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(library) }); }
+  catch (e) { alert('保存失败，请确认已运行 python server.py'); }
+}
+function normalizeMat(mat) {
+  mat.topic = mat.topic || '未命名';
+  mat.note = mat.note || '';
+  if (!Array.isArray(mat.angles)) mat.angles = [];
+  mat.angles = mat.angles.map(a => ({ label: a.label || '要点', text: a.text || '' }));
+  return mat;
+}
+function addMaterial(mat) {
+  mat = normalizeMat(mat);
+  mat.id = 'm_' + Date.now() + '_' + Math.random().toString(36).slice(2, 6);
+  mat.ts = Date.now();
+  library.materials.push(mat);
+  saveLibrary(); renderLibrary(); renderDictPicker();
+}
+function updateMaterial(id, mat) {
+  const i = library.materials.findIndex(x => x.id === id);
+  if (i < 0) return;
+  library.materials[i] = { ...library.materials[i], ...normalizeMat(mat), id };
+  saveLibrary(); renderLibrary(); renderDictPicker();
+}
+
+function materialCard(mat, mode) {
+  const angles = (mat.angles || []).map(a =>
+    `<div class="angle"><div class="a-label">${esc(a.label)}</div><div class="a-text">${esc(a.text)}</div></div>`).join('');
+  let actions = '';
+  if (mode === 'saved') {
+    actions = `<button class="btn btn-sm" onclick="openEditorExisting('${mat.id}')">编辑</button>
+               <button class="btn btn-sm" onclick="delMaterial('${mat.id}')">删除</button>`;
+  } else {
+    actions = `<button class="btn btn-sm" onclick="openEditorGenerated(${mat._gi})">讨论/修改</button>
+               <button class="btn btn-sm btn-success" onclick="saveGenerated(${mat._gi})">保存</button>`;
+  }
+  return `<div class="material-card">
+    <div class="m-card-head"><span class="m-topic">${esc(mat.topic)}</span><span class="m-note">${esc(mat.note)}</span>
+      <div class="m-actions">${actions}</div></div>${angles}</div>`;
+}
+function renderLibrary() {
+  document.getElementById('libCount').textContent = library.materials.length;
+  document.getElementById('library').innerHTML = library.materials.map(m => materialCard(m, 'saved')).join('')
+    || '<div class="hint">还没有素材，去「AI 互动」或「自动找素材」生成吧。</div>';
+}
+function delMaterial(id) {
+  if (!confirm('确定删除这条素材吗？')) return;
+  library.materials = library.materials.filter(m => m.id !== id);
+  Object.keys(mastered).filter(k => k.startsWith(id + ':')).forEach(k => delete mastered[k]);
+  localStorage.setItem(LS_MASTERED, JSON.stringify(mastered));
+  saveLibrary(); renderLibrary(); renderDictPicker();
+}
+
+// ============ 生成结果（未保存的素材） ============
+function renderGenerated(mats, containerId) {
+  generatedMats = mats.map((m, i) => ({ ...normalizeMat(m), _gi: i }));
+  const el = document.getElementById(containerId);
+  el.innerHTML = generatedMats.map(m => materialCard(m, 'generated')).join('');
+}
+function saveGenerated(gi) {
+  const m = generatedMats[gi];
+  if (!m) return;
+  addMaterial(m);
+  // 从生成列表里移除这条
+  generatedMats[gi] = null;
+  document.getElementById('summarizeResult').innerHTML =
+    generatedMats.map(m => m ? materialCard(m, 'generated') : '').join('');
+}
+
+// ============ AI 互动（聊天） ============
+let chatHistory = [];
+function renderChat() {
+  const log = document.getElementById('chatLog');
+  log.innerHTML = '';
+  for (const m of chatHistory) {
+    if (m.role === 'user') {
+      const d = document.createElement('div'); d.className = 'chat-msg user'; d.textContent = m.content; log.appendChild(d);
+    } else {
+      const mats = parseJsonMaterials(m.content);
+      if (mats) {
+        generatedMats = mats.map((x, i) => ({ ...normalizeMat(x), _gi: i }));
+        for (const mat of generatedMats) {
+          const w = document.createElement('div'); w.innerHTML = materialCard(mat, 'generated'); log.appendChild(w);
+        }
+      } else {
+        const d = document.createElement('div'); d.className = 'chat-msg ai'; d.textContent = m.content; log.appendChild(d);
+      }
+    }
+  }
+  log.scrollTop = log.scrollHeight;
+}
+async function sendChat() {
+  const input = document.getElementById('chatInput');
+  const q = input.value.trim();
+  if (!q) return;
+  input.value = '';
+  chatHistory.push({ role: 'user', content: q });
+  renderChat();
+  const btn = document.getElementById('chatSend'); btn.disabled = true;
+  const typing = document.createElement('div'); typing.className = 'chat-msg ai'; typing.textContent = '思考中…';
+  document.getElementById('chatLog').appendChild(typing);
+  try {
+    const messages = [
+      { role: 'system', content: MATERIAL_SYSTEM },
+      ...chatHistory.map(m => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.content })),
+    ];
+    const r = await fetch('/grade', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'deepseek-v4-flash', messages }) });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'HTTP ' + r.status);
+    chatHistory.push({ role: 'assistant', content: d.content });
+  } catch (e) {
+    chatHistory.push({ role: 'assistant', content: '（出错：' + e.message + '）' });
+  }
+  btn.disabled = false;
+  renderChat();
+}
+
+// ============ 自动找素材 ============
+async function doSummarize() {
+  const btn = document.getElementById('summarizeBtn');
+  const box = document.getElementById('summarizeResult');
+  btn.disabled = true; btn.textContent = '找素材中…（约 1~2 分钟）';
+  box.innerHTML = '<div class="hint">正在归纳主题并生成具体例子素材，请稍候…</div>';
+  try {
+    const r = await fetch('/summarize', { method: 'POST' });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'HTTP ' + r.status);
+    const mats = d.materials || [];
+    box.innerHTML = `<div class="hint" style="margin-bottom:10px;">生成了 ${mats.length} 条例子素材（点「讨论/修改」可进编辑器打磨）：</div>`;
+    renderGenerated(mats, 'summarizeResult');
+  } catch (e) {
+    box.innerHTML = `<div class="hint" style="color:var(--danger)">失败：${esc(e.message)}</div>`;
+  }
+  btn.disabled = false; btn.textContent = '✨ 根据题库自动找素材';
+}
+
+// ============ 素材编辑器 ============
+let editingId = null;       // null=新建，字符串=编辑已有
+let editChatHistory = [];
+function openEditor(mat, id) {
+  editingId = id || null;
+  editChatHistory = [];
+  document.getElementById('edTopic').value = mat.topic || '';
+  document.getElementById('edNote').value = mat.note || '';
+  renderEditorAngles(mat.angles || []);
+  document.getElementById('edChatLog').innerHTML = '';
+  document.getElementById('editorModal').classList.add('open');
+}
+function openEditorGenerated(gi) { const m = generatedMats[gi]; if (m) openEditor(m, null); }
+function openEditorExisting(id) { const m = library.materials.find(x => x.id === id); if (m) openEditor(m, id); }
+function renderEditorAngles(angles) {
+  const el = document.getElementById('edAngles');
+  el.innerHTML = '';
+  (angles.length ? angles : [{ label: '', text: '' }]).forEach(a => addAngleRow(a.label, a.text));
+}
+function addAngleRow(label, text) {
+  const row = document.createElement('div');
+  row.className = 'angle-row';
+  row.innerHTML = `<input type="text" class="a-label-input" placeholder="角度（如：书名）" value="${esc(label || '')}">
+    <textarea class="a-text-input" placeholder="英文句子">${esc(text || '')}</textarea>
+    <button class="btn btn-sm a-del">✕</button>`;
+  row.querySelector('.a-del').addEventListener('click', () => row.remove());
+  document.getElementById('edAngles').appendChild(row);
+}
+function editorCollect() {
+  const angles = [];
+  document.querySelectorAll('#edAngles .angle-row').forEach(row => {
+    const label = row.querySelector('.a-label-input').value.trim();
+    const text = row.querySelector('.a-text-input').value.trim();
+    if (text) angles.push({ label: label || '要点', text });
+  });
+  return { topic: document.getElementById('edTopic').value.trim(), note: document.getElementById('edNote').value.trim(), angles };
+}
+function renderEditChat() {
+  const log = document.getElementById('edChatLog');
+  log.innerHTML = '';
+  for (const m of editChatHistory) {
+    const d = document.createElement('div');
+    d.className = 'chat-msg ' + (m.role === 'user' ? 'user' : 'ai');
+    d.textContent = m.content;
+    log.appendChild(d);
+  }
+  log.scrollTop = log.scrollHeight;
+}
+async function editorChat(q) {
+  if (!q) return;
+  editChatHistory.push({ role: 'user', content: q });
+  renderEditChat();
+  const typing = document.createElement('div'); typing.className = 'chat-msg ai'; typing.textContent = '思考中…';
+  document.getElementById('edChatLog').appendChild(typing);
+  try {
+    const mat = editorCollect();
+    const messages = [
+      { role: 'system', content: EDITOR_SYSTEM },
+      { role: 'user', content: '当前素材：' + JSON.stringify(mat) },
+      ...editChatHistory.map(m => ({ role: m.role === 'user' ? 'user' : 'assistant', content: m.content })),
+    ];
+    const r = await fetch('/grade', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ model: 'deepseek-v4-flash', messages }) });
+    const d = await r.json();
+    if (!r.ok) throw new Error(d.error || 'HTTP ' + r.status);
+    editChatHistory.push({ role: 'assistant', content: d.content });
+    // 若 AI 给出 JSON 素材，自动填入编辑器
+    const mats = parseJsonMaterials(d.content);
+    if (mats && mats[0]) {
+      const nm = normalizeMat(mats[0]);
+      document.getElementById('edTopic').value = nm.topic;
+      document.getElementById('edNote').value = nm.note;
+      renderEditorAngles(nm.angles);
+    }
+  } catch (e) {
+    editChatHistory.push({ role: 'assistant', content: '（出错：' + e.message + '）' });
+  }
+  renderEditChat();
+}
+function editorSave() {
+  const mat = editorCollect();
+  if (!mat.topic) { alert('请填主题名'); return; }
+  if (!mat.angles.length) { alert('至少加一个角度（英文句子）'); return; }
+  if (editingId) updateMaterial(editingId, mat);
+  else addMaterial(mat);
+  document.getElementById('editorModal').classList.remove('open');
+}
+
+// ============ 背诵默写 ============
+function renderDictPicker() {
+  const el = document.getElementById('dictPicker');
+  if (!library.materials.length) { el.innerHTML = '<div class="hint">素材库为空，先积累素材。</div>'; return; }
+  el.innerHTML = library.materials.map(m => {
+    const total = (m.angles || []).length;
+    const done = (m.angles || []).filter((a, i) => mastered[m.id + ':' + i]).length;
+    const cls = done === total && total > 0 ? 'mastered' : '';
+    return `<div class="dict-item ${cls}" onclick="openMaterial('${m.id}')"><span class="di-topic">${esc(m.topic)}</span><span class="di-meta">${done}/${total} 掌握</span></div>`;
+  }).join('');
+}
+function openMaterial(id) {
+  const m = library.materials.find(x => x.id === id);
+  if (!m) return;
+  const area = document.getElementById('dictArea');
+  area.innerHTML = `<div class="material-card">
+    <div class="m-card-head"><span class="m-topic">${esc(m.topic)}</span><span class="m-note">${esc(m.note || '')}</span></div>
+    ${(m.angles || []).map((a, i) => {
+      const key = id + ':' + i;
+      const st = mastered[key] ? '✅ 已掌握' : '—';
+      return `<div class="angle"><div class="a-label">${esc(a.label)} · ${st}</div>
+        <div class="a-text" id="ref_${i}">${esc(a.text)}</div>
+        <button class="btn btn-sm" style="margin-top:6px;" onclick="startDictation('${id}',${i})">默写这句</button></div>`;
+    }).join('')}
+    <div id="dictPlay" style="margin-top:10px;"></div></div>`;
+  area.scrollIntoView({ behavior: 'smooth' });
+}
+let dictRef = '';
+function startDictation(id, idx) {
+  const m = library.materials.find(x => x.id === id);
+  const a = m.angles[idx];
+  dictRef = a.text;
+  document.getElementById('dictPlay').innerHTML = `
+    <div class="a-label" style="color:var(--warn);margin-bottom:6px;">默写「${esc(a.label)}」——凭记忆打出英文：</div>
+    <textarea id="dictInput" rows="3" style="width:100%;border:1px solid var(--border);border-radius:10px;background:var(--panel);color:var(--text);padding:10px;font-family:inherit;font-size:.95rem;line-height:1.6;" placeholder="在这里打出你记住的英文句子"></textarea>
+    <div style="margin-top:8px;display:flex;gap:8px;">
+      <button class="btn btn-primary btn-sm" onclick="checkDictation('${id}',${idx})">检查</button>
+      <button class="btn btn-sm" onclick="document.getElementById('dictPlay').innerHTML=''">取消</button></div>`;
+  document.getElementById('dictInput').focus();
+}
+function normalizeWords(s) { return s.toLowerCase().replace(/[^a-z0-9' ]+/g, ' ').split(/\s+/).filter(Boolean); }
+function lcsLen(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => new Array(n + 1).fill(0));
+  for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++)
+    dp[i][j] = a[i - 1] === b[j - 1] ? dp[i - 1][j - 1] + 1 : Math.max(dp[i - 1][j], dp[i][j - 1]);
+  return dp[m][n];
+}
+function checkDictation(id, idx) {
+  const user = document.getElementById('dictInput').value;
+  const uw = normalizeWords(user), rw = normalizeWords(dictRef);
+  const acc = rw.length ? lcsLen(uw, rw) / rw.length : 0;
+  const ok = acc >= 0.95;
+  if (ok) { mastered[id + ':' + idx] = true; localStorage.setItem(LS_MASTERED, JSON.stringify(mastered)); }
+  document.getElementById('dictPlay').innerHTML = `
+    <div class="dict-result">
+      <b style="color:${ok ? 'var(--success)' : 'var(--danger)'}">准确率 ${(acc * 100).toFixed(0)}% ${ok ? '✅ 已掌握' : '（目标 ≥95%，再试一次）'}</b>
+      <div style="margin-top:6px;color:var(--text2)">原文：</div>
+      <div style="white-space:pre-wrap;">${esc(dictRef)}</div>
+      <div style="margin-top:8px;display:flex;gap:8px;">
+        <button class="btn btn-sm" onclick="startDictation('${id}',${idx})">再默写一次</button>
+        <button class="btn btn-sm" onclick="openMaterial('${id}')">返回</button></div></div>`;
+  renderDictPicker();
+}
+
+// ============ 导出 md ============
+function toMarkdown() {
+  return library.materials.map(m => {
+    let s = '# ' + (m.topic || '未命名') + '\n';
+    if (m.note) s += '- 说明: ' + m.note + '\n';
+    for (const a of (m.angles || [])) { s += '- ' + (a.label || '要点') + '\n    - ' + (a.text || '') + '\n'; }
+    return s;
+  }).join('\n');
+}
+function exportMd() {
+  const blob = new Blob([toMarkdown()], { type: 'text/markdown' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob); a.download = 'materials.md'; a.click();
+  URL.revokeObjectURL(a.href);
+}
+function manualAdd() {
+  const topic = prompt('主题名（如：Silent Spring 环保书籍）：');
+  if (topic === null) return;
+  openEditor({ topic, note: '', angles: [{ label: '', text: '' }] }, null);
+}
+
+// ============ 事件 ============
+document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+  document.querySelectorAll('.tab').forEach(x => x.classList.remove('active'));
+  t.classList.add('active');
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-' + t.dataset.tab).classList.add('active');
+}));
+document.getElementById('chatSend').addEventListener('click', sendChat);
+document.getElementById('chatInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendChat(); } });
+document.getElementById('summarizeBtn').addEventListener('click', doSummarize);
+document.getElementById('exportBtn').addEventListener('click', exportMd);
+document.getElementById('manualAddBtn').addEventListener('click', manualAdd);
+document.getElementById('editorClose').addEventListener('click', () => document.getElementById('editorModal').classList.remove('open'));
+document.getElementById('edAddAngle').addEventListener('click', () => addAngleRow('', ''));
+document.getElementById('edChatSend').addEventListener('click', () => { const i = document.getElementById('edChatInput'); editorChat(i.value.trim()); i.value = ''; });
+document.getElementById('edChatInput').addEventListener('keydown', e => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); const i = document.getElementById('edChatInput'); editorChat(i.value.trim()); i.value = ''; } });
+document.getElementById('edImprove').addEventListener('click', () => editorChat('请改进并扩充这个素材：补充细节、优化英文、增加角度。只输出 JSON。'));
+document.getElementById('edSave').addEventListener('click', editorSave);
+
+// ============ 初始化 ============
+loadLibrary();
+</script>
+</body>
+</html>

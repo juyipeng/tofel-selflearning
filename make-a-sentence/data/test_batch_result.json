@@ -1,0 +1,32 @@
+[
+  {
+    "prompt": "What did Sarah say about the meeting tomorrow?",
+    "sentence": ["She", null, "to know", "if it would be", null, "if she", null],
+    "options": ["wanted", "ok", "arrived late"],
+    "answers": ["wanted", "ok", "arrived late"]
+  },
+  {
+    "prompt": "Did you see the documentary they showed in the campus auditorium last week?",
+    "sentence": ["Can", "you", null, "me whether", "it's worth", null, "?"],
+    "options": ["tell", "watching"],
+    "answers": ["tell", "watching"]
+  },
+  {
+    "prompt": "I need to get my university-issued laptop repaired this weekend.",
+    "sentence": [null, "will", "you", null, "it", "?"],
+    "options": ["where", "take"],
+    "answers": ["where", "take"]
+  },
+  {
+    "prompt": "I heard you went to the new restaurant off campus. How was it?",
+    "sentence": ["Can you", null, "if you are", null, "the food", "or the atmosphere", "?"],
+    "options": ["tell me", "asking about"],
+    "answers": ["tell me", "asking about"]
+  },
+  {
+    "prompt": "I need to find a gift for my professor's birthday.",
+    "sentence": [null, "does", "she", null, "?"],
+    "options": ["what", "like"],
+    "answers": ["what", "like"]
+  }
+]

@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Make a Sentence 练习</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --panel: #1e293b;
+  --panel2: #1a2332;
+  --text: #e2e8f0;
+  --text2: #94a3b8;
+  --accent: #38bdf8;
+  --success: #34d399;
+  --danger: #f87171;
+  --warn: #fbbf24;
+  --border: #334155;
+  --blank: #334155;
+  --blank-filled: #1e3a5f;
+  --chip: #1e293b;
+  --chip-selected: #2563eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100dvh;
+}
+
+/* ===== Shared ===== */
+.btn {
+  padding: 12px 22px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  color: var(--text);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  font-family: inherit;
+}
+.btn:hover { background: #2d3a4f; }
+.btn:active { transform: scale(0.97); }
+.btn-primary {
+  background: var(--accent);
+  color: #0f172a;
+  border-color: var(--accent);
+  font-weight: 700;
+}
+.btn-primary:hover { background: #7dd3fc; }
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.view { display: none; flex: 1; flex-direction: column; min-height: 0; }
+.view.active { display: flex; }
+
+/* ===== Start view ===== */
+#startView {
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  padding: 24px;
+}
+#startView h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.set-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 420px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+.set-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--panel);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.set-item:hover { border-color: #64748b; }
+.set-item.selected {
+  border-color: var(--accent);
+  background: rgba(56,189,248,0.08);
+}
+.set-item .set-radio {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.set-item.selected .set-radio { border-color: var(--accent); }
+.set-item.selected .set-radio::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.set-item .set-name { font-size: 0.95rem; }
+.set-item .set-count { margin-left: auto; font-size: 0.8rem; color: var(--text2); }
+
+/* ===== Quiz view ===== */
+#quizView { padding: 0; }
+.quiz-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.quiz-topbar .progress-text { font-size: 0.85rem; color: var(--text2); }
+.timer {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  padding: 4px 14px;
+  border-radius: 10px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+}
+.timer.normal { color: var(--accent); }
+.timer.overtime { color: var(--danger); border-color: var(--danger); }
+
+.quiz-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 20px;
+  overflow: hidden;
+}
+
+.prompt-block {
+  padding: 12px 16px;
+  background: var(--panel2);
+  border-left: 3px solid var(--warn);
+  border-radius: 8px;
+  font-size: 0.92rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+.prompt-label {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warn);
+  margin-bottom: 4px;
+}
+
+.sentence-block {
+  font-size: 1.1rem;
+  line-height: 2.6;
+  padding: 12px 8px;
+}
+.sentence-block .seg {
+  display: inline;
+  margin-right: 4px;
+}
+
+.blank-slot {
+  display: inline-block;
+  min-width: 96px;
+  height: 2.2em;
+  margin: 0 4px;
+  vertical-align: middle;
+  text-align: center;
+  border-bottom: 3px solid var(--blank);
+  border-radius: 2px;
+  position: relative;
+  transition: all 0.15s;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text);
+}
+.blank-slot.empty {
+  background: transparent;
+}
+.blank-slot.filled {
+  background: var(--blank-filled);
+  border-bottom-color: var(--accent);
+}
+.blank-slot.drag-over {
+  border-bottom-color: var(--accent);
+  background: rgba(56,189,248,0.15);
+}
+.blank-slot .blank-word {
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 4px;
+  vertical-align: middle;
+}
+
+.options-block {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: flex-start;
+  min-height: 44px;
+}
+.word-chip {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--chip);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.15s;
+  user-select: none;
+}
+.word-chip:hover { border-color: #64748b; }
+.word-chip.selected {
+  border-color: var(--accent);
+  background: var(--chip-selected);
+  box-shadow: 0 0 0 2px rgba(56,189,248,0.3);
+}
+.word-chip.used { opacity: 0; pointer-events: none; }
+.word-chip.dragging { opacity: 0.5; }
+
+.quiz-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+#submitBtn { width: 100%; max-width: 300px; font-size: 1rem; }
+
+/* ===== Result view ===== */
+#resultView {
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 24px;
+  overflow-y: auto;
+}
+.result-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.result-title { font-size: 1.1rem; font-weight: 700; }
+.score-line {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 1rem;
+}
+.score-line .score-big {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+.score-line .score-big.perfect { color: var(--success); }
+
+.answer-row {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--panel2);
+  font-size: 0.9rem;
+  line-height: 2.2;
+}
+.answer-row .lbl {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text2);
+  margin-bottom: 4px;
+}
+.answer-word {
+  display: inline-block;
+  padding: 1px 8px;
+  margin: 0 3px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+.answer-word.correct { background: rgba(52,211,153,0.2); color: var(--success); }
+.answer-word.wrong { background: rgba(248,113,113,0.2); color: var(--danger); }
+.answer-word.key { background: rgba(56,189,248,0.15); color: var(--accent); }
+.seg-word { color: var(--text); }
+
+.timed-score {
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(251,191,36,0.1);
+  border: 1px solid rgba(251,191,36,0.3);
+  font-size: 0.88rem;
+  color: var(--warn);
+}
+
+/* ===== End view ===== */
+#endView {
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+}
+.end-card {
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 24px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--panel);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+.end-title { font-size: 1.3rem; font-weight: 700; }
+.end-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.end-stat .num { font-size: 2rem; font-weight: 700; color: var(--accent); }
+.end-stat .lbl { font-size: 0.82rem; color: var(--text2); }
+.end-stats {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===== Set record (in start list) ===== */
+.set-record {
+  font-size: 0.75rem;
+  color: var(--text2);
+  white-space: nowrap;
+  margin-left: 8px;
+}
+
+/* ===== Stats view / trend chart ===== */
+#statsView .end-card { max-width: 760px; }
+.chart-wrap { width: 100%; max-width: 660px; }
+.chart-wrap svg { width: 100%; height: auto; display: block; }
+.chart-legend {
+  display: flex; gap: 18px; justify-content: center;
+  font-size: 0.82rem; color: var(--text2);
+}
+.legend-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  display: inline-block; margin-right: 5px; vertical-align: middle;
+}
+.legend-dot.score { background: var(--accent); }
+.legend-dot.time { background: #f59e0b; }
+.btn-secondary { background: var(--panel); }
+.btn-secondary:hover { background: #2d3a4f; }
+
+/* ===== Topbar (persistent) ===== */
+.app-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.app-topbar .title { font-weight: 700; font-size: 0.95rem; }
+.app-topbar .actions { display: flex; gap: 6px; }
+.mini-btn {
+  padding: 6px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--text2);
+  font-size: 0.78rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+.mini-btn:hover { color: var(--text); border-color: #64748b; }
+
+@media (max-width: 500px) {
+  .blank-slot { min-width: 72px; }
+  .sentence-block { font-size: 1rem; }
+  .word-chip { padding: 7px 12px; font-size: 0.85rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- Persistent top bar -->
+<div class="app-topbar">
+  <div class="title" id="topTitle">Make a Sentence</div>
+  <div class="actions">
+    <button class="mini-btn" id="saveBtn">💾 保存</button>
+    <button class="mini-btn" id="loadBtn">📂 加载</button>
+    <button class="mini-btn" id="resetBtn">🔄 重置</button>
+  </div>
+</div>
+
+<!-- ===== Start view ===== -->
+<div class="view active" id="startView">
+  <h1>Make a Sentence 练习</h1>
+  <div class="set-list" id="setList"></div>
+  <button class="btn btn-primary" id="startBtn" disabled>开始答题</button>
+  <button class="btn btn-secondary" id="statsBtn">数据总结</button>
+</div>
+
+<!-- ===== Quiz view ===== -->
+<div class="view" id="quizView">
+  <div class="quiz-topbar">
+    <span class="progress-text" id="progressText">第 1 / 5 题</span>
+    <span class="timer normal" id="timerDisplay">36s</span>
+  </div>
+  <div class="quiz-body">
+    <div class="prompt-block">
+      <div class="prompt-label">提示句</div>
+      <div id="promptText"></div>
+    </div>
+    <div class="sentence-block" id="sentenceBlock"></div>
+    <div class="options-block" id="optionsBlock"></div>
+  </div>
+  <div class="quiz-footer">
+    <button class="btn btn-primary" id="submitBtn">提交答案</button>
+  </div>
+</div>
+
+<!-- ===== Result view ===== -->
+<div class="view" id="resultView">
+  <div class="result-card">
+    <div class="result-title" id="resultTitle"></div>
+    <div class="score-line">
+      本题得分
+      <span class="score-big" id="resultScore"></span>
+    </div>
+    <div class="answer-row" id="myAnswerRow"></div>
+    <div class="answer-row" id="keyAnswerRow"></div>
+    <div class="timed-score" id="timedScoreRow" style="display:none;"></div>
+    <button class="btn btn-primary" id="nextBtn">下一题</button>
+  </div>
+</div>
+
+<!-- ===== End view ===== -->
+<div class="view" id="endView">
+  <div class="end-card">
+    <div class="end-title">答题完成</div>
+    <div class="end-stats">
+      <div class="end-stat">
+        <span class="num" id="endCorrect"></span>
+        <span class="lbl">答题统计</span>
+      </div>
+      <div class="end-stat">
+        <span class="num" id="endRate"></span>
+        <span class="lbl">正确率</span>
+      </div>
+      <div class="end-stat">
+        <span class="num" id="endTimed"></span>
+        <span class="lbl">限时得分</span>
+      </div>
+      <div class="end-stat">
+        <span class="num" id="endAvgOvertime"></span>
+        <span class="lbl">平均用时</span>
+      </div>
+    </div>
+    <button class="btn btn-primary" id="restartBtn">返回选题</button>
+  </div>
+</div>
+
+<!-- ===== Stats view ===== -->
+<div class="view" id="statsView">
+  <div class="end-card">
+    <div class="end-title">数据总结</div>
+    <div class="chart-wrap">
+      <svg id="trendChart" viewBox="0 0 640 340" preserveAspectRatio="xMidYMid meet"></svg>
+    </div>
+    <div class="chart-legend">
+      <span class="legend-dot score"></span>窗口平均得分
+      <span class="legend-dot time"></span>窗口平均用时（秒/题）
+    </div>
+    <button class="btn btn-primary" id="statsBackBtn">返回</button>
+  </div>
+</div>
+
+<script>
+// ===== DATA (mock; replaced by build script) =====
+const QUIZ_DATA = __QUIZ_DATA__;
+
+// ===== STATE =====
+const QUESTION_TIME = 36; // seconds per question
+
+let state = {
+  batch: null,        // 'BS_4月' | 'BS_5月'
+  set: null,          // 'set_01'
+  qIndex: 0,
+  // record per question: { blanks: [...], timedBlanks: [...]|null, timedOut: bool, timeSpent, finalCorrect, timedCorrect }
+  records: [],
+  // per-set history: [{ key, batch, set, name, score(0-1), avgTime(sec), ts }]
+  setHistory: [],
+};
+
+// Current question working state
+let blanks = [];          // array, index = blank idx, value = word or null
+let selectedChip = null;  // word selected via tap
+let timedBlanks = null;   // snapshot at timeout
+let timedOut = false;
+let questionStartTime = 0; // ms, set when a question is shown
+
+// Timer
+let timerInterval = null;
+let timeLeft = QUESTION_TIME;
+let overtime = 0;
+
+// ===== UTILITY =====
+function currentSetData() {
+  return QUIZ_DATA[state.batch].sets[state.set];
+}
+function currentQuestions() {
+  return currentSetData().questions;
+}
+function currentQuestion() {
+  return currentQuestions()[state.qIndex];
+}
+
+// ===== VIEWS =====
+function showView(name) {
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.getElementById(name + 'View').classList.add('active');
+}
+
+// ===== START VIEW =====
+function getSetRecord(batchName, setName) {
+  return state.setHistory.find(h => h.batch === batchName && h.set === setName);
+}
+
+function renderStart() {
+  const list = document.getElementById('setList');
+  list.innerHTML = '';
+  let selectedBatch = state.batch;
+  let selectedSet = state.set;
+
+  for (const [batchName, batch] of Object.entries(QUIZ_DATA)) {
+    for (const [setName, setData] of Object.entries(batch.sets)) {
+      const item = document.createElement('div');
+      item.className = 'set-item';
+      item.dataset.batch = batchName;
+      item.dataset.set = setName;
+      if (selectedBatch === batchName && selectedSet === setName) item.classList.add('selected');
+      const rec = getSetRecord(batchName, setName);
+      const recHtml = rec
+        ? `<span class="set-record">上次 ${Math.round(rec.score * 100)}% · 平均 ${rec.avgTime.toFixed(1)}s/题</span>`
+        : '';
+      item.innerHTML = `
+        <div class="set-radio"></div>
+        <span class="set-name">${batch.name} · ${setData.name || setName}</span>
+        <span class="set-count">${setData.questions.length} 题</span>
+        ${recHtml}
+      `;
+      item.addEventListener('click', () => {
+        state.batch = batchName;
+        state.set = setName;
+        document.querySelectorAll('.set-item').forEach(i => i.classList.remove('selected'));
+        item.classList.add('selected');
+        document.getElementById('startBtn').disabled = false;
+      });
+      list.appendChild(item);
+    }
+  }
+  document.getElementById('startBtn').disabled = !(selectedBatch && selectedSet);
+}
+
+function startQuiz() {
+  if (!state.batch || !state.set) return;
+  state.qIndex = 0;
+  state.records = [];
+  showView('quiz');
+  loadQuestion();
+}
+
+// ===== QUIZ =====
+function loadQuestion() {
+  const q = currentQuestion();
+  const total = currentQuestions().length;
+  document.getElementById('progressText').textContent = `第 ${state.qIndex + 1} / ${total} 题`;
+  document.getElementById('promptText').textContent = q.prompt;
+
+  // init blanks
+  blanks = q.answers.map(() => null);
+  selectedChip = null;
+  timedBlanks = null;
+  timedOut = false;
+  questionStartTime = Date.now();
+
+  renderSentence();
+  renderOptions();
+  startTimer();
+}
+
+function renderSentence() {
+  const q = currentQuestion();
+  const block = document.getElementById('sentenceBlock');
+  block.innerHTML = '';
+  let blankIdx = 0;
+  q.sentence.forEach(part => {
+    if (part === null) {
+      const slot = document.createElement('span');
+      slot.className = 'blank-slot empty';
+      slot.dataset.blank = blankIdx;
+      slot.innerHTML = '<span class="blank-word"></span>';
+      setupBlankEvents(slot);
+      block.appendChild(slot);
+      blankIdx++;
+    } else {
+      const seg = document.createElement('span');
+      seg.className = 'seg';
+      seg.textContent = part;
+      block.appendChild(seg);
+    }
+  });
+}
+
+function renderOptions() {
+  const q = currentQuestion();
+  const block = document.getElementById('optionsBlock');
+  block.innerHTML = '';
+  q.options.forEach((word, idx) => {
+    const chip = document.createElement('div');
+    chip.className = 'word-chip';
+    chip.textContent = word;
+    chip.dataset.word = word;
+    chip.dataset.idx = idx;
+    // used if this word is currently placed in a blank
+    if (blanks.includes(word)) chip.classList.add('used');
+    setupChipEvents(chip);
+    block.appendChild(chip);
+  });
+}
+
+function updateSlotVisuals() {
+  const slots = document.querySelectorAll('.blank-slot');
+  slots.forEach(slot => {
+    const bi = parseInt(slot.dataset.blank);
+    const word = blanks[bi];
+    const wordEl = slot.querySelector('.blank-word');
+    if (word) {
+      slot.classList.remove('empty');
+      slot.classList.add('filled');
+      wordEl.textContent = word;
+      slot.draggable = true;
+    } else {
+      slot.classList.add('empty');
+      slot.classList.remove('filled');
+      wordEl.textContent = '';
+      slot.draggable = false;
+    }
+  });
+  // update chip used states
+  document.querySelectorAll('.word-chip').forEach(chip => {
+    chip.classList.toggle('used', blanks.includes(chip.dataset.word));
+  });
+}
+
+// ===== INTERACTION =====
+function fillBlank(blankIdx, word) {
+  // remove word from any existing blank (move)
+  const existingIdx = blanks.indexOf(word);
+  if (existingIdx !== -1) blanks[existingIdx] = null;
+  // if target blank already has a word, swap it back? just overwrite (return old word to pool is implicit)
+  blanks[blankIdx] = word;
+  updateSlotVisuals();
+}
+
+function clearBlank(blankIdx) {
+  blanks[blankIdx] = null;
+  updateSlotVisuals();
+}
+
+function setupBlankEvents(slot) {
+  // tap-select
+  slot.addEventListener('click', () => {
+    const bi = parseInt(slot.dataset.blank);
+    if (selectedChip) {
+      fillBlank(bi, selectedChip);
+      selectedChip = null;
+      clearChipSelection();
+    } else if (blanks[bi]) {
+      // tap filled blank -> pick word back up (unfill)
+      clearBlank(bi);
+    }
+  });
+  // drag a filled word OUT of a blank (to move to another blank)
+  slot.addEventListener('dragstart', (e) => {
+    const bi = parseInt(slot.dataset.blank);
+    if (blanks[bi]) {
+      e.dataTransfer.setData('text/plain', blanks[bi]);
+      e.dataTransfer.effectAllowed = 'move';
+      clearBlank(bi);
+    }
+  });
+  // drop a word INTO a blank
+  slot.addEventListener('dragover', (e) => {
+    e.preventDefault();
+    slot.classList.add('drag-over');
+  });
+  slot.addEventListener('dragleave', () => slot.classList.remove('drag-over'));
+  slot.addEventListener('drop', (e) => {
+    e.preventDefault();
+    slot.classList.remove('drag-over');
+    const word = e.dataTransfer.getData('text/plain');
+    if (word) {
+      const bi = parseInt(slot.dataset.blank);
+      fillBlank(bi, word);
+      clearChipSelection();
+    }
+  });
+}
+
+function setupChipEvents(chip) {
+  // tap-select
+  chip.addEventListener('click', () => {
+    if (chip.classList.contains('used')) return;
+    selectedChip = chip.dataset.word;
+    clearChipSelection();
+    chip.classList.add('selected');
+  });
+  // drag
+  chip.draggable = true;
+  chip.addEventListener('dragstart', (e) => {
+    e.dataTransfer.setData('text/plain', chip.dataset.word);
+    e.dataTransfer.effectAllowed = 'move';
+    chip.classList.add('dragging');
+  });
+  chip.addEventListener('dragend', () => chip.classList.remove('dragging'));
+}
+
+function clearChipSelection() {
+  document.querySelectorAll('.word-chip').forEach(c => c.classList.remove('selected'));
+}
+
+// ===== TIMER =====
+function startTimer() {
+  stopTimer();
+  timeLeft = QUESTION_TIME;
+  overtime = 0;
+  timedOut = false;
+  updateTimerDisplay();
+  timerInterval = setInterval(() => {
+    if (!timedOut) {
+      timeLeft--;
+      if (timeLeft <= 0) {
+        timeLeft = 0;
+        onTimeout();
+      }
+    } else {
+      overtime++;
+    }
+    updateTimerDisplay();
+  }, 1000);
+}
+
+function stopTimer() {
+  if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+}
+
+function onTimeout() {
+  timedOut = true;
+  timedBlanks = [...blanks]; // snapshot answer at timeout
+}
+
+function updateTimerDisplay() {
+  const el = document.getElementById('timerDisplay');
+  if (!timedOut) {
+    el.textContent = `${timeLeft}s`;
+    el.className = 'timer normal';
+  } else {
+    el.textContent = `超时 +${overtime}s`;
+    el.className = 'timer overtime';
+  }
+}
+
+// ===== SCORING =====
+function sameWord(a, b) {
+  return (a || '').toLowerCase() === (b || '').toLowerCase();
+}
+
+// A question is correct only if EVERY blank is correct.
+function isQuestionCorrect(given, answers) {
+  return given.length === answers.length && given.every((w, i) => sameWord(w, answers[i]));
+}
+
+// ===== SUBMIT =====
+function submitAnswer() {
+  stopTimer();
+  const q = currentQuestion();
+  const finalCorrect = isQuestionCorrect(blanks, q.answers) ? 1 : 0;
+  const timedCorrect = timedBlanks ? (isQuestionCorrect(timedBlanks, q.answers) ? 1 : 0) : null;
+  const timeSpent = Math.round((Date.now() - questionStartTime) / 1000);
+
+  // save record
+  state.records[state.qIndex] = {
+    blanks: [...blanks],
+    timedBlanks: timedBlanks ? [...timedBlanks] : null,
+    timedOut,
+    overtime,
+    timeSpent,
+    finalCorrect,
+    timedCorrect,
+  };
+
+  renderResult(finalCorrect, timedCorrect, timedOut);
+}
+
+function renderResult(finalCorrect, timedCorrect, timedOut) {
+  const q = currentQuestion();
+  const total = currentQuestions().length;
+  document.getElementById('resultTitle').textContent =
+    state.qIndex + 1 >= total ? '最后一题完成' : `第 ${state.qIndex + 1} 题结果`;
+
+  const scoreEl = document.getElementById('resultScore');
+  scoreEl.textContent = finalCorrect ? '正确' : '错误';
+  scoreEl.classList.toggle('perfect', finalCorrect === 1);
+
+  // my answer (complete sentence)
+  let myHtml = '<div class="lbl">你的作答</div>';
+  {
+    let ai = 0;
+    q.sentence.forEach(part => {
+      if (part === null) {
+        const w = blanks[ai];
+        const correct = sameWord(w, q.answers[ai]);
+        myHtml += `<span class="answer-word ${correct ? 'correct' : 'wrong'}">${w || '（空）'}</span>`;
+        ai++;
+      } else {
+        myHtml += `<span class="seg-word">${part}</span>`;
+      }
+    });
+  }
+  document.getElementById('myAnswerRow').innerHTML = myHtml;
+
+  // key answer (complete sentence)
+  let keyHtml = '<div class="lbl">正确答案</div>';
+  {
+    let ai = 0;
+    q.sentence.forEach(part => {
+      if (part === null) {
+        keyHtml += `<span class="answer-word key">${q.answers[ai]}</span>`;
+        ai++;
+      } else {
+        keyHtml += `<span class="seg-word">${part}</span>`;
+      }
+    });
+  }
+  document.getElementById('keyAnswerRow').innerHTML = keyHtml;
+
+  // timed score
+  const timedRow = document.getElementById('timedScoreRow');
+  if (timedOut && timedCorrect !== null) {
+    timedRow.style.display = '';
+    timedRow.textContent = `限时作答（36秒内）：${timedCorrect ? '正确' : '错误'}`;
+  } else {
+    timedRow.style.display = 'none';
+  }
+
+  document.getElementById('nextBtn').textContent =
+    state.qIndex + 1 >= total ? '查看总结' : '下一题';
+
+  showView('result');
+}
+
+// ===== NEXT =====
+function nextQuestion() {
+  const total = currentQuestions().length;
+  if (state.qIndex + 1 >= total) {
+    renderEnd();
+  } else {
+    state.qIndex++;
+    showView('quiz');
+    loadQuestion();
+  }
+}
+
+// ===== END =====
+function renderEnd() {
+  const totalQuestions = state.records.length;
+  const correctQuestions = state.records.reduce((s, r) => s + (r.finalCorrect || 0), 0);
+  const timedCorrect = state.records.reduce((s, r) => s + (r.timedCorrect || 0), 0);
+  const timedTotal = state.records.filter(r => r.timedCorrect !== null).length;
+  const rate = totalQuestions > 0 ? Math.round((correctQuestions / totalQuestions) * 100) : 0;
+  document.getElementById('endCorrect').textContent = `${correctQuestions}/${totalQuestions}`;
+  document.getElementById('endRate').textContent = `${rate}%`;
+  document.getElementById('endTimed').textContent =
+    timedTotal > 0 ? `${timedCorrect}/${timedTotal}` : '—';
+  // average per-question time
+  const totalTime = state.records.reduce((sum, r) => sum + (r.timeSpent || 0), 0);
+  const avgTime = totalQuestions > 0 ? totalTime / totalQuestions : 0;
+  document.getElementById('endAvgOvertime').textContent = `${avgTime.toFixed(1)}s`;
+
+  // save per-set record (latest score + avg time)
+  if (totalQuestions > 0) {
+    saveSetRecord(correctQuestions / totalQuestions, avgTime);
+  }
+
+  showView('end');
+}
+
+function saveSetRecord(score, avgTime) {
+  const key = state.batch + '::' + state.set;
+  const setData = currentSetData();
+  const rec = {
+    key, batch: state.batch, set: state.set,
+    name: `${state.batch} · ${setData.name || state.set}`,
+    score, avgTime, ts: Date.now(),
+  };
+  const idx = state.setHistory.findIndex(h => h.key === key);
+  if (idx >= 0) state.setHistory[idx] = rec;
+  else state.setHistory.push(rec);
+}
+
+// ===== STATS / TREND CHART =====
+function renderStats() {
+  renderChart();
+  showView('stats');
+}
+
+function renderChart() {
+  const svg = document.getElementById('trendChart');
+  const hist = [...state.setHistory].sort((a, b) => a.ts - b.ts);
+  const n = hist.length;
+  const W = 640, H = 340;
+  const padL = 48, padR = 52, padT = 20, padB = 44;
+  const plotW = W - padL - padR, plotH = H - padT - padB;
+
+  if (n === 0) {
+    svg.innerHTML = `<text x="${W / 2}" y="${H / 2}" fill="#94a3b8" text-anchor="middle" font-size="15">暂无做题记录，先完成一套题吧</text>`;
+    return;
+  }
+
+  const WIN = 5;
+  const windows = [];
+  if (n >= WIN) {
+    for (let i = 0; i + WIN <= n; i++) {
+      const win = hist.slice(i, i + WIN);
+      windows.push({
+        avgScore: win.reduce((s, r) => s + r.score, 0) / WIN,
+        avgTime: win.reduce((s, r) => s + r.avgTime, 0) / WIN,
+        label: `${i + 1}-${i + WIN}`,
+      });
+    }
+  } else {
+    windows.push({
+      avgScore: hist.reduce((s, r) => s + r.score, 0) / n,
+      avgTime: hist.reduce((s, r) => s + r.avgTime, 0) / n,
+      label: `1-${n}`,
+    });
+  }
+
+  const m = windows.length;
+  const maxT = Math.max(10, Math.ceil(Math.max(...windows.map(w => w.avgTime)) / 10) * 10);
+
+  const x = i => padL + (m === 1 ? plotW / 2 : (i / (m - 1)) * plotW);
+  const yScore = s => padT + (1 - s) * plotH;
+  const yTime = t => padT + (1 - t / maxT) * plotH;
+
+  const els = [];
+  // grid + left (score %) / right (time s) axis labels
+  [0, 0.5, 1].forEach(f => {
+    const y = padT + (1 - f) * plotH;
+    els.push(`<line x1="${padL}" y1="${y}" x2="${W - padR}" y2="${y}" stroke="#1e293b" stroke-width="1"/>`);
+    els.push(`<text x="${padL - 8}" y="${y + 4}" fill="#94a3b8" font-size="11" text-anchor="end">${Math.round(f * 100)}%</text>`);
+    els.push(`<text x="${W - padR + 8}" y="${y + 4}" fill="#94a3b8" font-size="11" text-anchor="start">${Math.round(f * maxT)}s</text>`);
+  });
+
+  // two lines
+  const scorePts = windows.map((w, i) => `${x(i)},${yScore(w.avgScore)}`).join(' ');
+  const timePts = windows.map((w, i) => `${x(i)},${yTime(w.avgTime)}`).join(' ');
+  els.push(`<polyline points="${scorePts}" fill="none" stroke="#38bdf8" stroke-width="2.5" stroke-linejoin="round"/>`);
+  els.push(`<polyline points="${timePts}" fill="none" stroke="#f59e0b" stroke-width="2.5" stroke-linejoin="round"/>`);
+
+  // dots + x labels
+  const step = Math.max(1, Math.ceil(m / 10));
+  windows.forEach((w, i) => {
+    els.push(`<circle cx="${x(i)}" cy="${yScore(w.avgScore)}" r="3.5" fill="#38bdf8"/>`);
+    els.push(`<circle cx="${x(i)}" cy="${yTime(w.avgTime)}" r="3.5" fill="#f59e0b"/>`);
+    if (i % step === 0) {
+      els.push(`<text x="${x(i)}" y="${H - padB + 18}" fill="#94a3b8" font-size="10" text-anchor="middle">${w.label}</text>`);
+    }
+  });
+
+  // axes
+  els.push(`<line x1="${padL}" y1="${padT}" x2="${padL}" y2="${H - padB}" stroke="#334155" stroke-width="1"/>`);
+  els.push(`<line x1="${padL}" y1="${H - padB}" x2="${W - padR}" y2="${H - padB}" stroke="#334155" stroke-width="1"/>`);
+
+  svg.innerHTML = els.join('');
+}
+
+// ===== PERSISTENCE =====
+function serializeState() {
+  return JSON.stringify({
+    batch: state.batch,
+    set: state.set,
+    qIndex: state.qIndex,
+    records: state.records,
+    setHistory: state.setHistory,
+  }, null, 2);
+}
+
+function saveToFile() {
+  const blob = new Blob([serializeState()], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'make_a_sentence_progress.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function loadFromFile() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json';
+  input.onchange = async () => {
+    const file = input.files[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      const parsed = JSON.parse(text);
+      state.batch = parsed.batch || null;
+      state.set = parsed.set || null;
+      state.qIndex = parsed.qIndex || 0;
+      state.records = parsed.records || [];
+      state.setHistory = parsed.setHistory || [];
+      renderStart();
+      if (state.batch && state.set) {
+        showView('start');
+      }
+    } catch (e) {
+      alert('文件格式错误，无法读取进度。');
+    }
+  };
+  input.click();
+}
+
+function resetState() {
+  if (confirm('确定要重置当前答题进度吗？')) {
+    state.batch = null;
+    state.set = null;
+    state.qIndex = 0;
+    state.records = [];
+    renderStart();
+    showView('start');
+  }
+}
+
+// ===== EVENT LISTENERS =====
+document.getElementById('startBtn').addEventListener('click', startQuiz);
+document.getElementById('submitBtn').addEventListener('click', submitAnswer);
+document.getElementById('nextBtn').addEventListener('click', nextQuestion);
+document.getElementById('restartBtn').addEventListener('click', () => {
+  renderStart();
+  showView('start');
+});
+document.getElementById('saveBtn').addEventListener('click', saveToFile);
+document.getElementById('loadBtn').addEventListener('click', loadFromFile);
+document.getElementById('resetBtn').addEventListener('click', resetState);
+document.getElementById('statsBtn').addEventListener('click', renderStats);
+document.getElementById('statsBackBtn').addEventListener('click', () => {
+  renderStart();
+  showView('start');
+});
+
+// ===== INIT =====
+renderStart();
+showView('start');
+</script>
+</body>
+</html>

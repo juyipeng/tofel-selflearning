@@ -1,0 +1,302 @@
+[
+  {
+    "prompt": "I just finished reading the latest bestseller novel assigned for our literature class.",
+    "sentence": ["Do you", null, "if", "the author", "will be", null, "this weekend", "?"],
+    "options": ["know", "signing books"],
+    "answers": ["know", "signing books"]
+  },
+  {
+    "prompt": "What did your professor say on the last day of class?",
+    "sentence": ["He was", null, "which lesson", "the students", null],
+    "options": ["curious about", "had enjoyed most"],
+    "answers": ["curious about", "had enjoyed most"]
+  },
+  {
+    "prompt": "Why aren't you participating in the class debate?",
+    "sentence": ["The topic", "they", null, "does", "not", null, "me"],
+    "options": ["chose", "interest"],
+    "answers": ["chose", "interest"]
+  },
+  {
+    "prompt": "I missed the last bus to school.",
+    "sentence": ["Can you", null, "a", "taxi instead", "?"],
+    "options": ["call"],
+    "answers": ["call"]
+  },
+  {
+    "prompt": "I have a job interview for the school dining hall position soon.",
+    "sentence": ["Did you", null, "your answers", "to common", "interview questions", "?"],
+    "options": ["prepare"],
+    "answers": ["prepare"]
+  },
+  {
+    "prompt": "What did the professor say about our group project?",
+    "sentence": ["She", null, "to discuss", "how we", "could", null, "our teamwork", "and time management"],
+    "options": ["wanted", "improve"],
+    "answers": ["wanted", "improve"]
+  },
+  {
+    "prompt": "Did you enjoy the drama club's performance last night?",
+    "sentence": ["The", "storyline", "was", "not", "very", null],
+    "options": ["compelling"],
+    "answers": ["compelling"]
+  },
+  {
+    "prompt": "I heard there will be a workshop on creative writing next month.",
+    "sentence": ["Do you", null, "if", "the registration", "is", null, "yet", "?"],
+    "options": ["know", "open"],
+    "answers": ["know", "open"]
+  },
+  {
+    "prompt": "Why did the professor want to meet with you?",
+    "sentence": ["She", "wasn't", null, "if", "everyone", "was", null, "of", "the", "updates"],
+    "options": ["sure", "aware"],
+    "answers": ["sure", "aware"]
+  },
+  {
+    "prompt": "I had to miss the literature class yesterday.",
+    "sentence": ["Did you", null, "the", "notes", "from", "someone", "?"],
+    "options": ["get"],
+    "answers": ["get"]
+  },
+  {
+    "prompt": "I just finished reading the latest bestseller novel assigned for our literature class.",
+    "sentence": ["Do you", null, "if", "the author", "will be", null, "this weekend", "?"],
+    "options": ["know", "signing books"],
+    "answers": ["know", "signing books"]
+  },
+  {
+    "prompt": "What did your professor say on the last day of class?",
+    "sentence": ["He was", null, "which lesson", "the students", null],
+    "options": ["curious about", "had enjoyed most"],
+    "answers": ["curious about", "had enjoyed most"]
+  },
+  {
+    "prompt": "Why aren't you participating in the class debate?",
+    "sentence": ["The topic", "they", null, "does", "not", null, "me"],
+    "options": ["chose", "interest"],
+    "answers": ["chose", "interest"]
+  },
+  {
+    "prompt": "I missed the last bus to school.",
+    "sentence": ["Can you", null, "a", "taxi instead", "?"],
+    "options": ["call"],
+    "answers": ["call"]
+  },
+  {
+    "prompt": "I have a job interview for the school dining hall position soon.",
+    "sentence": ["Did you", null, "your answers", "to common", "interview questions", "?"],
+    "options": ["prepare"],
+    "answers": ["prepare"]
+  },
+  {
+    "prompt": "What did the professor say about our group project?",
+    "sentence": ["She", null, "to discuss", "how we", "could", null, "our teamwork", "and time management"],
+    "options": ["wanted", "improve"],
+    "answers": ["wanted", "improve"]
+  },
+  {
+    "prompt": "Did you enjoy the drama club's performance last night?",
+    "sentence": ["The", "storyline", "was", "not", "very", null],
+    "options": ["compelling"],
+    "answers": ["compelling"]
+  },
+  {
+    "prompt": "I heard there will be a workshop on creative writing next month.",
+    "sentence": ["Do you", null, "if", "the registration", "is", null, "yet", "?"],
+    "options": ["know", "open"],
+    "answers": ["know", "open"]
+  },
+  {
+    "prompt": "Did you hear about the new restaurant that opened near campus?",
+    "sentence": ["I", "haven't", null, "about", "the", "new", "restaurant"],
+    "options": ["heard"],
+    "answers": ["heard"]
+  },
+  {
+    "prompt": "I am planning to organize the school's annual charity event next month.",
+    "sentence": ["Have", "you", null, "on", "the", "location", "yet", "?"],
+    "options": ["decided"],
+    "answers": ["decided"]
+  },
+  {
+    "prompt": "I've enrolled in a dance class for this semester.",
+    "sentence": ["What style", "of", "dance", "will", "you", "be", null, "?"],
+    "options": ["learning"],
+    "answers": ["learning"]
+  },
+  {
+    "prompt": "What was Maria asking about just now?",
+    "sentence": ["I", null, "she", null, "to know", "what time", "you'll be available", "to study", "for the exam"],
+    "options": ["think", "wants"],
+    "answers": ["think", "wants"]
+  },
+  {
+    "prompt": "I went to the seminar on leadership skills yesterday.",
+    "sentence": ["Do you", null, "if", "the speaker", null, "any", "handouts", "?"],
+    "options": ["know", "shared"],
+    "answers": ["know", "shared"]
+  },
+  {
+    "prompt": "I'm thinking about adopting a dog from the shelter near campus.",
+    "sentence": ["Do you", null, "if", "they have", "any puppies", null, "?"],
+    "options": ["know", "available"],
+    "answers": ["know", "available"]
+  },
+  {
+    "prompt": "I've been thinking about joining a new club at the university. Do you have any suggestions?",
+    "sentence": ["I", null, "there's a", "club that", null, "on", "environmental issues", "which you", "might", null, "interesting"],
+    "options": ["heard", "focuses", "find"],
+    "answers": ["heard", "focuses", "find"]
+  },
+  {
+    "prompt": "What did the counselor say about your course schedule?",
+    "sentence": ["She", null, "to ensure", "that", "my", "classes", "don't", null],
+    "options": ["wanted", "overlap"],
+    "answers": ["wanted", "overlap"]
+  },
+  {
+    "prompt": "Did the professor have any feedback about your research paper?",
+    "sentence": ["He", null, "if", "I", "could", null, "what methodology", "was", null, "for data", "analysis"],
+    "options": ["asked", "explain", "used"],
+    "answers": ["asked", "explain", "used"]
+  },
+  {
+    "prompt": "Why didn't you go to one of the school libraries yesterday?",
+    "sentence": ["The library", "that", "was supposed", "to be", null, "was", null, "for", "renovations"],
+    "options": ["open", "closed"],
+    "answers": ["open", "closed"]
+  },
+  {
+    "prompt": "Did you manage to complete the class project on time?",
+    "sentence": ["There were", "no", null, "in", "the", "final", "stages"],
+    "options": ["delays"],
+    "answers": ["delays"]
+  },
+  {
+    "prompt": "I'm looking for a new apartment closer to school.",
+    "sentence": ["Did", "you", null, "any", "real estate", "agents", "?"],
+    "options": ["contact"],
+    "answers": ["contact"]
+  },
+  {
+    "prompt": "I'm planning a weekend getaway to the mountains for our class.",
+    "sentence": ["What", "activities", "are", "you", null, "to", null, "?"],
+    "options": ["planning", "do"],
+    "answers": ["planning", "do"]
+  },
+  {
+    "prompt": "Why did you extend your office hours to meet with those students?",
+    "sentence": ["They were", null, "to", null, "what criteria", "will", "be", "used", "to", null, "their group assignment"],
+    "options": ["curious", "know", "grade"],
+    "answers": ["curious", "know", "grade"]
+  },
+  {
+    "prompt": "Our class meeting has been rescheduled to Friday morning.",
+    "sentence": ["Can", "you", null, "me whether", "it will", null, "our", "project deadlines", "?"],
+    "options": ["tell", "affect"],
+    "answers": ["tell", "affect"]
+  },
+  {
+    "prompt": "I heard the school drama club is putting on a new play next month.",
+    "sentence": ["Do you", null, "if", "tickets are", "already", "on", null, "?"],
+    "options": ["know", "sale"],
+    "answers": ["know", "sale"]
+  },
+  {
+    "prompt": "Did you see the new art exhibit at the museum near campus?",
+    "sentence": ["The paintings", "that were", null, "in", "the main", "hall", "were", null],
+    "options": ["displayed", "stunning"],
+    "answers": ["displayed", "stunning"]
+  },
+  {
+    "prompt": "Have you decided which book to read for the book club meeting next week?",
+    "sentence": ["I'm", null, "the novel", "that", "my", "friend", null, "last", "month"],
+    "options": ["considering", "recommended"],
+    "answers": ["considering", "recommended"]
+  },
+  {
+    "prompt": "When should we have the surprise party for your classmate?",
+    "sentence": ["I", null, "it would", "be", "best", "to", null, "her friends", "who", null, "her schedule"],
+    "options": ["believe", "ask", "know"],
+    "answers": ["believe", "ask", "know"]
+  },
+  {
+    "prompt": "What is your favorite place to go hiking?",
+    "sentence": ["The walking trail", "that is", null, "near", "the school", "is", "my", null],
+    "options": ["located", "favorite"],
+    "answers": ["located", "favorite"]
+  },
+  {
+    "prompt": "I've been studying French for a few months now.",
+    "sentence": ["How", "do", "you", null, null, "it", "?"],
+    "options": ["practice", "speaking"],
+    "answers": ["practice", "speaking"]
+  },
+  {
+    "prompt": "Where did you buy those shoes for gym class?",
+    "sentence": ["The store", "that is", null, "them", "is", null, "big", "discounts"],
+    "options": ["selling", "offering"],
+    "answers": ["selling", "offering"]
+  },
+  {
+    "prompt": "You missed the first part of the lecture this morning.",
+    "sentence": ["Did", "the professor", null, "the", "slides", "with the class", "?"],
+    "options": ["share"],
+    "answers": ["share"]
+  },
+  {
+    "prompt": "Are you coming to the biology seminar tomorrow?",
+    "sentence": ["No,", "I", "have", "another", null],
+    "options": ["commitment"],
+    "answers": ["commitment"]
+  },
+  {
+    "prompt": "Why did you choose that science course?",
+    "sentence": ["It is", null, "by", "a professor", "who", "is an", null, "in", "the field"],
+    "options": ["taught", "expert"],
+    "answers": ["taught", "expert"]
+  },
+  {
+    "prompt": "Did you see anyone in the lecture hall for the review session?",
+    "sentence": ["No", "one", "was", "there", "when", "I", null],
+    "options": ["arrived"],
+    "answers": ["arrived"]
+  },
+  {
+    "prompt": "I'm going to visit the new library on campus.",
+    "sentence": [null, "is", "it", null, "?"],
+    "options": ["where", "located"],
+    "answers": ["where", "located"]
+  },
+  {
+    "prompt": "What did Williams say about the project?",
+    "sentence": ["He", "doesn't", null, "when", "we", "are", "supposed", "to", null, "it"],
+    "options": ["know", "begin"],
+    "answers": ["know", "begin"]
+  },
+  {
+    "prompt": "Where did you put the class notes?",
+    "sentence": ["They", "are", "in the drawer", "where", "I", null, "the", "textbooks"],
+    "options": ["keep"],
+    "answers": ["keep"]
+  },
+  {
+    "prompt": "Why haven't you visited the university's new art exhibit?",
+    "sentence": ["I've", "been", null, "up", "with", "other", "responsibilities"],
+    "options": ["tied"],
+    "answers": ["tied"]
+  },
+  {
+    "prompt": "The university seminar on financial management was very insightful.",
+    "sentence": ["Do you", null, "if", "the slides", "will be", null, "online", "?"],
+    "options": ["know", "available"],
+    "answers": ["know", "available"]
+  },
+  {
+    "prompt": "Why is everyone gathering in that classroom?",
+    "sentence": ["They", null, "to", null, "out", "what the", "announcement", "is about"],
+    "options": ["want", "find"],
+    "answers": ["want", "find"]
+  }
+]

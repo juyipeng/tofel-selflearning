@@ -1,0 +1,1001 @@
+{
+  "sets": [
+    {
+      "id": "20260524A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You are planning a weekend getaway with your friends from the university and need to find suitable accommodation. You have found a vacation rental that looks perfect, but you want to confirm some details before booking. You need to contact the property owner, Mr. Johnson, for more information.",
+        "task": "Write an email to Mr. Johnson. In your email, do the following:",
+        "recipient": "Mr. Johnson",
+        "bullets": [
+          "Explain why you are interested in the property.",
+          "Ask about the availability of the property for your preferred dates.",
+          "Request details about nearby attractions."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on education. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Achebe",
+          "text": "Today’s educational institutions need to prepare students for a world impacted by climate change and other environmental problems. Education that focuses on science and technology can help students develop innovative solutions to environmental problems. On the other hand, education that emphasizes social sciences and ethics can foster students’ deeper understanding of environmental problems and their effects. In your view, which of these two approaches best prepares students to face climate change and other environmental issues?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Focusing on social sciences like history and human geography helps us to see how our actions affect global communities. By learning about different cultures and the environment, we understand the need for collective action. This knowledge encourages us to work together to improve the environment on a global scale."
+          },
+          {
+            "name": "Paul",
+            "text": "Technical skills are essential in combating climate change. They provide tangible solutions to environmental issues. Education should prioritize teaching these skills, as they directly address and solve problems like renewable energy development and waste reduction. A practical approach like this can ensure a better future for all."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260524B",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You are a student leader at your school and have been assigned to help plan your class field trip. You have found a travel agency that offers comprehensive travel packages and want to contact the travel agent, Mr. Brown, to inquire about their services.",
+        "task": "Write an email to the travel agent, Mr. Brown. In your email, do the following:",
+        "recipient": "Mr. Brown",
+        "bullets": [
+          "Explain the purpose and dates of the class field trip.",
+          "Ask about the available offers for large groups.",
+          "Request details on how they can accommodate specific travel needs and additional services offered."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a course on social psychology. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Balancing work and social life is challenging. On one hand, working full-time is important for financial stability and career growth. On the other, maintaining a healthy social life is crucial for emotional well-being and stress relief. How can people best manage a demanding job while still enjoying meaningful relationships and activities outside work? I'm curious to learn your thoughts. Is it possible to maintain a healthy social life while working full-time?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Yes, but you have to set limits on work and prioritize your health and well-being. Focusing exclusively on work causes stress and burnout, which is bad for your career in the long run. Enjoying social activities is vital for your health. By setting the right boundaries, you can balance work with a healthy social life."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, using technology to plan social activities can significantly enhance our social life. Tools like digital calendars and reminder apps help optimize free time, ensuring we don't miss out on valuable social interactions. This strategic planning can make maintaining a social life feasible, even with a full-time job."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260607C",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You recently completed a course on world history and found it very interesting, though you do have some criticisms. The teacher, Professor Brown, has asked for feedback from students to help improve the course. You want to offer some suggestions.",
+        "task": "Write an email to Professor Brown. In your email, do the following.",
+        "recipient": "Professor Brown",
+        "bullets": [
+          "Express your appreciation for Professor Brown’s teaching.",
+          "Mention what you found most helpful about the course.",
+          "Suggest what aspect of the course could be improved and how."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on sociology. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "This week, we are exploring the concept of social norms and their influence on behavior. Social norms are unwritten rules that dictate how individuals should act in society. For example, norms can include dressing appropriately for different occasions or greeting others politely. Some sociologists argue that social norms help maintain order and predictability, while others believe they can restrict personal freedom and creativity. Are the effects of social norms mostly positive, or mostly negative? Explain your views."
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe social norms help maintain order and predictability. They provide guidelines for acceptable behavior, which can make interactions smoother and help people understand what is expected of them in various social situations. These expectations are helpful to guide interactions that are at times unclear."
+          },
+          {
+            "name": "Paul",
+            "text": "I, personally, believe that social norms can sometimes restrict personal freedom as well as creativity. They often pressure individuals to conform to what the majority thinks is appropriate behavior. Breaking free from these norms can help people to express themselves more easily."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260609A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You are organizing a university theater production and need to rent costumes for the cast. You want to contact a local costume shop to inquire about their rental options, prices, and availability. You also need to know if they offer fitting services for the actors.",
+        "task": "Write an email to the costume shop manager, Ms. Parker. In your email, do the following:",
+        "recipient": "Ms. Parker",
+        "bullets": [
+          "Explain the purpose of the university theater production.",
+          "Ask about rental options, prices, and availability for costumes.",
+          "Invite them to the production."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on history. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "We’ve been discussing the impact of major historical figures on their respective societies. Some historians argue that individuals like political leaders or influential thinkers shape the course of history more than broader social and economical forces. Others believe social and economical events are the primary drivers of historical change. What do you think has a greater impact on shaping history: individual actions or broader social and economic forces? Why?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe individuals and their actions have a greater impact on shaping history. Leaders and influential thinkers can inspire movements, create significant changes, and leave a lasting legacy. Their decisions and actions often alter the course of events in profound ways."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, broader social and economic events are more significant in shaping history. While individuals can influence events, it is the underlying conditions and trends that drive major changes. These forces affect large groups of people and create the context in which individuals operate."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260610_W",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You recently attended a cooking class and thoroughly enjoyed the experience. You found the instructor, Ms. Baker, very helpful and want to thank her for the enjoyable class.",
+        "task": "Write an email to Ms. Baker. In your email, do the following:",
+        "recipient": "Ms. Baker",
+        "bullets": [
+          "Mention why you enjoyed the class.",
+          "Request advice and resources to improve your cooking skills.",
+          "Thank her for the class."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on economics. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Next week, we will be discussing the impact of minimum wage laws on the economy. Minimum wage laws are designed to ensure that workers receive fair compensation for their labor. Some argue that raising the minimum wage helps reduce poverty and improve living standards, while others believe it can lead to job losses and increased costs for businesses. What are your thoughts on this issue? Are minimum wage laws good or bad for the economy overall?"
+        },
+        "students": []
+      }
+    },
+    {
+      "id": "20260616A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You recently attended a technology conference where you met Mr. Smith, a prominent industry expert. You found his presentation helpful and informative. You want to thank Mr. Smith for his presentation and request additional information on a topic he discussed.",
+        "task": "Write an email to Mr. Smith. In your email, do the following:",
+        "recipient": "Mr. Smith",
+        "bullets": [
+          "Mention what you found useful about his presentation.",
+          "Request additional information about one of the topics he discussed",
+          "Express your appreciation for his time and insights."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on media studies. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "In today's world, the Internet floods us with news from countless sources. On one hand, this means we can access diverse viewpoints and stay updated instantly, which can broaden our understanding of the world. On the other hand, not all information is accurate, leading to confusion and, sometimes, false beliefs, which may deepen divisions among people. What do you think? Is the proliferation of online news sources making people more informed or contributing to misinformation and polarization?"
+        },
+        "students": [
+          {
+            "name": "Claire",
+            "text": "I think sensationalized reporting online does more harm than good. Many outlets publish biased articles just to get clicks, and this can mislead readers and fuel division. News coverage is no longer focused on informing the consumer; it’s often more about what grabs attention, even if it is at the cost of accuracy and unity."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, it’s up to individuals to learn how to navigate the sea of information better. We must learn to identify credible sources and ignore the rest. This skill is essential in today’s world. If we learn how to distinguish between what’s credible and what’s sensational and choose the credible sources, we eliminate the market for clickbait."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260616B",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You recently stayed at a hotel during a campus visit. While you generally liked the room, there were some issues with the room during your stay. You need to provide feedback to the hotel manager, Ms. Thompson, and suggest improvements.",
+        "task": "Write an email to Ms. Thompson. In your email, do the following:",
+        "recipient": "Ms. Thompson",
+        "bullets": [
+          "Describe what you enjoyed about your stay.",
+          "Explain the issues you had with the room and stay.",
+          "Suggest ways that the hotel could make a guest's stay more peaceful."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on marketing. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We’ve been discussing the importance of customer feedback in product development. Gathering feedback can help companies understand customer needs and improve their products. However, some argue that relying too heavily on customer feedback can stifle innovation and lead to mediocre products. What is your opinion on this?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Customer feedback is essential for product development. It helps companies understand customer needs and preferences, ensuring that products are tailored to the market. Feedback can guide improvements and enhance customer satisfaction."
+          },
+          {
+            "name": "Paul",
+            "text": "I believe that relying too heavily on customer feedback can stifle innovation. Companies should balance feedback with creative vision to avoid producing mediocre products. Innovation often requires taking risks and pursuing new ideas that customers may not initially recognize."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260622A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You are a university student who has recently moved into a new apartment. You have noticed some issues with the apartment. You want to inform your landlord, Mr. Thompson, about these problems.",
+        "task": "Write an email to Mr. Thompson. In your email, do the following:",
+        "recipient": "Mr. Thompson",
+        "bullets": [
+          "Describe the issues you have encountered in the apartment.",
+          "Explain how conditions negatively affect your studies.",
+          "Request that he make arrangements to address these issues soon."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on technology in education. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We have been discussing the integration of technology in educational settings. Some educators believe that digital tools enhance student learning by providing interactive and engaging experiences. Others are concerned that too much technology in the classroom can be distracting and may negatively impact learning outcomes. Do you think the use of technology in education is beneficial or harmful to students? Why?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe that technology in education is beneficial for students. It provides interactive learning experiences that can make complex topics easier to understand. Additionally, digital tools can cater to various learning styles, making education more accessible."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, excessive use of technology in the classroom can be harmful. It can distract students from their studies and reduce face-to-face interactions with teachers and peers. A balanced approach is necessary to ensure that technology enhances, rather than hinders, learning."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260624A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You are organizing a holiday party for your student club. You need to find a venue that can host the event and provide the necessary facilities. You want to contact a local community center to ask about their availability, pricing, and what facilities they offer.",
+        "task": "Write an email to the community center manager, Mr. Khan. In your email, do the following:",
+        "recipient": "Mr. Khan",
+        "bullets": [
+          "Explain the purpose of the event and the expected number of attendees.",
+          "Ask about the available dates and costs for hosting the event.",
+          "Describe the facilities you’ll need for the event and ask if the center can accommodate your requests."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "This week, we're exploring ways people can reduce their environmental impact through daily choices. Consider these specific actions:\n- Choosing to walk, bike, or take public transportation instead of driving\n- Buying fewer new items and repairing them instead of replacing them\n- Reducing energy use by unplugging devices\nWhich of these actions (or another specific environmental action) would be most effective for reducing environmental harm? Support your answer with specific examples of how this action works and what results it might produce."
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe reducing energy use is the most important thing we can do to protect the environment. If each person consumes a little bit less energy every day by unplugging devices, the result will be lower carbon emissions overall. And reducing carbon emissions helps combat climate change."
+          },
+          {
+            "name": "Paul",
+            "text": "Personally, I think the most crucial action people can take to help the environment is to recycle and reuse materials instead of throwing them away in the trash. By minimizing the amount of waste they create, individuals can significantly reduce their environmental footprint and conserve natural resources."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260630A",
+      "source": "写作精选套题练习10套",
+      "email": {
+        "context": "You and your friend Jasmine are planning to host a fundraising event for your university's tennis team. You have thought about some activities for the event, but you need Jasmine's input to finalize the plans. You also want to discuss the best time to meet and work out the details.",
+        "task": "Write an email to Jasmine. In your email, do the following:",
+        "recipient": "Jasmine",
+        "bullets": [
+          "Describe the activities you propose for the fundraising event.",
+          "Explain why you think these activities will be successful.",
+          "Suggest a meeting to discuss the plans in more detail."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on educational technology. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "We’ve been discussing the use of virtual reality (VR) in education. VR creates 3-dimensional, computer-simulated environments that people can interact with using electronic equipment such as goggles. Some educators argue that while VR technology can have some benefits, it can also have drawbacks. Do you think VR is a valuable tool in education? Why or why not?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "VR is a valuable tool in education because it gives learners a chance to interact directly with concepts and tools. Instead of just reading about a topic, learners can have highly engaging experiences that enhance understanding and retention. Although it is expensive, investing in VR can be beneficial in the long run."
+          },
+          {
+            "name": "Paul",
+            "text": "VR technology is not practical for widespread use in education due to its high cost. Many schools cannot afford it, which would lead to inequality in access. Even schools that can afford basic forms of VR do not have enough money for the most advanced and educationally valuable kinds of VR. Traditional teaching methods are more affordable and still effective."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260701B",
+      "source": "7月真题",
+      "email": {
+        "context": "You recently purchased a dress online for the upcoming university gala. When the dress arrived, you noticed some issues. You need to contact the online store’s customer service to report the issue and request a solution.",
+        "task": "Write an email to customer service. In your email, do the following:",
+        "recipient": "customer service",
+        "bullets": [
+          "Explain what you liked about your online shopping experience.",
+          "Describe the issue with the dress you received.",
+          "Suggest a resolution for the issue."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on marketing. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We’ve been discussing various strategies to build brand loyalty. One effective strategy is offering personalized services and products to customers. Personalization can make customers feel valued and understood. Do you think personalization is the key to building strong brand loyalty? Why or why not?"
+        },
+        "students": [
+          {
+            "name": "Claire",
+            "text": "I believe personalization is essential for building brand loyalty. When customers receive tailored services and products, they feel valued and are more likely to stick with the brand. It creates a unique customer experience that sets the brand apart from competitors."
+          },
+          {
+            "name": "Andrew",
+            "text": "In my opinion, while personalization is important, it’s not the only factor in building brand loyalty. Other aspects like customer service, product quality, and pricing also play a significant role. A balanced approach is needed to maintain strong brand loyalty."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260701C",
+      "source": "7月真题",
+      "email": {
+        "context": "You recently ordered school supplies from an online store, but there were problems with one of the items you received. You need to contact customer support to report the issue and request a resolution.",
+        "task": "Write an email to customer support. In your email, do the following:",
+        "recipient": "customer support",
+        "bullets": [
+          "Describe the issues with the item you received.",
+          "Suggest a solution for the problem.",
+          "Provide feedback on your online shopping experience."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on sociology. Write a post responding to the professor's question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "We often discuss the influence of social media on modern society. Social media platforms can connect people globally and promote the exchange of ideas. However, they can also lead to misinformation and negatively impact mental health. Do you think social media has a more positive or negative impact on society? Why?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe social media has a positive impact on society. It allows people to stay connected with friends and family, share experiences, and access information quickly. Social media can also be a powerful tool for raising awareness about important issues."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, social media has a negative impact on society. It can spread misinformation quickly and contribute to mental health problems like anxiety and depression. People often compare themselves to others on social media, which can lead to feelings of inadequacy."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260705B",
+      "source": "7月真题",
+      "email": {
+        "context": "You recently moved into a new apartment off campus and discovered that the heating system is not working properly. You need to contact the building maintenance manager, Mr. Smith, to report the issue.",
+        "task": "Write an email to Mr. Smith. In your email, do the following:",
+        "recipient": "Mr. Smith",
+        "bullets": [
+          "Describe the issue with the heating system.",
+          "Explain how the problem is affecting your daily life.",
+          "Suggest resolution for the problem."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on communications. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We’ve been discussing the role of storytelling in effective communication. Storytelling can be a powerful tool to convey messages and connect with audiences emotionally. Some experts argue that storytelling is essential for engaging presentations, while others believe that factual, straightforward communication is more effective. What is your opinion on the use of storytelling in communication?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Storytelling is essential for successful communication during, for instance, presentations. It helps to connect with the audience on an emotional level, making the message more memorable and impactful. Stories can illustrate points more vividly than plain facts and keep the audience engaged from start to finish."
+          },
+          {
+            "name": "Paul",
+            "text": "Factual, straightforward communication is more effective. Clear and concise information ensures that the audience understands the message without any ambiguity. While stories can be engaging, they may sometimes distract from the main points. Successful communication is determined more by its ability to convey a message than it is to entertain an audience.\nThe image provided is completely blank with no text content."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260708B",
+      "source": "7月真题",
+      "email": {
+        "context": "You recently joined the campus gym and have been enjoying the facilities. However, you have noticed that some of the equipment is not properly maintained. You need to contact the gym manager, Mr. Adams, to report the issue and suggest improvements.",
+        "task": "Write an email to Mr. Adams. In your email, do the following:",
+        "recipient": "Mr. Adams",
+        "bullets": [
+          "Mention specifically what you like most about the gym.",
+          "Describe the issues with the equipment and the potential risks.",
+          "Suggest ways to improve the equipment."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching an art history class. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Today we’ll discuss the dynamic role of art in society. Clearly, art can be a powerful form of expression and communication that can challenge societal norms and help society progress. On the other hand, some people believe that art primarily serves as a way to preserve both the history and heritage of a people, a country, or even a civilization. Which do you believe plays a larger role in the significance of art in society? Why?"
+        },
+        "students": []
+      }
+    },
+    {
+      "id": "20260715A",
+      "source": "7月真题",
+      "email": {
+        "context": "",
+        "task": "Write an email to Dr. Roberts. In your email, do the following:",
+        "recipient": "Dr. Roberts",
+        "bullets": [
+          "Mention what you found informative about her lecture.",
+          "Request recommendations for further reading materials and resources on environmental sustainability.",
+          "Ask her if she gives lectures on other topics that interest you."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on business management. Write a post responding to the professor's question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We've been discussing the impact of remote work on productivity and employee well-being. Remote work can have many significant advantages, but it may also lead to some unintended problems. Do you think remote work has a positive or negative impact?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Remote work can have a positive impact on both productivity and employee well-being. The flexibility helps employees manage their work-life balance better, and the reduction in commuting time can lead to increased productivity and less stress."
+          },
+          {
+            "name": "Paul",
+            "text": "While remote work offers flexibility, it can negatively impact employees. Isolation and lack of face-to-face interaction can hinder teamwork and lead to feelings of loneliness, affecting overall job performance.\nThe image provided is completely blank with no text content."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260715B",
+      "source": "7月真题",
+      "email": {
+        "context": "You recently purchased a piece of furniture for your off-campus apartment from an online store called \"Home Comforts.\" When the item arrived, you discovered that it was damaged during shipping. You need to contact customer service to resolve the issue.",
+        "task": "Write an email to the customer service representative, Ms. Brown. In your email, do the following:",
+        "recipient": "Ms. Brown",
+        "bullets": [
+          "Describe the item you purchased and the damage it sustained.",
+          "Explain why you are disappointed with the situation.",
+          "Suggest a resolution for the problem."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on education. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Today we’ll discuss how different factors affect educational outcomes. Clearly, the quality of teaching and the resources available to students play a significant role in their academic success. On the other hand, some people believe that a student’s home environment and parental involvement are equally, if not more, important. Which do you believe plays a larger role in a student’s educational outcomes? Why?\nThe image provided is completely blank with no text content."
+        },
+        "students": []
+      }
+    },
+    {
+      "id": "20260812A",
+      "source": "8月真题",
+      "email": {
+        "context": "You and your friend Jordan are planning a trip to Europe during your university's summer break. You have done some research and found some interesting destinations and activities that you would like to include in your itinerary. You want to share your ideas with Jordan and get their opinion.",
+        "task": "Write an email to Jordan. In your email, do the following:",
+        "recipient": "Jordan",
+        "bullets": [
+          "Describe the destinations you have researched.",
+          "Explain why you think these destinations would be enjoyable.",
+          "Ask for their opinion on the suggested itinerary and any additional ideas they might have."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on business management. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "This week we have been discussing strategies to promote workplace productivity and employee performance. One particularly controversial topic that has emerged is multitasking. While some argue that the ability to juggle multiple tasks at once is essential in today’s fast-paced work environments, others believe that multitasking actually reduces efficiency and increases the likelihood of errors. Do you believe that managers should promote multitasking in the workplace? Why or why not?\nI think managers should promote multitasking. It helps employees handle routine tasks simultaneously and mirrors real-world demands. Even outside of the office, who has the luxury of focusing only on one task? With the right tools and training, multitasking can improve time management and adaptability—key traits in today’s dynamic workplaces."
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I oppose multitasking in the workplace. It increases the chance of mistakes and leads to mental fatigue. For example, when employees answer emails during meetings, they often miss key details or misinterpret tasks. Deep, focused work is more effective for quality outcomes and long-term employee well-being."
+          },
+          {
+            "name": "Paul",
+            "text": "激活 Windows\n转到“设置”以激活 Windows"
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260812B",
+      "source": "8月真题",
+      "email": {
+        "context": "You recently attended a seminar on finding a job after graduation. You thought the seminar was very valuable and want to follow up with the presenter, Ms. Johnson, to give some feedback and ask for additional resources.",
+        "task": "Write an email to Ms. Johnson. In your email, do the following:",
+        "recipient": "Ms. Johnson",
+        "bullets": [
+          "Express your gratitude for Ms. Johnson giving the seminar.",
+          "Mention which topics you found most interesting.",
+          "Ask about additional resources to help you find a job after graduation."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on business management. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We’ve been discussing various leadership styles in business management. Some leaders are known for their authoritative approach, making decisions independently and expecting compliance from their team. Others prefer a collaborative approach, involving team members in decision-making and encouraging feedback. Which leadership style do you think is more effective in a business setting? Why?"
+        },
+        "students": [
+          {
+            "name": "Claire",
+            "text": "I believe a collaborative leadership style is more effective in a business setting. Involving team members in decision-making can foster a sense of team cohesion. This feeling tends to produce better results, in terms of both quantity and quality."
+          },
+          {
+            "name": "Paul",
+            "text": "I think an authoritative leadership style is typically more effective. It ensures clear guidance from one person, which can be helpful to all others in high-pressure situations when interactions may require a more nuanced approach."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260802A",
+      "source": "8月真题",
+      "email": {
+        "context": "You are part of your school’s drama club and have been assigned the role of event coordinator for an upcoming play. You need to arrange for promotional materials, such as posters and flyers, to be printed and distributed. You want to contact a local print shop to discuss this.",
+        "task": "Write an email to the print shop manager, Ms. Clark. In your email, do the following:",
+        "recipient": "Ms. Clark",
+        "bullets": [
+          "Describe the event and its importance.",
+          "Ask about their services for printing promotional materials.",
+          "Inquire about the costs and turnaround time for printing."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on technology in education. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We have been discussing the integration of technology in educational settings. Some educators believe that digital tools enhance student learning by providing interactive and engaging experiences. Others are concerned that too much technology in the classroom can be distracting and may negatively impact learning outcomes. Do you think the use of technology in education is beneficial or harmful to students? Why?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe that technology in education is beneficial for students. It provides interactive learning experiences that can make complex topics easier to understand. Additionally, digital tools can cater to various learning styles, making education more accessible."
+          },
+          {
+            "name": "Paul",
+            "text": "In my opinion, excessive use of technology in the classroom can be harmful. It can distract students from their studies and reduce face-to-face interactions with teachers and peers. A balanced approach is necessary to ensure that technology enhances, rather than hinders, learning."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260808A",
+      "source": "8月真题",
+      "email": {
+        "context": "You are having a scheduling conflict with your chemistry laboratory. There are many laboratory sessions, but the one you are assigned to meets on Wednesday afternoons. Unfortunately, your favorite student club's weekly meeting is also on Wednesdays. You need to ask your chemistry professor, Dr. Nguyen, for a schedule change.",
+        "task": "Write an email to Dr. Nguyen. In your email, do the following:",
+        "recipient": "Dr. Nguyen",
+        "bullets": [
+          "Explain the scheduling conflict you are having.",
+          "Explain why your student club meetings are so important to you.",
+          "Request a schedule change for your chemistry laboratory session."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on literature. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Literature includes novels, poems, plays, and stories that express ideas and emotions. Some writers aim to inspire change by showing problems like inequality or injustice. Others focus on entertaining readers through exciting plots or imaginative worlds. Both types of literature influence readers in different ways. Think about how stories can shape how people think or feel. Which do you believe is the main purpose of literature: to inspire change or to entertain? Give reasons to support your view."
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "The main purpose of literature is to inspire social change. Many stories explore serious topics like historical conflicts, unfair treatment, or climate problems. When people read about these issues, they develop an understanding of other people’s viewpoints and want to make improvements. Literature can open minds and help readers care about what others think and experience."
+          },
+          {
+            "name": "Paul",
+            "text": "Literature’s primary goal is to entertain. It allows readers to enter new worlds, meet fictional characters, and enjoy surprising events. Even stories with serious themes often include exciting moments. Entertainment helps readers relax, imagine new possibilities, and appreciate creativity, which are also important benefits for individuals and society."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260808B",
+      "source": "8月真题",
+      "email": {
+        "context": "You are organizing a holiday party for your student club. You need to find a venue that can host the event and provide the necessary facilities. You want to contact a local community center to ask about their availability, pricing, and what facilities they offer.",
+        "task": "Write an email to the community center manager, Mr. Khan. In your email, do the following:",
+        "recipient": "Mr. Khan",
+        "bullets": [
+          "Explain the purpose of the event and the expected number of attendees.",
+          "Ask about the available dates and costs for hosting the event.",
+          "Describe the facilities you’ll need for the event and ask if the center can accommodate your requests."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on anthropology. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We’re studying how communities benefit when people from different cultural backgrounds live and work together. Some researchers believe that cultural diversity helps communities by bringing new foods, languages, art forms, and business ideas that create economic opportunities and enrich daily life. Others believe that having shared cultural traditions and common languages makes it easier for people to communicate and cooperate effectively. Which factor do you think contributes more to building strong, successful communities?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe cultural diversity helps build stronger communities by bringing valuable new resources and opportunities. When people from different backgrounds share their traditional foods, music, and art forms, they create vibrant festivals and businesses that attract visitors and generate income. Additionally, multilingual residents help local businesses expand internationally and serve diverse customer groups more effectively."
+          },
+          {
+            "name": "Paul",
+            "text": "I think having shared cultural traditions and common languages makes communities more successful and cohesive. When residents speak the same language and celebrate similar holidays, they can communicate easily, organize community events more efficiently, and work together on local projects. Shared cultural practices help neighbors understand each other’s expectations and build trust quickly."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260808D",
+      "source": "8月真题",
+      "email": {
+        "context": "You and your friend Jordan are planning a trip to Europe during your university's summer break. You have done some research and found some interesting destinations and activities that you would like to include in your itinerary. You want to share your ideas with Jordan and get their opinion.",
+        "task": "Write an email to Jordan. In your email, do the following:",
+        "recipient": "Jordan",
+        "bullets": [
+          "Describe the destinations you have researched.",
+          "Explain why you think these destinations would be enjoyable.",
+          "Ask for their opinion on the suggested itinerary and any additional ideas they might have."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on economics. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "We’ve been discussing the impact of automation on the labor market. Because it removes or reduces the human element, automation can increase efficiency and reduce costs, but it can also lead to job displacement and changes in employment patterns. Do you think the benefits of automation outweigh the drawbacks? Why or why not?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "The benefits of automation outweigh the drawbacks. It can increase efficiency and reduce costs for businesses, leading to economic growth. While it may displace some jobs, it also creates new opportunities in technology and maintenance to compensate for job losses in other sectors."
+          },
+          {
+            "name": "Paul",
+            "text": "The drawbacks of automation are significant. Job displacement can lead to unemployment, social issues, economic downturns and a host of other problems. The focus should be on retraining workers and creating new job opportunities to mitigate these negative effects."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260809B",
+      "source": "8月真题",
+      "email": {
+        "context": "You recently stayed at a resort during your semester break and enjoyed the overall experience. However, you encountered some issues with your stay. You want to provide feedback to the resort manager, Ms. Garcia, to address these concerns.",
+        "task": "Write an email to Ms. Garcia. In your email, do the following:",
+        "recipient": "Ms. Garcia",
+        "bullets": [
+          "Mention what you enjoyed about your stay at the resort.",
+          "Describe the issues you had with your stay.",
+          "Suggest ways to improve the service."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on economics. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "Fast fashion refers to the rapid production of inexpensive clothing for mass-market sales. Fast fashion allows consumers to buy trendy items at low prices and provides job opportunities in manufacturing countries. But critics argue that fast fashion leads to vast amounts of pollution in the form of discarded clothing, which harms the environment, and that workers experience poor working conditions. In your view, what would be the most effective solution to the problems associated with fast fashion?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "I believe that laws should be created to hold fashion brands accountable for the problems their products create. This responsibility could push them to innovate and create new, environmentally friendly production methods. These innovations might not only reduce environmental damage but also improve conditions for workers."
+          },
+          {
+            "name": "Paul",
+            "text": "Based on my experience, today’s consumers demand products that are made in environmentally and socially responsible ways. As a result, market forces are effective at getting companies to adopt better practices voluntarily. Consumer demand can encourage positive change without the need for strict accountability being imposed on clothing makers."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260804A",
+      "source": "8月真题",
+      "email": {
+        "context": "You and your friend Jasmine are planning to host a fundraising event for your university's tennis team. You have thought about some activities for the event, but you need Jasmine's input to finalize the plans. You also want to discuss the best time to meet and work out the details.",
+        "task": "Write an email to Jasmine. In your email, do the following:",
+        "recipient": "Jasmine",
+        "bullets": [
+          "Describe the activities you propose for the fundraising event.",
+          "Explain why you think these activities will be successful.",
+          "Suggest a meeting to discuss the plans in more detail."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on public policy. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "Next week we’ll examine the role of government regulations in shaping public welfare and economic development. Regulations are laws designed to protect consumers and the environment by limiting or defining what businesses can do. But critics contend that excessive regulation can hinder innovation, reduce competitiveness, and burden small businesses. How should governments balance public protection with economic flexibility? Do you think that more regulation or less regulation is better overall? Share your perspective and"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Strict regulations are essential for safeguarding public health and protecting the environment from pollution. Regulations prevent harmful practices, such as pollution or unsafe products. Without oversight, profit-driven decisions may compromise safety and ethics. Regulations also promote long-term economic and social stability by setting standards that protect vulnerable populations and ecosystems from exploitation."
+          },
+          {
+            "name": "Paul",
+            "text": "While some regulation is necessary, excessive rules can hinder innovation and slow economic growth. Overregulation may discourage startups and limit creative problem-solving. Businesses need flexibility to adapt and compete globally. A balanced approach, where essential protections exist without stifling progress, is key to fostering both public welfare and economic growth."
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260805A",
+      "source": "8月真题",
+      "email": {
+        "context": "You are a member of a local community club that organizes monthly events, such as neighborhood clean-up days and guest-speaker nights. You attended the local university’s workshop on planning large community events and wanted to share what you learned with your local community club president, Ms. Jackson.",
+        "task": "Write an email to Ms. Jackson. In your email, do the following:",
+        "recipient": "Ms. Jackson",
+        "bullets": [
+          "Mention what you enjoyed about the online workshop you attended.",
+          "Explain how what you learned in the workshop can be applied to future events in your local club.",
+          "Request a meeting to discuss further."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on education. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr Gupta",
+          "text": "Today we’ll discuss the benefits and drawbacks of online learning. Supporters of online learning believe that it offers flexibility and access to a wide range of courses. Critics, on the other hand, believe that online learning lacks the personal interaction and structure of traditional classrooms. In your opinion, which of these factors do you believe plays a larger role in the effectiveness of online learning? Why?"
+        },
+        "students": [
+          {
+            "name": "Claire",
+            "text": "I think the flexibility and access to diverse courses would remove a significant barrier that often prevents students from furthering their education. That barrier is location. Online learning enables potential learners to explore specialized fields and skills that might not otherwise be available where they live."
+          },
+          {
+            "name": "Paul",
+            "text": "I believe that the lack of personal interaction during online learning sessions can be detrimental to true learning. Traditional classrooms provide direct and immediate support from teachers that students don’t receive during online learning classes. A classroom teacher can respond to students and answer questions in real time, which is not always possible when taking online classes."
+          },
+          {
+            "name": "Kelly",
+            "text": "I think"
+          }
+        ]
+      }
+    },
+    {
+      "id": "20260808C",
+      "source": "8月真题",
+      "email": {
+        "context": "You recently ordered school supplies from an online store, but there were problems with one of the items you received. You need to contact customer support to report the issue and request a resolution.",
+        "task": "Write an email to customer support. In your email, do the following:",
+        "recipient": "customer support",
+        "bullets": [
+          "Describe the issues with the item you received.",
+          "Suggest a solution for the problem.",
+          "Provide feedback on your online shopping experience."
+        ],
+        "closing": "Write as much as you can and in complete sentences. Use your own words."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on urban planning. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Gupta",
+          "text": "We've been discussing strategies for managing urban growth. One approach is to focus on expanding public transportation to reduce traffic congestion and pollution. Another approach is to create more green spaces like parks and gardens to improve residents' quality of life. Which strategy do you think is more effective in managing urban growth? Why?"
+        },
+        "students": []
+      }
+    },
+    {
+      "id": "20260809A",
+      "source": "8月真题",
+      "email": {
+        "context": "You have recently joined a university sports club and participated in your first training session. While you enjoyed the session, you found some challenges and would like some advice on how to improve. You need to contact the club coach, Mr. Davis, to ask for guidance.",
+        "task": "Write an email to Mr. Davis. In your email, do the following:",
+        "recipient": "Mr. Davis",
+        "bullets": [
+          "Mention what you enjoyed about the training session.",
+          "Describe the challenges you faced.",
+          "Ask for advice on how to improve your performance."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on school curriculum. Write a post responding to the professor’s question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "Dr. Diaz",
+          "text": "As the job market evolves rapidly, schools face the challenge of preparing students for future careers. Some argue that high schools should have more flexibility in their curriculum to quickly adapt to these changes, ensuring that students gain relevant skills for job market trends. Others believe that a stable, consistent curriculum that ensures a basic, well-rounded education is the best way to prepare all students for any kind of work. Considering both perspectives, do you think schools should routinely adapt their curriculum to the changing job market? Why or"
+        },
+        "students": []
+      }
+    },
+    {
+      "id": "20260711A",
+      "source": "7月真题",
+      "email": {
+        "context": "You and your friend Jordan are planning a trip to Europe during your university’s summer break. You have done some research and found some interesting destinations and activities that you would like to include in your itinerary. You want to share your ideas with Jordan and get their opinion.",
+        "task": "Write an email to Jordan. In your email, do the following:",
+        "recipient": "Jordan",
+        "bullets": [
+          "Describe the destinations you have researched.",
+          "Explain why you think these destinations would be enjoyable.",
+          "Ask for their opinion on the suggested itinerary and any additional ideas.",
+          "Explain why you think these destinations would be enjoyable.",
+          "Ask for their opinion on the suggested itinerary and any additional ideas they might have."
+        ],
+        "closing": "Write as much as you can and in complete sentences."
+      },
+      "discussion": {
+        "instruction": "Your professor is teaching a class on anthropology. Write a post responding to the professor's question.",
+        "requirements": [
+          "Express and support your opinion.",
+          "Make a contribution to the discussion in your own words."
+        ],
+        "word_min": 100,
+        "professor": {
+          "name": "",
+          "text": "Next week, we will be discussing the importance of preserving indigenous cultures that were present a long time ago and survive today. Indigenous cultures face numerous challenges, including globalization and environmental changes. Some experts argue that preserving these cultures is vital. Others believe that adapting to modern society is equally important for the survival and prosperity of indigenous peoples. What are your thoughts on this issue?"
+        },
+        "students": [
+          {
+            "name": "Kelly",
+            "text": "Preserving indigenous cultures is essential for maintaining cultural diversity and historical knowledge. These cultures offer unique perspectives and wisdom that contribute to the richness of human heritage. Efforts should be made to protect their traditions and languages because the history of civilizations are often preserved by cultures with a long, storied past."
+          },
+          {
+            "name": "Paul",
+            "text": "While preserving cultural heritage is important, adapting to modern society is also crucial for the survival and prosperity of indigenous peoples. Integration into modern systems can provide additional resources for education, healthcare, and economic development. Indigenous peoples can be part of a modern society without sacrificing their history and culture."
+          }
+        ]
+      }
+    }
+  ]
+}

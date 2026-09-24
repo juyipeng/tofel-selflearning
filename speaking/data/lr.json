@@ -1,0 +1,270 @@
+{
+ "topics": [
+  {
+   "id": "LR01",
+   "title": "Wall Painting Training",
+   "scenario": "A manager is training a part-time hardware-store employee to teach others how to paint a wall.",
+   "sentences": [
+    "Use a drop cloth on the floor to prevent stains.",
+    "Apply painter's tape to edges for clean lines.",
+    "Pour the paint directly into a tray for easy access.",
+    "Use a roller for even coverage on large areas.",
+    "Start painting at the top of the wall and work steadily downward.",
+    "You might use an extension ladder to reach very high spots and corners.",
+    "For the best results, remember to remove the tape before the paint fully dries."
+   ]
+  },
+  {
+   "id": "LR02",
+   "title": "Community Garden Training",
+   "scenario": "A leader is training a volunteer to teach new members how to care for a community garden.",
+   "sentences": [
+    "Protect your hands while working in the garden.",
+    "Put tools away after using them.",
+    "Follow the posted rules so everyone can stay safe.",
+    "Use safe lifting methods whenever you move large garden items.",
+    "Put yard scraps in the compost pile to maintain a tidy garden.",
+    "After watering the plants, store the hose properly so no one will trip on it.",
+    "During hot weather, drink water because hydration is important for good health."
+   ]
+  },
+  {
+   "id": "LR03",
+   "title": "Woodworking Simple Steps",
+   "scenario": "An art student is helping a professor train participants in a community woodworking class.",
+   "sentences": [
+    "Measure carefully to avoid mistakes.",
+    "Draw a line with a pencil before cutting.",
+    "Tap nails gently with a hammer so that the wood will not crack.",
+    "Hold the workpiece firmly in place while cutting to prevent accidents.",
+    "Polish the surface evenly until the board feels smooth.",
+    "Keep the tool straight when drilling wood to create neat and smooth holes.",
+    "Wear safety glasses for protection when using saws or heavy equipment."
+   ]
+  },
+  {
+   "id": "LR04",
+   "title": "Class Registration Training",
+   "scenario": "A trainer is teaching a helper how to guide new students through course registration.",
+   "sentences": [
+    "Enter your name and student ID number.",
+    "Browse the course catalog to choose your classes.",
+    "You can use the schedule planner tool to avoid time conflicts.",
+    "If a class is already full, a pop-up message will appear.",
+    "Contact the instructor to see if more seats can be added.",
+    "You can still add or drop classes up until the second week of the new semester.",
+    "For your records, print out a list of your classes or email a copy to yourself."
+   ]
+  },
+  {
+   "id": "LR05",
+   "title": "Handling Sensitive Library Materials",
+   "scenario": "A library manager is training student-workers to handle sensitive library materials.",
+   "sentences": [
+    "Store documents properly to prevent damage.",
+    "Temperature controls help protect papers.",
+    "Use the catalog system to organize records accurately.",
+    "Use restoration tools carefully to repair damaged items.",
+    "We provide a quiet reading area for researchers.",
+    "Security cameras are used to monitor sensitive materials.",
+    "If long-term storage is needed, use the special storage boxes over here."
+   ]
+  },
+  {
+   "id": "LR06",
+   "title": "Science Project Presentations",
+   "scenario": "A school supervisor is training an intern to help students prepare science project presentations.",
+   "sentences": [
+    "Start by setting up the projector screen.",
+    "Use the whiteboard to highlight key points.",
+    "Arrange your project materials neatly on the tables.",
+    "Check all the equipment to ensure it works properly.",
+    "Make sure your computer is set up for your presentation.",
+    "It's a good idea to practice delivering your speech in front of some friends.",
+    "Take time to review your notes thoroughly, so you'll feel confident and prepared."
+   ]
+  },
+  {
+   "id": "LR07",
+   "title": "Supporting Learners in a Yoga Studio",
+   "scenario": "A fitness-center manager is training an employee to assist customers during yoga activities.",
+   "sentences": [
+    "Find a good place to roll out your mat.",
+    "Keep some water handy to drink when needed.",
+    "Focus on slow breathing to stay relaxed through each movement.",
+    "Pay attention to the instructor's words to learn proper form.",
+    "A block can help you maintain your balance while holding poses.",
+    "During meditation, use a cushion to help relax and support your body.",
+    "If you have questions about the positions, speak with the teacher after class."
+   ]
+  },
+  {
+   "id": "LR08",
+   "title": "Making a Clay Bowl",
+   "scenario": "An instructor is showing children how to make a clay bowl.",
+   "sentences": [
+    "Moisten the clay with a small amount of water before shaping it.",
+    "Place the clay firmly in the center of the pottery wheel.",
+    "Press your thumbs into the middle to create an opening.",
+    "Pull the sides upward evenly to form the bowl.",
+    "Smooth any rough areas with a damp sponge.",
+    "Trim the extra clay around the base when the shape is stable.",
+    "Let the finished bowl dry completely before moving it."
+   ]
+  },
+  {
+   "id": "LR09",
+   "title": "Arranging Flowers",
+   "scenario": "An instructor is explaining how to make a balanced flower arrangement.",
+   "sentences": [
+    "Cut each flower stem at an angle before placing it in water.",
+    "Put a layer of small pebbles in the bottom of the container.",
+    "Place the tallest flowers near the center of the arrangement.",
+    "Use smaller flowers to fill the spaces around them.",
+    "Add a few green leaves to create color and texture.",
+    "Replace the water regularly to keep the flowers fresh.",
+    "Finish the arrangement by tying a ribbon around the container."
+   ]
+  },
+  {
+   "id": "LR10",
+   "title": "Botanical Garden Care",
+   "scenario": "A supervisor is training a new employee at a botanical garden.",
+   "sentences": [
+    "Water the young trees thoroughly during dry weather.",
+    "Add nutrients to the soil in the flower beds.",
+    "Adjust the greenhouse temperature when conditions change.",
+    "Do not use chemical products near the pond.",
+    "Place plant waste in the compost pile.",
+    "Return all equipment to the tool shed after use.",
+    "Direct visitors to the visitor center when they need assistance."
+   ]
+  },
+  {
+   "id": "LR11",
+   "title": "Baking Bread",
+   "scenario": "An instructor is teaching a community class how to bake bread.",
+   "sentences": [
+    "Measure every ingredient accurately before you begin.",
+    "Add the yeast to warm water and let it activate.",
+    "Combine the wet and dry ingredients to make a dough.",
+    "Press and fold the dough repeatedly until it becomes smooth.",
+    "Leave the dough in a warm place so it can rise.",
+    "Bake it until the top is brown and the center feels firm.",
+    "Cool the bread on a rack before slicing it."
+   ]
+  },
+  {
+   "id": "LR12",
+   "title": "Media Production Studio",
+   "scenario": "A staff member is introducing the equipment in a university media studio.",
+   "sentences": [
+    "Use the cameras to record interviews and other video projects.",
+    "Adjust the studio lights to control shadows and brightness.",
+    "Choose the microphones that best match your recording environment.",
+    "Edit and improve still images at the photo workstation.",
+    "Use the green screen to replace the background digitally.",
+    "Manage video and sound sources from the main control desk.",
+    "Record clean audio in the soundproof booth."
+   ]
+  },
+  {
+   "id": "LR13",
+   "title": "Watercolor Painting",
+   "scenario": "An instructor is explaining basic watercolor painting techniques.",
+   "sentences": [
+    "Dampen the brush gently before you begin painting.",
+    "Pick up only a small amount of paint with the brush.",
+    "Mix two or more paints to create a new color.",
+    "Apply thin layers so the paper does not tear.",
+    "Use a smaller brush when painting fine details.",
+    "Blot away extra water when an area becomes too wet.",
+    "Dry the finished painting with warm air before moving or storing it."
+   ]
+  },
+  {
+   "id": "LR14",
+   "title": "Career Fair Services",
+   "scenario": "A staff member is explaining the services available at a university career fair.",
+   "sentences": [
+    "Visit employers to learn about jobs.",
+    "Career workshops offer tools and guidance.",
+    "Use this space to build relationships and exchange information.",
+    "Get feedback from specialists on how to write your resume.",
+    "Feel free to take a break and recharge with some refreshments.",
+    "If you're unsure where to begin, follow the group tour that explores key areas.",
+    "If you are trying to make the most of your time, consult the map in advance."
+   ]
+  },
+  {
+   "id": "LR15",
+   "title": "Cultural Festival Guide",
+   "scenario": "A staff member is introducing the activities and services at a cultural festival.",
+   "sentences": [
+    "Dance performances will take place throughout the day.",
+    "Taste traditional foods from several different countries.",
+    "View creative works made by international artists.",
+    "Join the activities to learn about different traditions.",
+    "Ask a staff member if you have questions about the program.",
+    "Use the map to find events and plan the order of your visit.",
+    "Join a certified guide for a more detailed tour."
+   ]
+  },
+  {
+   "id": "LR16",
+   "title": "Preparing a Latte",
+   "scenario": "A cafe supervisor is teaching an employee how to prepare and serve a latte.",
+   "sentences": [
+    "Use the machine to make one shot of espresso.",
+    "Steam the milk until it becomes hot and foamy.",
+    "Pour the espresso into a cup of the correct size.",
+    "Add the milk slowly until the cup is about half full.",
+    "Create a simple design with a spoon if you know the technique.",
+    "Ask the customer whether they would like sugar or honey.",
+    "Place a small piece of chocolate beside the cup before serving it."
+   ]
+  },
+  {
+   "id": "LR17",
+   "title": "Art Gallery Guide",
+   "scenario": "A staff member is introducing the main areas and services in an art gallery.",
+   "sentences": [
+    "The first exhibition area displays ancient artifacts.",
+    "Modern artwork is shown in this part of the gallery.",
+    "The learning laboratory has activities for visitors of different ages.",
+    "Stop at the cafe if you need a break during your visit.",
+    "The gift shop sells souvenirs at reasonable prices.",
+    "Reserve weekend guided tours in advance.",
+    "Check the map if you are interested in special events."
+   ]
+  },
+  {
+   "id": "LR18",
+   "title": "Online Learning Platform",
+   "scenario": "An instructor is explaining how to use an online learning platform.",
+   "sentences": [
+    "Log in to the dashboard to see your current courses.",
+    "Check the assignment deadlines listed on the calendar.",
+    "Open the course area to view and download learning materials.",
+    "Take part in discussions on the class forum.",
+    "Review your grades regularly to monitor your progress.",
+    "Set up daily notifications for important updates.",
+    "Use the help page when you need to solve a technical problem."
+   ]
+  },
+  {
+   "id": "LR19",
+   "title": "Repairing a Bicycle Tire",
+   "scenario": "A technician is explaining how to repair a bicycle tire.",
+   "sentences": [
+    "Choose the correct tools before removing the wheel.",
+    "Release the air from the tire completely.",
+    "Find the hole in the inner tube and mark its location.",
+    "Select a patch and attach it firmly over the hole.",
+    "Use a pump to inflate the tube to the correct pressure.",
+    "Place the tube in water to check for another leak.",
+    "Reinstall and tighten the wheel after confirming there are no other problems."
+   ]
+  }
+ ]
+}

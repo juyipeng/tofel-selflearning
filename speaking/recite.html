@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TOEFL Take an Interview · 背诵卡片</title>
+<style>
+  :root { --bg:#f4f5f7; --card:#fff; --ink:#1c2333; --muted:#6b7280;
+         --accent:#4f46e5; --accent2:#eef2ff; --line:#e5e7eb; --gold:#b45309; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+         background:var(--bg); color:var(--ink); }
+  .wrap { max-width:760px; margin:0 auto; padding:28px 20px 80px; }
+  h1 { font-size:21px; margin:0 0 4px; }
+  .sub { color:var(--muted); font-size:13px; margin-bottom:16px; }
+  .toolbar { position:sticky; top:0; background:var(--bg); padding:12px 0; display:flex;
+         gap:10px; align-items:center; z-index:10; border-bottom:1px solid var(--line); }
+  .toolbar button { background:var(--card); border:1px solid var(--line); border-radius:9px;
+         padding:8px 16px; cursor:pointer; font-size:14px; }
+  .toolbar button.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .toolbar button:hover { filter:brightness(.96); }
+  .toolbar .stat { margin-left:auto; color:var(--muted); font-size:13px; }
+
+  .sec { margin-top:26px; }
+  .sec h2 { font-size:16px; margin:0 0 4px; display:flex; align-items:center; gap:8px; }
+  .sec h2 .cnt { font-size:12px; color:var(--muted); font-weight:400; }
+  .sec .desc { color:var(--muted); font-size:13px; margin:0 0 12px; }
+  .grid { display:grid; grid-template-columns:1fr; gap:10px; }
+
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px;
+         padding:14px 16px; cursor:pointer; transition:.12s; }
+  .card:hover { border-color:var(--accent); }
+  .card .label { font-weight:700; font-size:14px; }
+  .card .label .star { color:var(--gold); }
+  .card .hint { display:none; color:var(--muted); font-size:12.5px; margin-top:4px; }
+  .card .en { margin-top:10px; font-size:15px; line-height:1.75; color:#1a1f36; }
+  .card .en .line { display:block; }
+  .card .en .k { color:var(--accent); font-weight:600; }
+  .card.hide .en { display:none; }
+  .card.hide .hint { display:block; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>TOEFL Take an Interview · 背诵卡片</h1>
+  <div class="sub">先通读一遍，然后点「全部隐藏」进入背诵模式：看中文提示 → 回忆英文 → 点卡片核对</div>
+  <div class="toolbar">
+    <button class="primary" onclick="hideAll()">🙈 全部隐藏</button>
+    <button onclick="showAll()">👁 全部显示</button>
+    <span class="stat" id="stat"></span>
+  </div>
+  <div id="content"></div>
+</div>
+
+<script>
+const SECTIONS = [
+  {
+    title: '一、三种开头（必背，考场 3 秒判断）',
+    desc: '看题型关键词 → 背出对应开头句',
+    cards: [
+      { label: '习惯类开头', en: "To be perfectly honest, I'd say I usually..." },
+      { label: '经历类开头 ⭐', en: 'Sure. There was a time when I had to...' },
+      { label: '观点类开头', en: "From where I stand, I'm totally for the idea that..." },
+    ]
+  },
+  {
+    title: '二、三类完整模板',
+    desc: '完整答题结构，逐步骤背',
+    cards: [
+      { label: '🔵 习惯类模板', en: [
+          ['开头', "To be perfectly honest, I'd say I usually..."],
+          ['补充细节', 'On a typical day, I do it right after... It takes about...'],
+          ['给理由(感性)', 'Honestly, I do it simply because it makes me feel...'],
+          ['收尾', "So yeah, that's pretty much how it goes."],
+        ] },
+      { label: '🟢 经历类模板（要讲故事，不要给两个理由）', en: [
+          ['开头(背景)', 'Sure. There was a time when I had to [任务/挑战].'],
+          ['行动', 'So I decided to [具体做法]. Instead of [另一种选择], I kept trying to [关键动作].'],
+          ['结果/感受', 'In the end, I [结果]. Through this experience, I learned that [教训/感悟].'],
+        ] },
+      { label: '🟠 观点类模板', en: [
+          ['开头(亮观点)', "From where I stand, I'm totally for the idea that [填立场]."],
+          ['理由1', 'To start with, the main reason is that...'],
+          ['例子', "Let's say...（填入素材细节）"],
+          ['理由2', 'Another point is that...'],
+          ['让步+总结', 'However, I admit that... but for me... So I reckon...'],
+        ] },
+    ]
+  },
+  {
+    title: '三、骨架句速查',
+    desc: '所有题型通用的连接句',
+    cards: [
+      { label: '理由 1', en: 'To start with, the main reason is that...' },
+      { label: '理由 2', en: 'Another point is that...' },
+      { label: '举例', en: "Let's say..." },
+      { label: '让步', en: 'However, I admit that...' },
+      { label: '总结', en: 'For these reasons, I reckon...' },
+    ]
+  },
+  {
+    title: '四、经历类 · 专用句型（各选一句背死）',
+    desc: '背景 / 行动 / 结果 三组，每组选一句',
+    cards: [
+      { label: '背景开头', en: [
+          'Sure. There was a time when I had to... ⭐',
+          'Last semester, I encountered a situation where...',
+          'Once, I was asked to... and it was a valuable experience for me.',
+        ] },
+      { label: '行动描述', en: [
+          'So I decided to...',
+          'Instead of..., I kept trying different ways to...',
+          'I chose to... directly.',
+        ] },
+      { label: '结果/反思', en: [
+          'In the end, I succeeded in... and felt a great sense of achievement.',
+          'Through this experience, I learned that...',
+          'It not only helped me... but also brought me a lot of happiness.',
+        ] },
+    ]
+  },
+  {
+    title: '五、三个万能素材',
+    desc: '关键词 + 一句话版本，填进模板',
+    cards: [
+      { label: '素材 A：晨跑', en: [
+          ['关键词', '每周 3-4 次 · 早上 7 点上课前 · 3 公里约 20 分钟 · 整天精力充沛'],
+          ['一句话', 'I run 3 km every morning. It takes 20 minutes and keeps me energized all day.'],
+        ] },
+      { label: '素材 B：小组项目', en: [
+          ['关键词', '上学期 · 小组展示/论文 · 4 人 · 资料整理+PPT · 拿了 A'],
+          ['一句话', 'Last semester I did a group project with 4 classmates. I handled research and PPT. We got an A.'],
+        ] },
+      { label: '素材 C：周末爬山', en: [
+          ['关键词', '几乎每周末 · 市郊 1-2 小时车程 · 2-3 个朋友 · 往返 3-4 小时 · 放松'],
+          ['一句话', "I go hiking with friends almost every weekend. It's about 3 hours round trip and a great way to relax."],
+        ] },
+    ]
+  },
+  {
+    title: '六、万能理由库',
+    desc: '按类别背词句',
+    cards: [
+      { label: '效率', en: 'boost efficiency / get more work done' },
+      { label: '省钱', en: 'offer the greatest bang for my buck' },
+      { label: '人际关系', en: 'strengthen the bond with...' },
+      { label: '个人成长', en: 'gain cutting-edge knowledge / stand out' },
+      { label: '身心健康', en: 'wind me down / blow off steam' },
+      { label: '社会责任', en: 'reduce my carbon footprint' },
+      { label: '灵活适应', en: 'offer greater flexibility' },
+      { label: '心理价值', en: 'emotional value outweighs material worth' },
+    ]
+  },
+  {
+    title: '七、三类模板实战演示',
+    desc: '完整范例，可通读/背诵',
+    cards: [
+      { label: '习惯类：How often do you exercise?', en: [
+          "To be perfectly honest, I'd say I usually exercise about three or four times a week. I go running in the morning before class. It takes me about 20 minutes to run 3 kilometers. Honestly, I do it simply because it makes me feel energized for the whole day. So yeah, running has become a pretty important part of my routine.",
+        ] },
+      { label: '经历类：Tell me about a time you had to manage multiple tasks.', en: [
+          'Sure. There was a time when I had to prepare for three final exams while finishing a group presentation in the same week. So I decided to make a detailed schedule. Instead of studying randomly, I divided each day into blocks and stuck to it. In the end, I finished everything on time and got good grades. Through this experience, I learned that planning ahead really reduces stress.',
+        ] },
+      { label: '观点类：Do you think online learning will replace in-person learning?', en: [
+          "From where I stand, I'm definitely not for the idea that online learning will replace in-person learning. To start with, the main reason is that face-to-face interaction is irreplaceable. Let's say last semester I worked on a group project — we communicated much better in person than online. Another point is that traditional classrooms offer structure and discipline. However, I admit online learning is flexible, but for me, the human connection is more important. So I reckon they will coexist.",
+        ] },
+    ]
+  },
+];
+
+function esc(s){ return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function renderEn(en){
+  // en 是 string 或 array；array 里可能是 string 或 [key, value]
+  if (typeof en === 'string') return `<span class="line">${esc(en)}</span>`;
+  return en.map(item => {
+    if (Array.isArray(item)) {
+      return `<span class="line"><span class="k">${esc(item[0])}：</span>${esc(item[1])}</span>`;
+    }
+    return `<span class="line">${esc(item)}</span>`;
+  }).join('');
+}
+
+function render(){
+  let html = '';
+  let total = 0;
+  SECTIONS.forEach(sec => {
+    total += sec.cards.length;
+    html += `<div class="sec"><h2>${esc(sec.title)} <span class="cnt">${sec.cards.length} 张</span></h2>
+      <p class="desc">${esc(sec.desc)}</p><div class="grid">`;
+    sec.cards.forEach(c => {
+      html += `<div class="card" onclick="toggle(this)">
+        <div class="label">${esc(c.label)}</div>
+        <div class="hint">💭 回忆一下，点卡片显示英文</div>
+        <div class="en">${renderEn(c.en)}</div>
+      </div>`;
+    });
+    html += '</div></div>';
+  });
+  document.getElementById('content').innerHTML = html;
+  document.getElementById('stat').textContent = `共 ${total} 张`;
+}
+
+function toggle(card){ card.classList.toggle('hide'); }
+
+function hideAll(){
+  document.querySelectorAll('.card').forEach(c => c.classList.add('hide'));
+}
+function showAll(){
+  document.querySelectorAll('.card').forEach(c => c.classList.remove('hide'));
+}
+
+render();
+</script>
+</body>
+</html>

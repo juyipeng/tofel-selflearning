@@ -1,0 +1,18 @@
+# 环保活动
+- 简单一句话
+    - I participated in a local tree-planting project aimed at restoring the natural ecosystem.
+    - the travel went far beyond mere sightseeing, integrating a local tree-planting project aimed at restoring the natural ecosystem
+- 详细讲
+    - We spent the morning pl## Silent Spring
+- 书名: 
+    - Silent Spring
+- 作者:
+    - Rachel Carson
+- 一句话概述内容
+    - Rachel Carson's "Silent Spring" is a groundbreaking book that exposed the devastating ecological consequences of unchecked chemical pesticide use.
+- 深入讲解
+    - through meticulous research, Carson demostrated how pesticides like DDT accumulated in the food chain, causing widespread bird deaths and contaminate water supplies. 
+- 社会意义
+    - on social level, it sparked the global environmental movement and forced governments to regulate toxic chemicals
+- 个人意义
+   - on a personal level, it instills a stewardship, reminding us that our daily choices collectively shape the planet's health.

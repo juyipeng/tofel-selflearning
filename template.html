@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>托福词汇闪卡 - TOEFL Vocabulary Flashcards</title>
+<style>
+:root {
+  --bg: #0f172a;
+  --card-bg: #1e293b;
+  --card-back: #1e3a5f;
+  --text: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --accent: #38bdf8;
+  --success: #34d399;
+  --danger: #f87171;
+  --border: #334155;
+  --hover: #2d3a4f;
+  --chat-bg: #1a2332;
+  --bubble-user: #2563eb;
+  --bubble-claude: #1e293b;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+header {
+  width: 100%;
+  max-width: 800px;
+  padding: 20px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, var(--accent), #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stats {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.stats span { white-space: nowrap; }
+.stats .known-count { color: var(--success); }
+.stats .unknown-count { color: var(--danger); }
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 16px 24px;
+  gap: 16px;
+}
+
+/* ---- CARD ---- */
+.card-container {
+  perspective: 1200px;
+  width: 100%;
+  max-width: 500px;
+  height: 420px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+.card.flipped { transform: rotateY(180deg); }
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 24px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 10px 30px -10px rgba(0,0,0,0.4);
+}
+.card-front { background: var(--card-bg); }
+.card-back { background: var(--card-back); transform: rotateY(180deg); }
+
+.word {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
+}
+.phonetic {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.hint-text {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+  opacity: 0.7;
+}
+.definition {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 6px;
+  text-align: center;
+}
+.pos-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #0f172a;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.phrase-block {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  padding: 4px 12px;
+  background: rgba(56,189,248,0.08);
+  border-radius: 8px;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+.phrase-label, .sentence-label {
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1px;
+}
+
+.sentence-block {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  text-align: center;
+  padding: 4px 12px;
+  background: rgba(129,140,248,0.08);
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  line-height: 1.4;
+}
+
+.cn-trans {
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+/* ---- Back side mode buttons ---- */
+.back-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-teach, .btn-use {
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid;
+  font-family: inherit;
+}
+.btn-teach {
+  background: rgba(129,140,248,0.15);
+  border-color: #818cf8;
+  color: #a5b4fc;
+}
+.btn-teach:hover { background: rgba(129,140,248,0.3); }
+.btn-use {
+  background: rgba(52,211,153,0.15);
+  border-color: var(--success);
+  color: var(--success);
+}
+.btn-use:hover { background: rgba(52,211,153,0.3); }
+
+/* ---- Chat Panel ---- */
+.chat-panel {
+  width: 100%;
+  max-width: 500px;
+  background: var(--chat-bg);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-height: 360px;
+}
+.chat-panel.active { display: flex; }
+
+.chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.chat-header .mode-label { font-weight: 600; color: var(--accent); }
+.chat-close {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+.chat-close:hover { background: var(--hover); color: var(--text); }
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 120px;
+  max-height: 200px;
+}
+
+.chat-msg {
+  display: flex;
+  gap: 10px;
+  animation: msgIn 0.3s ease;
+}
+@keyframes msgIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.msg-avatar {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.6rem;
+  font-family: 'Courier New', monospace;
+  line-height: 1.15;
+  white-space: pre;
+}
+.msg-avatar.claude {
+  background: #1e293b;
+  border: 1px solid var(--border);
+  color: #f59e0b;
+}
+.msg-avatar.user {
+  background: #1e3a5f;
+  border: 1px solid #3b82f6;
+  color: #60a5fa;
+}
+
+.msg-bubble {
+  max-width: 380px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  word-break: break-word;
+}
+.msg-bubble.claude {
+  background: var(--bubble-claude);
+  border: 1px solid var(--border);
+  border-top-left-radius: 4px;
+}
+.msg-bubble.user {
+  background: var(--bubble-user);
+  border-top-right-radius: 4px;
+}
+.msg-bubble .highlight-word {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+  padding: 10px 16px;
+  border-top: 1px solid var(--border);
+}
+.chat-input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.chat-input:focus { border-color: var(--accent); }
+.chat-input::placeholder { color: #64748b; }
+
+.chat-submit {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: #0f172a;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.2s;
+}
+.chat-submit:hover { background: #7dd3fc; }
+.chat-submit:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.chat-typing {
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  padding: 4px 14px;
+  animation: blink 1s infinite;
+}
+@keyframes blink { 50% { opacity: 0.3; } }
+
+/* ---- Add Word Modal ---- */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+.modal {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.modal-header h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+.modal-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.tab-btn {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-family: inherit;
+}
+.tab-btn.active {
+  background: var(--accent);
+  color: #0f172a;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.form-grid {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 8px 12px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+.form-grid label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+.form-grid input {
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--chat-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+}
+.form-grid input:focus { border-color: var(--accent); }
+.req { color: var(--danger); }
+.bulk-hint {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+.bulk-hint code {
+  background: var(--chat-bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+#bulkText {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--chat-bg);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: 'Courier New', monospace;
+  resize: vertical;
+  outline: none;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+#bulkText:focus { border-color: var(--accent); }
+.modal-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+/* ---- Controls ---- */
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+  white-space: nowrap;
+}
+.btn:hover { background: var(--hover); border-color: #64748b; }
+.btn:active { transform: scale(0.97); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #0f172a;
+  border-color: var(--accent);
+  font-weight: 600;
+}
+.btn-primary:hover { background: #7dd3fc; }
+
+.btn-success {
+  background: rgba(52,211,153,0.15);
+  border-color: var(--success);
+  color: var(--success);
+}
+.btn-success:hover { background: rgba(52,211,153,0.25); }
+.btn-success.marked { background: var(--success); color: #0f172a; }
+
+.btn-danger {
+  background: rgba(248,113,113,0.15);
+  border-color: var(--danger);
+  color: var(--danger);
+}
+.btn-danger:hover { background: rgba(248,113,113,0.25); }
+.btn-danger.marked { background: var(--danger); color: #0f172a; }
+
+.nav-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn:hover { background: var(--hover); border-color: #64748b; }
+.nav-btn:active { transform: scale(0.93); }
+
+.progress-bar {
+  width: 100%;
+  max-width: 500px;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.list-select {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text);
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  outline: none;
+}
+.list-select:focus { border-color: var(--accent); }
+.list-select option { background: var(--card-bg); color: var(--text); }
+
+.shortcuts {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.6;
+  text-align: center;
+}
+
+.word-counter {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  min-width: 80px;
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  padding: 60px 20px;
+}
+.empty-state p { margin: 8px 0; }
+
+@media (max-width: 500px) {
+  .card-container { height: 380px; }
+  .word { font-size: 1.8rem; }
+  .definition { font-size: 1.2rem; }
+  .card-face { padding: 18px; }
+  .msg-bubble { max-width: 260px; font-size: 0.82rem; }
+  .chat-messages { max-height: 160px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>TOEFL 词汇闪卡</h1>
+  <div class="stats">
+    <span class="known-count">✓ <span id="knownCount">0</span></span>
+    <span class="unknown-count">✗ <span id="unknownCount">0</span></span>
+    <span>📝 <span id="totalCount">0</span></span>
+  </div>
+</header>
+
+<main>
+  <div class="filter-bar">
+    <select class="list-select" id="listSelect">
+      <option value="all">全部 List</option>
+      <option value="1">List 01</option>
+      <option value="2">List 02</option>
+      <option value="3">List 03</option>
+      <option value="4">List 04</option>
+      <option value="5">List 05</option>
+      <option value="6">List 06</option>
+      <option value="7">List 07</option>
+      <option value="8">List 08</option>
+      <option value="9">List 09</option>
+      <option value="10">List 10</option>
+    </select>
+    <button class="btn btn-primary filter-btn" data-filter="all">全部</button>
+    <button class="btn filter-btn" data-filter="unknown">未掌握</button>
+    <button class="btn filter-btn" data-filter="known">已掌握</button>
+    <button class="btn" id="shuffleBtn">🔀 随机</button>
+  </div>
+
+  <div class="card-container" id="cardContainer">
+    <div class="card" id="card">
+      <div class="card-face card-front">
+        <div class="word" id="wordDisplay"></div>
+        <div class="phonetic" id="phoneticDisplay"></div>
+        <div class="hint-text">点击卡片或按空格键翻转</div>
+      </div>
+      <div class="card-face card-back">
+        <div class="pos-badge" id="posDisplay"></div>
+        <div class="definition" id="definitionDisplay"></div>
+        <div class="phrase-label">词组</div>
+        <div class="phrase-block" id="phraseDisplay"></div>
+        <div class="sentence-label">例句</div>
+        <div class="sentence-block" id="sentenceDisplay"></div>
+        <div class="back-actions">
+          <button class="btn-teach" id="teachBtn">🤖 讲一讲</button>
+          <button class="btn-use" id="useBtn">✏️ 造句练习</button>
+        </div>
+        <div class="hint-text">点击卡片或按空格键翻转回正面</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="emptyState" class="empty-state" style="display:none;">
+    <p>🎉 这个列表已清空</p>
+    <p>切换筛选或重置继续学习</p>
+  </div>
+
+  <!-- Chat Panel -->
+  <div class="chat-panel" id="chatPanel">
+    <div class="chat-header">
+      <span><span class="mode-label" id="modeLabel"></span></span>
+      <button class="chat-close" id="chatClose">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages"></div>
+    <div class="chat-input-area">
+      <input type="text" class="chat-input" id="chatInput"
+        placeholder="输入你的回答……" autocomplete="off">
+      <button class="chat-submit" id="chatSubmit">发送</button>
+    </div>
+    <div class="chat-typing" id="chatTyping" style="display:none;">Claude 正在思考……</div>
+  </div>
+
+  <!-- Add Word Modal -->
+  <div class="modal-overlay" id="addWordModal" style="display:none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>添加单词</h2>
+        <button class="chat-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-tabs">
+        <button class="tab-btn active" data-tab="single">单个添加</button>
+        <button class="tab-btn" data-tab="bulk">批量导入</button>
+      </div>
+
+      <!-- Single add -->
+      <div class="tab-panel" id="tab-single">
+        <div class="form-grid">
+          <label>单词 <span class="req">*</span></label>
+          <input type="text" id="f-word" placeholder="e.g. serendipity">
+          <label>音标</label>
+          <input type="text" id="f-phonetic" placeholder="/ˌserənˈdɪpəti/">
+          <label>词性</label>
+          <input type="text" id="f-pos" placeholder="n. / v. / adj.">
+          <label>释义 <span class="req">*</span></label>
+          <input type="text" id="f-definition" placeholder="机缘巧合；意外发现">
+          <label>词组</label>
+          <input type="text" id="f-phrase" placeholder="by serendipity">
+          <label>词组翻译</label>
+          <input type="text" id="f-phrase-cn" placeholder="偶然地">
+          <label>例句</label>
+          <input type="text" id="f-sentence" placeholder="We met by serendipity.">
+          <label>例句翻译</label>
+          <input type="text" id="f-sentence-cn" placeholder="我们偶然相遇。">
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="addSingleBtn">添加</button>
+        </div>
+      </div>
+
+      <!-- Bulk import -->
+      <div class="tab-panel" id="tab-bulk" style="display:none;">
+        <p class="bulk-hint">每行一个单词，用 <code>|</code> 分隔：<br>
+          <code>单词 | 释义 | 词组 | 词组翻译 | 例句 | 例句翻译</code><br>
+          只有「单词」和「释义」必填，其余可留空。</p>
+        <textarea id="bulkText" rows="8" placeholder="serendipity | 机缘巧合 | by serendipity | 偶然地 | We met by serendipity. | 我们偶然相遇。&#10;resilient | 有韧性的 | | | | "></textarea>
+        <div class="modal-actions">
+          <button class="btn btn-primary" id="bulkImportBtn">导入</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill" style="width:0%"></div>
+  </div>
+
+  <div class="controls">
+    <div class="nav-area">
+      <button class="nav-btn" id="prevBtn" title="上一个 (←)">◀</button>
+      <div class="word-counter" id="wordCounter">0 / 0</div>
+      <button class="nav-btn" id="nextBtn" title="下一个 (→)">▶</button>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button class="btn btn-success" id="knownBtn" title="标记为已掌握">✓ 认识</button>
+    <button class="btn btn-danger" id="unknownBtn" title="标记为未掌握">✗ 不认识</button>
+    <button class="btn" id="saveFileBtn">💾 保存进度</button>
+    <button class="btn" id="loadFileBtn">📂 加载进度</button>
+    <button class="btn btn-primary" id="addWordBtn">＋ 添加单词</button>
+    <button class="btn" id="resetBtn">🔄 重置进度</button>
+  </div>
+
+  <div class="shortcuts">
+    空格/点击 → 翻转 &nbsp;|&nbsp; ← → 切换单词 &nbsp;|&nbsp; K 认识 &nbsp;|&nbsp; U 不认识
+  </div>
+</main>
+
+<script>
+// ===== VOCABULARY DATA =====
+const VOCAB_DATA = __VOCAB_DATA__;
+
+// ===== CLAUDE MASCOT =====
+const CLAUDE_ART = [
+  '▛▀▜',
+  '▌◠◠▐',
+  '▙▄▄▟',
+  ' ││',
+].join('\n');
+
+const USER_ART = [
+  '▗▄▄▖',
+  '▐◕◕▌',
+  '▙▄▄▟',
+  ' ││',
+].join('\n');
+
+// ===== STATE =====
+function emptyStateObj() {
+  return { known: new Set(), unknown: new Set(), currentIndex: 0, order: null, filter: 'all', list: 'all', customVocab: [] };
+}
+
+let state = emptyStateObj();
+let currentFilter = 'all';
+let currentList = 'all';
+let filteredIndices = [];
+let currentPos = 0;
+let allVocab = [...VOCAB_DATA];
+
+// Chat state
+let chatMode = null;
+let chatTurn = 0;
+let currentWord = null;
+let isChatActive = false;
+
+// Merge custom vocab into the effective vocab list
+function rebuildAllVocab() {
+  allVocab = [...VOCAB_DATA, ...state.customVocab];
+}
+
+// Serialize for file export
+function serializeState() {
+  return JSON.stringify({
+    known: [...state.known],
+    unknown: [...state.unknown],
+    currentIndex: state.currentIndex,
+    order: state.order,
+    filter: currentFilter,
+    list: currentList,
+    customVocab: state.customVocab,
+  }, null, 2);
+}
+
+// Deserialize from file import
+function deserializeState(json) {
+  const parsed = JSON.parse(json);
+  return {
+    known: new Set(parsed.known || []),
+    unknown: new Set(parsed.unknown || []),
+    currentIndex: parsed.currentIndex || 0,
+    order: parsed.order || null,
+    filter: parsed.filter || 'all',
+    list: parsed.list || 'all',
+    customVocab: parsed.customVocab || [],
+  };
+}
+
+// Manual save: download JSON file
+function saveToFile() {
+  const blob = new Blob([serializeState()], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'toefl_progress.json';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+// Manual load: file picker → restore state
+function loadFromFile() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json';
+  input.onchange = async () => {
+    const file = input.files[0];
+    if (!file) return;
+    try {
+      const text = await file.text();
+      state = deserializeState(text);
+      currentFilter = state.filter || 'all';
+      currentList = state.list || 'all';
+      rebuildAllVocab();
+      refreshListOptions();
+      document.getElementById('listSelect').value = currentList;
+      applyFilter();
+      document.querySelectorAll('.filter-btn').forEach(b =>
+        b.classList.toggle('btn-primary', b.dataset.filter === currentFilter)
+      );
+      render();
+    } catch(e) {
+      alert('文件格式错误，无法读取进度。');
+    }
+  };
+  input.click();
+}
+
+// ===== FILTERING =====
+function applyFilter() {
+  let base = state.order || [...Array(allVocab.length).keys()];
+  // Filter by list first
+  if (currentList !== 'all') {
+    const listVal = currentList === 'custom' ? 'custom' : parseInt(currentList);
+    base = base.filter(i => allVocab[i].list === listVal);
+  }
+  // Then filter by known/unknown
+  switch(currentFilter) {
+    case 'all':  filteredIndices = [...base]; break;
+    case 'known':  filteredIndices = base.filter(i => state.known.has(i)); break;
+    case 'unknown': filteredIndices = base.filter(i => !state.known.has(i)); break;
+  }
+  currentPos = Math.min(state.currentIndex, Math.max(0, filteredIndices.length - 1));
+}
+
+// ===== RENDER =====
+function render() {
+  const card = document.getElementById('card');
+  const emptyState = document.getElementById('emptyState');
+  const cardContainer = document.getElementById('cardContainer');
+
+  if (filteredIndices.length === 0) {
+    cardContainer.style.display = 'none';
+    emptyState.style.display = 'block';
+  } else {
+    cardContainer.style.display = '';
+    emptyState.style.display = 'none';
+  }
+
+  updateStats();
+  updateProgress();
+
+  if (filteredIndices.length === 0) return;
+
+  const dataIdx = filteredIndices[currentPos];
+  currentWord = allVocab[dataIdx];
+
+  document.getElementById('wordDisplay').textContent = currentWord.word;
+  document.getElementById('phoneticDisplay').textContent = currentWord.phonetic;
+  document.getElementById('posDisplay').textContent = currentWord.pos;
+  document.getElementById('definitionDisplay').textContent = currentWord.definition;
+  document.getElementById('phraseDisplay').innerHTML =
+    (currentWord.phrase || '—') + (currentWord.phrase_cn ? `<br><span class="cn-trans">${currentWord.phrase_cn}</span>` : '');
+  document.getElementById('sentenceDisplay').innerHTML =
+    (currentWord.sentence || '') + (currentWord.sentence_cn ? `<br><span class="cn-trans">${currentWord.sentence_cn}</span>` : '');
+  document.getElementById('wordCounter').textContent =
+    `${currentPos + 1} / ${filteredIndices.length}`;
+
+  card.classList.remove('flipped');
+
+  const knownBtn = document.getElementById('knownBtn');
+  const unknownBtn = document.getElementById('unknownBtn');
+  knownBtn.classList.toggle('marked', state.known.has(dataIdx));
+  unknownBtn.classList.toggle('marked', state.unknown.has(dataIdx));
+}
+
+function updateStats() {
+  document.getElementById('knownCount').textContent = state.known.size;
+  document.getElementById('unknownCount').textContent = state.unknown.size;
+  document.getElementById('totalCount').textContent = filteredIndices.length || allVocab.length;
+}
+
+function updateProgress() {
+  if (filteredIndices.length === 0) {
+    document.getElementById('progressFill').style.width = '0%';
+    return;
+  }
+  const pct = ((currentPos + 1) / filteredIndices.length) * 100;
+  document.getElementById('progressFill').style.width = pct + '%';
+  state.currentIndex = currentPos;
+  /* manual save — use saveToFile() */
+}
+
+// ===== CARD ACTIONS =====
+function flipCard() {
+  if (isChatActive) return;
+  document.getElementById('card').classList.toggle('flipped');
+}
+
+function goNext() {
+  if (filteredIndices.length === 0) return;
+  currentPos = (currentPos + 1) % filteredIndices.length;
+  closeChat();
+  render();
+}
+
+function goPrev() {
+  if (filteredIndices.length === 0) return;
+  currentPos = (currentPos - 1 + filteredIndices.length) % filteredIndices.length;
+  closeChat();
+  render();
+}
+
+function markKnown() {
+  if (filteredIndices.length === 0) return;
+  const dataIdx = filteredIndices[currentPos];
+  state.known.add(dataIdx);
+  state.unknown.delete(dataIdx);
+  /* manual save — use saveToFile() */
+  render();
+  setTimeout(goNext, 300);
+}
+
+function markUnknown() {
+  if (filteredIndices.length === 0) return;
+  const dataIdx = filteredIndices[currentPos];
+  state.unknown.add(dataIdx);
+  state.known.delete(dataIdx);
+  /* manual save — use saveToFile() */
+  render();
+  setTimeout(goNext, 300);
+}
+
+function shuffle() {
+  const indices = [...Array(allVocab.length).keys()];
+  for (let i = indices.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [indices[i], indices[j]] = [indices[j], indices[i]];
+  }
+  state.order = indices;
+  currentPos = 0;
+  applyFilter();
+  closeChat();
+  /* manual save — use saveToFile() */
+  render();
+}
+
+function resetProgress() {
+  if (confirm('确定要重置所有学习进度吗？此操作不可撤销。')) {
+    state.known.clear();
+    state.unknown.clear();
+    state.order = null;
+    state.currentIndex = 0;
+    currentPos = 0;
+    closeChat();
+    /* manual save — use saveToFile() */
+    applyFilter();
+    render();
+  }
+}
+
+function setFilter(filter) {
+  currentFilter = filter;
+  currentPos = 0;
+  applyFilter();
+  closeChat();
+  document.querySelectorAll('.filter-btn').forEach(b =>
+    b.classList.toggle('btn-primary', b.dataset.filter === filter)
+  );
+  state.currentIndex = 0;
+  /* manual save — use saveToFile() */
+  render();
+}
+
+// ===== CHAT SYSTEM =====
+function openChat(mode) {
+  chatMode = mode;
+  chatTurn = 0;
+  isChatActive = true;
+  currentWord = allVocab[filteredIndices[currentPos]];
+
+  const panel = document.getElementById('chatPanel');
+  const messages = document.getElementById('chatMessages');
+  const label = document.getElementById('modeLabel');
+
+  messages.innerHTML = '';
+  panel.classList.add('active');
+  label.textContent = mode === 'teach' ? '讲解模式' : '造句模式';
+
+  if (mode === 'teach') {
+    startTeachTurn();
+  } else {
+    startUseTurn();
+  }
+}
+
+function closeChat() {
+  chatMode = null;
+  chatTurn = 0;
+  isChatActive = false;
+  currentWord = allVocab[filteredIndices[currentPos]];
+  document.getElementById('chatPanel').classList.remove('active');
+  document.getElementById('chatMessages').innerHTML = '';
+  document.getElementById('chatInput').value = '';
+}
+
+function addClaudeMsg(text) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg';
+  div.innerHTML = `
+    <div class="msg-avatar claude"><pre>${CLAUDE_ART}</pre></div>
+    <div class="msg-bubble claude">${text}</div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function addUserMsg(text) {
+  const container = document.getElementById('chatMessages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg';
+  div.style.justifyContent = 'flex-end';
+  div.innerHTML = `
+    <div class="msg-bubble user">${escapeHTML(text)}</div>
+    <div class="msg-avatar user"><pre>${USER_ART}</pre></div>
+  `;
+  container.appendChild(div);
+  container.scrollTop = container.scrollHeight;
+}
+
+function escapeHTML(str) {
+  const el = document.createElement('span');
+  el.textContent = str;
+  return el.innerHTML;
+}
+
+function submitChat() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  addUserMsg(text || '(跳过)');
+  input.value = '';
+
+  if (chatMode === 'teach') {
+    handleTeachResponse(text);
+  } else if (chatMode === 'use') {
+    handleUseResponse(text);
+  }
+}
+
+// ---- TEACH MODE ----
+function startTeachTurn() {
+  const w = currentWord;
+  switch (chatTurn) {
+    case 0:
+      addClaudeMsg(
+        `你好！我在学一个新词，但不太理解……<br><br><b class="highlight-word">${w.word}</b> 这个词是什么意思呀？你能用你自己的话给我讲讲吗？`);
+      break;
+    case 1:
+      addClaudeMsg(
+        `哦～我好像有点明白了！<br><br>那在生活中，什么情况下会用到 <b class="highlight-word">${w.word}</b> 呢？能给我举个具体的场景例子吗？`);
+      break;
+    case 2:
+      addClaudeMsg(
+        `我也想试试用它！我造的句子是：<br><br><i>"The <b class="highlight-word">${w.word}</b> is really important."</i><br><br>……这样用对吗？还是我哪里用得不太自然？`);
+      break;
+  }
+}
+
+function handleTeachResponse(text) {
+  chatTurn++;
+
+  if (chatTurn === 1) {
+    // User explained the meaning
+    addClaudeMsg(
+      `原来如此！谢谢你这么耐心地解释～<br><br>偷偷看一下官方释义：<b>"${currentWord.definition}"</b> — 跟你讲的意思差不多嘛！`);
+    setTimeout(() => startTeachTurn(), 1200);
+  } else if (chatTurn === 2) {
+    // User gave an example scenario
+    addClaudeMsg(
+      `哇，这个例子好具体，我现在知道什么场合会用到它了。记下来记下来～`);
+    setTimeout(() => startTeachTurn(), 1200);
+  } else if (chatTurn === 3) {
+    // User judged Claude's sentence
+    addClaudeMsg(
+      `哈哈谢谢你的反馈！我会继续努力学习的～<br><br>今天我们聊了 <b class="highlight-word">${currentWord.word}</b>，感觉收获满满！你继续背下一个词吧，我不打扰你了～`);
+    document.getElementById('chatInput').disabled = true;
+    document.getElementById('chatSubmit').disabled = true;
+    setTimeout(() => {
+      document.getElementById('chatInput').disabled = false;
+      document.getElementById('chatSubmit').disabled = false;
+      closeChat();
+    }, 2500);
+  }
+}
+
+// ---- USE MODE ----
+function startUseTurn() {
+  const w = currentWord;
+  switch (chatTurn) {
+    case 0:
+      addClaudeMsg(
+        `我想看一个用 <b class="highlight-word">${w.word}</b> 造的句子！<br><br>你能用它写一个英文句子吗？让我看看这个词在实际中到底怎么用～`);
+      break;
+    case 1:
+      addClaudeMsg(
+        `好厉害！<br><br>那换个完全不同的场景呢？比如在旅行、工作或者朋友聊天中，怎么用 <b class="highlight-word">${w.word}</b> 再说一个句子？`);
+      break;
+  }
+}
+
+function handleUseResponse(text) {
+  const w = currentWord;
+  const wordLower = w.word.toLowerCase();
+  const textLower = text.toLowerCase();
+
+  // Check if the word (or its root) appears in the sentence
+  const wordRoot = w.word.replace(/\s.*$/, '').toLowerCase();
+  const containsWord = textLower.includes(wordLower) || textLower.includes(wordRoot);
+
+  chatTurn++;
+
+  if (chatTurn === 1) {
+    if (containsWord) {
+      addClaudeMsg(
+        `太棒了！我看到你用了 <b class="highlight-word">${w.word}</b>，句子很自然～<br><br>我觉得我又学会了一个词！`);
+    } else {
+      addClaudeMsg(
+        `咦，我好像没在你的句子里找到 <b class="highlight-word">${w.word}</b> 这个词……<br><br>不过没关系，要不再试一次？记得把"${w.word}"放进句子里哦！`);
+      chatTurn--; // retry this turn
+    }
+    if (chatTurn === 1) setTimeout(() => startUseTurn(), 1200);
+  } else if (chatTurn === 2) {
+    if (containsWord) {
+      addClaudeMsg(
+        `又一个精彩例句！你用 <b class="highlight-word">${w.word}</b> 的功力越来越强了～<br><br>两个句子两个场景，这下我彻底记住它了。谢谢老师！`);
+    } else {
+      addClaudeMsg(
+        `嗯，这个句子也不错，不过我还是想看到 <b class="highlight-word">${w.word}</b> 出现呢～<br><br>但没关系，你已经帮我很多了。这个词我记住了！`);
+    }
+    document.getElementById('chatInput').disabled = true;
+    document.getElementById('chatSubmit').disabled = true;
+    setTimeout(() => {
+      document.getElementById('chatInput').disabled = false;
+      document.getElementById('chatSubmit').disabled = false;
+      closeChat();
+    }, 2500);
+  }
+}
+
+// ===== EVENT LISTENERS =====
+document.getElementById('card').addEventListener('click', flipCard);
+document.getElementById('nextBtn').addEventListener('click', goNext);
+document.getElementById('prevBtn').addEventListener('click', goPrev);
+document.getElementById('knownBtn').addEventListener('click', markKnown);
+document.getElementById('unknownBtn').addEventListener('click', markUnknown);
+document.getElementById('shuffleBtn').addEventListener('click', shuffle);
+document.getElementById('saveFileBtn').addEventListener('click', saveToFile);
+document.getElementById('loadFileBtn').addEventListener('click', loadFromFile);
+document.getElementById('resetBtn').addEventListener('click', resetProgress);
+document.getElementById('chatClose').addEventListener('click', closeChat);
+document.getElementById('chatSubmit').addEventListener('click', submitChat);
+
+document.getElementById('teachBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  openChat('teach');
+});
+
+document.getElementById('useBtn').addEventListener('click', (e) => {
+  e.stopPropagation();
+  openChat('use');
+});
+
+document.getElementById('chatInput').addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    submitChat();
+  }
+});
+
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => setFilter(btn.dataset.filter));
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  switch(e.key) {
+    case ' ':
+      e.preventDefault();
+      flipCard();
+      break;
+    case 'ArrowRight':
+      e.preventDefault();
+      goNext();
+      break;
+    case 'ArrowLeft':
+      e.preventDefault();
+      goPrev();
+      break;
+    case 'k': case 'K':
+      markKnown();
+      break;
+    case 'u': case 'U':
+      markUnknown();
+      break;
+    case 'r': case 'R':
+      if (!e.ctrlKey && !e.metaKey) shuffle();
+      break;
+  }
+});
+
+// ===== ADD WORD =====
+function refreshListOptions() {
+  const sel = document.getElementById('listSelect');
+  const hasCustom = sel.querySelector('option[value="custom"]');
+  if (state.customVocab.length > 0 && !hasCustom) {
+    const opt = document.createElement('option');
+    opt.value = 'custom';
+    opt.textContent = '自定义';
+    sel.appendChild(opt);
+  } else if (state.customVocab.length === 0 && hasCustom) {
+    hasCustom.remove();
+  }
+}
+
+function openAddWordModal() {
+  document.getElementById('addWordModal').style.display = 'flex';
+  document.getElementById('f-word').focus();
+}
+
+function closeAddWordModal() {
+  document.getElementById('addWordModal').style.display = 'none';
+}
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.tab === tab)
+  );
+  document.getElementById('tab-single').style.display = tab === 'single' ? '' : 'none';
+  document.getElementById('tab-bulk').style.display = tab === 'bulk' ? '' : 'none';
+}
+
+function addCustomWord(entry) {
+  if (!entry.word || !entry.definition) return false;
+  const newEntry = {
+    word: entry.word.trim(),
+    phonetic: entry.phonetic || '',
+    pos: entry.pos || '',
+    definition: entry.definition.trim(),
+    phrase: entry.phrase || '',
+    phrase_cn: entry.phrase_cn || '',
+    sentence: entry.sentence || '',
+    sentence_cn: entry.sentence_cn || '',
+    list: 'custom',
+  };
+  state.customVocab.push(newEntry);
+  rebuildAllVocab();
+  refreshListOptions();
+  // Extend shuffle order to include the new index so it isn't hidden
+  if (state.order) {
+    state.order.push(allVocab.length - 1);
+  }
+  return true;
+}
+
+function handleSingleAdd() {
+  const entry = {
+    word: document.getElementById('f-word').value,
+    phonetic: document.getElementById('f-phonetic').value,
+    pos: document.getElementById('f-pos').value,
+    definition: document.getElementById('f-definition').value,
+    phrase: document.getElementById('f-phrase').value,
+    phrase_cn: document.getElementById('f-phrase-cn').value,
+    sentence: document.getElementById('f-sentence').value,
+    sentence_cn: document.getElementById('f-sentence-cn').value,
+  };
+  if (!entry.word || !entry.definition) {
+    alert('单词和释义为必填项。');
+    return;
+  }
+  if (addCustomWord(entry)) {
+    // Clear form
+    ['f-word','f-phonetic','f-pos','f-definition','f-phrase','f-phrase-cn','f-sentence','f-sentence-cn'].forEach(id =>
+      document.getElementById(id).value = ''
+    );
+    // Switch to custom list to show the new word
+    currentList = 'custom';
+    document.getElementById('listSelect').value = 'custom';
+    currentPos = 0;
+    state.currentIndex = 0;
+    applyFilter();
+    render();
+    closeAddWordModal();
+  }
+}
+
+function handleBulkImport() {
+  const text = document.getElementById('bulkText').value.trim();
+  if (!text) return;
+  const lines = text.split('\n').filter(l => l.trim());
+  let added = 0;
+  let skipped = 0;
+  for (const line of lines) {
+    const parts = line.split('|').map(p => p.trim());
+    if (parts.length < 2) { skipped++; continue; }
+    const entry = {
+      word: parts[0],
+      definition: parts[1],
+      phrase: parts[2] || '',
+      phrase_cn: parts[3] || '',
+      sentence: parts[4] || '',
+      sentence_cn: parts[5] || '',
+    };
+    if (addCustomWord(entry)) added++;
+    else skipped++;
+  }
+  document.getElementById('bulkText').value = '';
+  currentList = 'custom';
+  document.getElementById('listSelect').value = 'custom';
+  currentPos = 0;
+  state.currentIndex = 0;
+  applyFilter();
+  render();
+  closeAddWordModal();
+  alert(`导入完成：成功 ${added} 个，跳过 ${skipped} 个。记得点「保存进度」把新单词存下来！`);
+}
+
+// ===== INIT =====
+rebuildAllVocab();
+refreshListOptions();
+// Restore saved list selection
+if (state.list) {
+  currentList = state.list;
+  document.getElementById('listSelect').value = currentList;
+}
+applyFilter();
+document.querySelectorAll('.filter-btn').forEach(b =>
+  b.classList.toggle('btn-primary', b.dataset.filter === currentFilter)
+);
+render();
+
+// List select handler
+document.getElementById('listSelect').addEventListener('change', (e) => {
+  currentList = e.target.value;
+  currentPos = 0;
+  state.currentIndex = 0;
+  applyFilter();
+  closeChat();
+  document.querySelectorAll('.filter-btn').forEach(b =>
+    b.classList.toggle('btn-primary', b.dataset.filter === currentFilter)
+  );
+  render();
+});
+
+// Modal event listeners
+document.getElementById('addWordBtn').addEventListener('click', openAddWordModal);
+document.getElementById('modalClose').addEventListener('click', closeAddWordModal);
+document.getElementById('addWordModal').addEventListener('click', (e) => {
+  if (e.target === document.getElementById('addWordModal')) closeAddWordModal();
+});
+document.getElementById('addSingleBtn').addEventListener('click', handleSingleAdd);
+document.getElementById('bulkImportBtn').addEventListener('click', handleBulkImport);
+document.querySelectorAll('.tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+});
+</script>
+</body>
+</html>

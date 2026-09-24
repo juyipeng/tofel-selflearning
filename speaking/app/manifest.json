@@ -1,0 +1,1507 @@
+{
+ "title": "新托福口语 7 月回顾",
+ "lr": [
+  {
+   "id": "LR01",
+   "title": "Wall Painting Training",
+   "scenario": "A manager is training a part-time hardware-store employee to teach others how to paint a wall.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Use a drop cloth on the floor to prevent stains.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Apply painter's tape to edges for clean lines.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Pour the paint directly into a tray for easy access.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Use a roller for even coverage on large areas.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Start painting at the top of the wall and work steadily downward.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "You might use an extension ladder to reach very high spots and corners.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "For the best results, remember to remove the tape before the paint fully dries.",
+     "audio": "audio/listen_and_repeat/LR01/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR02",
+   "title": "Community Garden Training",
+   "scenario": "A leader is training a volunteer to teach new members how to care for a community garden.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Protect your hands while working in the garden.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Put tools away after using them.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Follow the posted rules so everyone can stay safe.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Use safe lifting methods whenever you move large garden items.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Put yard scraps in the compost pile to maintain a tidy garden.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "After watering the plants, store the hose properly so no one will trip on it.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "During hot weather, drink water because hydration is important for good health.",
+     "audio": "audio/listen_and_repeat/LR02/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR03",
+   "title": "Woodworking Simple Steps",
+   "scenario": "An art student is helping a professor train participants in a community woodworking class.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Measure carefully to avoid mistakes.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Draw a line with a pencil before cutting.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Tap nails gently with a hammer so that the wood will not crack.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Hold the workpiece firmly in place while cutting to prevent accidents.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Polish the surface evenly until the board feels smooth.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Keep the tool straight when drilling wood to create neat and smooth holes.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Wear safety glasses for protection when using saws or heavy equipment.",
+     "audio": "audio/listen_and_repeat/LR03/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR04",
+   "title": "Class Registration Training",
+   "scenario": "A trainer is teaching a helper how to guide new students through course registration.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Enter your name and student ID number.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Browse the course catalog to choose your classes.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "You can use the schedule planner tool to avoid time conflicts.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "If a class is already full, a pop-up message will appear.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Contact the instructor to see if more seats can be added.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "You can still add or drop classes up until the second week of the new semester.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "For your records, print out a list of your classes or email a copy to yourself.",
+     "audio": "audio/listen_and_repeat/LR04/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR05",
+   "title": "Handling Sensitive Library Materials",
+   "scenario": "A library manager is training student-workers to handle sensitive library materials.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Store documents properly to prevent damage.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Temperature controls help protect papers.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Use the catalog system to organize records accurately.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Use restoration tools carefully to repair damaged items.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "We provide a quiet reading area for researchers.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Security cameras are used to monitor sensitive materials.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "If long-term storage is needed, use the special storage boxes over here.",
+     "audio": "audio/listen_and_repeat/LR05/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR06",
+   "title": "Science Project Presentations",
+   "scenario": "A school supervisor is training an intern to help students prepare science project presentations.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Start by setting up the projector screen.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Use the whiteboard to highlight key points.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Arrange your project materials neatly on the tables.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Check all the equipment to ensure it works properly.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Make sure your computer is set up for your presentation.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "It's a good idea to practice delivering your speech in front of some friends.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Take time to review your notes thoroughly, so you'll feel confident and prepared.",
+     "audio": "audio/listen_and_repeat/LR06/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR07",
+   "title": "Supporting Learners in a Yoga Studio",
+   "scenario": "A fitness-center manager is training an employee to assist customers during yoga activities.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Find a good place to roll out your mat.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Keep some water handy to drink when needed.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Focus on slow breathing to stay relaxed through each movement.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Pay attention to the instructor's words to learn proper form.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "A block can help you maintain your balance while holding poses.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "During meditation, use a cushion to help relax and support your body.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "If you have questions about the positions, speak with the teacher after class.",
+     "audio": "audio/listen_and_repeat/LR07/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR08",
+   "title": "Making a Clay Bowl",
+   "scenario": "An instructor is showing children how to make a clay bowl.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Moisten the clay with a small amount of water before shaping it.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Place the clay firmly in the center of the pottery wheel.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Press your thumbs into the middle to create an opening.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Pull the sides upward evenly to form the bowl.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Smooth any rough areas with a damp sponge.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Trim the extra clay around the base when the shape is stable.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Let the finished bowl dry completely before moving it.",
+     "audio": "audio/listen_and_repeat/LR08/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR09",
+   "title": "Arranging Flowers",
+   "scenario": "An instructor is explaining how to make a balanced flower arrangement.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Cut each flower stem at an angle before placing it in water.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Put a layer of small pebbles in the bottom of the container.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Place the tallest flowers near the center of the arrangement.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Use smaller flowers to fill the spaces around them.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Add a few green leaves to create color and texture.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Replace the water regularly to keep the flowers fresh.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Finish the arrangement by tying a ribbon around the container.",
+     "audio": "audio/listen_and_repeat/LR09/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR10",
+   "title": "Botanical Garden Care",
+   "scenario": "A supervisor is training a new employee at a botanical garden.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Water the young trees thoroughly during dry weather.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Add nutrients to the soil in the flower beds.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Adjust the greenhouse temperature when conditions change.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do not use chemical products near the pond.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Place plant waste in the compost pile.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Return all equipment to the tool shed after use.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Direct visitors to the visitor center when they need assistance.",
+     "audio": "audio/listen_and_repeat/LR10/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR11",
+   "title": "Baking Bread",
+   "scenario": "An instructor is teaching a community class how to bake bread.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Measure every ingredient accurately before you begin.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Add the yeast to warm water and let it activate.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Combine the wet and dry ingredients to make a dough.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Press and fold the dough repeatedly until it becomes smooth.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Leave the dough in a warm place so it can rise.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Bake it until the top is brown and the center feels firm.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Cool the bread on a rack before slicing it.",
+     "audio": "audio/listen_and_repeat/LR11/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR12",
+   "title": "Media Production Studio",
+   "scenario": "A staff member is introducing the equipment in a university media studio.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Use the cameras to record interviews and other video projects.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Adjust the studio lights to control shadows and brightness.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Choose the microphones that best match your recording environment.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Edit and improve still images at the photo workstation.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Use the green screen to replace the background digitally.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Manage video and sound sources from the main control desk.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Record clean audio in the soundproof booth.",
+     "audio": "audio/listen_and_repeat/LR12/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR13",
+   "title": "Watercolor Painting",
+   "scenario": "An instructor is explaining basic watercolor painting techniques.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Dampen the brush gently before you begin painting.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Pick up only a small amount of paint with the brush.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Mix two or more paints to create a new color.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Apply thin layers so the paper does not tear.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Use a smaller brush when painting fine details.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Blot away extra water when an area becomes too wet.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Dry the finished painting with warm air before moving or storing it.",
+     "audio": "audio/listen_and_repeat/LR13/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR14",
+   "title": "Career Fair Services",
+   "scenario": "A staff member is explaining the services available at a university career fair.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Visit employers to learn about jobs.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Career workshops offer tools and guidance.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Use this space to build relationships and exchange information.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Get feedback from specialists on how to write your resume.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Feel free to take a break and recharge with some refreshments.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "If you're unsure where to begin, follow the group tour that explores key areas.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "If you are trying to make the most of your time, consult the map in advance.",
+     "audio": "audio/listen_and_repeat/LR14/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR15",
+   "title": "Cultural Festival Guide",
+   "scenario": "A staff member is introducing the activities and services at a cultural festival.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Dance performances will take place throughout the day.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Taste traditional foods from several different countries.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "View creative works made by international artists.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Join the activities to learn about different traditions.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Ask a staff member if you have questions about the program.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Use the map to find events and plan the order of your visit.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Join a certified guide for a more detailed tour.",
+     "audio": "audio/listen_and_repeat/LR15/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR16",
+   "title": "Preparing a Latte",
+   "scenario": "A cafe supervisor is teaching an employee how to prepare and serve a latte.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Use the machine to make one shot of espresso.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Steam the milk until it becomes hot and foamy.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Pour the espresso into a cup of the correct size.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Add the milk slowly until the cup is about half full.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Create a simple design with a spoon if you know the technique.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Ask the customer whether they would like sugar or honey.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Place a small piece of chocolate beside the cup before serving it.",
+     "audio": "audio/listen_and_repeat/LR16/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR17",
+   "title": "Art Gallery Guide",
+   "scenario": "A staff member is introducing the main areas and services in an art gallery.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "The first exhibition area displays ancient artifacts.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Modern artwork is shown in this part of the gallery.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "The learning laboratory has activities for visitors of different ages.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Stop at the cafe if you need a break during your visit.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "The gift shop sells souvenirs at reasonable prices.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Reserve weekend guided tours in advance.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Check the map if you are interested in special events.",
+     "audio": "audio/listen_and_repeat/LR17/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR18",
+   "title": "Online Learning Platform",
+   "scenario": "An instructor is explaining how to use an online learning platform.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Log in to the dashboard to see your current courses.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Check the assignment deadlines listed on the calendar.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Open the course area to view and download learning materials.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Take part in discussions on the class forum.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Review your grades regularly to monitor your progress.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Set up daily notifications for important updates.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Use the help page when you need to solve a technical problem.",
+     "audio": "audio/listen_and_repeat/LR18/sentence_07.mp3"
+    }
+   ]
+  },
+  {
+   "id": "LR19",
+   "title": "Repairing a Bicycle Tire",
+   "scenario": "A technician is explaining how to repair a bicycle tire.",
+   "sentences": [
+    {
+     "no": 1,
+     "text": "Choose the correct tools before removing the wheel.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Release the air from the tire completely.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Find the hole in the inner tube and mark its location.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Select a patch and attach it firmly over the hole.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_04.mp3"
+    },
+    {
+     "no": 5,
+     "text": "Use a pump to inflate the tube to the correct pressure.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_05.mp3"
+    },
+    {
+     "no": 6,
+     "text": "Place the tube in water to check for another leak.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_06.mp3"
+    },
+    {
+     "no": 7,
+     "text": "Reinstall and tighten the wheel after confirming there are no other problems.",
+     "audio": "audio/listen_and_repeat/LR19/sentence_07.mp3"
+    }
+   ]
+  }
+ ],
+ "int": [
+  {
+   "id": "INT01",
+   "title": "time management habits",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Thank you for agreeing to participate. I'd like to ask you some questions about your time management habits. First, do you use any tools or techniques to manage your time effectively? Please give some examples.",
+     "audio": "audio/take_an_interview/INT01/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Can you describe a typical day's events for you and how you organize your time?",
+     "audio": "audio/take_an_interview/INT01/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Interesting. Tell me about a time when you had to manage multiple tasks or responsibilities at once. How did you handle it?",
+     "audio": "audio/take_an_interview/INT01/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Some people believe that managing your time wisely can lead to higher productivity, while others think it can cause unnecessary stress and prefer a looser schedule. What is your opinion on this?",
+     "audio": "audio/take_an_interview/INT01/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT02",
+   "title": "education experiences",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Thank you for joining the study. Today I'd like to ask you some questions about your education experiences. First, which do you think is more important for a college, offering a wide variety of courses or having small class sizes? Why?",
+     "audio": "audio/take_an_interview/INT02/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Imagine that you are preparing for a test. Would you prefer to study by yourself or with a group? What would make you choose one over the other?",
+     "audio": "audio/take_an_interview/INT02/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Interesting. Some people believe that online courses offer more flexibility and accessibility compared to those offered in traditional classroom settings and are therefore superior. What are your thoughts on this? Do you agree or disagree? Why?",
+     "audio": "audio/take_an_interview/INT02/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Good points. Lastly, online courses are becoming increasingly popular and there are now full degree programs offered by universities where every class is available online only. Do you think online learning will someday completely replace in-person learning? Explain your thoughts.",
+     "audio": "audio/take_an_interview/INT02/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT03",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "What is one aspect of history that you find particularly interesting?",
+     "audio": "audio/take_an_interview/INT03/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Describe a history-related activity or project you enjoyed. What made it engaging?",
+     "audio": "audio/take_an_interview/INT03/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "If you were to visit a historical site you've never visited before, which one would you choose and why?",
+     "audio": "audio/take_an_interview/INT03/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do you think the study of history remains important in today's education system? Why or why not?",
+     "audio": "audio/take_an_interview/INT03/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT04",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How important is the issue of renewable energy, such as wind and solar power, to you personally? Why?",
+     "audio": "audio/take_an_interview/INT04/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Describe a time when you or someone you know tried to reduce energy use. What actions were taken?",
+     "audio": "audio/take_an_interview/INT04/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Have you noticed any renewable energy initiatives in your community? If not, what initiative might be beneficial?",
+     "audio": "audio/take_an_interview/INT04/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do you think the benefits of renewable energy outweigh the drawbacks? Why or why not?",
+     "audio": "audio/take_an_interview/INT04/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT05",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you take any specific actions to reduce your environmental impact, such as recycling or conserving energy? Give details.",
+     "audio": "audio/take_an_interview/INT05/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Can you describe one or two steps your community takes to be environmentally friendly?",
+     "audio": "audio/take_an_interview/INT05/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "If you could participate in an ecological activity, what would you do and why?",
+     "audio": "audio/take_an_interview/INT05/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do you agree that significant conservation changes must come from government policy rather than individual actions? Why or why not?",
+     "audio": "audio/take_an_interview/INT05/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT06",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you personally enjoy giving or receiving gifts? Why?",
+     "audio": "audio/take_an_interview/INT06/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What factors do you consider when choosing a gift for someone else?",
+     "audio": "audio/take_an_interview/INT06/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Tell me about one memorable gift you have received or given to a friend.",
+     "audio": "audio/take_an_interview/INT06/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Is exchanging gifts essential for maintaining close human relationships? What are your thoughts?",
+     "audio": "audio/take_an_interview/INT06/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT07",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you use any tools or techniques to manage your time effectively?",
+     "audio": "audio/take_an_interview/INT07/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Can you describe a typical day's events for you and how you organize your time?",
+     "audio": "audio/take_an_interview/INT07/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Tell me about a time when you had to manage multiple tasks or responsibilities at once. How did you handle it?",
+     "audio": "audio/take_an_interview/INT07/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Some people believe that managing your time wisely can lead to higher productivity, while others think it can cause unnecessary stress and prefer a looser schedule. What is your opinion on this?",
+     "audio": "audio/take_an_interview/INT07/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT08",
+   "title": "transportation",
+   "questions": [
+    {
+     "no": 1,
+     "text": "I'd like to ask you some questions about transportation. What kind of transportation do your family or friends usually prefer when they travel? For example, do they prefer trains, buses, or boats?",
+     "audio": "audio/take_an_interview/INT08/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What do you think of the public transportation system and the place you live? Tell me one thing you especially like or dislike.",
+     "audio": "audio/take_an_interview/INT08/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "In recent years, there has been a push toward working from home instead of in an office building. Do you think more people will work from home in the future? Why or why not?",
+     "audio": "audio/take_an_interview/INT08/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Some people believe that improving public transportation systems is essential for reducing traffic congestion and pollution in cities. Do you support this idea or do you think other solutions would be more effective?",
+     "audio": "audio/take_an_interview/INT08/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT09",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How would you describe the weather where you live?",
+     "audio": "audio/take_an_interview/INT09/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "How do you prepare for a rainy day?",
+     "audio": "audio/take_an_interview/INT09/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What kind of weather would you most like to live in and why?",
+     "audio": "audio/take_an_interview/INT09/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "How does the weather affect the way you plan your daily activities?",
+     "audio": "audio/take_an_interview/INT09/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT10",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you prefer indoor or outdoor activities in your free time?",
+     "audio": "audio/take_an_interview/INT10/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What is your favorite leisure activity and what do you enjoy about it?",
+     "audio": "audio/take_an_interview/INT10/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "How often do you take part in that activity and who usually joins you?",
+     "audio": "audio/take_an_interview/INT10/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "What role do leisure activities play in a person's life?",
+     "audio": "audio/take_an_interview/INT10/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT11",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you live alone or share your home with other people?",
+     "audio": "audio/take_an_interview/INT11/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What activities do you usually do at home?",
+     "audio": "audio/take_an_interview/INT11/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What would your ideal living environment be like?",
+     "audio": "audio/take_an_interview/INT11/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "What habit helps you keep your home comfortable and organized?",
+     "audio": "audio/take_an_interview/INT11/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT12",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How often do you shop online?",
+     "audio": "audio/take_an_interview/INT12/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What kinds of products are you most likely to buy online?",
+     "audio": "audio/take_an_interview/INT12/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Is online shopping more convenient than shopping in a physical store?",
+     "audio": "audio/take_an_interview/INT12/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do you think physical stores will disappear because of online shopping?",
+     "audio": "audio/take_an_interview/INT12/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT13",
+   "title": "entertainment preferences",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Thank you for your participation. Today, I'd like to ask you some questions about your entertainment preferences. What kind of movies do your family or friends generally like to watch? For example, do they prefer action movies, comedies, dramas, or other types?",
+     "audio": "audio/take_an_interview/INT13/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "I see. When you watch a movie, do you prefer to watch after work or school on weekdays? Or do you like to watch during the weekends? Why?",
+     "audio": "audio/take_an_interview/INT13/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Interesting. Next, I'd like to get your opinion in the past. People mostly watch movies in theaters today. Many people watch movies at home. Do you think that movie theaters will continue to exist in the future? Why or why not?",
+     "audio": "audio/take_an_interview/INT13/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Good points. I just have one more question. Some people believe that movies can be a powerful tool for educating people and raising awareness about important issues. Do you agree with this idea or do you think there are other more effective ways to educate people? Explain why you think so.",
+     "audio": "audio/take_an_interview/INT13/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT14",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Where do you prefer to shop for clothes, and why?",
+     "audio": "audio/take_an_interview/INT14/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "How would you describe your personal clothing style?",
+     "audio": "audio/take_an_interview/INT14/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "How do you decide what to wear on an ordinary day?",
+     "audio": "audio/take_an_interview/INT14/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "What is your opinion of buying clothes mainly to follow fast-changing fashion trends?",
+     "audio": "audio/take_an_interview/INT14/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT15",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "What is one important goal you are working toward now?",
+     "audio": "audio/take_an_interview/INT15/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What steps are you taking and what difficulty have you faced?",
+     "audio": "audio/take_an_interview/INT15/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What achievement has been especially meaningful to you?",
+     "audio": "audio/take_an_interview/INT15/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "How do personal goals contribute to a person's growth?",
+     "audio": "audio/take_an_interview/INT15/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT16",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "What hobby do you currently enjoy, and how did you begin it?",
+     "audio": "audio/take_an_interview/INT16/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What new hobby would you like to try?",
+     "audio": "audio/take_an_interview/INT16/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What obstacle might make that new hobby difficult?",
+     "audio": "audio/take_an_interview/INT16/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Is it better to focus on one hobby or develop several hobbies?",
+     "audio": "audio/take_an_interview/INT16/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT17",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How often do you shop for groceries?",
+     "audio": "audio/take_an_interview/INT17/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What products do you buy most often?",
+     "audio": "audio/take_an_interview/INT17/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Do you ever make impulse purchases at the grocery store?",
+     "audio": "audio/take_an_interview/INT17/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "What factors have the greatest influence on your grocery choices?",
+     "audio": "audio/take_an_interview/INT17/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT18",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How often do you review your income and spending?",
+     "audio": "audio/take_an_interview/INT18/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What method do you use to manage your money?",
+     "audio": "audio/take_an_interview/INT18/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What financial goal have you successfully reached?",
+     "audio": "audio/take_an_interview/INT18/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "What financial advice would you give another student?",
+     "audio": "audio/take_an_interview/INT18/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT19",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How often do you use buses or trains?",
+     "audio": "audio/take_an_interview/INT19/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What is one benefit and one inconvenience of public transportation?",
+     "audio": "audio/take_an_interview/INT19/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Would you move to make public transportation more convenient?",
+     "audio": "audio/take_an_interview/INT19/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Should cities invest more in public transportation to reduce congestion, travel time, and pollution?",
+     "audio": "audio/take_an_interview/INT19/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT20",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Have you attended a cultural festival, or is there one you would like to attend?",
+     "audio": "audio/take_an_interview/INT20/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What would you most like to see or experience at such a festival?",
+     "audio": "audio/take_an_interview/INT20/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What part of your own culture would you share at a festival, and why?",
+     "audio": "audio/take_an_interview/INT20/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Are cultural festivals only entertainment, or can they help preserve traditions?",
+     "audio": "audio/take_an_interview/INT20/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT21",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you prefer to plan tasks in advance or decide what to do at the last minute?",
+     "audio": "audio/take_an_interview/INT21/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What do you do when your plan is interrupted? Give an example.",
+     "audio": "audio/take_an_interview/INT21/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Is it necessary to maintain a strict daily routine?",
+     "audio": "audio/take_an_interview/INT21/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Describe a day when following a plan helped you.",
+     "audio": "audio/take_an_interview/INT21/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT22",
+   "title": "exercise programs",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Thank you for agreeing to participate. I'd like to ask you some questions about exercise programs. First, do you think exercising daily is important for good health? Why or why not?",
+     "audio": "audio/take_an_interview/INT22/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "Thank you. Imagine you are going to recommend or create an exercise program for a friend or family member who does not currently exercise. What kind of exercise or fitness routine would you recommend? Why?",
+     "audio": "audio/take_an_interview/INT22/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Interesting. For that same friend or family member, what do you think might challenge them the most about a regular exercise program? How would you help them through this challenge?",
+     "audio": "audio/take_an_interview/INT22/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Great. Some people believe that it is important to have some sort of reward after a good week of exercising. What do you think would be a good reward for the program you created? And why?",
+     "audio": "audio/take_an_interview/INT22/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT23",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Did you enjoy your school experience as a child?",
+     "audio": "audio/take_an_interview/INT23/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What school project or activity was especially memorable?",
+     "audio": "audio/take_an_interview/INT23/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What technology did you use in school, and did your education prepare you for life after school?",
+     "audio": "audio/take_an_interview/INT23/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Should schools teach more problem-solving and teamwork instead of mainly teaching facts?",
+     "audio": "audio/take_an_interview/INT23/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT24",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Would you like to work remotely and how often?",
+     "audio": "audio/take_an_interview/INT24/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What difficulty can remote work create?",
+     "audio": "audio/take_an_interview/INT24/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Should companies make access to remote workfare for employees?",
+     "audio": "audio/take_an_interview/INT24/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Will remote work become the main way people work in the future?",
+     "audio": "audio/take_an_interview/INT24/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT25",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "Do you enjoy giving gifts and why?",
+     "audio": "audio/take_an_interview/INT25/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "How do you decide what gift to give someone?",
+     "audio": "audio/take_an_interview/INT25/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "Describe a memorable experience of giving or receiving a gift.",
+     "audio": "audio/take_an_interview/INT25/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "When receiving a gift, do you prefer something from a wish list or a surprise?",
+     "audio": "audio/take_an_interview/INT25/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT26",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "What action have you taken to reduce your environmental impact?",
+     "audio": "audio/take_an_interview/INT26/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What environmental protection measure is used in your community?",
+     "audio": "audio/take_an_interview/INT26/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What nature or environmental activity would you join if you had the opportunity?",
+     "audio": "audio/take_an_interview/INT26/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Do major environmental changes require government policy?",
+     "audio": "audio/take_an_interview/INT26/question_04.mp3"
+    }
+   ]
+  },
+  {
+   "id": "INT27",
+   "title": "",
+   "questions": [
+    {
+     "no": 1,
+     "text": "How many times do you exercise in a typical week?",
+     "audio": "audio/take_an_interview/INT27/question_01.mp3"
+    },
+    {
+     "no": 2,
+     "text": "What exercise would you recommend to a friend or relative and why?",
+     "audio": "audio/take_an_interview/INT27/question_02.mp3"
+    },
+    {
+     "no": 3,
+     "text": "What new sport or physical activity would you like to try?",
+     "audio": "audio/take_an_interview/INT27/question_03.mp3"
+    },
+    {
+     "no": 4,
+     "text": "Can too much exercise have negative effects on physical or mental health?",
+     "audio": "audio/take_an_interview/INT27/question_04.mp3"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,274 @@
+{
+ "units": [
+  {
+   "id": "INT01",
+   "title": "time management habits",
+   "questions": [
+    "Thank you for agreeing to participate. I'd like to ask you some questions about your time management habits. First, do you use any tools or techniques to manage your time effectively? Please give some examples.",
+    "Can you describe a typical day's events for you and how you organize your time?",
+    "Interesting. Tell me about a time when you had to manage multiple tasks or responsibilities at once. How did you handle it?",
+    "Some people believe that managing your time wisely can lead to higher productivity, while others think it can cause unnecessary stress and prefer a looser schedule. What is your opinion on this?"
+   ]
+  },
+  {
+   "id": "INT02",
+   "title": "education experiences",
+   "questions": [
+    "Thank you for joining the study. Today I'd like to ask you some questions about your education experiences. First, which do you think is more important for a college, offering a wide variety of courses or having small class sizes? Why?",
+    "Imagine that you are preparing for a test. Would you prefer to study by yourself or with a group? What would make you choose one over the other?",
+    "Interesting. Some people believe that online courses offer more flexibility and accessibility compared to those offered in traditional classroom settings and are therefore superior. What are your thoughts on this? Do you agree or disagree? Why?",
+    "Good points. Lastly, online courses are becoming increasingly popular and there are now full degree programs offered by universities where every class is available online only. Do you think online learning will someday completely replace in-person learning? Explain your thoughts."
+   ]
+  },
+  {
+   "id": "INT03",
+   "title": "",
+   "questions": [
+    "What is one aspect of history that you find particularly interesting?",
+    "Describe a history-related activity or project you enjoyed. What made it engaging?",
+    "If you were to visit a historical site you've never visited before, which one would you choose and why?",
+    "Do you think the study of history remains important in today's education system? Why or why not?"
+   ]
+  },
+  {
+   "id": "INT04",
+   "title": "",
+   "questions": [
+    "How important is the issue of renewable energy, such as wind and solar power, to you personally? Why?",
+    "Describe a time when you or someone you know tried to reduce energy use. What actions were taken?",
+    "Have you noticed any renewable energy initiatives in your community? If not, what initiative might be beneficial?",
+    "Do you think the benefits of renewable energy outweigh the drawbacks? Why or why not?"
+   ]
+  },
+  {
+   "id": "INT05",
+   "title": "",
+   "questions": [
+    "Do you take any specific actions to reduce your environmental impact, such as recycling or conserving energy? Give details.",
+    "Can you describe one or two steps your community takes to be environmentally friendly?",
+    "If you could participate in an ecological activity, what would you do and why?",
+    "Do you agree that significant conservation changes must come from government policy rather than individual actions? Why or why not?"
+   ]
+  },
+  {
+   "id": "INT06",
+   "title": "",
+   "questions": [
+    "Do you personally enjoy giving or receiving gifts? Why?",
+    "What factors do you consider when choosing a gift for someone else?",
+    "Tell me about one memorable gift you have received or given to a friend.",
+    "Is exchanging gifts essential for maintaining close human relationships? What are your thoughts?"
+   ]
+  },
+  {
+   "id": "INT07",
+   "title": "",
+   "questions": [
+    "Do you use any tools or techniques to manage your time effectively?",
+    "Can you describe a typical day's events for you and how you organize your time?",
+    "Tell me about a time when you had to manage multiple tasks or responsibilities at once. How did you handle it?",
+    "Some people believe that managing your time wisely can lead to higher productivity, while others think it can cause unnecessary stress and prefer a looser schedule. What is your opinion on this?"
+   ]
+  },
+  {
+   "id": "INT08",
+   "title": "transportation",
+   "questions": [
+    "I'd like to ask you some questions about transportation. What kind of transportation do your family or friends usually prefer when they travel? For example, do they prefer trains, buses, or boats?",
+    "What do you think of the public transportation system and the place you live? Tell me one thing you especially like or dislike.",
+    "In recent years, there has been a push toward working from home instead of in an office building. Do you think more people will work from home in the future? Why or why not?",
+    "Some people believe that improving public transportation systems is essential for reducing traffic congestion and pollution in cities. Do you support this idea or do you think other solutions would be more effective?"
+   ]
+  },
+  {
+   "id": "INT09",
+   "title": "",
+   "questions": [
+    "How would you describe the weather where you live?",
+    "How do you prepare for a rainy day?",
+    "What kind of weather would you most like to live in and why?",
+    "How does the weather affect the way you plan your daily activities?"
+   ]
+  },
+  {
+   "id": "INT10",
+   "title": "",
+   "questions": [
+    "Do you prefer indoor or outdoor activities in your free time?",
+    "What is your favorite leisure activity and what do you enjoy about it?",
+    "How often do you take part in that activity and who usually joins you?",
+    "What role do leisure activities play in a person's life?"
+   ]
+  },
+  {
+   "id": "INT11",
+   "title": "",
+   "questions": [
+    "Do you live alone or share your home with other people?",
+    "What activities do you usually do at home?",
+    "What would your ideal living environment be like?",
+    "What habit helps you keep your home comfortable and organized?"
+   ]
+  },
+  {
+   "id": "INT12",
+   "title": "",
+   "questions": [
+    "How often do you shop online?",
+    "What kinds of products are you most likely to buy online?",
+    "Is online shopping more convenient than shopping in a physical store?",
+    "Do you think physical stores will disappear because of online shopping?"
+   ]
+  },
+  {
+   "id": "INT13",
+   "title": "entertainment preferences",
+   "questions": [
+    "Thank you for your participation. Today, I'd like to ask you some questions about your entertainment preferences. What kind of movies do your family or friends generally like to watch? For example, do they prefer action movies, comedies, dramas, or other types?",
+    "I see. When you watch a movie, do you prefer to watch after work or school on weekdays? Or do you like to watch during the weekends? Why?",
+    "Interesting. Next, I'd like to get your opinion in the past. People mostly watch movies in theaters today. Many people watch movies at home. Do you think that movie theaters will continue to exist in the future? Why or why not?",
+    "Good points. I just have one more question. Some people believe that movies can be a powerful tool for educating people and raising awareness about important issues. Do you agree with this idea or do you think there are other more effective ways to educate people? Explain why you think so."
+   ]
+  },
+  {
+   "id": "INT14",
+   "title": "",
+   "questions": [
+    "Where do you prefer to shop for clothes, and why?",
+    "How would you describe your personal clothing style?",
+    "How do you decide what to wear on an ordinary day?",
+    "What is your opinion of buying clothes mainly to follow fast-changing fashion trends?"
+   ]
+  },
+  {
+   "id": "INT15",
+   "title": "",
+   "questions": [
+    "What is one important goal you are working toward now?",
+    "What steps are you taking and what difficulty have you faced?",
+    "What achievement has been especially meaningful to you?",
+    "How do personal goals contribute to a person's growth?"
+   ]
+  },
+  {
+   "id": "INT16",
+   "title": "",
+   "questions": [
+    "What hobby do you currently enjoy, and how did you begin it?",
+    "What new hobby would you like to try?",
+    "What obstacle might make that new hobby difficult?",
+    "Is it better to focus on one hobby or develop several hobbies?"
+   ]
+  },
+  {
+   "id": "INT17",
+   "title": "",
+   "questions": [
+    "How often do you shop for groceries?",
+    "What products do you buy most often?",
+    "Do you ever make impulse purchases at the grocery store?",
+    "What factors have the greatest influence on your grocery choices?"
+   ]
+  },
+  {
+   "id": "INT18",
+   "title": "",
+   "questions": [
+    "How often do you review your income and spending?",
+    "What method do you use to manage your money?",
+    "What financial goal have you successfully reached?",
+    "What financial advice would you give another student?"
+   ]
+  },
+  {
+   "id": "INT19",
+   "title": "",
+   "questions": [
+    "How often do you use buses or trains?",
+    "What is one benefit and one inconvenience of public transportation?",
+    "Would you move to make public transportation more convenient?",
+    "Should cities invest more in public transportation to reduce congestion, travel time, and pollution?"
+   ]
+  },
+  {
+   "id": "INT20",
+   "title": "",
+   "questions": [
+    "Have you attended a cultural festival, or is there one you would like to attend?",
+    "What would you most like to see or experience at such a festival?",
+    "What part of your own culture would you share at a festival, and why?",
+    "Are cultural festivals only entertainment, or can they help preserve traditions?"
+   ]
+  },
+  {
+   "id": "INT21",
+   "title": "",
+   "questions": [
+    "Do you prefer to plan tasks in advance or decide what to do at the last minute?",
+    "What do you do when your plan is interrupted? Give an example.",
+    "Is it necessary to maintain a strict daily routine?",
+    "Describe a day when following a plan helped you."
+   ]
+  },
+  {
+   "id": "INT22",
+   "title": "exercise programs",
+   "questions": [
+    "Thank you for agreeing to participate. I'd like to ask you some questions about exercise programs. First, do you think exercising daily is important for good health? Why or why not?",
+    "Thank you. Imagine you are going to recommend or create an exercise program for a friend or family member who does not currently exercise. What kind of exercise or fitness routine would you recommend? Why?",
+    "Interesting. For that same friend or family member, what do you think might challenge them the most about a regular exercise program? How would you help them through this challenge?",
+    "Great. Some people believe that it is important to have some sort of reward after a good week of exercising. What do you think would be a good reward for the program you created? And why?"
+   ]
+  },
+  {
+   "id": "INT23",
+   "title": "",
+   "questions": [
+    "Did you enjoy your school experience as a child?",
+    "What school project or activity was especially memorable?",
+    "What technology did you use in school, and did your education prepare you for life after school?",
+    "Should schools teach more problem-solving and teamwork instead of mainly teaching facts?"
+   ]
+  },
+  {
+   "id": "INT24",
+   "title": "",
+   "questions": [
+    "Would you like to work remotely and how often?",
+    "What difficulty can remote work create?",
+    "Should companies make access to remote workfare for employees?",
+    "Will remote work become the main way people work in the future?"
+   ]
+  },
+  {
+   "id": "INT25",
+   "title": "",
+   "questions": [
+    "Do you enjoy giving gifts and why?",
+    "How do you decide what gift to give someone?",
+    "Describe a memorable experience of giving or receiving a gift.",
+    "When receiving a gift, do you prefer something from a wish list or a surprise?"
+   ]
+  },
+  {
+   "id": "INT26",
+   "title": "",
+   "questions": [
+    "What action have you taken to reduce your environmental impact?",
+    "What environmental protection measure is used in your community?",
+    "What nature or environmental activity would you join if you had the opportunity?",
+    "Do major environmental changes require government policy?"
+   ]
+  },
+  {
+   "id": "INT27",
+   "title": "",
+   "questions": [
+    "How many times do you exercise in a typical week?",
+    "What exercise would you recommend to a friend or relative and why?",
+    "What new sport or physical activity would you like to try?",
+    "Can too much exercise have negative effects on physical or mental health?"
+   ]
+  }
+ ]
+}

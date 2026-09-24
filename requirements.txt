@@ -1,0 +1,33 @@
+# 依赖按用途分组 —— 不需要全装，用哪个模块装哪个。
+# 安装示例：pip install -r requirements.txt
+# 或者只装一组：pip install Pillow
+
+# ---- 核心：OCR 与图像处理 ----
+# 阅读/听力/口语/写作/组句的抽取脚本都要用
+Pillow>=10.0
+
+# ---- 口语评分 + 听力转写 ----
+# 需要 PyTorch 环境（GPU 更好）。装了它才能跑 `start.py speaking` 完整模式。
+# 注意：cuda 版本请按 https://pytorch.org 的指引单独装 torch，再装下面这个。
+faster-whisper>=1.0
+
+# ---- 批量 LLM 结构化输出（make-a-sentence/llm_order.py）----
+langchain>=0.2
+langchain-openai>=0.1
+openai>=1.0
+
+# ============================================================
+# 非 pip 依赖（需要单独装）：
+#
+#   ffmpeg    —— 音频格式转换与切片（重建听力模块时用）
+#                下载：https://ffmpeg.org/download.html
+#
+#   poppler   —— pdftoppm / pdfinfo / pdfimages（拆 PDF 用）
+#                Windows：https://github.com/oschwartz10612/poppler-windows/releases
+#
+#   Ollama    —— 本地跑 GLM-OCR，无配额限制
+#                https://ollama.com
+#                拉模型：ollama pull glm-ocr:q8_0   （约 1.6 GB）
+#
+# 写作模块的 server.py 只用 Python 标准库，不需要任何第三方包。
+# ============================================================

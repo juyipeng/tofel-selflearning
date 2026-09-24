@@ -1,0 +1,31 @@
+读取 `e:\code\personal_projects\TOEFL-learning\make-a-sentence\data\agent_batches\batch_XXX.json`，是 JSON 数组，每题一个对象：
+
+```json
+{"b":"BS_1月","st":1,"pg":1,"ix":0,"p":"提示句","s":[null,"固定词",null,...],"o":["词1","词2",...]}
+```
+
+- `p` 是提示句（上下文，不参与填空）。
+- `s` 是待填句：`null` 表示空位（下划线），其余是固定词（已按正确顺序排好，含标点）。
+- `o` 是待选词，被打散成单个词（顺序打乱）。
+
+任务：把 `o` 里的所有词组织成正确的词组，并按正确顺序填入 `s` 的空位。
+
+用 Write 工具把结果 JSON 数组写入 `e:\code\personal_projects\TOEFL-learning\make-a-sentence\data\agent_batches\batch_XXX_result.json`，每题一个对象：
+
+```json
+{"answers":["词组1","词组2",...]}
+```
+
+规则：
+- `answers` 长度 = `s` 里 null 的个数。
+- 每个元素是填入对应空位的词组（多个词用空格连接）。
+- `o` 里所有词都要用上、且只用一次。
+- 拼起来（固定词 + answers 按位置填入）应是一句语法正确的完整英文句。
+- 词组按自然语义划分（如 "the due dates"、"have been updated"）。
+
+示例：
+输入 `{"p":"The professor announced a change in the syllabus.","s":[null,null,"know",null,null,null,"?"],"o":["do","have","been","updated","the","due","dates","if","you"]}`
+输出 `{"answers":["do","you","if","the due dates","have been updated"]}`
+（原句：Do you know if the due dates have been updated?）
+
+务必用 Write 工具写文件（JSON 数组，按输入顺序），不要在回复里贴 JSON。完成后一句话汇报。
